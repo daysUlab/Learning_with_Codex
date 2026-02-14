@@ -147,14 +147,12 @@ $$
 \begin{pmatrix}
 5 \\
 4
-\end{pmatrix}
-=
+\end{pmatrix}=
 \frac{1}{-7}
 \begin{pmatrix}
 -14 \\
 -7
-\end{pmatrix}
-=
+\end{pmatrix}=
 \begin{pmatrix}
 2 \\
 1
@@ -192,8 +190,7 @@ $$
 \begin{pmatrix}
 4-\lambda & 1 \\
 2 & 3-\lambda
-\end{pmatrix}
-=(4-\lambda)(3-\lambda)-2
+\end{pmatrix}=(4-\lambda)(3-\lambda)-2
 $$
 
 $$
@@ -392,8 +389,7 @@ $$
 \begin{vmatrix}
 2-\lambda & 1 \\
 1 & 2-\lambda
-\end{vmatrix}
-=(2-\lambda)^2-1
+\end{vmatrix}=(2-\lambda)^2-1
 $$
 
 $$
@@ -621,8 +617,7 @@ A^2=
 \begin{pmatrix}
 1 & 1 \\
 0 & 1
-\end{pmatrix}
-=
+\end{pmatrix}=
 \begin{pmatrix}
 1 & 2 \\
 0 & 1
@@ -640,8 +635,7 @@ $$
 \begin{vmatrix}
 -\lambda & 1 \\
 1 & -\lambda
-\end{vmatrix}
-=\lambda^2-1
+\end{vmatrix}=\lambda^2-1
 $$
 
 $$
@@ -664,8 +658,7 @@ $$
 \begin{vmatrix}
 1-\lambda & 2 \\
 2 & 1-\lambda
-\end{vmatrix}
-=(1-\lambda)^2-4
+\end{vmatrix}=(1-\lambda)^2-4
 $$
 
 $$
