@@ -1,0 +1,12 @@
+# residue_theorem_minimum
+
+このページは `residue_theorem_minimum.md` のスケルトンです。
+必要最小限の導入と導線のみを記述しています。
+
+## この章で扱うこと
+- 基本用語の確認
+- 主要な概念の見取り図
+- 次に読むノートへの接続
+
+## ナビゲーション
+- 親: [README.md](README.md)
