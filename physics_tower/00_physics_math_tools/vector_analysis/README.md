@@ -6,9 +6,9 @@
 $$
 \nabla f,
 \quad
-\nabla\cdot\\vec{F},
+\nabla\cdotF,
 \quad
-\nabla\times\\vec{F}
+\nabla\timesF
 $$
 
 この章では、直観から式へ、式から検算へという順で、後続章にそのまま持ち込める形へ整理します。
@@ -70,7 +70,7 @@ $$
 - ベクトル場:
 
 $$
-\\vec{F}=(F_x,F_y,F_z)
+F=(F_x,F_y,F_z)
 $$
 
 - 勾配:
@@ -87,7 +87,7 @@ $$
 - 発散:
 
 $$
-\nabla\cdot\\vec{F}
+\nabla\cdotF
 =
 \frac{\partial F_x}{\partial x}
 +
@@ -99,13 +99,9 @@ $$
 - 回転:
 
 $$
-\nabla\times\\vec{F}
+\nabla\timesF
 =
-\\pmatrix{
-\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z} \\
-\frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x} \\
-\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}
-}
+[[\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z}; \frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x}; \frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}]]
 $$
 
 ## 4. 本文（直観→導出→確認）
@@ -118,13 +114,13 @@ $$
 電磁気で言えば、
 
 $$
-\nabla\cdot\\vec{E}
+\nabla\cdotE
 $$
 
 は電荷密度と結びつき、
 
 $$
-\nabla\times\\vec{E}
+\nabla\timesE
 $$
 
 は時間変化する磁場と結びつく。
@@ -134,13 +130,13 @@ $$
 ベクトル場
 
 $$
-\\vec{F}=(x^2,xy,z)
+F=(x^2,xy,z)
 $$
 
 に対して発散を計算する。
 
 $$
-\nabla\cdot\\vec{F}
+\nabla\cdotF
 =
 \frac{\partial x^2}{\partial x}
 +
@@ -157,25 +153,13 @@ $$
 次に回転を計算する。
 
 $$
-\nabla\times\\vec{F}
+\nabla\timesF
 =
-\\pmatrix{
-\frac{\partial z}{\partial y}-\frac{\partial (xy)}{\partial z} \\
-\frac{\partial x^2}{\partial z}-\frac{\partial z}{\partial x} \\
-\frac{\partial (xy)}{\partial x}-\frac{\partial x^2}{\partial y}
-}
+[[\frac{\partial z}{\partial y}-\frac{\partial (xy)}{\partial z}; \frac{\partial x^2}{\partial z}-\frac{\partial z}{\partial x}; \frac{\partial (xy)}{\partial x}-\frac{\partial x^2}{\partial y}]]
 =
-\\pmatrix{
-0-0 \\
-0-0 \\
-y-0
-}
+[[0-0; 0-0; y-0]]
 =
-\\pmatrix{
-0 \\
-0 \\
-y
-}
+[[0; 0; y]]
 $$
 
 ### 4.3 導出B：発散定理
@@ -195,9 +179,9 @@ $$
 に対して
 
 $$
-\iiint_V (\nabla\cdot\\vec{F})\,dV
+\iiint_V (\nabla\cdotF)\,dV
 =
-\iint_S \\vec{F}\cdot d\\vec{S}
+\iint_S F\cdot dS
 $$
 
 が成り立つ。  
@@ -220,9 +204,9 @@ $$
 に対して
 
 $$
-\iint_S (\nabla\times\\vec{F})\cdot d\\vec{S}
+\iint_S (\nabla\timesF)\cdot dS
 =
-\oint_C \\vec{F}\cdot d\\vec{l}
+\oint_C F\cdot dl
 $$
 
 が成り立つ。  
@@ -254,7 +238,7 @@ $$
 ### 例題2（中）
 
 $$
-\\vec{F}=(-y,x,0)
+F=(-y,x,0)
 $$
 
 の回転を求めよ。
@@ -262,31 +246,19 @@ $$
 **解答**
 
 $$
-\nabla\times\\vec{F}
+\nabla\timesF
 =
-\\pmatrix{
-0 \\
-0 \\
-\frac{\partial x}{\partial x}-\frac{\partial(-y)}{\partial y}
-}
+[[0; 0; \frac{\partial x}{\partial x}-\frac{\partial(-y)}{\partial y}]]
 =
-\\pmatrix{
-0 \\
-0 \\
-1-(-1)
-}
+[[0; 0; 1-(-1)]]
 =
-\\pmatrix{
-0 \\
-0 \\
-2
-}
+[[0; 0; 2]]
 $$
 
 ### 例題3（やや難）
 
 $$
-\\vec{F}=(x,y,z)
+F=(x,y,z)
 $$
 
 について、半径
@@ -302,13 +274,13 @@ $$
 発散は
 
 $$
-\nabla\cdot\\vec{F}=1+1+1=3
+\nabla\cdotF=1+1+1=3
 $$
 
 発散定理より
 
 $$
-\iint_S \\vec{F}\cdot d\\vec{S}
+\iint_S F\cdot dS
 =
 \iiint_V 3\,dV
 =3\cdot\frac{4}{3}\pi R^3
@@ -353,49 +325,49 @@ $$
 2. **易**: 
 
 $$
-\\vec{F}=(x,0,0)
+F=(x,0,0)
 $$
 
 の発散を求めよ。  
 3. **易**: 
 
 $$
-\\vec{F}=(0,0,z)
+F=(0,0,z)
 $$
 
 の発散を求めよ。  
 4. **易**: 
 
 $$
-\\vec{F}=(0,x,0)
+F=(0,x,0)
 $$
 
 の回転を求めよ。  
 5. **中**: 
 
 $$
-\\vec{F}=(-y,x,0)
+F=(-y,x,0)
 $$
 
 の発散を求めよ。  
 6. **中**: 
 
 $$
-\\vec{F}=(x^2,y^2,z^2)
+F=(x^2,y^2,z^2)
 $$
 
 の発散を求めよ。  
 7. **中**: 
 
 $$
-\\vec{F}=(yz,zx,xy)
+F=(yz,zx,xy)
 $$
 
 の回転を求めよ。  
 8. **中**: 
 
 $$
-\\vec{F}=(x,y,z)
+F=(x,y,z)
 $$
 
 の発散を求めよ。  
@@ -408,14 +380,14 @@ $$
 球で
 
 $$
-\\vec{F}=(x,y,z)
+F=(x,y,z)
 $$
 
 の流束を発散定理で求めよ。  
 10. **難**: 
 
 $$
-\\vec{F}=(-y,x,0)
+F=(-y,x,0)
 $$
 
 について、単位円
@@ -427,7 +399,7 @@ $$
 上の線積分
 
 $$
-\oint_C \\vec{F}\cdot d\\vec{l}
+\oint_C F\cdot dl
 $$
 
 を求めよ。  
@@ -448,59 +420,51 @@ $$
 2. **解答**:  
 
 $$
-\nabla\cdot\\vec{F}=1
+\nabla\cdotF=1
 $$
 
 3. **解答**:  
 
 $$
-\nabla\cdot\\vec{F}=1
+\nabla\cdotF=1
 $$
 
 4. **解答**:  
 
 $$
-\nabla\times\\vec{F}=
-\\pmatrix{
-0 \\
-0 \\
-1
-}
+\nabla\timesF=
+[[0; 0; 1]]
 $$
 
 5. **解答**:  
 
 $$
-\nabla\cdot\\vec{F}=0
+\nabla\cdotF=0
 $$
 
 6. **解答**:  
 
 $$
-\nabla\cdot\\vec{F}=2x+2y+2z
+\nabla\cdotF=2x+2y+2z
 $$
 
 7. **解答**:  
 
 $$
-\nabla\times\\vec{F}=
-\\pmatrix{
-0 \\
-0 \\
-0
-}
+\nabla\timesF=
+[[0; 0; 0]]
 $$
 
 8. **解答**:  
 
 $$
-\nabla\cdot\\vec{F}=3
+\nabla\cdotF=3
 $$
 
 9. **解答**:  
 
 $$
-\iint_S \\vec{F}\cdot d\\vec{S}
+\iint_S F\cdot dS
 =
 \iiint_V 3\,dV
 =4\pi R^3
@@ -510,25 +474,25 @@ $$
 単位円を
 
 $$
-\\vec{r}(\theta)=(\cos\theta,\sin\theta,0)
+r(\theta)=(\cos\theta,\sin\theta,0)
 $$
 
 で表す。
 
 $$
-d\\vec{l}=(-\sin\theta,\cos\theta,0)d\theta
+dl=(-\sin\theta,\cos\theta,0)d\theta
 $$
 
 $$
-\\vec{F}(\\vec{r}(\theta))=(-\sin\theta,\cos\theta,0)
+F(r(\theta))=(-\sin\theta,\cos\theta,0)
 $$
 
 $$
-\\vec{F}\cdot d\\vec{l}=1\cdot d\theta
+F\cdot dl=1\cdot d\theta
 $$
 
 $$
-\oint_C \\vec{F}\cdot d\\vec{l}=
+\oint_C F\cdot dl=
 \int_0^{2\pi}d\theta
 =2\pi
 $$
