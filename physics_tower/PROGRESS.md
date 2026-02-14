@@ -10,6 +10,7 @@
 - 次の `TODO` は同一実行内で `DOING` にしない（次回実行時に選ばれるよう `TODO` のまま残す）。
 - 対象範囲は `physics_tower/` 配下のみ。
 - 数式は原則として文章中に埋め込まず、独立行のブロック数式（`$$...$$`）で記述する。
+- 行列数式は `\begin{pmatrix}...\end{pmatrix}` を必ず同一ブロック数式内で閉じ、途中改行や記号欠落でレンダリング崩れを起こさない。
 
 ## キュー定義
 - 順序規則: `physics_tower/README.md` → `00_physics_math_tools`（`00_overview.md` 優先、その後サブフォルダ）→ 番号順フォルダ → `90_topics_from_conversations`。
@@ -31,7 +32,7 @@
 | `physics_tower/00_physics_math_tools/experiment/errors_significant_digits.md` | DONE | 2026-02-14 | 誤差評価と有効数字の実践ページを執筆。統計量・誤差伝播・丸め規則を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/linear_algebra/README.md` | DONE | 2026-02-14 | 線形代数章の入口を教科書化。連立方程式・固有値問題・対角化を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/linear_algebra/basics.md` | DONE | 2026-02-14 | 線形代数基礎実践を執筆。連立・固有値・対角化を途中式で整理し、演習10問＋全解答を追加。 |
-| `physics_tower/00_physics_math_tools/vector_analysis/README.md` | TODO | - |  |
+| `physics_tower/00_physics_math_tools/vector_analysis/README.md` | DONE | 2026-02-14 | ベクトル解析章の入口を教科書化。勾配・発散・回転と積分定理を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/vector_analysis/nabla_identities.md` | TODO | - |  |
 | `physics_tower/01_dynamics/00_overview.md` | TODO | - |  |
 | `physics_tower/01_dynamics/columns_and_qa/README.md` | TODO | - |  |
