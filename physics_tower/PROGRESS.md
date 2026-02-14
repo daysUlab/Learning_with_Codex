@@ -9,6 +9,7 @@
 - 執筆完了後は、この表の対象行を `DONE` に更新し、`last_updated` と `notes` を記録する。
 - 次の `TODO` は同一実行内で `DOING` にしない（次回実行時に選ばれるよう `TODO` のまま残す）。
 - 対象範囲は `physics_tower/` 配下のみ。
+- 数式は原則として文章中に埋め込まず、独立行のブロック数式（`$$...$$`）で記述する。
 
 ## キュー定義
 - 順序規則: `physics_tower/README.md` → `00_physics_math_tools`（`00_overview.md` 優先、その後サブフォルダ）→ 番号順フォルダ → `90_topics_from_conversations`。
@@ -28,7 +29,7 @@
 | `physics_tower/00_physics_math_tools/differential_equations/ode_methods.md` | DONE | 2026-02-14 | 常微分方程式の解法手順集を執筆。型判別→解法選択→検算を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/experiment/README.md` | DONE | 2026-02-14 | 実験章の入口を教科書化。平均・標準偏差・誤差伝播・有効数字を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/experiment/errors_significant_digits.md` | DONE | 2026-02-14 | 誤差評価と有効数字の実践ページを執筆。統計量・誤差伝播・丸め規則を整理し、演習10問＋全解答を追加。 |
-| `physics_tower/00_physics_math_tools/linear_algebra/README.md` | TODO | - |  |
+| `physics_tower/00_physics_math_tools/linear_algebra/README.md` | DONE | 2026-02-14 | 線形代数章の入口を教科書化。連立方程式・固有値問題・対角化を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/linear_algebra/basics.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/vector_analysis/README.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/vector_analysis/nabla_identities.md` | TODO | - |  |

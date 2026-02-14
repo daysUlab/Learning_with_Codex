@@ -40,7 +40,7 @@
 - 絶対値: $|z|=\sqrt{x^2+y^2}$
 - 正則関数: $f(z)$ が領域内で複素微分可能
 - 閉曲線積分: $\oint_C f(z)dz$
-- 留数: $\operatorname{Res}(f,z_0)$
+- 留数: $\mathrm{Res}(f,z_0)$
 - 積分路の向き: 反時計回りを正向き（標準）
 
 物理での時間依存は多くの場合
@@ -89,7 +89,7 @@ $$
 有理関数 $f(z)$ が有限個の孤立特異点 $z_k$ を持つとき、各点の主部係数（$1/(z-z_k)$ の係数）が留数。したがって
 
 $$
-\oint_C f(z)dz = 2\pi i\sum_{z_k\in\mathrm{Int}(C)}\operatorname{Res}(f,z_k)
+\oint_C f(z)dz = 2\pi i\sum_{z_k\in\mathrm{Int}(C)}\mathrm{Res}(f,z_k)
 $$
 
 を得ます。これが留数定理。
@@ -97,13 +97,13 @@ $$
 #### 1位極の留数
 
 $$
-\operatorname{Res}(f,z_0)=\lim_{z\to z_0}(z-z_0)f(z)
+\mathrm{Res}(f,z_0)=\lim_{z\to z_0}(z-z_0)f(z)
 $$
 
 #### 2位極（一般 $m$ 位極）
 
 $$
-\operatorname{Res}(f,z_0)=\frac{1}{(m-1)!}\lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}\left[(z-z_0)^m f(z)\right]
+\mathrm{Res}(f,z_0)=\frac{1}{(m-1)!}\lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}\left[(z-z_0)^m f(z)\right]
 $$
 
 ### 4.3 導出B：代表積分を実際に計算
@@ -125,7 +125,7 @@ $$
 上半平面内の極は $z=i$ のみ。
 
 $$
-\operatorname{Res}\left(\frac{e^{iaz}}{z^2+1},i\right)
+\mathrm{Res}\left(\frac{e^{iaz}}{z^2+1},i\right)
 =\lim_{z\to i}\frac{e^{iaz}}{z+i}
 =\frac{e^{iai}}{2i}
 =\frac{e^{-a}}{2i}
@@ -178,7 +178,7 @@ $$
 **解答**
 
 $$
-\operatorname{Res}(f,1)=\lim_{z\to1}\frac{z-1}{(z-1)(z+2)}=\frac{1}{3}
+\mathrm{Res}(f,1)=\lim_{z\to1}\frac{z-1}{(z-1)(z+2)}=\frac{1}{3}
 $$
 
 ### 例題3（やや難）: 実積分
@@ -193,7 +193,7 @@ $$
 $f(z)=1/(z^2+4)=1/[(z-2i)(z+2i)]$。上半平面の極は $z=2i$。
 
 $$
-\operatorname{Res}(f,2i)=\lim_{z\to2i}\frac{1}{z+2i}=\frac{1}{4i}
+\mathrm{Res}(f,2i)=\lim_{z\to2i}\frac{1}{z+2i}=\frac{1}{4i}
 $$
 
 したがって
@@ -246,14 +246,14 @@ $$
 
 3. **解答**:  
    1位極なので
-   $$\operatorname{Res}\left(\frac{1}{z-2},2\right)=1$$
+   $$\mathrm{Res}\left(\frac{1}{z-2},2\right)=1$$
 
 4. **解答**:  
    $$\int_{-\infty}^{\infty}\frac{dx}{x^2+1}=\pi$$
 
 5. **解答**:  
-   $$\operatorname{Res}(f,0)=\lim_{z\to0}\frac{z+1}{z-1}=-1$$
-   $$\operatorname{Res}(f,1)=\lim_{z\to1}\frac{z+1}{z}=2$$
+   $$\mathrm{Res}(f,0)=\lim_{z\to0}\frac{z+1}{z-1}=-1$$
+   $$\mathrm{Res}(f,1)=\lim_{z\to1}\frac{z+1}{z}=2$$
 
 6. **解答**:  
    一般式 $\int_{-\infty}^{\infty}\frac{dx}{x^2+a^2}=\frac{\pi}{a}$ より
@@ -264,7 +264,7 @@ $$
 
 8. **解答**:  
    向きが逆なので
-   $$\oint_C f(z)dz=-2\pi i\sum\operatorname{Res}$$
+   $$\oint_C f(z)dz=-2\pi i\sum\mathrm{Res}$$
 
 9. **解答**:  
    被積分関数は偶関数（$x\sin x$ は偶）なので 0 ではない。既知積分より
