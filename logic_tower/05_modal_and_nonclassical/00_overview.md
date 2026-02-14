@@ -1,12 +1,16 @@
-# 00_overview
+# 05_modal_and_nonclassical
 
-このページは `00_overview.md` のスケルトンです。
-必要最小限の導入と導線のみを記述しています。
+05_modal_and_nonclassical の入口ページです。
+このフォルダ配下の章やノートを巡回するための最小ガイドを記載します。
 
 ## この章で扱うこと
-- 基本用語の確認
-- 主要な概念の見取り図
-- 次に読むノートへの接続
+- 章の全体像の把握
+- 基本用語と前提の確認
+- 次に読むページへの導線
 
 ## ナビゲーション
 - 親: [../README.md](../README.md)
+- 子:
+  - [01_modal_logic_kripke.md](01_modal_logic_kripke.md)
+  - [02_intuitionistic_logic.md](02_intuitionistic_logic.md)
+  - [03_other_logics_map.md](03_other_logics_map.md)
