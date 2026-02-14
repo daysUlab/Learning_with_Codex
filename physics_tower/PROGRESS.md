@@ -27,7 +27,7 @@
 | `physics_tower/00_physics_math_tools/differential_equations/README.md` | DONE | 2026-02-14 | 微分方程式章の入口を教科書化。1階/2階線形ODEの導出と検算手順を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/differential_equations/ode_methods.md` | DONE | 2026-02-14 | 常微分方程式の解法手順集を執筆。型判別→解法選択→検算を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/experiment/README.md` | DONE | 2026-02-14 | 実験章の入口を教科書化。平均・標準偏差・誤差伝播・有効数字を整理し、演習10問＋全解答を追加。 |
-| `physics_tower/00_physics_math_tools/experiment/errors_significant_digits.md` | TODO | - |  |
+| `physics_tower/00_physics_math_tools/experiment/errors_significant_digits.md` | DONE | 2026-02-14 | 誤差評価と有効数字の実践ページを執筆。統計量・誤差伝播・丸め規則を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/linear_algebra/README.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/linear_algebra/basics.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/vector_analysis/README.md` | TODO | - |  |
