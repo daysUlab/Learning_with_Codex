@@ -10,6 +10,7 @@
 - 次の `TODO` は同一実行内で `DOING` にしない（次回実行時に選ばれるよう `TODO` のまま残す）。
 - 対象範囲は `physics_tower/` 配下のみ。
 - 数式は原則として文章中に埋め込まず、独立行のブロック数式（`$$...$$`）で記述する。
+- 上記ルールは全セクションに適用し、特に演習問題・演習解答・章末まとめでも数式をインライン記法にしない。
 - 行列数式は `\begin{pmatrix}...\end{pmatrix}` を必ず同一ブロック数式内で閉じ、途中改行や記号欠落でレンダリング崩れを起こさない。
 
 ## キュー定義
@@ -34,7 +35,7 @@
 | `physics_tower/00_physics_math_tools/linear_algebra/basics.md` | DONE | 2026-02-14 | 線形代数基礎実践を執筆。連立・固有値・対角化を途中式で整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/vector_analysis/README.md` | DONE | 2026-02-14 | ベクトル解析章の入口を教科書化。勾配・発散・回転と積分定理を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/vector_analysis/nabla_identities.md` | DONE | 2026-02-14 | ナブラ恒等式の実践ページを執筆。3つの恒等式の成分導出、物理接続、演習10問＋解答を追加。 |
-| `physics_tower/01_dynamics/00_overview.md` | TODO | - |  |
+| `physics_tower/01_dynamics/00_overview.md` | DONE | 2026-02-14 | 力学章の入口を教科書形式で執筆。保存則3本柱の導出、例題3題、演習10問＋解答を追加。 |
 | `physics_tower/01_dynamics/columns_and_qa/README.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part01_momentum_conservation/README.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part02_energy_conservation/README.md` | TODO | - |  |
