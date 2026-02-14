@@ -36,7 +36,7 @@
 | `physics_tower/00_physics_math_tools/vector_analysis/README.md` | DONE | 2026-02-14 | ベクトル解析章の入口を教科書化。勾配・発散・回転と積分定理を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/vector_analysis/nabla_identities.md` | DONE | 2026-02-14 | ナブラ恒等式の実践ページを執筆。3つの恒等式の成分導出、物理接続、演習10問＋解答を追加。 |
 | `physics_tower/01_dynamics/00_overview.md` | DONE | 2026-02-14 | EMAN力学章を参考に本文を再作成。保存則の導出・例題3題・演習10問を含む教科書版へ更新。 |
-| `physics_tower/01_dynamics/columns_and_qa/README.md` | TODO | - |  |
+| `physics_tower/01_dynamics/columns_and_qa/README.md` | DONE | 2026-02-14 | Q&Aコラムを本文化。保存則の使い分け、検算テンプレ、ガウス積分の位置づけを追加。 |
 | `physics_tower/01_dynamics/part01_momentum_conservation/README.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part02_energy_conservation/README.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part03_angular_momentum/README.md` | TODO | - |  |
