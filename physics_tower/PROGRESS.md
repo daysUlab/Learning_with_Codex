@@ -26,7 +26,7 @@
 | `physics_tower/00_physics_math_tools/complex_analysis/residue_theorem_minimum.md` | DONE | 2026-02-14 | 留数定理の最小実装ページを執筆。積分路選択・留数計算・実積分への復元を途中式で整理し、演習10問＋解答を追加。 |
 | `physics_tower/00_physics_math_tools/differential_equations/README.md` | DONE | 2026-02-14 | 微分方程式章の入口を教科書化。1階/2階線形ODEの導出と検算手順を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/differential_equations/ode_methods.md` | DONE | 2026-02-14 | 常微分方程式の解法手順集を執筆。型判別→解法選択→検算を整理し、演習10問＋全解答を追加。 |
-| `physics_tower/00_physics_math_tools/experiment/README.md` | TODO | - |  |
+| `physics_tower/00_physics_math_tools/experiment/README.md` | DONE | 2026-02-14 | 実験章の入口を教科書化。平均・標準偏差・誤差伝播・有効数字を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/experiment/errors_significant_digits.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/linear_algebra/README.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/linear_algebra/basics.md` | TODO | - |  |

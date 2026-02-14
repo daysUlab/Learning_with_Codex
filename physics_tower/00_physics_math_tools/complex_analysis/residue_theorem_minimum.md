@@ -25,19 +25,19 @@ $$
 
 ## 3. 記法・単位・符号規約
 
-- 留数: $\operatorname{Res}(f,z_0)$
+- 留数: $\mathrm{Res}(f,z_0)$
 - 反時計回り閉曲線: 正向き
 - 留数定理:
   $$
-  \oint_C f(z)dz = 2\pi i\sum_{z_k\in \mathrm{Int}(C)}\operatorname{Res}(f,z_k)
+  \oint_C f(z)dz = 2\pi i\sum_{z_k\in \mathrm{Int}(C)}\mathrm{Res}(f,z_k)
   $$
 - 1位極:
   $$
-  \operatorname{Res}(f,z_0)=\lim_{z\to z_0}(z-z_0)f(z)
+  \mathrm{Res}(f,z_0)=\lim_{z\to z_0}(z-z_0)f(z)
   $$
 - $m$ 位極:
   $$
-  \operatorname{Res}(f,z_0)=\frac{1}{(m-1)!}\lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}\left[(z-z_0)^m f(z)\right]
+  \mathrm{Res}(f,z_0)=\frac{1}{(m-1)!}\lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}\left[(z-z_0)^m f(z)\right]
   $$
 
 ## 4. 本文（直観→導出→確認）
@@ -70,7 +70,7 @@ $$
 #### Step 3: 留数計算
 
 $$
-\operatorname{Res}(f,i)
+\mathrm{Res}(f,i)
 =\lim_{z\to i}\frac{z-i}{(z-i)(z+i)}
 =\frac{1}{2i}
 $$
@@ -112,7 +112,7 @@ $$
 極 $z=i$ で
 
 $$
-\operatorname{Res}\left(\frac{e^{iaz}}{z^2+1},i\right)
+\mathrm{Res}\left(\frac{e^{iaz}}{z^2+1},i\right)
 =\lim_{z\to i}\frac{e^{iaz}}{z+i}
 =\frac{e^{-a}}{2i}
 $$
@@ -150,7 +150,7 @@ $$
 上半平面の極は $z=2i$。
 
 $$
-\operatorname{Res}\left(\frac{1}{z^2+4},2i\right)=\frac{1}{4i}
+\mathrm{Res}\left(\frac{1}{z^2+4},2i\right)=\frac{1}{4i}
 $$
 
 よって
@@ -195,7 +195,7 @@ $$
 上半平面の極 $z=i$ の留数は
 
 $$
-\operatorname{Res}(f,i)=\lim_{z\to i}\frac{z e^{iz}}{z+i}=\frac{i e^{-1}}{2i}=\frac{e^{-1}}{2}
+\mathrm{Res}(f,i)=\lim_{z\to i}\frac{z e^{iz}}{z+i}=\frac{i e^{-1}}{2i}=\frac{e^{-1}}{2}
 $$
 
 ゆえに
@@ -232,11 +232,11 @@ $$
 
 ### 問題
 
-1. **易**: $\operatorname{Res}(1/(z-3),3)$ を求めよ。  
+1. **易**: $\mathrm{Res}(1/(z-3),3)$ を求めよ。  
 2. **易**: $\int_{-\infty}^{\infty}\dfrac{dx}{x^2+9}$ を求めよ。  
 3. **易**: $\int_{-\infty}^{\infty}\dfrac{dx}{x^2+16}$ を求めよ。  
 4. **易**: $\int_{-\infty}^{\infty}\dfrac{\cos x}{x^2+1}dx$ を求めよ。  
-5. **中**: $\operatorname{Res}\left(\dfrac{1}{(z-1)(z+1)},1\right)$ を求めよ。  
+5. **中**: $\mathrm{Res}\left(\dfrac{1}{(z-1)(z+1)},1\right)$ を求めよ。  
 6. **中**: $\int_{-\infty}^{\infty}\dfrac{\cos(3x)}{x^2+1}dx$ を求めよ。  
 7. **中**: 時計回り積分路での留数定理の係数を書け。  
 8. **中**: $\int_{-\infty}^{\infty}\dfrac{x\sin(2x)}{x^2+1}dx$ を求めよ。  
@@ -246,7 +246,7 @@ $$
 ### 解答
 
 1. **解答**:  
-   $$\operatorname{Res}\left(\frac{1}{z-3},3\right)=1$$
+   $$\mathrm{Res}\left(\frac{1}{z-3},3\right)=1$$
 
 2. **解答**:  
    $$\int_{-\infty}^{\infty}\frac{dx}{x^2+9}=\frac{\pi}{3}$$
@@ -258,13 +258,13 @@ $$
    $$\int_{-\infty}^{\infty}\frac{\cos x}{x^2+1}dx=\pi e^{-1}$$
 
 5. **解答**:  
-   $$\operatorname{Res}\left(\frac{1}{(z-1)(z+1)},1\right)=\lim_{z\to1}\frac{1}{z+1}=\frac12$$
+   $$\mathrm{Res}\left(\frac{1}{(z-1)(z+1)},1\right)=\lim_{z\to1}\frac{1}{z+1}=\frac12$$
 
 6. **解答**:  
    $$\int_{-\infty}^{\infty}\frac{\cos(3x)}{x^2+1}dx=\pi e^{-3}$$
 
 7. **解答**:  
-   $$\oint_C f(z)dz=-2\pi i\sum\operatorname{Res}$$
+   $$\oint_C f(z)dz=-2\pi i\sum\mathrm{Res}$$
 
 8. **解答**:  
    一般結果より
