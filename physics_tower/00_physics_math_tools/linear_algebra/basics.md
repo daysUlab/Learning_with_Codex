@@ -28,40 +28,44 @@
 
 - ベクトル:
 
-```text
-x=
-[[x_1; \vdots; x_n]]
-```
+$$
+\mathbf{x}=
+\begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix}
+$$
 
 - 行列:
 
-```text
+$$
 A=(a_{ij})
-```
+$$
 
 - 線形系:
 
-```text
-Ax=b
-```
+$$
+A\mathbf{x}=\mathbf{b}
+$$
 
 - 単位行列:
 
-```text
+$$
 I
-```
+$$
 
 - 行列式:
 
-```text
+$$
 \det A
-```
+$$
 
 - 固有値問題:
 
-```text
-Av=\lambda v
-```
+$$
+A\mathbf{v}=\lambda\mathbf{v}
+$$
 
 単位は成分ごとに持つ。和を取る場合は必ず同次元であることを確認する。
 
@@ -76,178 +80,232 @@ Av=\lambda v
 
 次の連立を考える。
 
-```text
+$$
 \begin{cases}
 2x+y=5 \\
 3x-2y=4
 \end{cases}
-```
+$$
 
 行列形式:
 
-```text
+$$
 A=
-[[2 & 1; 3 & -2]],
+\begin{pmatrix}
+2 & 1 \\
+3 & -2
+\end{pmatrix},
 \quad
-x=
-[[x; y]],
+\mathbf{x}=
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix},
 \quad
-b=
-[[5; 4]]
-```
+\mathbf{b}=
+\begin{pmatrix}
+5 \\
+4
+\end{pmatrix}
+$$
 
-```text
-Ax=b
-```
+$$
+A\mathbf{x}=\mathbf{b}
+$$
 
 行列式:
 
-```text
+$$
 \det A=2\cdot(-2)-1\cdot3=-7\neq0
-```
+$$
 
 よって可逆で、解は一意。
 
 逆行列:
 
-```text
+$$
 A^{-1}=\frac{1}{-7}
-[[-2 & -1; -3 & 2]]
-```
+\begin{pmatrix}
+-2 & -1 \\
+-3 & 2
+\end{pmatrix}
+$$
 
-```text
-x=A^{-1}b
-```
+$$
+\mathbf{x}=A^{-1}\mathbf{b}
+$$
 
 計算:
 
-```text
-x=
+$$
+\mathbf{x}=
 \frac{1}{-7}
-[[-2 & -1; -3 & 2]]
-[[5; 4]]
+\begin{pmatrix}
+-2 & -1 \\
+-3 & 2
+\end{pmatrix}
+\begin{pmatrix}
+5 \\
+4
+\end{pmatrix}
 =
 \frac{1}{-7}
-[[-14; -7]]
+\begin{pmatrix}
+-14 \\
+-7
+\end{pmatrix}
 =
-[[2; 1]]
-```
+\begin{pmatrix}
+2 \\
+1
+\end{pmatrix}
+$$
 
 したがって
 
-```text
+$$
 x=2,
 \quad
 y=1
-```
+$$
 
 ### 4.3 導出B：固有値と固有ベクトル
 
 行列
 
-```text
+$$
 A=
-[[4 & 1; 2 & 3]]
-```
+\begin{pmatrix}
+4 & 1 \\
+2 & 3
+\end{pmatrix}
+$$
 
 の固有値を求める。
 
-```text
+$$
 \det(A-\lambda I)=0
-```
+$$
 
-```text
+$$
 \det
-[[4-\lambda & 1; 2 & 3-\lambda]]
+\begin{pmatrix}
+4-\lambda & 1 \\
+2 & 3-\lambda
+\end{pmatrix}
 =(4-\lambda)(3-\lambda)-2
-```
+$$
 
-```text
+$$
 =\lambda^2-7\lambda+10
 =(\lambda-5)(\lambda-2)=0
-```
+$$
 
 よって
 
-```text
+$$
 \lambda_1=5,
 \quad
 \lambda_2=2
-```
+$$
 
 固有ベクトルを求める。
 
 #### 固有値 5
 
-```text
-(A-5I)v=0
-```
+$$
+(A-5I)\mathbf{v}=0
+$$
 
-```text
-[[-1 & 1; 2 & -2]]
-[[v_1; v_2]]=0
-```
+$$
+\begin{pmatrix}
+-1 & 1 \\
+2 & -2
+\end{pmatrix}
+\begin{pmatrix}
+v_1 \\
+v_2
+\end{pmatrix}=0
+$$
 
-```text
+$$
 v_1=v_2
-```
+$$
 
 1つ選んで
 
-```text
-v^{(1)}=
-[[1; 1]]
-```
+$$
+\mathbf{v}^{(1)}=
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+$$
 
 #### 固有値 2
 
-```text
-(A-2I)v=0
-```
+$$
+(A-2I)\mathbf{v}=0
+$$
 
-```text
-[[2 & 1; 2 & 1]]
-[[v_1; v_2]]=0
-```
+$$
+\begin{pmatrix}
+2 & 1 \\
+2 & 1
+\end{pmatrix}
+\begin{pmatrix}
+v_1 \\
+v_2
+\end{pmatrix}=0
+$$
 
-```text
+$$
 2v_1+v_2=0
-```
+$$
 
 1つ選んで
 
-```text
-v^{(2)}=
-[[1; -2]]
-```
+$$
+\mathbf{v}^{(2)}=
+\begin{pmatrix}
+1 \\
+-2
+\end{pmatrix}
+$$
 
 ### 4.4 導出C：対角化
 
 固有ベクトルを列に並べる。
 
-```text
+$$
 P=
-[[1 & 1; 1 & -2]]
-```
+\begin{pmatrix}
+1 & 1 \\
+1 & -2
+\end{pmatrix}
+$$
 
 固有値を対角に置く。
 
-```text
+$$
 D=
-[[5 & 0; 0 & 2]]
-```
+\begin{pmatrix}
+5 & 0 \\
+0 & 2
+\end{pmatrix}
+$$
 
 このとき
 
-```text
+$$
 A=PDP^{-1}
-```
+$$
 
 よって
 
-```text
+$$
 A^n=PD^nP^{-1}
-```
+$$
 
 となる。  
 長時間発展や反復作用の計算で大幅に効率化できる。
@@ -257,9 +315,9 @@ A^n=PD^nP^{-1}
 1. 求めた解を元の連立へ代入する。
 2. 固有値・固有ベクトルは
 
-```text
-Av=\lambda v
-```
+$$
+A\mathbf{v}=\lambda\mathbf{v}
+$$
 
 を直接確認する。
 3. 物理量成分の次元整合を確認する。
@@ -268,12 +326,12 @@ Av=\lambda v
 
 ### 例題1（易）
 
-```text
+$$
 \begin{cases}
 x+y=3 \\
 2x-y=0
 \end{cases}
-```
+$$
 
 を解け。
 
@@ -281,24 +339,27 @@ x+y=3 \\
 
 2式を加えて
 
-```text
+$$
 3x=3
-```
+$$
 
-```text
+$$
 x=1
-```
+$$
 
-```text
+$$
 y=2
-```
+$$
 
 ### 例題2（中）
 
-```text
+$$
 A=
-[[1 & 2; 0 & 3]]
-```
+\begin{pmatrix}
+1 & 2 \\
+0 & 3
+\end{pmatrix}
+$$
 
 の固有値を求めよ。
 
@@ -306,39 +367,45 @@ A=
 
 上三角行列なので対角成分が固有値。
 
-```text
+$$
 \lambda_1=1,
 \quad
 \lambda_2=3
-```
+$$
 
 ### 例題3（やや難）
 
-```text
+$$
 A=
-[[2 & 1; 1 & 2]]
-```
+\begin{pmatrix}
+2 & 1 \\
+1 & 2
+\end{pmatrix}
+$$
 
 の固有値を求めよ。
 
 **解答**
 
-```text
+$$
 \det(A-\lambda I)=
-|2-\lambda & 1; 1 & 2-\lambda|
+\begin{vmatrix}
+2-\lambda & 1 \\
+1 & 2-\lambda
+\end{vmatrix}
 =(2-\lambda)^2-1
-```
+$$
 
-```text
+$$
 =\lambda^2-4\lambda+3
 =(\lambda-1)(\lambda-3)
-```
+$$
 
-```text
+$$
 \lambda_1=1,
 \quad
 \lambda_2=3
-```
+$$
 
 ## 6. よくある誤解・落とし穴
 
@@ -351,23 +418,23 @@ A=
 
 - 連立一次方程式は
 
-```text
-Ax=b
-```
+$$
+A\mathbf{x}=\mathbf{b}
+$$
 
 で統一できる。
 - 可逆性判定は
 
-```text
+$$
 \det A\neq0
-```
+$$
 
 で行う。
 - 固有値問題は
 
-```text
+$$
 \det(A-\lambda I)=0
-```
+$$
 
 から始める。
 - 対角化は反復計算を軽くする。
@@ -382,99 +449,123 @@ Ax=b
 
 1. **易**: 
 
-```text
+$$
 \begin{cases}
 x+2y=5 \\
 x-y=2
 \end{cases}
-```
+$$
 
 を解け。  
 2. **易**: 
 
-```text
+$$
 \det
-[[2 & 3; 1 & 4]]
-```
+\begin{pmatrix}
+2 & 3 \\
+1 & 4
+\end{pmatrix}
+$$
 
 を求めよ。  
 3. **易**: 
 
-```text
-u=
-[[1; 2]],
+$$
+\mathbf{u}=
+\begin{pmatrix}
+1 \\
+2
+\end{pmatrix},
 \quad
-v=
-[[3; -1]]
-```
+\mathbf{v}=
+\begin{pmatrix}
+3 \\
+-1
+\end{pmatrix}
+$$
 
 の内積を求めよ。  
 4. **易**: 対角行列
 
-```text
-[[6 & 0; 0 & -1]]
-```
+$$
+\begin{pmatrix}
+6 & 0 \\
+0 & -1
+\end{pmatrix}
+$$
 
 の固有値を求めよ。  
 5. **中**: 
 
-```text
+$$
 A=
-[[1 & 1; 0 & 1]]
-```
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+$$
 
 について
 
-```text
+$$
 A^2
-```
+$$
 
 を求めよ。  
 6. **中**: 
 
-```text
+$$
 \begin{cases}
 2x+4y=6 \\
 x+2y=3
 \end{cases}
-```
+$$
 
 の解の個数を判定せよ。  
 7. **中**: 
 
-```text
+$$
 A=
-[[0 & 1; 1 & 0]]
-```
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
 
 の固有値を求めよ。  
 8. **中**: 
 
-```text
+$$
 A=
-[[3 & 0; 4 & 2]]
-```
+\begin{pmatrix}
+3 & 0 \\
+4 & 2
+\end{pmatrix}
+$$
 
 の固有値を求めよ。  
 9. **難**: 
 
-```text
+$$
 A=
-[[1 & 2; 2 & 1]]
-```
+\begin{pmatrix}
+1 & 2 \\
+2 & 1
+\end{pmatrix}
+$$
 
 の固有値を求めよ。  
 10. **難**: 
 
-```text
+$$
 \det A=0
-```
+$$
 
 のとき
 
-```text
-Ax=0
-```
+$$
+A\mathbf{x}=\mathbf{0}
+$$
 
 が非自明解を持ち得る理由を述べよ。  
 
@@ -483,51 +574,60 @@ Ax=0
 1. **解答**:  
 2式より
 
-```text
+$$
 x=2+y
-```
+$$
 
 1式へ代入:
 
-```text
+$$
 2+y+2y=5
-```
+$$
 
-```text
+$$
 y=1,
 \quad
 x=3
-```
+$$
 
 2. **解答**:  
 
-```text
+$$
 2\cdot4-3\cdot1=5
-```
+$$
 
 3. **解答**:  
 
-```text
-u\cdotv=1\cdot3+2\cdot(-1)=1
-```
+$$
+\mathbf{u}\cdot\mathbf{v}=1\cdot3+2\cdot(-1)=1
+$$
 
 4. **解答**:  
 
-```text
+$$
 6,
 \quad
 -1
-```
+$$
 
 5. **解答**:  
 
-```text
+$$
 A^2=
-[[1 & 1; 0 & 1]]
-[[1 & 1; 0 & 1]]
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
 =
-[[1 & 2; 0 & 1]]
-```
+\begin{pmatrix}
+1 & 2 \\
+0 & 1
+\end{pmatrix}
+$$
 
 6. **解答**:  
 2本は同じ式なので独立方程式は1本。  
@@ -535,62 +635,68 @@ A^2=
 
 7. **解答**:  
 
-```text
+$$
 \det(A-\lambda I)=
-|-\lambda & 1; 1 & -\lambda|
+\begin{vmatrix}
+-\lambda & 1 \\
+1 & -\lambda
+\end{vmatrix}
 =\lambda^2-1
-```
+$$
 
-```text
+$$
 \lambda=\pm1
-```
+$$
 
 8. **解答**:  
 下三角行列なので対角成分。
 
-```text
+$$
 3,
 \quad
 2
-```
+$$
 
 9. **解答**:  
 
-```text
+$$
 \det(A-\lambda I)=
-|1-\lambda & 2; 2 & 1-\lambda|
+\begin{vmatrix}
+1-\lambda & 2 \\
+2 & 1-\lambda
+\end{vmatrix}
 =(1-\lambda)^2-4
-```
+$$
 
-```text
+$$
 =\lambda^2-2\lambda-3
 =(\lambda-3)(\lambda+1)
-```
+$$
 
-```text
+$$
 \lambda_1=3,
 \quad
 \lambda_2=-1
-```
+$$
 
 10. **解答**:  
 
-```text
+$$
 \det A=0
-```
+$$
 
 は列（または行）が一次従属で可逆でないことを意味する。  
 したがって核が非自明になり得るため
 
-```text
-Ax=0
-```
+$$
+A\mathbf{x}=\mathbf{0}
+$$
 
 に
 
-```text
-x\neq0
-```
+$$
+\mathbf{x}\neq\mathbf{0}
+$$
 
 が存在し得る。
 
