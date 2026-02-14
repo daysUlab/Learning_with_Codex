@@ -90,25 +90,31 @@ x-y=1
 \end{cases}
 $$
 
-は
+は次のように、係数行列・未知ベクトル・右辺ベクトルに分けて書ける。
 
 $$
+A=
 \begin{pmatrix}
 2 & 1 \\
 1 & -1
-\end{pmatrix}
+\end{pmatrix},
+\quad
+\mathbf{x}=
 \begin{pmatrix}
 x \\
 y
-\end{pmatrix}
-=
+\end{pmatrix},
+\quad
+\mathbf{b}=
 \begin{pmatrix}
 5 \\
 1
 \end{pmatrix}
 $$
 
-と書ける。
+$$
+A\mathbf{x}=\mathbf{b}
+$$
 
 逆行列が存在すれば
 
