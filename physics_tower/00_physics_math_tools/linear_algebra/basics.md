@@ -29,8 +29,8 @@
 - ベクトル:
 
 $$
-\vec{x}=
-\pmatrix{
+\\vec{x}=
+\\pmatrix{
 x_1 \\
 \vdots \\
 x_n
@@ -46,7 +46,7 @@ $$
 - 線形系:
 
 $$
-A\vec{x}=\vec{b}
+A\\vec{x}=\\vec{b}
 $$
 
 - 単位行列:
@@ -64,7 +64,7 @@ $$
 - 固有値問題:
 
 $$
-A\vec{v}=\lambda\vec{v}
+A\\vec{v}=\lambda\\vec{v}
 $$
 
 単位は成分ごとに持つ。和を取る場合は必ず同次元であることを確認する。
@@ -91,26 +91,26 @@ $$
 
 $$
 A=
-\pmatrix{
+\\pmatrix{
 2 & 1 \\
 3 & -2
 },
 \quad
-\vec{x}=
-\pmatrix{
+\\vec{x}=
+\\pmatrix{
 x \\
 y
 },
 \quad
-\vec{b}=
-\pmatrix{
+\\vec{b}=
+\\pmatrix{
 5 \\
 4
 }
 $$
 
 $$
-A\vec{x}=\vec{b}
+A\\vec{x}=\\vec{b}
 $$
 
 行列式:
@@ -125,37 +125,37 @@ $$
 
 $$
 A^{-1}=\frac{1}{-7}
-\pmatrix{
+\\pmatrix{
 -2 & -1 \\
 -3 & 2
 }
 $$
 
 $$
-\vec{x}=A^{-1}\vec{b}
+\\vec{x}=A^{-1}\\vec{b}
 $$
 
 計算:
 
 $$
-\vec{x}=
+\\vec{x}=
 \frac{1}{-7}
-\pmatrix{
+\\pmatrix{
 -2 & -1 \\
 -3 & 2
 }
-\pmatrix{
+\\pmatrix{
 5 \\
 4
 }
 =
 \frac{1}{-7}
-\pmatrix{
+\\pmatrix{
 -14 \\
 -7
 }
 =
-\pmatrix{
+\\pmatrix{
 2 \\
 1
 }
@@ -175,7 +175,7 @@ $$
 
 $$
 A=
-\pmatrix{
+\\pmatrix{
 4 & 1 \\
 2 & 3
 }
@@ -189,7 +189,7 @@ $$
 
 $$
 \det
-\pmatrix{
+\\pmatrix{
 4-\lambda & 1 \\
 2 & 3-\lambda
 }
@@ -214,15 +214,15 @@ $$
 #### 固有値 5
 
 $$
-(A-5I)\vec{v}=0
+(A-5I)\\vec{v}=0
 $$
 
 $$
-\pmatrix{
+\\pmatrix{
 -1 & 1 \\
 2 & -2
 }
-\pmatrix{
+\\pmatrix{
 v_1 \\
 v_2
 }=0
@@ -235,8 +235,8 @@ $$
 1つ選んで
 
 $$
-\vec{v}^{(1)}=
-\pmatrix{
+\\vec{v}^{(1)}=
+\\pmatrix{
 1 \\
 1
 }
@@ -245,15 +245,15 @@ $$
 #### 固有値 2
 
 $$
-(A-2I)\vec{v}=0
+(A-2I)\\vec{v}=0
 $$
 
 $$
-\pmatrix{
+\\pmatrix{
 2 & 1 \\
 2 & 1
 }
-\pmatrix{
+\\pmatrix{
 v_1 \\
 v_2
 }=0
@@ -266,8 +266,8 @@ $$
 1つ選んで
 
 $$
-\vec{v}^{(2)}=
-\pmatrix{
+\\vec{v}^{(2)}=
+\\pmatrix{
 1 \\
 -2
 }
@@ -279,7 +279,7 @@ $$
 
 $$
 P=
-\pmatrix{
+\\pmatrix{
 1 & 1 \\
 1 & -2
 }
@@ -289,7 +289,7 @@ $$
 
 $$
 D=
-\pmatrix{
+\\pmatrix{
 5 & 0 \\
 0 & 2
 }
@@ -316,7 +316,7 @@ $$
 2. 固有値・固有ベクトルは
 
 $$
-A\vec{v}=\lambda\vec{v}
+A\\vec{v}=\lambda\\vec{v}
 $$
 
 を直接確認する。
@@ -355,7 +355,7 @@ $$
 
 $$
 A=
-\pmatrix{
+\\pmatrix{
 1 & 2 \\
 0 & 3
 }
@@ -377,7 +377,7 @@ $$
 
 $$
 A=
-\pmatrix{
+\\pmatrix{
 2 & 1 \\
 1 & 2
 }
@@ -389,7 +389,7 @@ $$
 
 $$
 \det(A-\lambda I)=
-\vmatrix{
+\\vmatrix{
 2-\lambda & 1 \\
 1 & 2-\lambda
 }
@@ -419,7 +419,7 @@ $$
 - 連立一次方程式は
 
 $$
-A\vec{x}=\vec{b}
+A\\vec{x}=\\vec{b}
 $$
 
 で統一できる。
@@ -461,7 +461,7 @@ $$
 
 $$
 \det
-\pmatrix{
+\\pmatrix{
 2 & 3 \\
 1 & 4
 }
@@ -471,14 +471,14 @@ $$
 3. **易**: 
 
 $$
-\vec{u}=
-\pmatrix{
+\\vec{u}=
+\\pmatrix{
 1 \\
 2
 },
 \quad
-\vec{v}=
-\pmatrix{
+\\vec{v}=
+\\pmatrix{
 3 \\
 -1
 }
@@ -488,7 +488,7 @@ $$
 4. **易**: 対角行列
 
 $$
-\pmatrix{
+\\pmatrix{
 6 & 0 \\
 0 & -1
 }
@@ -499,7 +499,7 @@ $$
 
 $$
 A=
-\pmatrix{
+\\pmatrix{
 1 & 1 \\
 0 & 1
 }
@@ -526,7 +526,7 @@ $$
 
 $$
 A=
-\pmatrix{
+\\pmatrix{
 0 & 1 \\
 1 & 0
 }
@@ -537,7 +537,7 @@ $$
 
 $$
 A=
-\pmatrix{
+\\pmatrix{
 3 & 0 \\
 4 & 2
 }
@@ -548,7 +548,7 @@ $$
 
 $$
 A=
-\pmatrix{
+\\pmatrix{
 1 & 2 \\
 2 & 1
 }
@@ -564,7 +564,7 @@ $$
 のとき
 
 $$
-A\vec{x}=\vec{0}
+A\\vec{x}=\\vec{0}
 $$
 
 が非自明解を持ち得る理由を述べよ。  
@@ -599,7 +599,7 @@ $$
 3. **解答**:  
 
 $$
-\vec{u}\cdot\vec{v}=1\cdot3+2\cdot(-1)=1
+\\vec{u}\cdot\\vec{v}=1\cdot3+2\cdot(-1)=1
 $$
 
 4. **解答**:  
@@ -614,16 +614,16 @@ $$
 
 $$
 A^2=
-\pmatrix{
+\\pmatrix{
 1 & 1 \\
 0 & 1
 }
-\pmatrix{
+\\pmatrix{
 1 & 1 \\
 0 & 1
 }
 =
-\pmatrix{
+\\pmatrix{
 1 & 2 \\
 0 & 1
 }
@@ -637,7 +637,7 @@ $$
 
 $$
 \det(A-\lambda I)=
-\vmatrix{
+\\vmatrix{
 -\lambda & 1 \\
 1 & -\lambda
 }
@@ -661,7 +661,7 @@ $$
 
 $$
 \det(A-\lambda I)=
-\vmatrix{
+\\vmatrix{
 1-\lambda & 2 \\
 2 & 1-\lambda
 }
@@ -689,13 +689,13 @@ $$
 したがって核が非自明になり得るため
 
 $$
-A\vec{x}=\vec{0}
+A\\vec{x}=\\vec{0}
 $$
 
 に
 
 $$
-\vec{x}\neq\vec{0}
+\\vec{x}\neq\\vec{0}
 $$
 
 が存在し得る。
