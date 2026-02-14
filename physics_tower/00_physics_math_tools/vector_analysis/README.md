@@ -87,8 +87,7 @@ $$
 - 発散:
 
 $$
-\nabla\cdot\mathbf{F}
-=
+\nabla\cdot\mathbf{F}=
 \frac{\partial F_x}{\partial x}
 +
 \frac{\partial F_y}{\partial y}
@@ -99,8 +98,7 @@ $$
 - 回転:
 
 $$
-\nabla\times\mathbf{F}
-=
+\nabla\times\mathbf{F}=
 \begin{pmatrix}
 \frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z} \\
 \frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x} \\
@@ -140,8 +138,7 @@ $$
 に対して発散を計算する。
 
 $$
-\nabla\cdot\mathbf{F}
-=
+\nabla\cdot\mathbf{F}=
 \frac{\partial x^2}{\partial x}
 +
 \frac{\partial (xy)}{\partial y}
@@ -157,8 +154,7 @@ $$
 次に回転を計算する。
 
 $$
-\nabla\times\mathbf{F}
-=
+\nabla\times\mathbf{F}=
 \begin{pmatrix}
 \frac{\partial z}{\partial y}-\frac{\partial (xy)}{\partial z} \\
 \frac{\partial x^2}{\partial z}-\frac{\partial z}{\partial x} \\
@@ -193,8 +189,7 @@ $$
 に対して
 
 $$
-\iiint_V (\nabla\cdot\mathbf{F})\,dV
-=
+\iiint_V (\nabla\cdot\mathbf{F})\,dV=
 \iint_S \mathbf{F}\cdot d\mathbf{S}
 $$
 
@@ -218,8 +213,7 @@ $$
 に対して
 
 $$
-\iint_S (\nabla\times\mathbf{F})\cdot d\mathbf{S}
-=
+\iint_S (\nabla\times\mathbf{F})\cdot d\mathbf{S}=
 \oint_C \mathbf{F}\cdot d\mathbf{l}
 $$
 
@@ -260,8 +254,7 @@ $$
 **解答**
 
 $$
-\nabla\times\mathbf{F}
-=
+\nabla\times\mathbf{F}=
 \begin{pmatrix}
 0 \\
 0 \\
@@ -304,8 +297,7 @@ $$
 発散定理より
 
 $$
-\iint_S \mathbf{F}\cdot d\mathbf{S}
-=
+\iint_S \mathbf{F}\cdot d\mathbf{S}=
 \iiint_V 3\,dV
 =3\cdot\frac{4}{3}\pi R^3
 =4\pi R^3
@@ -496,8 +488,7 @@ $$
 9. **解答**:  
 
 $$
-\iint_S \mathbf{F}\cdot d\mathbf{S}
-=
+\iint_S \mathbf{F}\cdot d\mathbf{S}=
 \iiint_V 3\,dV
 =4\pi R^3
 $$
