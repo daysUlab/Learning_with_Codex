@@ -369,29 +369,44 @@ $$
 
 ## 6. 演習問題（10問）
 
-1. 任意の十分滑らかな
+### 問1
+
+任意の十分滑らかなベクトル場
+
 $$
 \mathbf{F}
 $$
-について
+
+について、次を成分表示で示せ。
+
 $$
 \nabla\cdot(\nabla\times\mathbf{F})=0
 $$
-を成分で示せ。
-2. 任意の十分滑らかな
+
+### 問2
+
+任意の十分滑らかなスカラー場
+
 $$
 f
 $$
-について
+
+について、次を成分表示で示せ。
+
 $$
 \nabla\times(\nabla f)=\mathbf{0}
 $$
-を成分で示せ。
-3. 次の場について
+
+### 問3
+
+次の場に対して、
+
 $$
 \nabla\times(\nabla\times\mathbf{F})
 $$
+
 を求めよ。
+
 $$
 \mathbf{F}=
 \begin{pmatrix}
@@ -400,11 +415,17 @@ $$
 xy
 \end{pmatrix}
 $$
-4. 次の場で
+
+### 問4
+
+次の場で
+
 $$
 \nabla\cdot\mathbf{F}=0
 $$
+
 を確認せよ。
+
 $$
 \mathbf{F}=
 \begin{pmatrix}
@@ -413,11 +434,17 @@ x \\
 0
 \end{pmatrix}
 $$
-5. 次の場のラプラシアン
+
+### 問5
+
+次の場のラプラシアン
+
 $$
 \nabla^2\mathbf{F}
 $$
+
 を求めよ。
+
 $$
 \mathbf{F}=
 \begin{pmatrix}
@@ -426,55 +453,91 @@ yz \\
 xy
 \end{pmatrix}
 $$
-6. 次の
+
+### 問6
+
+次の
+
 $$
 \phi
 $$
-に対して
+
+に対して、
+
 $$
 \nabla\times(-\nabla\phi)
 $$
+
 を計算せよ。
+
 $$
 \phi=x^2+y^2+z^2
 $$
-7. 二重回転恒等式のy成分のみを明示的に導出せよ。
-8.
+
+### 問7
+
+二重回転恒等式の y 成分のみを明示的に導出せよ。
+
+### 問8
+
 $$
 \nabla\cdot\mathbf{v}=0
 $$
-のとき
+
+のとき、
+
 $$
 \nabla\times(\nabla\times\mathbf{v})=-\nabla^2\mathbf{v}
 $$
+
 を示せ。
-9. 反例を与えよ。
+
+### 問9
+
+次の記法が曖昧である理由を、成分表示で説明せよ。
+
 $$
 \nabla\cdot(\nabla\mathbf{F})
 $$
-という記法が曖昧である理由を、成分表示で説明せよ。
-10. 任意のベクトル場を
+
+### 問10
+
+任意のベクトル場を
+
 $$
 \mathbf{F}=\nabla\phi+\mathbf{G}
 $$
+
 と分解するとき、
+
 $$
 \nabla\cdot\mathbf{G}=0
 $$
+
 を満たす成分の意味を文章で述べよ。
 
 ## 7. 演習解答
 
-1. 回転を成分表示し、発散を取ると混合偏微分の差が3組現れ、各組が0となる。
-2. 勾配を成分表示し回転を取ると混合偏微分の差のみになり0。
-3.
+### 問1 解答
+
+回転を成分表示し発散を取ると、混合偏微分の差が3組現れ、各組が 0 となる。
+
+### 問2 解答
+
+勾配を成分表示し回転を取ると、混合偏微分の差のみになり 0 となる。
+
+### 問3 解答
+
 $$
 \nabla\times\mathbf{F}=
 \begin{pmatrix}
 x \\
 -y \\
 0
-\end{pmatrix},\quad
+\end{pmatrix}
+$$
+
+$$
 \nabla\times(\nabla\times\mathbf{F})=
 \begin{pmatrix}
 0 \\
@@ -482,49 +545,83 @@ x \\
 -2
 \end{pmatrix}
 $$
-4.
+
+### 問4 解答
+
 $$
 \nabla\cdot\mathbf{F}=\partial_x(-y)+\partial_y x+\partial_z 0=0
 $$
-5. 各成分が2次微分で0になるので
+
+### 問5 解答
+
+各成分が2次微分で 0 になるので、
+
 $$
 \nabla^2\mathbf{F}=\mathbf{0}
 $$
-6. 恒等式より必ず
+
+### 問6 解答
+
+恒等式より必ず
+
 $$
 \mathbf{0}
 $$
-7. y成分は
+
+となる。
+
+### 問7 解答
+
+y 成分は
+
 $$
 \partial_z(\partial_y F_z-\partial_z F_y)-\partial_x(\partial_x F_y-\partial_y F_x)
 $$
+
 を整理して
+
 $$
 \partial_y(\nabla\cdot\mathbf{F})-\nabla^2 F_y
 $$
+
 に一致する。
-8. 恒等式Cの右辺で
+
+### 問8 解答
+
+恒等式 C の右辺で
+
 $$
 \nabla(\nabla\cdot\mathbf{v})
 $$
-が0になるので直ちに成立。
-9.
+
+が 0 になるので直ちに成立する。
+
+### 問9 解答
+
 $$
 \nabla\mathbf{F}
 $$
+
 はヤコビ行列を指す場合と他の記法が混在し、
+
 $$
 \nabla\cdot(\nabla\mathbf{F})
 $$
-は成分ごとの発散なのかテンソル縮約なのか不明確。明示的な添字が必要。
-10.
+
+は成分ごとの発散なのかテンソル縮約なのか不明確である。明示的な添字が必要。
+
+### 問10 解答
+
 $$
 \nabla\phi
 $$
+
 は無渦成分、
+
 $$
 \mathbf{G}
 $$
+
 は発散ゼロのソレノイダル成分で、流体では体積保存流れの成分を表す。
 
 ## 8. 章末まとめ
