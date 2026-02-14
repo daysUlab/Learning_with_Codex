@@ -539,3 +539,8 @@ $$
 - 関連: [part02_energy_conservation/README.md](part02_energy_conservation/README.md)
 - 関連: [part03_angular_momentum/README.md](part03_angular_momentum/README.md)
 - 補助: [columns_and_qa/README.md](columns_and_qa/README.md)
+
+
+## 参考（学習補助）
+
+- EMANの物理学（力学・電磁気ほか）: https://eman-physics.net/
