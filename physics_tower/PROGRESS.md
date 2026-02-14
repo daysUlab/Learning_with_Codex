@@ -41,11 +41,11 @@
 | `physics_tower/01_dynamics/part02_energy_conservation/README.md` | DONE | 2026-02-14 | エネルギー保存パートを執筆。仕事-エネルギー関係、例題2題、演習5問を追加。 |
 | `physics_tower/01_dynamics/part03_angular_momentum/README.md` | DONE | 2026-02-14 | 角運動量保存パートを執筆。トルクとの関係、例題2題、演習5問を追加。 |
 | `physics_tower/01_dynamics/part04_applications/README.md` | DONE | 2026-02-14 | 応用パートを執筆。保存則選択フロー、複合例題2題、演習5問を追加。 |
-| `physics_tower/02_electromagnetism/00_overview.md` | TODO | - |  |
-| `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | TODO | - |  |
-| `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | TODO | - |  |
-| `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | TODO | - |  |
-| `physics_tower/02_electromagnetism/qa/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/00_overview.md` | DONE | 2026-02-14 | 電磁気章の入口を教科書形式で執筆。マクスウェル方程式、学習導線、例題を追加。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | DONE | 2026-02-14 | 方程式構築パートを執筆。4式の導入順と変位電流項の位置づけを追加。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | DONE | 2026-02-14 | 方程式適用パートを執筆。対称性ベースの解法手順、例題、演習を追加。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | DONE | 2026-02-14 | 現象論パートを執筆。電磁誘導・電磁波・エネルギー流の最小セットを追加。 |
+| `physics_tower/02_electromagnetism/qa/README.md` | DONE | 2026-02-14 | Q&Aページを執筆。電場/磁場の結合、変位電流、境界条件のFAQを追加。 |
 | `physics_tower/02_electromagnetism/remedial/README.md` | TODO | - |  |
 | `physics_tower/03_analytical_mechanics/00_overview.md` | TODO | - |  |
 | `physics_tower/03_analytical_mechanics/part01_supplements/README.md` | TODO | - |  |
