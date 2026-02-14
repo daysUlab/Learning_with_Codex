@@ -30,7 +30,7 @@
 | `physics_tower/00_physics_math_tools/experiment/README.md` | DONE | 2026-02-14 | 実験章の入口を教科書化。平均・標準偏差・誤差伝播・有効数字を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/experiment/errors_significant_digits.md` | DONE | 2026-02-14 | 誤差評価と有効数字の実践ページを執筆。統計量・誤差伝播・丸め規則を整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/linear_algebra/README.md` | DONE | 2026-02-14 | 線形代数章の入口を教科書化。連立方程式・固有値問題・対角化を整理し、演習10問＋全解答を追加。 |
-| `physics_tower/00_physics_math_tools/linear_algebra/basics.md` | TODO | - |  |
+| `physics_tower/00_physics_math_tools/linear_algebra/basics.md` | DONE | 2026-02-14 | 線形代数基礎実践を執筆。連立・固有値・対角化を途中式で整理し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/vector_analysis/README.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/vector_analysis/nabla_identities.md` | TODO | - |  |
 | `physics_tower/01_dynamics/00_overview.md` | TODO | - |  |
