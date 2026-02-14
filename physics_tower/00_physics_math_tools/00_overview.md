@@ -224,8 +224,7 @@ $$
 \end{pmatrix}
 \begin{pmatrix}
 x\\y
-\end{pmatrix}
-=
+\end{pmatrix}=
 \begin{pmatrix}
 5\\1
 \end{pmatrix}

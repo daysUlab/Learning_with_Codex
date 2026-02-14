@@ -492,8 +492,7 @@ A^2=
 \begin{pmatrix}
 1 & 2 \\
 0 & 1
-\end{pmatrix}
-=
+\end{pmatrix}=
 \begin{pmatrix}
 1 & 4 \\
 0 & 1
