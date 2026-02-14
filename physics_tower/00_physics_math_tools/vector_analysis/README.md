@@ -3,13 +3,13 @@
 ベクトル解析は、電磁気学・流体力学・連続体力学を読むための共通言語です。  
 「場」を扱う物理では、次の3演算が中核になります。
 
-$$
+```text
 \nabla f,
 \quad
 \nabla\cdotF,
 \quad
 \nabla\timesF
-$$
+```
 
 この章では、直観から式へ、式から検算へという順で、後続章にそのまま持ち込める形へ整理します。
 
@@ -23,9 +23,9 @@ $$
 4. 単位・符号・座標系の取り方で誤らない計算手順を実行できる。
 5. 後続ページ
 
-$$
+```text
 \texttt{nabla\_identities.md}
-$$
+```
 
 で恒等式を使った展開に進める。
 
@@ -44,49 +44,49 @@ $$
 
 直交座標系
 
-$$
+```text
 (x,y,z)
-$$
+```
 
 を基本に、ナブラを
 
-$$
+```text
 \nabla=
 \left(
 \frac{\partial}{\partial x},
 \frac{\partial}{\partial y},
 \frac{\partial}{\partial z}
 \right)
-$$
+```
 
 と定義する。
 
 - スカラー場:
 
-$$
+```text
 f(x,y,z)
-$$
+```
 
 - ベクトル場:
 
-$$
+```text
 F=(F_x,F_y,F_z)
-$$
+```
 
 - 勾配:
 
-$$
+```text
 \nabla f=
 \left(
 \frac{\partial f}{\partial x},
 \frac{\partial f}{\partial y},
 \frac{\partial f}{\partial z}
 \right)
-$$
+```
 
 - 発散:
 
-$$
+```text
 \nabla\cdotF
 =
 \frac{\partial F_x}{\partial x}
@@ -94,15 +94,15 @@ $$
 \frac{\partial F_y}{\partial y}
 +
 \frac{\partial F_z}{\partial z}
-$$
+```
 
 - 回転:
 
-$$
+```text
 \nabla\timesF
 =
 [[\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z}; \frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x}; \frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}]]
-$$
+```
 
 ## 4. 本文（直観→導出→確認）
 
@@ -113,15 +113,15 @@ $$
 
 電磁気で言えば、
 
-$$
+```text
 \nabla\cdotE
-$$
+```
 
 は電荷密度と結びつき、
 
-$$
+```text
 \nabla\timesE
-$$
+```
 
 は時間変化する磁場と結びつく。
 
@@ -129,13 +129,13 @@ $$
 
 ベクトル場
 
-$$
+```text
 F=(x^2,xy,z)
-$$
+```
 
 に対して発散を計算する。
 
-$$
+```text
 \nabla\cdotF
 =
 \frac{\partial x^2}{\partial x}
@@ -143,16 +143,16 @@ $$
 \frac{\partial (xy)}{\partial y}
 +
 \frac{\partial z}{\partial z}
-$$
+```
 
-$$
+```text
 =2x+x+1
 =3x+1
-$$
+```
 
 次に回転を計算する。
 
-$$
+```text
 \nabla\timesF
 =
 [[\frac{\partial z}{\partial y}-\frac{\partial (xy)}{\partial z}; \frac{\partial x^2}{\partial z}-\frac{\partial z}{\partial x}; \frac{\partial (xy)}{\partial x}-\frac{\partial x^2}{\partial y}]]
@@ -160,29 +160,29 @@ $$
 [[0-0; 0-0; y-0]]
 =
 [[0; 0; y]]
-$$
+```
 
 ### 4.3 導出B：発散定理
 
 体積領域
 
-$$
+```text
 V
-$$
+```
 
 とその境界面
 
-$$
+```text
 S=\partial V
-$$
+```
 
 に対して
 
-$$
+```text
 \iiint_V (\nabla\cdotF)\,dV
 =
 \iint_S F\cdot dS
-$$
+```
 
 が成り立つ。  
 左辺は内部での総湧き出し、右辺は境界面から外へ出る総流束で、保存則の幾何学表現になっている。
@@ -191,23 +191,23 @@ $$
 
 曲面
 
-$$
+```text
 S
-$$
+```
 
 とその境界曲線
 
-$$
+```text
 C=\partial S
-$$
+```
 
 に対して
 
-$$
+```text
 \iint_S (\nabla\timesF)\cdot dS
 =
 \oint_C F\cdot dl
-$$
+```
 
 が成り立つ。  
 左辺は面全体の回転の総和、右辺は境界に沿った循環。
@@ -223,29 +223,29 @@ $$
 
 ### 例題1（易）
 
-$$
+```text
 f=x^2+y^2+z^2
-$$
+```
 
 の勾配を求めよ。
 
 **解答**
 
-$$
+```text
 \nabla f=(2x,2y,2z)
-$$
+```
 
 ### 例題2（中）
 
-$$
+```text
 F=(-y,x,0)
-$$
+```
 
 の回転を求めよ。
 
 **解答**
 
-$$
+```text
 \nabla\timesF
 =
 [[0; 0; \frac{\partial x}{\partial x}-\frac{\partial(-y)}{\partial y}]]
@@ -253,19 +253,19 @@ $$
 [[0; 0; 1-(-1)]]
 =
 [[0; 0; 2]]
-$$
+```
 
 ### 例題3（やや難）
 
-$$
+```text
 F=(x,y,z)
-$$
+```
 
 について、半径
 
-$$
+```text
 R
-$$
+```
 
 の球面での流束を求めよ。
 
@@ -273,19 +273,19 @@ $$
 
 発散は
 
-$$
+```text
 \nabla\cdotF=1+1+1=3
-$$
+```
 
 発散定理より
 
-$$
+```text
 \iint_S F\cdot dS
 =
 \iiint_V 3\,dV
 =3\cdot\frac{4}{3}\pi R^3
 =4\pi R^3
-$$
+```
 
 ## 6. よくある誤解・落とし穴
 
@@ -311,96 +311,96 @@ $$
 
 1. **易**: 
 
-$$
+```text
 f=x^2y
-$$
+```
 
 の
 
-$$
+```text
 \nabla f
-$$
+```
 
 を求めよ。  
 2. **易**: 
 
-$$
+```text
 F=(x,0,0)
-$$
+```
 
 の発散を求めよ。  
 3. **易**: 
 
-$$
+```text
 F=(0,0,z)
-$$
+```
 
 の発散を求めよ。  
 4. **易**: 
 
-$$
+```text
 F=(0,x,0)
-$$
+```
 
 の回転を求めよ。  
 5. **中**: 
 
-$$
+```text
 F=(-y,x,0)
-$$
+```
 
 の発散を求めよ。  
 6. **中**: 
 
-$$
+```text
 F=(x^2,y^2,z^2)
-$$
+```
 
 の発散を求めよ。  
 7. **中**: 
 
-$$
+```text
 F=(yz,zx,xy)
-$$
+```
 
 の回転を求めよ。  
 8. **中**: 
 
-$$
+```text
 F=(x,y,z)
-$$
+```
 
 の発散を求めよ。  
 9. **難**: 半径
 
-$$
+```text
 R
-$$
+```
 
 球で
 
-$$
+```text
 F=(x,y,z)
-$$
+```
 
 の流束を発散定理で求めよ。  
 10. **難**: 
 
-$$
+```text
 F=(-y,x,0)
-$$
+```
 
 について、単位円
 
-$$
+```text
 x^2+y^2=1
-$$
+```
 
 上の線積分
 
-$$
+```text
 \oint_C F\cdot dl
-$$
+```
 
 を求めよ。  
 
@@ -408,94 +408,94 @@ $$
 
 1. **解答**:  
 
-$$
+```text
 \nabla f=
 \left(
 2xy,
 \ x^2,
 \ 0
 \right)
-$$
+```
 
 2. **解答**:  
 
-$$
+```text
 \nabla\cdotF=1
-$$
+```
 
 3. **解答**:  
 
-$$
+```text
 \nabla\cdotF=1
-$$
+```
 
 4. **解答**:  
 
-$$
+```text
 \nabla\timesF=
 [[0; 0; 1]]
-$$
+```
 
 5. **解答**:  
 
-$$
+```text
 \nabla\cdotF=0
-$$
+```
 
 6. **解答**:  
 
-$$
+```text
 \nabla\cdotF=2x+2y+2z
-$$
+```
 
 7. **解答**:  
 
-$$
+```text
 \nabla\timesF=
 [[0; 0; 0]]
-$$
+```
 
 8. **解答**:  
 
-$$
+```text
 \nabla\cdotF=3
-$$
+```
 
 9. **解答**:  
 
-$$
+```text
 \iint_S F\cdot dS
 =
 \iiint_V 3\,dV
 =4\pi R^3
-$$
+```
 
 10. **解答**:  
 単位円を
 
-$$
+```text
 r(\theta)=(\cos\theta,\sin\theta,0)
-$$
+```
 
 で表す。
 
-$$
+```text
 dl=(-\sin\theta,\cos\theta,0)d\theta
-$$
+```
 
-$$
+```text
 F(r(\theta))=(-\sin\theta,\cos\theta,0)
-$$
+```
 
-$$
+```text
 F\cdot dl=1\cdot d\theta
-$$
+```
 
-$$
+```text
 \oint_C F\cdot dl=
 \int_0^{2\pi}d\theta
 =2\pi
-$$
+```
 
 ---
 
