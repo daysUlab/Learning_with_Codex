@@ -23,7 +23,7 @@
 | `physics_tower/00_physics_math_tools/calculus_techniques/README.md` | DONE | 2026-02-14 | 微積分テクニックの入口を教科書化。連鎖律・部分積分・ヤコビアンを直観→導出→確認で整理し、演習10問＋解答を追加。 |
 | `physics_tower/00_physics_math_tools/calculus_techniques/partials_integrals_jacobian.md` | DONE | 2026-02-14 | 偏微分・部分積分・ヤコビアンの実践ページを執筆。境界項と測度変換を含む導出、例題3題、演習10問＋解答を追加。 |
 | `physics_tower/00_physics_math_tools/complex_analysis/README.md` | DONE | 2026-02-14 | 複素解析の入口を教科書形式で執筆。コーシー積分公式から留数定理、実積分への適用、演習10問＋解答を追加。 |
-| `physics_tower/00_physics_math_tools/complex_analysis/residue_theorem_minimum.md` | TODO | - |  |
+| `physics_tower/00_physics_math_tools/complex_analysis/residue_theorem_minimum.md` | DONE | 2026-02-14 | 留数定理の最小実装ページを執筆。積分路選択・留数計算・実積分への復元を途中式で整理し、演習10問＋解答を追加。 |
 | `physics_tower/00_physics_math_tools/differential_equations/README.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/differential_equations/ode_methods.md` | TODO | - |  |
 | `physics_tower/00_physics_math_tools/experiment/README.md` | TODO | - |  |
