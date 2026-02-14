@@ -163,14 +163,12 @@ $$
 \frac{\partial z}{\partial y}-\frac{\partial (xy)}{\partial z} \\
 \frac{\partial x^2}{\partial z}-\frac{\partial z}{\partial x} \\
 \frac{\partial (xy)}{\partial x}-\frac{\partial x^2}{\partial y}
-\end{pmatrix}
-=
+\end{pmatrix}=
 \begin{pmatrix}
 0-0 \\
 0-0 \\
 y-0
-\end{pmatrix}
-=
+\end{pmatrix}=
 \begin{pmatrix}
 0 \\
 0 \\
@@ -268,14 +266,12 @@ $$
 0 \\
 0 \\
 \frac{\partial x}{\partial x}-\frac{\partial(-y)}{\partial y}
-\end{pmatrix}
-=
+\end{pmatrix}=
 \begin{pmatrix}
 0 \\
 0 \\
 1-(-1)
-\end{pmatrix}
-=
+\end{pmatrix}=
 \begin{pmatrix}
 0 \\
 0 \\
