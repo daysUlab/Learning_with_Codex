@@ -56,8 +56,11 @@
 | `physics_tower/01_dynamics/part04_applications/01_ballistic_pendulum.md` | DONE | 2026-02-15 | 弾道振り子ページを本文化。2段階解法、エネルギー損失評価、例題3題、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part04_applications/02_two_stage_strategy.md` | DONE | 2026-02-15 | 複合問題の一般戦略ページを本文化。段階分解テンプレ、対応表、二段階/三段階例、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part04_applications/03_checklist.md` | DONE | 2026-02-15 | 複合保存則問題のチェックリストを本文化。設計/立式/検算の実戦項目と答案テンプレを追加。 |
-| `physics_tower/02_electromagnetism/00_overview.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/00_overview.md` | DONE | 2026-02-15 | 電磁気章の入口を本文化。4本柱・学習マップ・解法フロー・力学との接続を追加。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/01_from_coulomb_to_gauss.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/02_faraday_law.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/03_ampere_maxwell.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | TODO | - |  |
 | `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | TODO | - |  |
 | `physics_tower/02_electromagnetism/qa/README.md` | TODO | - |  |
