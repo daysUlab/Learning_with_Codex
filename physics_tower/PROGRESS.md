@@ -38,7 +38,7 @@
 | `physics_tower/01_dynamics/00_overview.md` | DONE | 2026-02-14 | EMAN力学章を参考に概要本文を拡充。保存則導出・例題・演習・検算テンプレを整備。 |
 | `physics_tower/01_dynamics/columns_and_qa/README.md` | DONE | 2026-02-14 | READMEを概要ページとして整備。目的・読み進め方・子md導線を明確化。 |
 | `physics_tower/01_dynamics/part01_momentum_conservation/README.md` | DONE | 2026-02-14 | README本文を拡充。導出の意味・典型パターン・例題・落とし穴・子md導線を追加。 |
-| `physics_tower/01_dynamics/part02_energy_conservation/README.md` | TODO | - |  |
+| `physics_tower/01_dynamics/part02_energy_conservation/README.md` | DONE | 2026-02-14 | README本文を拡充。保存力/非保存力の整理、例題、誤りポイント、子md導線を追加。 |
 | `physics_tower/01_dynamics/part03_angular_momentum/README.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part04_applications/README.md` | TODO | - |  |
 | `physics_tower/02_electromagnetism/00_overview.md` | TODO | - |  |
