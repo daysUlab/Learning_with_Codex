@@ -15,3 +15,5 @@
 - 行列を扱う数式は `\begin{pmatrix}...\end{pmatrix}` を同一ブロック数式内で完結させ、閉じタグ欠落や途中分断を禁止する。
 - Physics タワー本文では、`\end{pmatrix}` / `\end{vmatrix}` の直後に `=` が続く場合は同一行（例: `...\end{pmatrix}=...`）で記述し、Markdown見出し誤解釈を避ける。
 - Physics タワー本文では、数式中の `=` の直前で改行しない（`=` は前行末尾へ置く）。
+
+- `physics_tower/01_dynamics` は README を概要ページとして保ち、話題ごとの本文は子mdに分割して管理する。
