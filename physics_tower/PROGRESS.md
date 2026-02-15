@@ -62,9 +62,21 @@
 | `physics_tower/02_electromagnetism/part01_build_maxwell/02_faraday_law.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/03_ampere_maxwell.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/01_boundary_conditions.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/02_em_waves.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/03_poynting_vector.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/part03_phenomenology/01_dielectrics.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/02_conductors_and_skin_effect.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/03_radiation_basics.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/qa/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/qa/01_common_misconceptions.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/qa/02_problem_selection.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/qa/03_units_and_signs.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/remedial/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/remedial/01_vector_calc_for_em.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/remedial/02_ode_pde_refresh.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/remedial/03_complex_representation_ac.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/03_analytical_mechanics/00_overview.md` | TODO | - |  |
 | `physics_tower/03_analytical_mechanics/part01_supplements/README.md` | TODO | - |  |
 | `physics_tower/03_analytical_mechanics/part02_basics/README.md` | TODO | - |  |
