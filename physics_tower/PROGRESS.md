@@ -56,12 +56,27 @@
 | `physics_tower/01_dynamics/part04_applications/01_ballistic_pendulum.md` | DONE | 2026-02-15 | 弾道振り子ページを本文化。2段階解法、エネルギー損失評価、例題3題、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part04_applications/02_two_stage_strategy.md` | DONE | 2026-02-15 | 複合問題の一般戦略ページを本文化。段階分解テンプレ、対応表、二段階/三段階例、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part04_applications/03_checklist.md` | DONE | 2026-02-15 | 複合保存則問題のチェックリストを本文化。設計/立式/検算の実戦項目と答案テンプレを追加。 |
-| `physics_tower/02_electromagnetism/00_overview.md` | TODO | - |  |
-| `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/00_overview.md` | DONE | 2026-02-15 | 電磁気章の入口を本文化。4本柱・学習マップ・解法フロー・力学との接続を追加。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | DONE | 2026-02-15 | マクスウェル構築パートのREADMEを本文化。学習順序・つまずき点・後続接続を追加。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/01_from_coulomb_to_gauss.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/02_faraday_law.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/03_ampere_maxwell.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/01_boundary_conditions.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/02_em_waves.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/03_poynting_vector.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/part03_phenomenology/01_dielectrics.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/02_conductors_and_skin_effect.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/03_radiation_basics.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/qa/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/qa/01_common_misconceptions.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/qa/02_problem_selection.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/qa/03_units_and_signs.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/remedial/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/remedial/01_vector_calc_for_em.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/remedial/02_ode_pde_refresh.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/remedial/03_complex_representation_ac.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/03_analytical_mechanics/00_overview.md` | TODO | - |  |
 | `physics_tower/03_analytical_mechanics/part01_supplements/README.md` | TODO | - |  |
 | `physics_tower/03_analytical_mechanics/part02_basics/README.md` | TODO | - |  |
