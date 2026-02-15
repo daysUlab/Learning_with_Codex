@@ -38,7 +38,7 @@
 | `physics_tower/01_dynamics/00_overview.md` | DONE | 2026-02-14 | EMAN力学章を参考に概要本文を拡充。保存則導出・例題・演習・検算テンプレを整備。 |
 | `physics_tower/01_dynamics/columns_and_qa/README.md` | DONE | 2026-02-14 | READMEを概要ページとして整備。目的・読み進め方・子md導線を明確化。 |
 | `physics_tower/01_dynamics/columns_and_qa/01_how_to_choose_system.md` | DONE | 2026-02-15 | 系の切り方を高密度に本文化。外力/内力の分類、保存則の判定手順、典型3パターン、例題を追加。 |
-| `physics_tower/01_dynamics/columns_and_qa/02_momentum_vs_energy.md` | TODO | - |  |
+| `physics_tower/01_dynamics/columns_and_qa/02_momentum_vs_energy.md` | DONE | 2026-02-15 | 保存則の使い分けページを本文化。区間分割フロー、非弾性/弾性の判定、2段階例題を追加。 |
 | `physics_tower/01_dynamics/columns_and_qa/03_gaussian_integral_positioning.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part01_momentum_conservation/README.md` | DONE | 2026-02-14 | README本文を拡充。導出の意味・典型パターン・例題・落とし穴・子md導線を追加。 |
 | `physics_tower/01_dynamics/part01_momentum_conservation/01_derivation.md` | DONE | 2026-02-15 | 多粒子系からの運動量保存則導出を本文化。成立条件・方向別適用・例題・検算を追加。 |
