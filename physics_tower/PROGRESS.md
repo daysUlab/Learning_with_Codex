@@ -40,7 +40,7 @@
 | `physics_tower/01_dynamics/part01_momentum_conservation/README.md` | DONE | 2026-02-14 | README本文を拡充。導出の意味・典型パターン・例題・落とし穴・子md導線を追加。 |
 | `physics_tower/01_dynamics/part02_energy_conservation/README.md` | DONE | 2026-02-14 | README本文を拡充。保存力/非保存力の整理、例題、誤りポイント、子md導線を追加。 |
 | `physics_tower/01_dynamics/part03_angular_momentum/README.md` | DONE | 2026-02-14 | README本文を拡充。角運動量保存の導出、中心力接続、例題、誤りポイントを追加。 |
-| `physics_tower/01_dynamics/part04_applications/README.md` | TODO | - |  |
+| `physics_tower/01_dynamics/part04_applications/README.md` | DONE | 2026-02-15 | README本文を拡充。保存則の選択フロー、弾道振り子例題、検算観点、子md導線を追加。 |
 | `physics_tower/02_electromagnetism/00_overview.md` | TODO | - |  |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | TODO | - |  |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | TODO | - |  |
