@@ -51,7 +51,7 @@
 | `physics_tower/01_dynamics/part03_angular_momentum/README.md` | DONE | 2026-02-14 | README本文を拡充。角運動量保存の導出、中心力接続、例題、誤りポイントを追加。 |
 | `physics_tower/01_dynamics/part03_angular_momentum/01_torque_and_L.md` | DONE | 2026-02-15 | トルクと角運動量の基本式ページを本文化。導出、多粒子拡張、原点依存、例題3題を追加。 |
 | `physics_tower/01_dynamics/part03_angular_momentum/02_central_force.md` | DONE | 2026-02-15 | 中心力ページを本文化。角運動量保存、面積速度、極座標式、有効ポテンシャル導入を追加。 |
-| `physics_tower/01_dynamics/part03_angular_momentum/03_inertia_change.md` | TODO | - |  |
+| `physics_tower/01_dynamics/part03_angular_momentum/03_inertia_change.md` | DONE | 2026-02-15 | 慣性モーメント変化ページを本文化。角運動量保存条件、エネルギー差、実例、例題3題を追加。 |
 | `physics_tower/01_dynamics/part04_applications/README.md` | DONE | 2026-02-15 | README本文を拡充。保存則の選択フロー、弾道振り子例題、検算観点、子md導線を追加。 |
 | `physics_tower/01_dynamics/part04_applications/01_ballistic_pendulum.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part04_applications/02_two_stage_strategy.md` | TODO | - |  |
