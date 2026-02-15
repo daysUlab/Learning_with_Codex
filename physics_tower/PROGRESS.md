@@ -47,11 +47,11 @@
 | `physics_tower/01_dynamics/part02_energy_conservation/README.md` | DONE | 2026-02-14 | README本文を拡充。保存力/非保存力の整理、例題、誤りポイント、子md導線を追加。 |
 | `physics_tower/01_dynamics/part02_energy_conservation/01_work_energy.md` | DONE | 2026-02-15 | 仕事と運動エネルギー定理ページを本文化。導出、複数力分解、仕事率、例題3題、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part02_energy_conservation/02_conservative_force.md` | DONE | 2026-02-15 | 保存力とポテンシャルページを本文化。同値条件、判定法、代表例、例題3題、注意点を追加。 |
-| `physics_tower/01_dynamics/part02_energy_conservation/03_nonconservative_cases.md` | TODO | - |  |
+| `physics_tower/01_dynamics/part02_energy_conservation/03_nonconservative_cases.md` | DONE | 2026-02-15 | 非保存力のエネルギー収支ページを本文化。標準式、散逸解釈、例題3題、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part03_angular_momentum/README.md` | DONE | 2026-02-14 | README本文を拡充。角運動量保存の導出、中心力接続、例題、誤りポイントを追加。 |
-| `physics_tower/01_dynamics/part03_angular_momentum/01_torque_and_L.md` | TODO | - |  |
-| `physics_tower/01_dynamics/part03_angular_momentum/02_central_force.md` | TODO | - |  |
-| `physics_tower/01_dynamics/part03_angular_momentum/03_inertia_change.md` | TODO | - |  |
+| `physics_tower/01_dynamics/part03_angular_momentum/01_torque_and_L.md` | DONE | 2026-02-15 | トルクと角運動量の基本式ページを本文化。導出、多粒子拡張、原点依存、例題3題を追加。 |
+| `physics_tower/01_dynamics/part03_angular_momentum/02_central_force.md` | DONE | 2026-02-15 | 中心力ページを本文化。角運動量保存、面積速度、極座標式、有効ポテンシャル導入を追加。 |
+| `physics_tower/01_dynamics/part03_angular_momentum/03_inertia_change.md` | DONE | 2026-02-15 | 慣性モーメント変化ページを本文化。角運動量保存条件、エネルギー差、実例、例題3題を追加。 |
 | `physics_tower/01_dynamics/part04_applications/README.md` | DONE | 2026-02-15 | README本文を拡充。保存則の選択フロー、弾道振り子例題、検算観点、子md導線を追加。 |
 | `physics_tower/01_dynamics/part04_applications/01_ballistic_pendulum.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part04_applications/02_two_stage_strategy.md` | TODO | - |  |
