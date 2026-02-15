@@ -46,7 +46,7 @@
 | `physics_tower/01_dynamics/part01_momentum_conservation/03_center_of_mass.md` | DONE | 2026-02-15 | 重心系ページを本文化。重心運動方程式、還元質量、衝突変換、典型誤りを追加。 |
 | `physics_tower/01_dynamics/part02_energy_conservation/README.md` | DONE | 2026-02-14 | README本文を拡充。保存力/非保存力の整理、例題、誤りポイント、子md導線を追加。 |
 | `physics_tower/01_dynamics/part02_energy_conservation/01_work_energy.md` | DONE | 2026-02-15 | 仕事と運動エネルギー定理ページを本文化。導出、複数力分解、仕事率、例題3題、誤り対策を追加。 |
-| `physics_tower/01_dynamics/part02_energy_conservation/02_conservative_force.md` | TODO | - |  |
+| `physics_tower/01_dynamics/part02_energy_conservation/02_conservative_force.md` | DONE | 2026-02-15 | 保存力とポテンシャルページを本文化。同値条件、判定法、代表例、例題3題、注意点を追加。 |
 | `physics_tower/01_dynamics/part02_energy_conservation/03_nonconservative_cases.md` | TODO | - |  |
 | `physics_tower/01_dynamics/part03_angular_momentum/README.md` | DONE | 2026-02-14 | README本文を拡充。角運動量保存の導出、中心力接続、例題、誤りポイントを追加。 |
 | `physics_tower/01_dynamics/part03_angular_momentum/01_torque_and_L.md` | TODO | - |  |
