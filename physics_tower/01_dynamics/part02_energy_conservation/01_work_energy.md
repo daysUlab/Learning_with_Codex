@@ -1,74 +1,98 @@
-# 仕事と運動エネルギー（仕事-エネルギー定理）
+# 仕事と運動エネルギー定理
 
-## 導出
+## 学習目標
+- 仕事と運動エネルギーの関係を運動方程式から導ける。
+- 速度や軌道が求めにくい問題でエネルギー法を使える。
 
+## 1. 導出
 運動方程式
 
 $$
-m\frac{d\mathbf{v}}{dt}=\mathbf{F}
+\mathbf{F}=m\frac{d\mathbf{v}}{dt}
 $$
 
-の両辺を
+の両辺と微小変位
 
 $$
-\mathbf{v}
+d\mathbf{r}
 $$
 
-と内積すると
+の内積をとると
 
 $$
-m\frac{d\mathbf{v}}{dt}\cdot\mathbf{v}=\mathbf{F}\cdot\mathbf{v}
+\mathbf{F}\cdot d\mathbf{r}
+= m\frac{d\mathbf{v}}{dt}\cdot d\mathbf{r}
 $$
 
-左辺は
+右辺に
 
 $$
-\frac{d}{dt}\left(\frac{1}{2}mv^2\right)
+d\mathbf{r}=\mathbf{v}dt
 $$
 
-なので
+を用いれば
 
 $$
-\frac{dK}{dt}=\mathbf{F}\cdot\mathbf{v}
+\mathbf{F}\cdot d\mathbf{r}=m\mathbf{v}\cdot d\mathbf{v}
 $$
 
-を得ます。
-
-時間積分すれば
+したがって
 
 $$
-\Delta K=\int \mathbf{F}\cdot d\mathbf{r}=W
+\int_{A}^{B}\mathbf{F}\cdot d\mathbf{r}
+=\int_{v_A}^{v_B}m\mathbf{v}\cdot d\mathbf{v}
+=\frac{1}{2}mv_B^2-\frac{1}{2}mv_A^2
 $$
 
-です。
-
-## 物理的意味
-
-- 正の仕事は運動エネルギーを増やす。
-- 負の仕事は運動エネルギーを減らす。
-
-## 代表例
-
-一定力
+となり
 
 $$
-F
+W_{A\to B}=\Delta K
 $$
 
-が変位
+を得る。
+
+## 2. 複数の力がある場合
+合力の仕事は各力の仕事の和である。
 
 $$
-\Delta x
+\Delta K=\sum_j W_j
 $$
 
-方向に働くとき
+ここから「どの力がエネルギーを供給し、どの力が散逸させるか」を切り分ける。
+
+## 3. 有効な使いどころ
+- 時間依存より位置依存が自然な問題。
+- 速度の大きさだけ知りたい問題。
+- 直線運動でなくても、仕事が計算しやすい問題。
+
+## 4. 典型例
+高さ
 
 $$
-W=F\Delta x
+h
 $$
 
-です。
+だけ落下した質点では重力の仕事
 
-## 注意点
+$$
+W= mgh
+$$
 
-経路依存な力では、仕事は始点終点だけで決まりません。
+により
+
+$$
+\frac{1}{2}mv^2-\frac{1}{2}mv_0^2 = mgh
+$$
+
+を得る。初速ゼロなら
+
+$$
+v=\sqrt{2gh}
+$$
+
+となる。
+
+## まとめ
+- 仕事と運動エネルギー定理は、運動方程式と同値の重要な表現である。
+- 力の内積積分として仕事を正しく評価することが鍵になる。
