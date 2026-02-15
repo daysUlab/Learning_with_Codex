@@ -1,15 +1,16 @@
 # part02_energy_conservation
 
-part02_energy_conservation の入口ページです。
-このディレクトリは章内の小区分として用意されており、本文はこれから追加します。
-最小限のナビゲーションのみ先に整備しています。
+`part02_energy_conservation` の入口ページです。
+このディレクトリでは、仕事とエネルギーの関係を段階的に整理します。
 
 ## この章で扱うこと
-- この区分の目的と範囲の確認
-- 追加予定ノートの整理
-- 上位章との対応関係の明確化
+- 仕事-エネルギー定理
+- 保存力とポテンシャル
+- 非保存力の補正
 
 ## ナビゲーション
 - 親: [../00_overview.md](../00_overview.md)
 - 子:
-  - （準備中）
+  - [01_work_energy.md](01_work_energy.md)
+  - [02_conservative_force.md](02_conservative_force.md)
+  - [03_nonconservative_cases.md](03_nonconservative_cases.md)
