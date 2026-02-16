@@ -21,10 +21,10 @@
 
 | file_path | status | last_updated | notes |
 |---|---|---|---|
-| `logic_tower/README.md` | TODO | - |  |
-| `logic_tower/00_orientation/README.md` | TODO | - |  |
-| `logic_tower/00_orientation/00_what_is_logic.md` | TODO | - |  |
-| `logic_tower/00_orientation/01_language_and_meaning.md` | TODO | - |  |
+| `logic_tower/README.md` | DONE | 2026-02-16 | 入口ページを初学者向けに大幅増補。到達目標・ロードマップ・用語最小セット・典型例・つまずきポイント・自己確認を追加。 |
+| `logic_tower/00_orientation/README.md` | DONE | 2026-02-16 | 導入章READMEを本文化。学習目標・3つの問い・直観例・つまずき対策・自己確認を追加。 |
+| `logic_tower/00_orientation/00_what_is_logic.md` | DONE | 2026-02-16 | 論理学の目的・必要性・誤謬例・証明/意味の2視点・最小用語・確認問題を追加し初学者向けに本文化。 |
+| `logic_tower/00_orientation/01_language_and_meaning.md` | DONE | 2026-02-16 | 構文と意味の違いを初学者向けに本文化。規則・直観例・誤解・ミニ演習・自己確認を追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | TODO | - |  |
 | `logic_tower/01_propositional_logic/00_overview.md` | TODO | - |  |
 | `logic_tower/01_propositional_logic/01_syntax_semantics.md` | TODO | - |  |
