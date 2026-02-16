@@ -58,7 +58,7 @@
 | `physics_tower/01_dynamics/part04_applications/03_checklist.md` | DONE | 2026-02-15 | 複合保存則問題のチェックリストを本文化。設計/立式/検算の実戦項目と答案テンプレを追加。 |
 | `physics_tower/02_electromagnetism/00_overview.md` | DONE | 2026-02-15 | 電磁気章の入口を本文化。4本柱・学習マップ・解法フロー・力学との接続を追加。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | DONE | 2026-02-15 | マクスウェル構築パートのREADMEを本文化。学習順序・つまずき点・後続接続を追加。 |
-| `physics_tower/02_electromagnetism/part01_build_maxwell/01_from_coulomb_to_gauss.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/01_from_coulomb_to_gauss.md` | DONE | 2026-02-15 | クーロン法則からガウス法則への導出、対称性例題、演習と解答まで本文化。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/02_faraday_law.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/03_ampere_maxwell.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | TODO | - |  |
