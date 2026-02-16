@@ -1,0 +1,54 @@
+# logic_tower 執筆進捗（PROGRESS）
+
+## 運用ルール（このリポジトリ専用）
+- ユーザーが **「次をお願いします」** とだけ指示した場合も、このファイルを最初に確認する。
+- 優先順位は次の通り。
+  1. `status=DOING` の行があれば、そのファイルを最優先で仕上げて `DONE` にする。
+  2. `DOING` が無ければ、キュー先頭から最初の `TODO` を1件だけ選んで執筆する。
+  3. 1回の実行で本文執筆は **必ず1ファイルのみ**。
+- 執筆完了後は、この表の対象行を `DONE` に更新し、`last_updated` と `notes` を記録する。
+- 次の `TODO` は同一実行内で `DOING` にしない（次回実行時に選ばれるよう `TODO` のまま残す）。
+- 対象範囲は `logic_tower/` 配下のみ。
+- 新しい章（新フォルダ）に入るタイミングでは、導線設計を先に行い、**子mdを3ファイル以上スケルトン作成**してから本文執筆に入る。
+- 入口ページは `00_overview.md` 優先、なければ `README.md` を使う。
+
+## キュー定義
+- 順序規則: `logic_tower/README.md` → `00_orientation` → `01` 以降を番号順 → `90_essays`。
+- 各フォルダ内はファイル名辞書順。
+
+## 執筆キュー
+
+| file_path | status | last_updated | notes |
+|---|---|---|---|
+| `logic_tower/README.md` | TODO | - |  |
+| `logic_tower/00_orientation/README.md` | TODO | - |  |
+| `logic_tower/00_orientation/00_what_is_logic.md` | TODO | - |  |
+| `logic_tower/00_orientation/01_language_and_meaning.md` | TODO | - |  |
+| `logic_tower/00_orientation/02_proof_and_model.md` | TODO | - |  |
+| `logic_tower/01_propositional_logic/00_overview.md` | TODO | - |  |
+| `logic_tower/01_propositional_logic/01_syntax_semantics.md` | TODO | - |  |
+| `logic_tower/01_propositional_logic/02_truth_tables.md` | TODO | - |  |
+| `logic_tower/01_propositional_logic/03_normal_forms.md` | TODO | - |  |
+| `logic_tower/01_propositional_logic/04_natural_deduction.md` | TODO | - |  |
+| `logic_tower/02_predicate_logic/00_overview.md` | TODO | - |  |
+| `logic_tower/02_predicate_logic/01_quantifiers.md` | TODO | - |  |
+| `logic_tower/02_predicate_logic/02_structures_and_models.md` | TODO | - |  |
+| `logic_tower/02_predicate_logic/03_proofs.md` | TODO | - |  |
+| `logic_tower/03_soundness_completeness/00_overview.md` | TODO | - |  |
+| `logic_tower/03_soundness_completeness/01_soundness.md` | TODO | - |  |
+| `logic_tower/03_soundness_completeness/02_completeness.md` | TODO | - |  |
+| `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | TODO | - |  |
+| `logic_tower/04_computability_and_automata/00_overview.md` | TODO | - |  |
+| `logic_tower/04_computability_and_automata/01_finite_automata.md` | TODO | - |  |
+| `logic_tower/04_computability_and_automata/02_pushdown_automata.md` | TODO | - |  |
+| `logic_tower/04_computability_and_automata/03_turing_machines.md` | TODO | - |  |
+| `logic_tower/04_computability_and_automata/04_decidability.md` | TODO | - |  |
+| `logic_tower/05_modal_and_nonclassical/00_overview.md` | TODO | - |  |
+| `logic_tower/05_modal_and_nonclassical/01_modal_logic_kripke.md` | TODO | - |  |
+| `logic_tower/05_modal_and_nonclassical/02_intuitionistic_logic.md` | TODO | - |  |
+| `logic_tower/05_modal_and_nonclassical/03_other_logics_map.md` | TODO | - |  |
+| `logic_tower/90_essays/README.md` | TODO | - |  |
+| `logic_tower/90_essays/logic_and_database_queries.md` | TODO | - | 新規スケルトン（子md拡張）。 |
+| `logic_tower/90_essays/modal_logic_and_computation.md` | TODO | - |  |
+| `logic_tower/90_essays/proof_assistants_and_logic.md` | TODO | - | 新規スケルトン（子md拡張）。 |
+| `logic_tower/PROGRESS.md` | DONE | 2026-02-16 | physics_tower の運用を踏襲して進捗管理基盤を新規作成。 |
