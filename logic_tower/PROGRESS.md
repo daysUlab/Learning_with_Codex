@@ -22,7 +22,7 @@
 | file_path | status | last_updated | notes |
 |---|---|---|---|
 | `logic_tower/README.md` | DONE | 2026-02-16 | 入口ページを初学者向けに大幅増補。到達目標・ロードマップ・用語最小セット・典型例・つまずきポイント・自己確認を追加。 |
-| `logic_tower/00_orientation/README.md` | TODO | - |  |
+| `logic_tower/00_orientation/README.md` | DONE | 2026-02-16 | 導入章READMEを本文化。学習目標・3つの問い・直観例・つまずき対策・自己確認を追加。 |
 | `logic_tower/00_orientation/00_what_is_logic.md` | TODO | - |  |
 | `logic_tower/00_orientation/01_language_and_meaning.md` | TODO | - |  |
 | `logic_tower/00_orientation/02_proof_and_model.md` | TODO | - |  |
