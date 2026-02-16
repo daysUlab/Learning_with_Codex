@@ -65,7 +65,7 @@
 | `physics_tower/02_electromagnetism/part02_use_maxwell/01_boundary_conditions.md` | DONE | 2026-02-16 | 境界条件の法線/接線導出、導体条件、例題、演習と解答まで本文化。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/02_em_waves.md` | DONE | 2026-02-16 | 真空中波動方程式の導出、平面波関係、ポインティングベクトル、演習と解答まで本文化。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/03_poynting_vector.md` | DONE | 2026-02-16 | ポインティング定理の導出、エネルギー密度、平面波強度、演習と解答まで本文化。 |
-| `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | DONE | 2026-02-16 | 現象論パートの入口を本文化。誘電体→導体→放射の学習導線と近似の観点を整備。 |
 | `physics_tower/02_electromagnetism/part03_phenomenology/01_dielectrics.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part03_phenomenology/02_conductors_and_skin_effect.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part03_phenomenology/03_radiation_basics.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
