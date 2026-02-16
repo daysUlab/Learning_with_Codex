@@ -61,7 +61,7 @@
 | `physics_tower/02_electromagnetism/part01_build_maxwell/01_from_coulomb_to_gauss.md` | DONE | 2026-02-15 | クーロン法則からガウス法則への導出、対称性例題、演習と解答まで本文化。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/02_faraday_law.md` | DONE | 2026-02-15 | ファラデー法則の積分形・微分形、レンツの法則、例題、演習と解答まで本文化。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/03_ampere_maxwell.md` | DONE | 2026-02-15 | アンペール・マクスウェル法則の補正理由、連続の式との整合、例題、演習と解答まで本文化。 |
-| `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | TODO | - |  |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | DONE | 2026-02-16 | part02の入口を本文化。境界条件→波動→エネルギー流の学習導線と注意点を整備。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/01_boundary_conditions.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/02_em_waves.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
 | `physics_tower/02_electromagnetism/part02_use_maxwell/03_poynting_vector.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
