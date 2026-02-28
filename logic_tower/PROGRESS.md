@@ -29,7 +29,7 @@
 | `logic_tower/00_orientation/01_language_and_meaning.md` | DONE | 2026-02-16 | 構文と意味の違いを初学者向けに本文化。規則・直観例・誤解・ミニ演習・自己確認を追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | DONE | 2026-02-16 | 証明視点とモデル視点の違いを本文化。記号（⊢/⊨）、健全性/完全性の入口、演習と自己確認を追加。 |
 | `logic_tower/01_propositional_logic/00_overview.md` | DONE | 2026-02-16 | 命題論理章の入口を本文化。到達目標・学習マップ・典型例・つまずき対策・自己確認を追加。 |
-| `logic_tower/01_propositional_logic/01_syntax_semantics.md` | TODO | - |  |
+| `logic_tower/01_propositional_logic/01_syntax_semantics.md` | DONE | 2026-02-16 | 構文と意味の基礎を本文化。Mermaid図で処理フローを可視化し、規則・例・演習・自己確認を追加。 |
 | `logic_tower/01_propositional_logic/02_truth_tables.md` | TODO | - |  |
 | `logic_tower/01_propositional_logic/03_normal_forms.md` | TODO | - |  |
 | `logic_tower/01_propositional_logic/04_natural_deduction.md` | TODO | - |  |
