@@ -40,7 +40,7 @@
 | `logic_tower/02_predicate_logic/03_proofs.md` | DONE | 2026-02-16 | 述語論理の証明規則を本文化。Mermaid証明フロー図、TeX記法、量化導入/除去規則と変数条件を追加。 |
 | `logic_tower/03_soundness_completeness/00_overview.md` | DONE | 2026-02-16 | 健全性・完全性章の入口を本文化。Mermaid概念図とTeX記法で⊢/⊨/コンパクト性の関係を整理。 |
 | `logic_tower/03_soundness_completeness/01_soundness.md` | DONE | 2026-02-16 | 健全性を本文化。Mermaid概念図、TeX定義、局所健全性の例、完全性との差分と演習を追加。 |
-| `logic_tower/03_soundness_completeness/02_completeness.md` | TODO | - |  |
+| `logic_tower/03_soundness_completeness/02_completeness.md` | DONE | 2026-02-16 | 完全性を本文化。Mermaid方向図、TeX定義、健全性との対比、反例モデル構成の発想、演習を追加。 |
 | `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | TODO | - |  |
 | `logic_tower/04_computability_and_automata/00_overview.md` | TODO | - |  |
 | `logic_tower/04_computability_and_automata/01_finite_automata.md` | TODO | - |  |
