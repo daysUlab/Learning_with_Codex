@@ -38,7 +38,7 @@
 | `logic_tower/02_predicate_logic/01_quantifiers.md` | DONE | 2026-02-16 | 量化記号を本文化。Mermaid学習フロー図、TeX記法、否定同値変形、スコープ注意点、演習を追加。 |
 | `logic_tower/02_predicate_logic/02_structures_and_models.md` | DONE | 2026-02-16 | 構造とモデルを本文化。Mermaid意味評価フロー図、TeX記法、充足/妥当性の区別、演習を追加。 |
 | `logic_tower/02_predicate_logic/03_proofs.md` | DONE | 2026-02-16 | 述語論理の証明規則を本文化。Mermaid証明フロー図、TeX記法、量化導入/除去規則と変数条件を追加。 |
-| `logic_tower/03_soundness_completeness/00_overview.md` | TODO | - |  |
+| `logic_tower/03_soundness_completeness/00_overview.md` | DONE | 2026-02-16 | 健全性・完全性章の入口を本文化。Mermaid概念図とTeX記法で⊢/⊨/コンパクト性の関係を整理。 |
 | `logic_tower/03_soundness_completeness/01_soundness.md` | TODO | - |  |
 | `logic_tower/03_soundness_completeness/02_completeness.md` | TODO | - |  |
 | `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | TODO | - |  |
