@@ -32,7 +32,7 @@
 | `logic_tower/01_propositional_logic/00_overview.md` | DONE | 2026-02-16 | 命題論理章の入口を本文化。到達目標・学習マップ・典型例・つまずき対策・自己確認を追加。 |
 | `logic_tower/01_propositional_logic/01_syntax_semantics.md` | DONE | 2026-02-16 | 構文と意味の基礎を本文化。Mermaid図のGitHub互換性を修正し、処理フロー可視化・規則・例・演習・自己確認を整備。 |
 | `logic_tower/01_propositional_logic/02_truth_tables.md` | DONE | 2026-02-16 | 真理値表の作り方を本文化。Mermaid手順図とTeX論理記号を用いて判定手順・反例探索・演習を追加。 |
-| `logic_tower/01_propositional_logic/03_normal_forms.md` | TODO | - |  |
+| `logic_tower/01_propositional_logic/03_normal_forms.md` | DONE | 2026-02-16 | 標準形（CNF/DNF）を本文化。Mermaid変換フロー図とTeX記法で同値変形・例題・演習を追加。 |
 | `logic_tower/01_propositional_logic/04_natural_deduction.md` | TODO | - |  |
 | `logic_tower/02_predicate_logic/00_overview.md` | TODO | - |  |
 | `logic_tower/02_predicate_logic/01_quantifiers.md` | TODO | - |  |
