@@ -36,10 +36,10 @@
 | `logic_tower/01_propositional_logic/04_natural_deduction.md` | DONE | 2026-02-16 | 自然演繹を本文化。Mermaid証明フロー図、導入/除去規則、TeX記号での例題・演習を追加。 |
 | `logic_tower/02_predicate_logic/00_overview.md` | DONE | 2026-02-16 | 述語論理章の入口を本文化。Mermaid学習フロー図とTeX記法で量化・モデル・証明への導線を追加。 |
 | `logic_tower/02_predicate_logic/01_quantifiers.md` | DONE | 2026-02-16 | 量化記号を本文化。Mermaid学習フロー図、TeX記法、否定同値変形、スコープ注意点、演習を追加。 |
-| `logic_tower/02_predicate_logic/02_structures_and_models.md` | TODO | - |  |
-| `logic_tower/02_predicate_logic/03_proofs.md` | TODO | - |  |
-| `logic_tower/03_soundness_completeness/00_overview.md` | TODO | - |  |
-| `logic_tower/03_soundness_completeness/01_soundness.md` | TODO | - |  |
+| `logic_tower/02_predicate_logic/02_structures_and_models.md` | DONE | 2026-02-16 | 構造とモデルを本文化。Mermaid意味評価フロー図、TeX記法、充足/妥当性の区別、演習を追加。 |
+| `logic_tower/02_predicate_logic/03_proofs.md` | DONE | 2026-02-16 | 述語論理の証明規則を本文化。Mermaid証明フロー図、TeX記法、量化導入/除去規則と変数条件を追加。 |
+| `logic_tower/03_soundness_completeness/00_overview.md` | DONE | 2026-02-16 | 健全性・完全性章の入口を本文化。Mermaid概念図とTeX記法で⊢/⊨/コンパクト性の関係を整理。 |
+| `logic_tower/03_soundness_completeness/01_soundness.md` | DONE | 2026-02-16 | 健全性を本文化。Mermaid概念図、TeX定義、局所健全性の例、完全性との差分と演習を追加。 |
 | `logic_tower/03_soundness_completeness/02_completeness.md` | TODO | - |  |
 | `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | TODO | - |  |
 | `logic_tower/04_computability_and_automata/00_overview.md` | TODO | - |  |
