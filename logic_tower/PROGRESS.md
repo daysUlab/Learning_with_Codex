@@ -12,6 +12,8 @@
 - 新しい章（新フォルダ）に入るタイミングでは、導線設計を先に行い、**子mdを3ファイル以上スケルトン作成**してから本文執筆に入る。
 - 入口ページは `00_overview.md` 優先、なければ `README.md` を使う。
 - 本文化時は初心者向けを最優先とし、定義だけで終わらず「直観・例・つまずきポイント・確認問題」の4要素を可能な限り含める。
+- 図解はASCIIではなく `mermaid` を使用し、本文化ページには原則として **1記事1図以上** を含める。
+- `DONE` 更新前に「Mermaid図があるか」「図の読み取りポイント説明があるか」を確認する。
 
 ## キュー定義
 - 順序規則: `logic_tower/README.md` → `00_orientation` → `01` 以降を番号順 → `90_essays`。
@@ -26,8 +28,8 @@
 | `logic_tower/00_orientation/00_what_is_logic.md` | DONE | 2026-02-16 | 論理学の目的・必要性・誤謬例・証明/意味の2視点・最小用語・確認問題を追加し初学者向けに本文化。 |
 | `logic_tower/00_orientation/01_language_and_meaning.md` | DONE | 2026-02-16 | 構文と意味の違いを初学者向けに本文化。規則・直観例・誤解・ミニ演習・自己確認を追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | DONE | 2026-02-16 | 証明視点とモデル視点の違いを本文化。記号（⊢/⊨）、健全性/完全性の入口、演習と自己確認を追加。 |
-| `logic_tower/01_propositional_logic/00_overview.md` | TODO | - |  |
-| `logic_tower/01_propositional_logic/01_syntax_semantics.md` | TODO | - |  |
+| `logic_tower/01_propositional_logic/00_overview.md` | DONE | 2026-02-16 | 命題論理章の入口を本文化。到達目標・学習マップ・典型例・つまずき対策・自己確認を追加。 |
+| `logic_tower/01_propositional_logic/01_syntax_semantics.md` | DONE | 2026-02-16 | 構文と意味の基礎を本文化。Mermaid図で処理フローを可視化し、規則・例・演習・自己確認を追加。 |
 | `logic_tower/01_propositional_logic/02_truth_tables.md` | TODO | - |  |
 | `logic_tower/01_propositional_logic/03_normal_forms.md` | TODO | - |  |
 | `logic_tower/01_propositional_logic/04_natural_deduction.md` | TODO | - |  |
