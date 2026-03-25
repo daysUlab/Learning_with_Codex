@@ -41,7 +41,7 @@
 | `logic_tower/03_soundness_completeness/00_overview.md` | DONE | 2026-02-16 | 健全性・完全性章の入口を本文化。Mermaid概念図とTeX記法で⊢/⊨/コンパクト性の関係を整理。 |
 | `logic_tower/03_soundness_completeness/01_soundness.md` | DONE | 2026-02-16 | 健全性を本文化。Mermaid概念図、TeX定義、局所健全性の例、完全性との差分と演習を追加。 |
 | `logic_tower/03_soundness_completeness/02_completeness.md` | DONE | 2026-02-16 | 完全性を本文化。Mermaid方向図、TeX定義、健全性との対比、反例モデル構成の発想、演習を追加。 |
-| `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | TODO | - |  |
+| `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | DONE | 2026-03-25 | コンパクト性を初学者向けに本文化。Mermaid概念図、完全性との接続、イメージ重視の演習4問＋解答を追加。 |
 | `logic_tower/04_computability_and_automata/00_overview.md` | TODO | - |  |
 | `logic_tower/04_computability_and_automata/01_finite_automata.md` | TODO | - |  |
 | `logic_tower/04_computability_and_automata/02_pushdown_automata.md` | TODO | - |  |
