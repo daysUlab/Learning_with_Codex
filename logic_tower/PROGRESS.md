@@ -29,7 +29,7 @@
 | `logic_tower/00_orientation/00_what_is_logic.md` | UPGRADE_DONE | 2026-07-25 | 形式化と決定可能性を区別し、前提の真偽と推論の妥当性を分離。人間向けタイトル、到達目標、Mermaid図と読み取り、具体例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/01_language_and_meaning.md` | UPGRADE_DONE | 2026-07-25 | 構文・意味・解釈の区別を構文木と複数割当で補強。自然言語の形式化で失う情報も明示し、Mermaid図、段階例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | UPGRADE_DONE | 2026-07-25 | 証明可能性と意味論的帰結を分離し、反例モデルを使う段階例を追加。完全性を言語・意味論・証明体系の組に相対化し、Mermaid図、演習6問と全解答、復帰手順、学習チェック、前・次・親リンクを整備。 GitHub上のブロック数式表示を安定させるため、追加式の区切りを `$` に修正。 |
-| `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_DONE | 2026-07-25 | 章入口を、構文・真理値表・標準形・自然演繹の役割が見える構成へ統一。Mermaid学習図、段階例2件、典型的誤解と復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
+| `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_DONE | 2026-07-25 | 章入口を、構文・真理値表・標準形・自然演繹の役割が見える構成へ統一。Mermaid学習図、段階例2件、典型的誤解と復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 GitHub上のブロック数式表示を安定させるため、追加式の区切りを `$` に修正。 |
 | `logic_tower/01_propositional_logic/01_syntax_semantics.md` | UPGRADE_DONE | 2026-07-25 | 構文規則と意味評価の往復を補強し、主結合子・構文木・妥当性の区別を演習化。既存Mermaid図と例を保持し、演習6問と全解答、誤解・復帰手順、学習チェック、前・次・親リンクを整備。 |
 | `logic_tower/01_propositional_logic/02_truth_tables.md` | UPGRADE_DONE | 2026-07-25 | 真理値表の作表・式分類・反例探索を6問の段階演習へ拡張。既存の2例とMermaid手順図を保持し、全解答、典型誤答と復帰手順、学習チェック、前・次・親リンクを整備。 |
 | `logic_tower/01_propositional_logic/03_normal_forms.md` | UPGRADE_DONE | 2026-07-25 | CNF・DNFの変換例と同値法則を保持し、否定押し下げ・分配・簡単化・検算を段階演習化。Mermaid図、誤変形からの復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを整備。 |
@@ -73,7 +73,7 @@
 | `logic_tower/00_orientation/00_what_is_logic.md` | UPGRADE_DONE | 2026-07-25 | 形式化と決定可能性を区別し、前提の真偽と推論の妥当性を分離。人間向けタイトル、到達目標、Mermaid図と読み取り、具体例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/01_language_and_meaning.md` | UPGRADE_DONE | 2026-07-25 | 構文・意味・解釈の区別を構文木と複数割当で補強。自然言語の形式化で失う情報も明示し、Mermaid図、段階例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | UPGRADE_DONE | 2026-07-25 | 証明可能性と意味論的帰結を分離し、反例モデルを使う段階例を追加。完全性を言語・意味論・証明体系の組に相対化し、Mermaid図、演習6問と全解答、復帰手順、学習チェック、前・次・親リンクを整備。 GitHub上のブロック数式表示を安定させるため、追加式の区切りを `$` に修正。 |
-| `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_DONE | 2026-07-25 | 章入口を、構文・真理値表・標準形・自然演繹の役割が見える構成へ統一。Mermaid学習図、段階例2件、典型的誤解と復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
+| `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_DONE | 2026-07-25 | 章入口を、構文・真理値表・標準形・自然演繹の役割が見える構成へ統一。Mermaid学習図、段階例2件、典型的誤解と復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 GitHub上のブロック数式表示を安定させるため、追加式の区切りを `$` に修正。 |
 | `logic_tower/01_propositional_logic/01_syntax_semantics.md` | UPGRADE_DONE | 2026-07-25 | 構文規則と意味評価の往復を補強し、主結合子・構文木・妥当性の区別を演習化。既存Mermaid図と例を保持し、演習6問と全解答、誤解・復帰手順、学習チェック、前・次・親リンクを整備。 |
 | `logic_tower/01_propositional_logic/02_truth_tables.md` | UPGRADE_DONE | 2026-07-25 | 真理値表の作表・式分類・反例探索を6問の段階演習へ拡張。既存の2例とMermaid手順図を保持し、全解答、典型誤答と復帰手順、学習チェック、前・次・親リンクを整備。 |
 | `logic_tower/01_propositional_logic/03_normal_forms.md` | UPGRADE_DONE | 2026-07-25 | CNF・DNFの変換例と同値法則を保持し、否定押し下げ・分配・簡単化・検算を段階演習化。Mermaid図、誤変形からの復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを整備。 |
