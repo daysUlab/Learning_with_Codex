@@ -1,4 +1,4 @@
-# 02_predicate_logic
+# 述語論理への入口――対象・性質・量化
 
 この章は、命題論理の次の段階として
 **述語論理（predicate logic）**を学ぶ入口です。
@@ -105,6 +105,16 @@ $$
 
 ---
 
+### 例2：量化の順序で意味が変わる
+「すべての学生に、相談できる教員がいる」は、
+
+$$
+\forall x\,(\mathrm{Student}(x)\to\exists y\,(\mathrm{Teacher}(y)\land\mathrm{CanConsult}(x,y)))
+$$
+と表せます。学生ごとに別の教員を選べます。一方、先頭を $\exists y\forall x$ にすると、全学生が相談できる共通の教員が1人いるという、より強い主張になります。
+
+---
+
 ## 6. よくあるつまずき
 - $\forall x\, P(x) \to Q(x)$ と $\forall x\,(P(x) \to Q(x))$ を混同する。
 - $\lnot \forall x\, P(x)$ と $\forall x\, \lnot P(x)$ を取り違える。
@@ -117,16 +127,57 @@ $$
 
 ---
 
-## 7. 学習チェック（自己確認）
-- 「すべて」と「ある」を $\forall, \exists$ で書き分けられる。
-- 量化記号のスコープ違いによる意味差を説明できる。
-- 述語論理が命題論理より表現力が高い理由を説明できる。
+## 7. 演習問題
+### 問1
+「すべての猫は眠る」を $\mathrm{Cat},\mathrm{Sleeps}$ で表しなさい。
+
+### 問2
+「眠らない猫がいる」を表しなさい。
+
+### 問3
+$\lnot\forall x\,P(x)$ を同値変形しなさい。
+
+### 問4
+$\exists x\,P(x)$ が真でも $\forall x\,P(x)$ が真とは限らない例を作りなさい。
+
+### 問5
+自由変数と束縛変数の違いを説明しなさい。
+
+### 問6
+述語論理式の真偽を決めるため、式以外に何が必要ですか。
+
+---
+
+## 8. 演習問題の解答
+### 解答1
+$\forall x\,(\mathrm{Cat}(x)\to\mathrm{Sleeps}(x))$ です。
+
+### 解答2
+$\exists x\,(\mathrm{Cat}(x)\land\lnot\mathrm{Sleeps}(x))$ です。
+
+### 解答3
+$\exists x\,\lnot P(x)$ です。
+
+### 解答4
+定義域を2人とし、$P$ を満たす人が1人だけいる構造なら、存在は真で全称は偽です。
+
+### 解答5
+束縛変数は対応する量化記号の作用範囲内にあり、自由変数はどの量化記号にも束縛されていません。
+
+### 解答6
+定義域と、定数・関数・述語記号の解釈を含む構造が必要です。自由変数があれば変数割当も必要です。
+
+---
+
+## 学習チェック（自己確認）
+- 命題論理と述語論理の表現力の差を説明できる。
+- 対象条件を含意または連言で表せる。
+- 全称・存在・否定を日本語と往復できる。
+- 構造が意味評価に必要だと説明できる。
 
 ---
 
 ## ナビゲーション
 - 親: [../README.md](../README.md)
-- 子:
-  - [01_quantifiers.md](01_quantifiers.md)
-  - [02_structures_and_models.md](02_structures_and_models.md)
-  - [03_proofs.md](03_proofs.md)
+- 前: [../01_propositional_logic/04_natural_deduction.md](../01_propositional_logic/04_natural_deduction.md)
+- 次: [01_quantifiers.md](01_quantifiers.md)
