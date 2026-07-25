@@ -103,28 +103,28 @@
 | file_path | status | last_updated | notes |
 |---|---|---|---|
 | `logic_tower/90_essays/foundations_and_expressiveness/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/00_when_is_a_sentence_a_proposition.md` | EXPANSION_TODO |  | 文脈・時点・対象・測定規約を固定して、自然言語文から真偽評価可能な内容を切り出す。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/01_atomic_does_not_mean_indivisible.md` | EXPANSION_TODO |  | 原子命題を、存在論的な原子ではなく分析上これ以上分解しない単位として捉える。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/02_why_propositional_logic_still_matters.md` | EXPANSION_TODO |  | 表現力を限定することで、有限問題を強力に機械処理できる命題論理の現代的位置を示す。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/03_names_constants_and_identity.md` | EXPANSION_TODO |  | 「Aさん」を命題論理と述語論理でどう扱うかを、定項・変数・等号・存在と結び付ける。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/04_quantifiers_in_mathematics.md` | EXPANSION_TODO |  | 曖昧さの少ない数学例で、全称・存在・定義域・反例・証人を学ぶ。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/05_quantifier_order.md` | EXPANSION_TODO |  | ∀x∃yと∃y∀xの違いを、日常例・数学例・ゲーム意味論で可視化する。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/06_counterexamples_and_witnesses.md` | EXPANSION_TODO |  | 全称命題を崩す反例と、存在命題を成立させる証人を、探索と証明の両面から扱う。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/07_what_does_stronger_logic_mean.md` | EXPANSION_TODO |  | 表現力・証明力・決定可能性・計算量を分離し、「強い論理」という言葉の多義性を整理する。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/08_first_order_vs_higher_order.md` | EXPANSION_TODO |  | 個体だけを量化する一階論理と、集合・関係・関数も量化する高階論理を比較する。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/09_lindstrom_and_the_tradeoff.md` | EXPANSION_TODO |  | 一階論理が無条件に最強なのではなく、コンパクト性とLöwenheim–Skolem性の下で特別な位置を占める直観を示す。 |
-| `logic_tower/90_essays/foundations_and_expressiveness/10_why_mathematics_uses_classical_first_order_foundations.md` | EXPANSION_TODO |  | 通常数学で古典一階論理と集合論が選ばれる実務的・基礎論的理由を整理する。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/00_when_is_a_sentence_a_proposition.md` | EXPANSION_DONE | 2026-07-25 | 文と命題を分離し、文脈・時点・指示対象・測定規約を固定する段階例を追加。Mermaid図、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/01_atomic_does_not_mean_indivisible.md` | EXPANSION_DONE | 2026-07-25 | 原子性を形式言語と分析目的に相対化し、Pから述語への粒度変更と仕様設計上の情報損失を具体化。図・演習6問・全解答・復帰手順を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/02_why_propositional_logic_still_matters.md` | EXPANSION_DONE | 2026-07-25 | 有限問題の命題化、SAT・回路・設定探索への接続、符号化に相対的な保証範囲を説明。図・演習6問・全解答・復帰手順を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/03_names_constants_and_identity.md` | EXPANSION_DONE | 2026-07-25 | 固有名・個体定項・変数・等号・存在・一意存在を分離し、標準一階論理と自由論理の境界を明示。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/04_quantifiers_in_mathematics.md` | EXPANSION_DONE | 2026-07-25 | 数学例で定義域、全称・存在、反例・証人、量化否定を段階化。図・演習6問・全解答・復帰手順を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/05_quantifier_order.md` | EXPANSION_DONE | 2026-07-25 | ∀x∃yと∃y∀xを、依存する証人・共通証人・ゲーム意味論・実数例で比較。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/06_counterexamples_and_witnesses.md` | EXPANSION_DONE | 2026-07-25 | 反例と証人の非対称性、有限全探索と探索失敗の限界を整理。図・演習6問・全解答・復帰手順を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/07_what_does_stronger_logic_mean.md` | EXPANSION_DONE | 2026-07-25 | 表現力・証明力・決定可能性・計算量を別軸に分解し、単一の最強順位を避ける比較枠組みを提示。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/08_first_order_vs_higher_order.md` | EXPANSION_DONE | 2026-07-25 | 個体量化と集合・関係量化、標準意味論とHenkin意味論、表現力と完全性の交換関係を整理。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/09_lindstrom_and_the_tradeoff.md` | EXPANSION_DONE | 2026-07-25 | Lindströmの定理を条件付き最大性として説明し、コンパクト性・下方Löwenheim–Skolem性・有限性表現の関係を明示。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/10_why_mathematics_uses_classical_first_order_foundations.md` | EXPANSION_DONE | 2026-07-25 | 一階論理と集合論の役割分担、完全性と不完全性、代替基礎を整理し、標準採用を唯一性と誤解しない構成へ本文化。 |
 | `logic_tower/90_essays/hardware_and_sat/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
-| `logic_tower/90_essays/hardware_and_sat/00_boolean_algebra.md` | EXPANSION_TODO |  | 論理結合子を代数的法則として扱い、式変形と回路簡単化の共通基盤を学ぶ。 |
-| `logic_tower/90_essays/hardware_and_sat/01_logic_gates.md` | EXPANSION_TODO |  | AND・OR・NOTを真理関数を計算する回路として読む。 |
-| `logic_tower/90_essays/hardware_and_sat/02_functional_completeness.md` | EXPANSION_TODO |  | ある結合子集合だけで任意のBoolean関数を表せるとは何かを説明する。 |
-| `logic_tower/90_essays/hardware_and_sat/03_nand_and_nor.md` | EXPANSION_TODO |  | NANDまたはNOR単独からNOT・AND・ORを構成し、万能ゲートの意味を示す。 |
-| `logic_tower/90_essays/hardware_and_sat/04_from_formulas_to_circuits.md` | EXPANSION_TODO |  | 構文木を回路へ変換し、共有・深さ・ゲート数という実装上の観点を導入する。 |
-| `logic_tower/90_essays/hardware_and_sat/05_circuit_equivalence.md` | EXPANSION_TODO |  | 二つの回路が全入力で同じ出力を返すかを論理式へ落とす。 |
-| `logic_tower/90_essays/hardware_and_sat/06_sat_and_circuit_verification.md` | EXPANSION_TODO |  | 回路のバグ候補をSAT問題として表し、充足割当を反例として読む。 |
-| `logic_tower/90_essays/hardware_and_sat/07_bdd_and_symbolic_representation.md` | EXPANSION_TODO |  | 真理値割当の巨大集合を共有グラフで表す発想と、その強み・弱みを学ぶ。 |
+| `logic_tower/90_essays/hardware_and_sat/00_boolean_algebra.md` | EXPANSION_DONE | 2026-07-25 | Boolean代数の基本法則、双対性、吸収律、論理式・代数・物理回路の三層を整理。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/hardware_and_sat/01_logic_gates.md` | EXPANSION_DONE | 2026-07-25 | AND・OR・NOTの真理関数から組合せ回路へ接続し、論理抽象と電圧・遅延など物理実装を分離。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/hardware_and_sat/02_functional_completeness.md` | EXPANSION_DONE | 2026-07-25 | 任意のBoolean関数の表現可能性をDNF構成で説明し、機能的完全性と効率性を区別。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/hardware_and_sat/03_nand_and_nor.md` | EXPANSION_DONE | 2026-07-25 | NAND・NORから基本ゲートを構成して万能性を示し、ゲート種類と個数・段数・性能を区別。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/hardware_and_sat/04_from_formulas_to_circuits.md` | EXPANSION_DONE | 2026-07-25 | 構文木から回路への変換、共通部分式共有によるDAG化、サイズ・深さ・ファンアウトの違いを説明。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/hardware_and_sat/05_circuit_equivalence.md` | EXPANSION_DONE | 2026-07-25 | miter回路とSATにより全入力等価性を反例探索へ変換し、組合せ回路と順序回路の前提差を明示。図・演習6問・全解答を整備。 |
+| `logic_tower/90_essays/hardware_and_sat/06_sat_and_circuit_verification.md` | EXPANSION_DONE | 2026-07-25 | 回路違反条件、CNF、Tseitin等充足変換、有界検証の保証範囲を段階化。図・演習6問・全解答・反例確認手順を整備。 |
+| `logic_tower/90_essays/hardware_and_sat/07_bdd_and_symbolic_representation.md` | EXPANSION_DONE | 2026-07-25 | BDD・ROBDDの共有と簡約、固定変数順序での標準性、順序依存の指数的膨張を整理。図・演習6問・全解答を整備。 |
 | `logic_tower/90_essays/databases/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
-| `logic_tower/90_essays/databases/00_relations_as_mathematical_relations.md` | EXPANSION_TODO |  | 関係・タプル・属性・定義域を整理し、実DBとの差が生まれる地点を明示する。 |
+| `logic_tower/90_essays/databases/00_relations_as_mathematical_relations.md` | EXPANSION_DONE | 2026-07-25 | 関係・タプル・属性・定義域・スキーマを定義し、SQLのbag semantics・NULL・表示順との差を明示。図・演習6問・全解答を整備。 |
 | `logic_tower/90_essays/databases/01_relational_algebra_and_first_order_logic.md` | EXPANSION_TODO |  | 選択・射影・結合・差を論理式と対応付け、問い合わせ言語の表現力を考える。 |
 | `logic_tower/90_essays/databases/02_functional_dependencies.md` | EXPANSION_TODO |  | Xが一致すればYも一致するという制約を、行の対への全称条件として定義する。 |
 | `logic_tower/90_essays/databases/03_armstrongs_axioms.md` | EXPANSION_TODO |  | 反射律・増加律・推移律を、関数従属性の健全で完全な推論体系として学ぶ。 |
