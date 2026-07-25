@@ -29,7 +29,7 @@
 | `logic_tower/00_orientation/00_what_is_logic.md` | UPGRADE_DONE | 2026-07-25 | 形式化と決定可能性を区別し、前提の真偽と推論の妥当性を分離。人間向けタイトル、到達目標、Mermaid図と読み取り、具体例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/01_language_and_meaning.md` | UPGRADE_DONE | 2026-07-25 | 構文・意味・解釈の区別を構文木と複数割当で補強。自然言語の形式化で失う情報も明示し、Mermaid図、段階例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | UPGRADE_DONE | 2026-07-25 | 証明可能性と意味論的帰結を分離し、反例モデルを使う段階例を追加。完全性を言語・意味論・証明体系の組に相対化し、Mermaid図、演習6問と全解答、復帰手順、学習チェック、前・次・親リンクを整備。 |
-| `logic_tower/01_propositional_logic/00_overview.md` | DONE | 2026-02-16 | 命題論理章の入口を本文化。到達目標・学習マップ・典型例・つまずき対策・自己確認を追加。 |
+| `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_DONE | 2026-07-25 | 章入口を、構文・真理値表・標準形・自然演繹の役割が見える構成へ統一。Mermaid学習図、段階例2件、典型的誤解と復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/01_propositional_logic/01_syntax_semantics.md` | DONE | 2026-02-16 | 構文と意味の基礎を本文化。Mermaid図のGitHub互換性を修正し、処理フロー可視化・規則・例・演習・自己確認を整備。 |
 | `logic_tower/01_propositional_logic/02_truth_tables.md` | DONE | 2026-02-16 | 真理値表の作り方を本文化。Mermaid手順図とTeX論理記号を用いて判定手順・反例探索・演習を追加。 |
 | `logic_tower/01_propositional_logic/03_normal_forms.md` | DONE | 2026-02-16 | 標準形（CNF/DNF）を本文化。Mermaid変換フロー図とTeX記法で同値変形・例題・演習を追加。 |
@@ -73,7 +73,7 @@
 | `logic_tower/00_orientation/00_what_is_logic.md` | UPGRADE_DONE | 2026-07-25 | 形式化と決定可能性を区別し、前提の真偽と推論の妥当性を分離。人間向けタイトル、到達目標、Mermaid図と読み取り、具体例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/01_language_and_meaning.md` | UPGRADE_DONE | 2026-07-25 | 構文・意味・解釈の区別を構文木と複数割当で補強。自然言語の形式化で失う情報も明示し、Mermaid図、段階例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | UPGRADE_DONE | 2026-07-25 | 証明可能性と意味論的帰結を分離し、反例モデルを使う段階例を追加。完全性を言語・意味論・証明体系の組に相対化し、Mermaid図、演習6問と全解答、復帰手順、学習チェック、前・次・親リンクを整備。 |
-| `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_TODO |  | 章入口をv1.0構成へ統一する。 |
+| `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_DONE | 2026-07-25 | 章入口を、構文・真理値表・標準形・自然演繹の役割が見える構成へ統一。Mermaid学習図、段階例2件、典型的誤解と復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/01_propositional_logic/01_syntax_semantics.md` | UPGRADE_TODO |  | 構文規則と意味評価の往復、演習・全解答を補強する。 |
 | `logic_tower/01_propositional_logic/02_truth_tables.md` | UPGRADE_TODO |  | 真理値表の作成・反例探索・典型誤答を補強する。 |
 | `logic_tower/01_propositional_logic/03_normal_forms.md` | UPGRADE_TODO |  | CNF・DNFの変換例と誤変形からの復帰方法を補強する。 |
