@@ -1,6 +1,6 @@
-# 90_essays
+# 発展・応用エッセイ
 
-この章は、教科書本編で学んだ論理学を、データベース、プログラム検証、証明支援系へ接続する**橋渡しノート**です。
+この章は、教科書本編で学んだ論理学を、数学基礎論、回路・SAT、データベース、プログラム検証、量子計算、AI・形式数学へ接続する**全68記事の橋渡しノート**です。
 
 本編で記号や定理を学んだあと、「実務のどこで同じ考え方が使われているか」を具体例から確かめます。応用だけを先に読み、必要になった基礎へ戻る使い方もできます。
 
@@ -76,9 +76,9 @@ $$
 戻り先は、[自然演繹](../01_propositional_logic/04_natural_deduction.md) と [直観主義論理](../05_modal_and_nonclassical/02_intuitionistic_logic.md) です。
 
 
-## 4. 新しい発展カテゴリ
+## 4. 発展カテゴリ
 
-既存3記事を正本として残し、その周囲に次の支線を追加します。
+既存3記事を正本として残し、その周囲に6カテゴリ・65記事の支線を本文化しました。
 
 - [論理の粒度・表現力・限界](foundations_and_expressiveness/)：自然言語、原子命題、数学的量化、一階・高階論理、Lindströmの定理
 - [Boolean代数・回路・SAT](hardware_and_sat/)：論理ゲート、NAND、回路等価性、SAT、BDD
@@ -87,7 +87,7 @@ $$
 - [量子計算と論理](quantum_computing_and_logic/)：可逆計算、量子ゲート、測定、量子論理
 - [AI・形式数学・証明探索](ai_mathematics_and_logic/)：LLM、証明探索、形式検証、予想・反例、人間との共同研究
 
-各カテゴリREADMEは導線設計済みです。子ページは概要・論点・注意点だけを持つスケルトンであり、[PROGRESS.md](../PROGRESS.md) のv1.1拡張キュー順に本文化します。
+各カテゴリREADMEと全65子ページは本文化済みです。単独記事から読んでも、各カテゴリの番号順に読んでも、本編へ戻れる構成です。進捗の正本は [PROGRESS.md](../PROGRESS.md) です。
 
 ### 疑問から選ぶ
 
@@ -222,7 +222,7 @@ $$
 
 ## 学習チェック（自己確認）
 
-- 3本のノートと本編の戻り先を説明できる。
+- 既存3記事と6発展カテゴリから、自分の疑問に合う入口を選べる。
 - 自然言語から形式化までの5段階を使える。
 - ツールの正しさと仕様の正しさを区別できる。
 - 自分の関心に合う最初の1本を選べる。
@@ -237,4 +237,10 @@ $$
   - [logic_and_database_queries.md](logic_and_database_queries.md)
   - [modal_logic_and_computation.md](modal_logic_and_computation.md)
   - [proof_assistants_and_logic.md](proof_assistants_and_logic.md)
+  - [foundations_and_expressiveness/](foundations_and_expressiveness/)
+  - [hardware_and_sat/](hardware_and_sat/)
+  - [databases/](databases/)
+  - [modal_logic_and_verification/](modal_logic_and_verification/)
+  - [quantum_computing_and_logic/](quantum_computing_and_logic/)
+  - [ai_mathematics_and_logic/](ai_mathematics_and_logic/)
 
