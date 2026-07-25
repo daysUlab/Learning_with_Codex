@@ -51,7 +51,7 @@
 | `logic_tower/05_modal_and_nonclassical/01_modal_logic_kripke.md` | DONE | 2026-07-25 | 様相論理とクリプキ意味論を本文化。Mermaidモデル図、フレーム/モデル・満足関係・空虚真・公理K・フレーム条件、演習6問＋解答を追加。 |
 | `logic_tower/05_modal_and_nonclassical/02_intuitionistic_logic.md` | DONE | 2026-07-25 | 直観主義論理を本文化。Mermaid証拠図、BHK解釈・否定・排中律・二重否定・カリー＝ハワード対応・情報増加モデル、演習6問＋解答を追加。 |
 | `logic_tower/05_modal_and_nonclassical/03_other_logics_map.md` | DONE | 2026-07-25 | 非古典論理の地図を本文化。Mermaid分類図、時相・認識・義務・多値・ファジィ・矛盾許容・関連性論理の比較、演習6問＋解答を追加。 |
-| `logic_tower/90_essays/README.md` | TODO | - |  |
+| `logic_tower/90_essays/README.md` | DONE | 2026-07-25 | 応用エッセイ章の入口を本文化。Mermaid接続図、本編からDB・モデル検査・証明支援系への往復導線、共通の形式化手順、演習4問＋解答を追加。 |
 | `logic_tower/90_essays/logic_and_database_queries.md` | TODO | - | 新規スケルトン（子md拡張）。 |
 | `logic_tower/90_essays/modal_logic_and_computation.md` | TODO | - |  |
 | `logic_tower/90_essays/proof_assistants_and_logic.md` | TODO | - | 新規スケルトン（子md拡張）。 |
