@@ -48,7 +48,7 @@
 | `logic_tower/04_computability_and_automata/03_turing_machines.md` | DONE | 2026-07-25 | チューリング機械を本文化。Mermaid処理図、7つ組・瞬間記述・a^n b^n c^nの判定、認識と決定、チャーチ＝チューリングのテーゼ、演習6問＋解答を追加。 |
 | `logic_tower/04_computability_and_automata/04_decidability.md` | DONE | 2026-07-25 | 決定可能性を本文化。Mermaid包含図、決定可能/認識可能の区別、停止問題・対角線論法・写像還元・ライスの定理、演習6問＋解答を追加。 |
 | `logic_tower/05_modal_and_nonclassical/00_overview.md` | DONE | 2026-07-25 | 様相・非古典論理章の入口を本文化。Mermaid学習マップ、必然/可能・クリプキ意味論・直観主義論理の導入、体系比較、演習5問＋解答を追加。 |
-| `logic_tower/05_modal_and_nonclassical/01_modal_logic_kripke.md` | TODO | - |  |
+| `logic_tower/05_modal_and_nonclassical/01_modal_logic_kripke.md` | DONE | 2026-07-25 | 様相論理とクリプキ意味論を本文化。Mermaidモデル図、フレーム/モデル・満足関係・空虚真・公理K・フレーム条件、演習6問＋解答を追加。 |
 | `logic_tower/05_modal_and_nonclassical/02_intuitionistic_logic.md` | TODO | - |  |
 | `logic_tower/05_modal_and_nonclassical/03_other_logics_map.md` | TODO | - |  |
 | `logic_tower/90_essays/README.md` | TODO | - |  |
