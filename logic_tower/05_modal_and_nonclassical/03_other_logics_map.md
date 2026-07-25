@@ -131,7 +131,7 @@ $$
 を「$P$ であるべきだ」、
 
 $$
-P(P)
+\mathrm{Perm}(P)
 $$
 
 を「$P$ が許される」と読みます。
@@ -350,4 +350,3 @@ UNKNOWNです。`x = 1` がUNKNOWNであり、NOT UNKNOWNもUNKNOWNです。
 - 親: [00_overview.md](00_overview.md)
 - 前: [02_intuitionistic_logic.md](02_intuitionistic_logic.md)
 - 次: [../90_essays/README.md](../90_essays/README.md)
-
