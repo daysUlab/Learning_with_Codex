@@ -54,5 +54,5 @@
 | `logic_tower/90_essays/README.md` | DONE | 2026-07-25 | 応用エッセイ章の入口を本文化。Mermaid接続図、本編からDB・モデル検査・証明支援系への往復導線、共通の形式化手順、演習4問＋解答を追加。 |
 | `logic_tower/90_essays/logic_and_database_queries.md` | DONE | 2026-07-25 | 論理とDB問い合わせを本文化。Mermaid翻訳フロー、述語・EXISTS・全称の二重NOT EXISTS・空虚真・NULLの3値論理・JOINと重複、演習6問＋解答を追加。 |
 | `logic_tower/90_essays/modal_logic_and_computation.md` | DONE | 2026-07-25 | 様相論理と計算を本文化。Mermaid状態遷移図、安全性/活性、LTL演算子、CTLの経路量化、モデル検査・状態爆発・公平性、演習6問＋解答を追加。 |
-| `logic_tower/90_essays/proof_assistants_and_logic.md` | TODO | - | 新規スケルトン（子md拡張）。 |
+| `logic_tower/90_essays/proof_assistants_and_logic.md` | DONE | 2026-07-25 | 証明支援系と論理を本文化。Mermaid検査フロー、Curry–Howard対応、ゴール/コンテキスト、自然演繹との対応、帰納法・古典公理・信頼境界、演習6問＋解答を追加。 |
 | `logic_tower/PROGRESS.md` | DONE | 2026-02-16 | physics_tower の運用を踏襲して進捗管理基盤を新規作成。 |
