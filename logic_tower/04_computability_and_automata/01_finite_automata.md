@@ -112,21 +112,21 @@ $$
 1文字ではなく文字列全体を扱うため、遷移関数を拡張した
 
 $$
-\delta^*:Q\times\Sigma^*\to Q
+\delta^{*}:Q\times\Sigma^{*}\to Q
 $$
 
 を使います。
 
-ここで $\Sigma^*$ は、$\Sigma$ の文字から作れる有限長の文字列すべての集合で、空文字列 $\varepsilon$ も含みます。
+ここで $\Sigma^{*}$ は、$\Sigma$ の文字から作れる有限長の文字列すべての集合で、空文字列 $\varepsilon$ も含みます。
 
 拡張遷移関数は、次のように再帰的に定義できます。
 
 $$
-\delta^*(q,\varepsilon)=q
+\delta^{*}(q,\varepsilon)=q
 $$
 
 $$
-\delta^*(q,wa)=\delta(\delta^*(q,w),a)
+\delta^{*}(q,wa)=\delta(\delta^{*}(q,w),a)
 $$
 
 ただし、$w$ は途中までの文字列、$a$ は最後の1文字です。
@@ -135,7 +135,7 @@ $$
 DFA $M$ が受理する言語は、
 
 $$
-L(M)=\{w\in\Sigma^*\mid \delta^*(q_0,w)\in F\}
+L(M)=\{w\in\Sigma^{*}\mid \delta^{*}(q_0,w)\in F\}
 $$
 
 です。
