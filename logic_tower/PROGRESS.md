@@ -56,3 +56,33 @@
 | `logic_tower/90_essays/modal_logic_and_computation.md` | DONE | 2026-07-25 | 様相論理と計算を本文化。Mermaid状態遷移図、安全性/活性、LTL演算子、CTLの経路量化、モデル検査・状態爆発・公平性、演習6問＋解答を追加。 |
 | `logic_tower/90_essays/proof_assistants_and_logic.md` | DONE | 2026-07-25 | 証明支援系と論理を本文化。Mermaid検査フロー、Curry–Howard対応、ゴール/コンテキスト、自然演繹との対応、帰納法・古典公理・信頼境界、演習6問＋解答を追加。 |
 | `logic_tower/PROGRESS.md` | DONE | 2026-02-16 | physics_tower の運用を踏襲して進捗管理基盤を新規作成。 |
+
+## v1.0アップグレードキュー
+
+### 運用ルール
+
+- 既存の執筆キューの `DONE` は「一度本文を作成済み」を表し、この表はv1.0品質への更新状況を表す。
+- 優先順位は `UPGRADING`、次に表の先頭の `UPGRADE_TODO` とする。
+- 1回の作業で更新する本文は1ファイルだけとし、同じ作業内で次の本文へ着手しない。
+- 本文の正しい説明と既存の文体を残し、直観・定義・例・誤解・復帰方法・演習・全解答・学習チェック・ナビゲーションを補う。
+- 完了時は `UPGRADE_DONE` に変更し、`last_updated` と判断理由を含む `notes` を残す。
+
+| file_path | status | last_updated | notes |
+|---|---|---|---|
+| `logic_tower/00_orientation/README.md` | UPGRADE_DONE | 2026-07-25 | 既存の3つの問いと章導線を保持し、形式化と決定可能性を区別する表現へ修正。人間向けタイトル、用語と記号、Mermaid図と読み取り、段階例2件、典型的誤解、復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加し、後半ページ相当の学習順へ統一。 |
+| `logic_tower/00_orientation/00_what_is_logic.md` | UPGRADE_TODO |  | 形式化と決定可能性を区別し、導入ページ相当の演習・全解答を補う。 |
+| `logic_tower/00_orientation/01_language_and_meaning.md` | UPGRADE_TODO |  | 構文・意味・解釈の区別を例と反例で補強する。 |
+| `logic_tower/00_orientation/02_proof_and_model.md` | UPGRADE_TODO |  | 証明可能性と意味論的帰結の区別を段階例で補強する。 |
+| `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_TODO |  | 章入口をv1.0構成へ統一する。 |
+| `logic_tower/01_propositional_logic/01_syntax_semantics.md` | UPGRADE_TODO |  | 構文規則と意味評価の往復、演習・全解答を補強する。 |
+| `logic_tower/01_propositional_logic/02_truth_tables.md` | UPGRADE_TODO |  | 真理値表の作成・反例探索・典型誤答を補強する。 |
+| `logic_tower/01_propositional_logic/03_normal_forms.md` | UPGRADE_TODO |  | CNF・DNFの変換例と誤変形からの復帰方法を補強する。 |
+| `logic_tower/01_propositional_logic/04_natural_deduction.md` | UPGRADE_TODO |  | 導入・除去規則の適用条件と完全解答を補強する。 |
+| `logic_tower/02_predicate_logic/00_overview.md` | UPGRADE_TODO |  | 命題論理から述語論理への拡張を段階的に示す。 |
+| `logic_tower/02_predicate_logic/01_quantifiers.md` | UPGRADE_TODO |  | 量化記号のスコープを括弧明記方針へ統一し、誤読例を補う。 |
+| `logic_tower/02_predicate_logic/02_structures_and_models.md` | UPGRADE_TODO |  | 構造・割当・満足・モデルの区別を具体例で補強する。 |
+| `logic_tower/02_predicate_logic/03_proofs.md` | UPGRADE_TODO |  | 量化規則の変数条件と典型的な誤証明を補強する。 |
+| `logic_tower/03_soundness_completeness/00_overview.md` | UPGRADE_TODO |  | 性質を言語・意味論・証明体系の組に相対化し、完全性と不完全性の混同を防ぐ。 |
+| `logic_tower/03_soundness_completeness/01_soundness.md` | UPGRADE_TODO |  | 局所健全性から体系全体の健全性への流れを補強する。 |
+| `logic_tower/03_soundness_completeness/02_completeness.md` | UPGRADE_TODO |  | 古典一階述語論理の完全性とGödelの不完全性を明確に区別する。 |
+| `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | UPGRADE_TODO |  | 有限部分の充足可能性と判定アルゴリズムを区別し、無限モデル例の前提を厳密化する。 |
