@@ -27,7 +27,7 @@
 | `logic_tower/README.md` | DONE | 2026-02-16 | 入口ページを初学者向けに大幅増補。到達目標・ロードマップ・用語最小セット・典型例・つまずきポイント・自己確認を追加。 |
 | `logic_tower/00_orientation/README.md` | DONE | 2026-02-16 | 導入章READMEを本文化。学習目標・3つの問い・直観例・つまずき対策・自己確認を追加。 |
 | `logic_tower/00_orientation/00_what_is_logic.md` | UPGRADE_DONE | 2026-07-25 | 形式化と決定可能性を区別し、前提の真偽と推論の妥当性を分離。人間向けタイトル、到達目標、Mermaid図と読み取り、具体例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
-| `logic_tower/00_orientation/01_language_and_meaning.md` | DONE | 2026-02-16 | 構文と意味の違いを初学者向けに本文化。規則・直観例・誤解・ミニ演習・自己確認を追加。 |
+| `logic_tower/00_orientation/01_language_and_meaning.md` | UPGRADE_DONE | 2026-07-25 | 構文・意味・解釈の区別を構文木と複数割当で補強。自然言語の形式化で失う情報も明示し、Mermaid図、段階例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | DONE | 2026-02-16 | 証明視点とモデル視点の違いを本文化。記号（⊢/⊨）、健全性/完全性の入口、演習と自己確認を追加。 |
 | `logic_tower/01_propositional_logic/00_overview.md` | DONE | 2026-02-16 | 命題論理章の入口を本文化。到達目標・学習マップ・典型例・つまずき対策・自己確認を追加。 |
 | `logic_tower/01_propositional_logic/01_syntax_semantics.md` | DONE | 2026-02-16 | 構文と意味の基礎を本文化。Mermaid図のGitHub互換性を修正し、処理フロー可視化・規則・例・演習・自己確認を整備。 |
@@ -71,7 +71,7 @@
 |---|---|---|---|
 | `logic_tower/00_orientation/README.md` | UPGRADE_DONE | 2026-07-25 | 既存の3つの問いと章導線を保持し、形式化と決定可能性を区別する表現へ修正。人間向けタイトル、用語と記号、Mermaid図と読み取り、段階例2件、典型的誤解、復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加し、後半ページ相当の学習順へ統一。 |
 | `logic_tower/00_orientation/00_what_is_logic.md` | UPGRADE_DONE | 2026-07-25 | 形式化と決定可能性を区別し、前提の真偽と推論の妥当性を分離。人間向けタイトル、到達目標、Mermaid図と読み取り、具体例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
-| `logic_tower/00_orientation/01_language_and_meaning.md` | UPGRADE_TODO |  | 構文・意味・解釈の区別を例と反例で補強する。 |
+| `logic_tower/00_orientation/01_language_and_meaning.md` | UPGRADE_DONE | 2026-07-25 | 構文・意味・解釈の区別を構文木と複数割当で補強。自然言語の形式化で失う情報も明示し、Mermaid図、段階例2件、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを追加。 |
 | `logic_tower/00_orientation/02_proof_and_model.md` | UPGRADE_TODO |  | 証明可能性と意味論的帰結の区別を段階例で補強する。 |
 | `logic_tower/01_propositional_logic/00_overview.md` | UPGRADE_TODO |  | 章入口をv1.0構成へ統一する。 |
 | `logic_tower/01_propositional_logic/01_syntax_semantics.md` | UPGRADE_TODO |  | 構文規則と意味評価の往復、演習・全解答を補強する。 |
