@@ -80,7 +80,7 @@
 | `logic_tower/01_propositional_logic/04_natural_deduction.md` | UPGRADE_DONE | 2026-07-25 | 導入・除去規則と既存3例を保持し、仮定スコープ・選言除去・後件肯定を段階演習で補強。Mermaid図、演習6問と全解答、誤解・復帰手順、学習チェック、前・次・親リンクを整備。 |
 | `logic_tower/02_predicate_logic/00_overview.md` | UPGRADE_DONE | 2026-07-25 | 命題論理から述語論理への拡張を、対象・述語・量化・構造の順で再構成。既存Mermaid図と対象付き推論を保持し、量化順序の段階例、誤解・復帰手順、演習6問と全解答、学習チェック、前・次・親リンクを整備。 |
 | `logic_tower/02_predicate_logic/01_quantifiers.md` | UPGRADE_DONE | 2026-07-25 | 量化記号のスコープを括弧明記方針へ統一し、省略規則が教材・体系で異なることを明示。既存例とMermaid図を保持し、量化順序・自由変数・否定変形を含む演習6問と全解答、復帰手順、学習チェック、前・次・親リンクを整備。 |
-| `logic_tower/02_predicate_logic/02_structures_and_models.md` | UPGRADE_TODO |  | 構造・割当・満足・モデルの区別を具体例で補強する。 |
+| `logic_tower/02_predicate_logic/02_structures_and_models.md` | UPGRADE_DONE | 2026-07-25 | 構造・割当・項評価・充足・モデルの役割を分離し、有限構造と複数構造の段階例、反例モデル、典型的誤解と復帰手順、Mermaid図、演習6問と全解答、学習チェック、前・次・親リンクを整備。 |
 | `logic_tower/02_predicate_logic/03_proofs.md` | UPGRADE_TODO |  | 量化規則の変数条件と典型的な誤証明を補強する。 |
 | `logic_tower/03_soundness_completeness/00_overview.md` | UPGRADE_TODO |  | 性質を言語・意味論・証明体系の組に相対化し、完全性と不完全性の混同を防ぐ。 |
 | `logic_tower/03_soundness_completeness/01_soundness.md` | UPGRADE_TODO |  | 局所健全性から体系全体の健全性への流れを補強する。 |
