@@ -44,7 +44,7 @@
 | `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | DONE | 2026-03-25 | コンパクト性を初学者向けに本文化。Mermaid概念図、完全性との接続、イメージ重視の演習4問＋解答を追加。 |
 | `logic_tower/04_computability_and_automata/00_overview.md` | DONE | 2026-03-26 | 計算可能性章の入口を本文化。Mermaid全体マップ、モデル比較、決定可能性の基礎、演習4問＋解答を追加。 |
 | `logic_tower/04_computability_and_automata/01_finite_automata.md` | DONE | 2026-07-25 | 有限オートマトン入門を本文化。Mermaid状態遷移図、DFAの5つ組・受理判定・設計手順、NFA/正規表現との関係、演習6問＋解答を追加。 |
-| `logic_tower/04_computability_and_automata/02_pushdown_automata.md` | TODO | - |  |
+| `logic_tower/04_computability_and_automata/02_pushdown_automata.md` | DONE | 2026-07-25 | PDA入門を本文化。Mermaid処理フロー図、スタック操作・7つ組・括弧列とa^n b^nの追跡、CFGとの関係・限界、演習6問＋解答を追加。 |
 | `logic_tower/04_computability_and_automata/03_turing_machines.md` | TODO | - |  |
 | `logic_tower/04_computability_and_automata/04_decidability.md` | TODO | - |  |
 | `logic_tower/05_modal_and_nonclassical/00_overview.md` | TODO | - |  |
