@@ -90,6 +90,8 @@
 
 ## v1.1 発展・応用拡張キュー
 
+> 完了状態：カテゴリREADME 6件と子記事65件をすべて `EXPANSION_DONE` に更新済み（2026-07-25）。未完了キューはありません。
+
 ### 運用ルール
 
 - カテゴリREADMEは導線設計済み、子ページは本文未完成のスケルトンである。
@@ -102,7 +104,7 @@
 
 | file_path | status | last_updated | notes |
 |---|---|---|---|
-| `logic_tower/90_essays/foundations_and_expressiveness/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
+| `logic_tower/90_essays/foundations_and_expressiveness/README.md` | EXPANSION_DONE | 2026-07-25 | 全子記事の本文化完了に合わせ、状態・読み方・カテゴリ導線を完成版へ更新。 |
 | `logic_tower/90_essays/foundations_and_expressiveness/00_when_is_a_sentence_a_proposition.md` | EXPANSION_DONE | 2026-07-25 | 文と命題を分離し、文脈・時点・指示対象・測定規約を固定する段階例を追加。Mermaid図、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
 | `logic_tower/90_essays/foundations_and_expressiveness/01_atomic_does_not_mean_indivisible.md` | EXPANSION_DONE | 2026-07-25 | 原子性を形式言語と分析目的に相対化し、Pから述語への粒度変更と仕様設計上の情報損失を具体化。図・演習6問・全解答・復帰手順を整備。 |
 | `logic_tower/90_essays/foundations_and_expressiveness/02_why_propositional_logic_still_matters.md` | EXPANSION_DONE | 2026-07-25 | 有限問題の命題化、SAT・回路・設定探索への接続、符号化に相対的な保証範囲を説明。図・演習6問・全解答・復帰手順を整備。 |
@@ -114,7 +116,7 @@
 | `logic_tower/90_essays/foundations_and_expressiveness/08_first_order_vs_higher_order.md` | EXPANSION_DONE | 2026-07-25 | 個体量化と集合・関係量化、標準意味論とHenkin意味論、表現力と完全性の交換関係を整理。図・演習6問・全解答を整備。 |
 | `logic_tower/90_essays/foundations_and_expressiveness/09_lindstrom_and_the_tradeoff.md` | EXPANSION_DONE | 2026-07-25 | Lindströmの定理を条件付き最大性として説明し、コンパクト性・下方Löwenheim–Skolem性・有限性表現の関係を明示。図・演習6問・全解答を整備。 |
 | `logic_tower/90_essays/foundations_and_expressiveness/10_why_mathematics_uses_classical_first_order_foundations.md` | EXPANSION_DONE | 2026-07-25 | 一階論理と集合論の役割分担、完全性と不完全性、代替基礎を整理し、標準採用を唯一性と誤解しない構成へ本文化。 |
-| `logic_tower/90_essays/hardware_and_sat/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
+| `logic_tower/90_essays/hardware_and_sat/README.md` | EXPANSION_DONE | 2026-07-25 | 全子記事の本文化完了に合わせ、状態・読み方・カテゴリ導線を完成版へ更新。 |
 | `logic_tower/90_essays/hardware_and_sat/00_boolean_algebra.md` | EXPANSION_DONE | 2026-07-25 | Boolean代数の基本法則、双対性、吸収律、論理式・代数・物理回路の三層を整理。図・演習6問・全解答を整備。 |
 | `logic_tower/90_essays/hardware_and_sat/01_logic_gates.md` | EXPANSION_DONE | 2026-07-25 | AND・OR・NOTの真理関数から組合せ回路へ接続し、論理抽象と電圧・遅延など物理実装を分離。図・演習6問・全解答を整備。 |
 | `logic_tower/90_essays/hardware_and_sat/02_functional_completeness.md` | EXPANSION_DONE | 2026-07-25 | 任意のBoolean関数の表現可能性をDNF構成で説明し、機能的完全性と効率性を区別。図・演習6問・全解答を整備。 |
@@ -123,53 +125,53 @@
 | `logic_tower/90_essays/hardware_and_sat/05_circuit_equivalence.md` | EXPANSION_DONE | 2026-07-25 | miter回路とSATにより全入力等価性を反例探索へ変換し、組合せ回路と順序回路の前提差を明示。図・演習6問・全解答を整備。 |
 | `logic_tower/90_essays/hardware_and_sat/06_sat_and_circuit_verification.md` | EXPANSION_DONE | 2026-07-25 | 回路違反条件、CNF、Tseitin等充足変換、有界検証の保証範囲を段階化。図・演習6問・全解答・反例確認手順を整備。 |
 | `logic_tower/90_essays/hardware_and_sat/07_bdd_and_symbolic_representation.md` | EXPANSION_DONE | 2026-07-25 | BDD・ROBDDの共有と簡約、固定変数順序での標準性、順序依存の指数的膨張を整理。図・演習6問・全解答を整備。 |
-| `logic_tower/90_essays/databases/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
+| `logic_tower/90_essays/databases/README.md` | EXPANSION_DONE | 2026-07-25 | 全子記事の本文化完了に合わせ、状態・読み方・カテゴリ導線を完成版へ更新。 |
 | `logic_tower/90_essays/databases/00_relations_as_mathematical_relations.md` | EXPANSION_DONE | 2026-07-25 | 関係・タプル・属性・定義域・スキーマを定義し、SQLのbag semantics・NULL・表示順との差を明示。図・演習6問・全解答を整備。 |
-| `logic_tower/90_essays/databases/01_relational_algebra_and_first_order_logic.md` | EXPANSION_TODO |  | 選択・射影・結合・差を論理式と対応付け、問い合わせ言語の表現力を考える。 |
-| `logic_tower/90_essays/databases/02_functional_dependencies.md` | EXPANSION_TODO |  | Xが一致すればYも一致するという制約を、行の対への全称条件として定義する。 |
-| `logic_tower/90_essays/databases/03_armstrongs_axioms.md` | EXPANSION_TODO |  | 反射律・増加律・推移律を、関数従属性の健全で完全な推論体系として学ぶ。 |
-| `logic_tower/90_essays/databases/04_attribute_closure_and_keys.md` | EXPANSION_TODO |  | 属性集合から推論できる全属性を計算し、スーパーキーと候補キーを求める。 |
-| `logic_tower/90_essays/databases/05_why_normalization_is_logical_reasoning.md` | EXPANSION_TODO |  | 更新異常の経験則と、従属性から導く形式的設計条件をつなぐ。 |
-| `logic_tower/90_essays/databases/06_first_second_and_third_normal_forms.md` | EXPANSION_TODO |  | 各正規形が何を制限し、どの従属性を問題にするかを段階例で整理する。 |
-| `logic_tower/90_essays/databases/07_bcnf_and_tradeoffs.md` | EXPANSION_TODO |  | BCNFの強い分解条件と、依存性保存を優先する3NF設計を比較する。 |
-| `logic_tower/90_essays/databases/08_lossless_join_decomposition.md` | EXPANSION_TODO |  | 分解後の自然結合で元の関係を復元できる条件を学ぶ。 |
-| `logic_tower/90_essays/databases/09_dependency_preservation.md` | EXPANSION_TODO |  | 分解後にJOINせず局所制約だけで元の従属性を検査できるかを考える。 |
-| `logic_tower/90_essays/databases/10_multivalued_dependencies_and_4nf.md` | EXPANSION_TODO |  | 独立な多値事実が同じ表に入ることで生じる組合せ冗長性を扱う。 |
-| `logic_tower/90_essays/databases/11_sql_null_and_three_valued_logic.md` | EXPANSION_TODO |  | 既存の問い合わせ記事を起点に、UNKNOWNが制約・結合・否定へ与える影響を深掘りする。 |
-| `logic_tower/90_essays/databases/12_why_real_databases_are_not_pure_set_theory.md` | EXPANSION_TODO |  | bag semantics、NULL、順序、型、トランザクションを通じて数学モデルと実装の距離を測る。 |
-| `logic_tower/90_essays/modal_logic_and_verification/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
-| `logic_tower/90_essays/modal_logic_and_verification/00_standard_translation_to_first_order_logic.md` | EXPANSION_TODO |  | Kripke世界と到達可能関係を個体・二項関係として扱い、BoxとDiamondを翻訳する。 |
-| `logic_tower/90_essays/modal_logic_and_verification/01_why_modal_logic_is_useful_even_if_translatable.md` | EXPANSION_TODO |  | 状態・時間・知識に必要な構造だけを表面化する抽象化の価値を示す。 |
-| `logic_tower/90_essays/modal_logic_and_verification/02_temporal_logic_and_model_checking.md` | EXPANSION_TODO |  | 既存のモデル検査記事を正本として、LTL・CTL・安全性・活性への学習導線を作る。 |
-| `logic_tower/90_essays/modal_logic_and_verification/03_epistemic_logic_and_distributed_systems.md` | EXPANSION_TODO |  | 主体が何を知るか、共有知・共通知識がプロトコルでどう効くかを扱う。 |
-| `logic_tower/90_essays/modal_logic_and_verification/04_provability_logic.md` | EXPANSION_TODO |  | Boxを形式体系での証明可能性として読むときの直観とGödel–Löb論理への入口を作る。 |
-| `logic_tower/90_essays/modal_logic_and_verification/05_modal_logic_in_mathematics.md` | EXPANSION_TODO |  | 位相意味論、forcing、圏論・トポスなど、専門的道具としての位置を概観する。 |
-| `logic_tower/90_essays/modal_logic_and_verification/06_modal_logic_and_physics.md` | EXPANSION_TODO |  | 物理法則・因果・可能性を様相的に分析する研究と、その限界を整理する。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/00_bits_boolean_functions_and_classical_circuits.md` | EXPANSION_TODO |  | 古典計算の状態と演算を整理し、量子回路との比較基準を作る。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/01_why_classical_gates_can_be_irreversible.md` | EXPANSION_TODO |  | ANDなどが入力情報を失うことと、古典計算機での熱・消去の議論への入口を作る。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/02_reversible_computation.md` | EXPANSION_TODO |  | 入力から出力を一意に逆算できる計算と、古典関数の可逆埋め込みを学ぶ。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/03_qubits_are_not_three_valued_bits.md` | EXPANSION_TODO |  | 重ね合わせを0・1・その中間という第三の真理値と誤解しないための基礎を作る。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/04_quantum_gates_as_linear_transformations.md` | EXPANSION_TODO |  | 量子ゲートを複素ベクトル空間上のユニタリ変換として扱う。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/05_toffoli_and_embedded_boolean_computation.md` | EXPANSION_TODO |  | 不可逆なBoolean関数を補助量子ビット付きの可逆写像へ埋め込む。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/06_measurement_and_probability.md` | EXPANSION_TODO |  | 量子状態から古典的結果が得られる測定と、振幅・確率・状態更新を区別する。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/07_quantum_logic_is_not_quantum_programming.md` | EXPANSION_TODO |  | 量子回路の計算モデルと、量子力学の命題構造を扱う量子論理を分離する。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/08_propositions_in_quantum_mechanics.md` | EXPANSION_TODO |  | 観測可能量の命題を射影作用素や閉部分空間へ対応させ、非Boolean性の意味を探る。 |
-| `logic_tower/90_essays/quantum_computing_and_logic/09_does_quantum_mechanics_refute_classical_logic.md` | EXPANSION_TODO |  | 物理理論の対象レベルと、それを記述するメタレベルの古典数学を分けて論争を整理する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/README.md` | SCAFFOLD_DONE | 2026-07-25 | カテゴリの目的、記事一覧、共通執筆方針、本線への導線を作成。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/00_what_does_it_mean_for_ai_to_solve_math.md` | EXPANSION_TODO |  | 自然言語解答、形式証明、探索、予想生成、共同研究を分類する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/01_llms_are_not_proof_checkers.md` | EXPANSION_TODO |  | もっともらしい証明生成と、規則に基づく決定的検査の役割差を示す。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/02_proof_generation_and_verification.md` | EXPANSION_TODO |  | 候補を作る難しさと正しさを検査する難しさを分離する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/03_search_space_of_mathematical_proofs.md` | EXPANSION_TODO |  | 適用可能な補題・代入・タクティクが作る巨大な分岐を捉える。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/04_tactic_prediction.md` | EXPANSION_TODO |  | 現在のゴールと文脈から有望な次手を予測する学習問題を扱う。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/05_lean_coq_and_formal_mathematics.md` | EXPANSION_TODO |  | 証明支援系の言語・ライブラリ・カーネル・自動化の役割を整理する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/06_neural_theorem_proving.md` | EXPANSION_TODO |  | ニューラルモデルと記号探索・形式検証を組み合わせる代表構成を比較する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/07_reinforcement_learning_for_proofs.md` | EXPANSION_TODO |  | 証明成功を報酬とし、自己生成問題や探索結果から方策を改善する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/08_alphaproof_and_olympiad_mathematics.md` | EXPANSION_TODO |  | 形式環境・強化学習・長時間探索を含む成果を、評価条件と日付付きで検証する記事にする。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/09_conjecture_generation.md` | EXPANSION_TODO |  | 例やデータから規則性を抽出し、証明対象となる新しい予想を提案する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/10_counterexample_search.md` | EXPANSION_TODO |  | 有限探索、SAT/SMT、プログラム生成を使って主張を崩す具体例を探す。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/11_formalization_bottleneck.md` | EXPANSION_TODO |  | 自然言語の数学を定義・補題・ライブラリへ落とす労力と曖昧さを扱う。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/12_can_llms_discover_new_mathematics.md` | EXPANSION_TODO |  | 新規予想・新証明・新概念を区別し、発見の評価枠組みを作る。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/13_when_an_ai_proof_should_be_trusted.md` | EXPANSION_TODO |  | 形式検査、依存公理、形式化妥当性、再現性から信頼境界を点検する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/14_human_ai_mathematical_collaboration.md` | EXPANSION_TODO |  | 例の列挙、補題提案、反例探索、概念選択、最終検証の分業を設計する。 |
-| `logic_tower/90_essays/ai_mathematics_and_logic/15_why_math_is_good_for_verifiable_ai.md` | EXPANSION_TODO |  | 候補生成と小さな検査器を分離できる数学の特性を、限界込みで説明する。 |
+| `logic_tower/90_essays/databases/01_relational_algebra_and_first_order_logic.md` | EXPANSION_DONE | 2026-07-25 | 選択と連言・射影と存在量化・結合・差・安全性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/02_functional_dependencies.md` | EXPANSION_DONE | 2026-07-25 | 定義・制約と観測・自明・非自明を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/03_armstrongs_axioms.md` | EXPANSION_DONE | 2026-07-25 | 反射律・増加律・推移律と完全性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/04_attribute_closure_and_keys.md` | EXPANSION_DONE | 2026-07-25 | 閉包アルゴリズム・スーパーキー・候補キーを整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/05_why_normalization_is_logical_reasoning.md` | EXPANSION_DONE | 2026-07-25 | 冗長性の原因・更新異常・分解の義務を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/06_first_second_and_third_normal_forms.md` | EXPANSION_DONE | 2026-07-25 | 第一正規形・第二正規形・第三正規形を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/07_bcnf_and_tradeoffs.md` | EXPANSION_DONE | 2026-07-25 | BCNF・3NFとの差・トレードオフを整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/08_lossless_join_decomposition.md` | EXPANSION_DONE | 2026-07-25 | 射影と再結合・二分解の条件・全インスタンスへの保証を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/09_dependency_preservation.md` | EXPANSION_DONE | 2026-07-25 | 制約の射影・保存条件・実務的意味を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/10_multivalued_dependencies_and_4nf.md` | EXPANSION_DONE | 2026-07-25 | 多値従属性・直積状の冗長性・第四正規形を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/11_sql_null_and_three_valued_logic.md` | EXPANSION_DONE | 2026-07-25 | 比較とUNKNOWN・文脈ごとの採否・NOT INとNOT EXISTSを整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/databases/12_why_real_databases_are_not_pure_set_theory.md` | EXPANSION_DONE | 2026-07-25 | 集合とバッグ・値と実行文脈・状態変化とトランザクションを整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/modal_logic_and_verification/README.md` | EXPANSION_DONE | 2026-07-25 | 全子記事の本文化完了に合わせ、状態・読み方・カテゴリ導線を完成版へ更新。 |
+| `logic_tower/90_essays/modal_logic_and_verification/00_standard_translation_to_first_order_logic.md` | EXPANSION_DONE | 2026-07-25 | 命題変数の持ち上げ・必然と可能・再帰的翻訳を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/modal_logic_and_verification/01_why_modal_logic_is_useful_even_if_translatable.md` | EXPANSION_DONE | 2026-07-25 | 意図を直接書く・モデルに相対的な読み・制限の利点を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/modal_logic_and_verification/02_temporal_logic_and_model_checking.md` | EXPANSION_DONE | 2026-07-25 | LTL・安全性と活性・モデル検査を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/modal_logic_and_verification/03_epistemic_logic_and_distributed_systems.md` | EXPANSION_DONE | 2026-07-25 | 個人の知識・相互知識と共通知識・通信と不可能性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/modal_logic_and_verification/04_provability_logic.md` | EXPANSION_DONE | 2026-07-25 | 証明可能性述語・導出可能性条件・Gödel–Löb論理を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/modal_logic_and_verification/05_modal_logic_in_mathematics.md` | EXPANSION_DONE | 2026-07-25 | 位相意味論・forcingと集合論的宇宙・内部論理を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/modal_logic_and_verification/06_modal_logic_and_physics.md` | EXPANSION_DONE | 2026-07-25 | 可能性の種類・時空と因果・モデル依存性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/README.md` | EXPANSION_DONE | 2026-07-25 | 全子記事の本文化完了に合わせ、状態・読み方・カテゴリ導線を完成版へ更新。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/00_bits_boolean_functions_and_classical_circuits.md` | EXPANSION_DONE | 2026-07-25 | ビット・Boolean関数・状態を持つ回路を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/01_why_classical_gates_can_be_irreversible.md` | EXPANSION_DONE | 2026-07-25 | 単射性・古典実装・情報と熱を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/02_reversible_computation.md` | EXPANSION_DONE | 2026-07-25 | 可逆ゲート・埋め込み・補助情報の後始末を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/03_qubits_are_not_three_valued_bits.md` | EXPANSION_DONE | 2026-07-25 | 重ね合わせ・測定基底・混合状態を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/04_quantum_gates_as_linear_transformations.md` | EXPANSION_DONE | 2026-07-25 | 線形性・ユニタリ性・多量子ビットを整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/05_toffoli_and_embedded_boolean_computation.md` | EXPANSION_DONE | 2026-07-25 | CCNOT・ANDの保存・万能性の範囲を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/06_measurement_and_probability.md` | EXPANSION_DONE | 2026-07-25 | Born則・状態更新・統計的推定を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/07_quantum_logic_is_not_quantum_programming.md` | EXPANSION_DONE | 2026-07-25 | 計算モデル・命題構造・非Boolean性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/08_propositions_in_quantum_mechanics.md` | EXPANSION_DONE | 2026-07-25 | 射影命題・格子演算・文脈と可換性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/quantum_computing_and_logic/09_does_quantum_mechanics_refute_classical_logic.md` | EXPANSION_DONE | 2026-07-25 | 対象レベル・メタレベル・複数の立場を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/README.md` | EXPANSION_DONE | 2026-07-25 | 全子記事の本文化完了に合わせ、状態・読み方・カテゴリ導線を完成版へ更新。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/00_what_does_it_mean_for_ai_to_solve_math.md` | EXPANSION_DONE | 2026-07-25 | 出力の型・検証の型・成果の文脈を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/01_llms_are_not_proof_checkers.md` | EXPANSION_DONE | 2026-07-25 | 確率的生成・小さな検査器・役割分担を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/02_proof_generation_and_verification.md` | EXPANSION_DONE | 2026-07-25 | 生成・検証・信頼基盤を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/03_search_space_of_mathematical_proofs.md` | EXPANSION_DONE | 2026-07-25 | 状態・行動・誘導を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/04_tactic_prediction.md` | EXPANSION_DONE | 2026-07-25 | 入力表現・候補生成・評価を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/05_lean_coq_and_formal_mathematics.md` | EXPANSION_DONE | 2026-07-25 | Curry–Howard対応・ツール層・形式数学の資産を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/06_neural_theorem_proving.md` | EXPANSION_DONE | 2026-07-25 | 前提選択・方策と価値・環境フィードバックを整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/07_reinforcement_learning_for_proofs.md` | EXPANSION_DONE | 2026-07-25 | 状態と遷移・学習信号・自己生成を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/08_alphaproof_and_olympiad_mathematics.md` | EXPANSION_DONE | 2026-07-25 | 確認された結果・形式化と探索・計算条件を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/09_conjecture_generation.md` | EXPANSION_DONE | 2026-07-25 | パターン抽出・候補のフィルタ・研究サイクルを整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/10_counterexample_search.md` | EXPANSION_DONE | 2026-07-25 | 否定の形式化・探索手段・検証と縮小を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/11_formalization_bottleneck.md` | EXPANSION_DONE | 2026-07-25 | 定理文の曖昧さ・依存知識・保守性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/12_can_llms_discover_new_mathematics.md` | EXPANSION_DONE | 2026-07-25 | 新規性の層・検証パイプライン・共同発見を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/13_when_an_ai_proof_should_be_trusted.md` | EXPANSION_DONE | 2026-07-25 | 定理文・証明と公理・再現性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/14_human_ai_mathematical_collaboration.md` | EXPANSION_DONE | 2026-07-25 | 探索の分業・検証の分業・来歴管理を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+| `logic_tower/90_essays/ai_mathematics_and_logic/15_why_math_is_good_for_verifiable_ai.md` | EXPANSION_DONE | 2026-07-25 | 安価な反証と検査・探索のスケール・境界を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
