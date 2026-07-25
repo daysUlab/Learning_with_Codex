@@ -85,4 +85,4 @@
 | `logic_tower/03_soundness_completeness/00_overview.md` | UPGRADE_DONE | 2026-07-25 | 健全性・完全性を言語・意味論・証明体系の組に相対化し、完全性と算術理論の不完全性、コンパクト性と判定可能性を区別。Mermaid図、段階例2件、誤解・復帰手順、演習6問と全解答、学習チェック、章内外リンクを整備。 |
 | `logic_tower/03_soundness_completeness/01_soundness.md` | UPGRADE_DONE | 2026-07-25 | 局所健全性・公理の妥当性から導出木の高さに関する帰納法で体系全体へ進む流れを明示。量化規則と含意導入の例、非健全規則の反例、保証範囲、Mermaid図、演習6問と全解答、復帰手順、学習チェック、前・次・親リンクを整備。 |
 | `logic_tower/03_soundness_completeness/02_completeness.md` | UPGRADE_DONE | 2026-07-25 | 古典一階述語論理の全モデルに関する完全性と、実効的算術理論・標準自然数構造に関するGödelの不完全性を非標準モデルも含めて区別。対偶的モデル構成、保証しない事項、Mermaid図、演習6問と全解答、復帰手順、学習チェック、前・次・親リンクを整備。 |
-| `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | UPGRADE_TODO |  | 有限部分の充足可能性と判定アルゴリズムを区別し、無限モデル例の前提を厳密化する。 |
+| `logic_tower/03_soundness_completeness/03_compactness_low_level.md` | UPGRADE_DONE | 2026-07-25 | コンパクト性を存在定理として明記し、任意の有限部分と有限回の判定を分離。順序公理を暗黙にした例を相異なる定数 c_i≠c_j へ置換し、完全性・健全性からの導出、Mermaid図、演習6問と全解答、誤解・復帰手順、学習チェック、前・次・親リンクを整備。 |
