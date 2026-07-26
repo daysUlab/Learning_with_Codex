@@ -544,6 +544,10 @@ $$
 - 平面波の向き・振幅・位相関係を真空中で説明できる。
 - 真空、損失なし媒質、損失媒質を区別できる。
 
+## 回路理論の限界への接続
+
+配線寸法が波長に比べて無視できなくなると、電圧と電流は位置依存の波になります。[集中定数近似](../part04_from_fields_to_circuits/07_lumped_element_approximation.md)で移行条件を確認し、[伝送線路](../part05_circuit_applications/11_transmission_lines_as_distributed_circuits.md)へ進みます。
+
 ## ナビゲーション
 
 - 前：[境界条件](01_boundary_conditions.md)

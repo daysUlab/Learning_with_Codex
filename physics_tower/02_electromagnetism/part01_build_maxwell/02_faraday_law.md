@@ -411,6 +411,10 @@ $$
 - 固定回路と移動回路の起電力を区別できる。
 - 静電場と誘導電場の閉路積分を比較できる。
 
+## 回路・機器への接続
+
+磁束鎖交数を端子量へ縮約すると自己・相互インダクタンスが生まれます。[磁束からインダクタンスへ](../part04_from_fields_to_circuits/05_inductance_from_flux_and_faraday.md)でコイル電圧を導き、[変圧器](../part05_circuit_applications/09_mutual_inductance_and_transformers.md)と[モーター・発電機](../part05_circuit_applications/10_motors_generators_and_back_emf.md)へ進みます。
+
 ## ナビゲーション
 
 - 前：[Coulomb則からGauss則](01_from_coulomb_to_gauss.md)
