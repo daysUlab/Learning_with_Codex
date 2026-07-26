@@ -25,17 +25,37 @@ $$
 $$
 Q=\frac{\omega_0L}{R},\qquad \Delta\omega=\frac{\omega_0}{Q}
 $$
-で半値幅を表す。実効値フェーザを用いた複素電力は
+で半値幅を表す。実効値フェーザを用いる。ここでは、電流が電圧より実時間で遅れる角を
 
 $$
-\mathcal{S}=\tilde V\tilde I^*=P+iQ_{\mathrm{r}},\qquad |\mathcal{S}|=VI
+\varphi>0
 $$
-。有効電力、無効電力、皮相電力は
+
+とし、誘導性無効電力を正に定義する。採用した時間規約では位相差が複素振幅上で逆符号に見えるため、
+
+$$
+\mathcal{S}=\tilde V\tilde I^*=P-iQ_{\mathrm{r}},\qquad |\mathcal{S}|=VI
+$$
+
+と書く。有効電力、慣用的に誘導性を正とした無効電力、皮相電力は
 
 $$
 P=VI\cos\varphi,\qquad Q_{\mathrm{r}}=VI\sin\varphi,\qquad S=VI
 $$
-で、力率は
+
+である。時間規約を
+
+$$
+\exp(+i\omega t)
+$$
+
+とする教科書では同じ慣用定義に対して
+
+$$
+\mathcal{S}=P+iQ_{\mathrm{r}}
+$$
+
+となる。力率は
 
 $$
 \mathrm{pf}=P/S=\cos\varphi

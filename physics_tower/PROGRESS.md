@@ -88,7 +88,7 @@
 | `physics_tower/02_electromagnetism/part05_circuit_applications/05_rl_transient_response.md` | QA_PASS | 2026-07-26 | 新規本文化。RL時定数、電流連続、遮断高電圧、フライバック。演習6問＋全解答、数式・リンク検査通過。 |
 | `physics_tower/02_electromagnetism/part05_circuit_applications/06_lc_and_rlc_oscillation.md` | QA_PASS | 2026-07-26 | 新規本文化。場エネルギー交換、固有振動、減衰、力学対応。演習6問＋全解答、数式・リンク・図検査通過。 |
 | `physics_tower/02_electromagnetism/part05_circuit_applications/07_ac_impedance_and_phasors.md` | QA_PASS | 2026-07-26 | 新規本文化。exp(-iωt)のRLCインピーダンス、過渡/定常、1 kHz例。演習6問＋全解答、数式・リンク検査通過。 |
-| `physics_tower/02_electromagnetism/part05_circuit_applications/08_resonance_power_and_power_factor.md` | QA_PASS | 2026-07-26 | 新規本文化。共振、Q、半値幅、P/Q/S、力率と送電損失。演習6問＋全解答、数式・リンク検査通過。 |
+| `physics_tower/02_electromagnetism/part05_circuit_applications/08_resonance_power_and_power_factor.md` | QA_PASS | 2026-07-26 | 新規本文化。共振、Q、半値幅、P/Q/S、力率と送電損失。exp(-iωt)で誘導性Qを正とする複素電力符号を明記。演習6問＋全解答、数式・リンク検査通過。 |
 | `physics_tower/02_electromagnetism/part05_circuit_applications/09_mutual_inductance_and_transformers.md` | QA_PASS | 2026-07-26 | 新規本文化。相互誘導、巻数比、負荷反映、銅損/鉄損、送電図。演習6問＋全解答、数式・リンク・図検査通過。 |
 | `physics_tower/02_electromagnetism/part05_circuit_applications/10_motors_generators_and_back_emf.md` | QA_PASS | 2026-07-26 | 新規本文化。Lorentzトルク、発電、逆起電力、始動・回生例。演習6問＋全解答、数式・リンク検査通過。 |
 | `physics_tower/02_electromagnetism/part05_circuit_applications/11_transmission_lines_as_distributed_circuits.md` | QA_PASS | 2026-07-26 | 新規本文化。電信方程式、Z0、反射、終端、Poynting対応。演習6問＋全解答、数式・リンク・図検査通過。 |
