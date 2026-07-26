@@ -109,6 +109,10 @@ Poynting定理または受動符号規約で、境界からの流入、場への
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体への接続
+
+半導体の導電率はcarrier密度と移動度に依存し、gate電圧や濃度勾配で変わります。固定抵抗へ縮約する前の状態は[drift・diffusion](../part06_semiconductor_bridge/04_drift_diffusion_and_current.md)が正本です。
+
 ## ナビゲーション
 
 - 前：[電流密度から電流へ](02_current_from_current_density.md)

@@ -108,6 +108,10 @@ $$
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体packageへの接続
+
+HBMの広幅I/O、interposer、chiplet、GPU間linkも、立上り時間と配線遅延によって伝送線路として扱います。[HBM](../part07_semiconductor_products/07_hbm_and_vertical_integration.md)と[signal integrity](../part07_semiconductor_products/09_interconnects_signal_integrity_and_power.md)へ進みます。
+
 ## ナビゲーション
 
 - 前：[10_motors_generators_and_back_emf.md](10_motors_generators_and_back_emf.md)

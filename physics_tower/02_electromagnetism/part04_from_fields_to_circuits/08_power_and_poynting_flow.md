@@ -114,6 +114,10 @@ Poynting定理または受動符号規約で、境界からの流入、場への
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体への接続
+
+CMOSの容量充放電、配線損失、漏れ、power deliveryも同じenergy収支に従います。[switching energyとRC遅延](../part06_semiconductor_bridge/11_switching_energy_and_rc_delay.md)では端子modelへ縮約して読みます。
+
 ## ナビゲーション
 
 - 前：[集中定数近似](07_lumped_element_approximation.md)

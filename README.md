@@ -5,6 +5,8 @@
 
 `logic_tower` は本線と発展・応用68記事を本文化済みです。ほかのタワーの状態は各 `PROGRESS.md` を正本として確認します。
 
+`physics_tower` の電磁気学章は、Maxwell方程式から回路、半導体デバイス、DRAM・NAND・HBM・GPU・SSD、AI計算基盤への入口まで本文化済みです。
+
 ## トップレベル目次
 - [logic_tower](logic_tower/README.md)
 - [math_tower](math_tower/README.md)

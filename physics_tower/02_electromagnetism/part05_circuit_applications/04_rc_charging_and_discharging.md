@@ -99,6 +99,10 @@ RとCが一定、配線遅延が時定数より十分短く、スイッチが理
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体への接続
+
+logic gateのon抵抗とgate・接合・配線容量は同じRC方程式へ縮約できます。[switching energyとRC遅延](../part06_semiconductor_bridge/11_switching_energy_and_rc_delay.md)で電圧・周波数・漏れのtrade-offを扱います。
+
 ## ナビゲーション
 
 - 前：[03_capacitors_in_series_and_parallel.md](03_capacitors_in_series_and_parallel.md)

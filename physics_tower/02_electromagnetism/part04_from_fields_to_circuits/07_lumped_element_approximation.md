@@ -99,6 +99,10 @@ Poynting定理または受動符号規約で、境界からの流入、場への
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体への接続
+
+chip内でも短い配線を常に理想nodeとはみなせません。RC遅延、crosstalk、package・HBM I/Oでは分布性が戻ります。[高速I/Oの信号品質](../part07_semiconductor_products/09_interconnects_signal_integrity_and_power.md)へ接続します。
+
 ## ナビゲーション
 
 - 前：[Maxwell方程式からKirchhoff則へ](06_kirchhoff_laws_from_maxwell.md)

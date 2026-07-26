@@ -115,6 +115,10 @@ Poynting定理または受動符号規約で、境界からの流入、場への
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体への接続
+
+端子電圧はMOS gateやpn接合の境界条件になり、内部電位はPoisson方程式から空間分布として求まります。[電位とcarrier制御](../part06_semiconductor_bridge/02_electric_potential_and_carrier_control.md)では、電子の静電energyが電位と逆符号になる点を確認します。
+
 ## ナビゲーション
 
 - 前：[part04入口](README.md)

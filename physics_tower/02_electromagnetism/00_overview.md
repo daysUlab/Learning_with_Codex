@@ -1,6 +1,6 @@
-# 電磁気学――電荷から場・回路・電気工学まで
+# 電磁気学――電荷から場・回路・半導体・AI計算基盤まで
 
-> 完成状態：場の理論から大学受験回路・工学初歩・伝送線路・アンテナへの入口まで本文化済み
+> 完成状態：場の理論から回路・半導体デバイス・memory・AI計算基盤への入口まで本文化済み
 > 単位系：SI
 > 交流の時間規約：
 >
@@ -26,7 +26,7 @@ $$
 
 を通して物質へ作用します。
 
-## 1. 24段階のストーリー
+## 1. 30段階のストーリー
 
 この図は、静的な電荷から場を組み立て、端子量へ縮約し、集中定数の限界で再び波動と放射へ戻る因果順序を示します。
 
@@ -39,7 +39,11 @@ flowchart TD
   E --> F["R・C・L・Kirchhoff則"]
   F --> G["直流・過渡・交流・機器"]
   G --> H["伝送線路・アンテナ・限界"]
-  H --> I["問題選択・数学補習"]
+  H --> I["半導体中の電位・電荷・輸送"]
+  I --> J["pn接合・MOSFET"]
+  J --> K["logic・DRAM・NAND・HBM"]
+  K --> L["GPU・SSD・AI計算基盤"]
+  L --> M["量子・統計で再訪"]
 ```
 
 1. 電荷と電場
@@ -66,6 +70,12 @@ flowchart TD
 22. 回路理論の限界
 23. 問題選択・誤解整理
 24. 数学補習
+25. 半導体中の電位・Poisson方程式・ドリフト拡散
+26. ドーピング・空乏層・pn接合
+27. MOSコンデンサ・MOSFET
+28. CMOS・SRAM・DRAM・NAND
+29. HBM・GPU・SSD・package
+30. AI計算基盤と古典理論の限界
 
 ## 2. Maxwell方程式を二つの記述で整理する
 
@@ -222,6 +232,40 @@ $$
 4. [伝送線路・アンテナ](part05_circuit_applications/11_transmission_lines_as_distributed_circuits.md)
 5. [10_circuitsで回路解析を深める](../10_circuits/00_overview.md)
 
+### 半導体デバイスルート
+
+1. [電位・Poisson・輸送](part06_semiconductor_bridge/README.md)
+2. [pn接合](part06_semiconductor_bridge/06_pn_junction_as_an_electrostatic_structure.md)
+3. [MOSコンデンサ](part06_semiconductor_bridge/08_mos_capacitor.md)
+4. [MOSFET](part06_semiconductor_bridge/09_mosfet_as_a_field_controlled_switch.md)
+
+### memory技術ルート
+
+1. [SRAM](part07_semiconductor_products/03_sram_and_cache.md)
+2. [DRAM](part07_semiconductor_products/04_dram_as_a_transistor_capacitor_cell.md)
+3. [NAND](part07_semiconductor_products/05_nand_flash_and_floating_gate_or_charge_trap.md)
+4. [SSDとHBM](part07_semiconductor_products/06_ssd_controller_and_nand_system.md)
+
+### AI hardwareルート
+
+1. [CMOSとGPU](part07_semiconductor_products/02_cmos_logic_and_gpu_switching.md)
+2. [HBM](part07_semiconductor_products/07_hbm_and_vertical_integration.md)
+3. [GPUとmemory帯域](part07_semiconductor_products/08_gpu_memory_bandwidth_and_ai.md)
+4. [AIデータセンター](part07_semiconductor_products/13_from_device_physics_to_ai_datacenter.md)
+
+### 企業・産業ルート
+
+1. [製造工程](part07_semiconductor_products/11_semiconductor_manufacturing_overview.md)
+2. [企業マップ](part07_semiconductor_products/12_company_map_kioxia_micron_skhynix_nvidia.md)
+3. [value chain Q&A](qa/08_semiconductor_company_value_chain.md)
+
+### 量子力学への準備ルート
+
+1. [電磁気学と量子論の分業](part06_semiconductor_bridge/01_why_semiconductors_need_em_and_quantum.md)
+2. [古典像の限界](part06_semiconductor_bridge/12_limits_of_the_classical_picture.md)
+3. [統計力学](../05_statistical_mechanics/00_overview.md)
+4. [量子力学](../07_quantum_mechanics/00_overview.md)
+
 ### 数学補習ルート
 
 - grad・div・curlで止まった：[ベクトル解析](remedial/01_vector_calc_for_em.md)
@@ -253,14 +297,18 @@ $$
 | [part03](part03_phenomenology/README.md) | 物質と放射へつなぐ | 新規本文化・レビュー済み |
 | [part04](part04_from_fields_to_circuits/README.md) | 場から端子量・RLC・Kirchhoff則へ縮約 | 本文化・QA済み |
 | [part05](part05_circuit_applications/README.md) | 大学受験回路から工学初歩へ接続 | 本文化・QA済み |
+| [part06](part06_semiconductor_bridge/README.md) | 電場・電位からpn接合・MOSFETへ接続 | 本文化・内容・演習QA済み |
+| [part07](part07_semiconductor_products/README.md) | logic・memory・GPU・AI基盤と企業分業 | 本文化・内容・演習・一次資料QA済み |
 | [qa](qa/README.md) | 誤解・問題選択・受験・工学マップ | 本文化済み |
 | [remedial](remedial/README.md) | 数学への最短復帰 | 新規本文化済み |
 
-## 7. 回路理論との役割分担と次章
+## 7. 回路・量子・統計との役割分担
 
 本章は、回路量が場からどう生まれ、どの近似で有効かを正本とします。[10_circuits](../10_circuits/00_overview.md) はThévenin・Norton、回路網解析、フィルタ、二端子対、オペアンプ、半導体、実装・計測を独立した工学体系として詳しく扱います。
 
-次章の解析力学では、場そのものではなく作用・変分・対称性から運動方程式と保存則を統一します。本章で使った
+半導体の巨視的な場・電荷・端子モデルは本章、回路網としての詳細は[10_circuits](../10_circuits/00_overview.md)、band・トンネル・量子閉じ込めは[量子力学](../07_quantum_mechanics/00_overview.md)、Fermi準位とcarrier統計は[統計力学](../05_statistical_mechanics/00_overview.md)で再訪します。
+
+解析力学では、場そのものではなく作用・変分・対称性から運動方程式と保存則を統一します。本章で使った
 
 $$
 \text{モデル}
@@ -283,6 +331,9 @@ $$
 - 境界条件、波動、エネルギー保存を同じ方程式系から説明できる。
 - 良導体近似と遠方場近似の条件を述べられる。
 - 問題文から第一候補の道具を選べる。
+- 電場・電位・電荷分布からpn接合とMOSの巨視的動作を説明できる。
+- DRAM、NAND、HBM、SSD、GPUを異なる階層へ配置できる。
+- 古典電磁気学で読める範囲と量子・統計へ保留する範囲を区別できる。
 
 ## ナビゲーション
 

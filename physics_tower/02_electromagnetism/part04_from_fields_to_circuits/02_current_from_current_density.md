@@ -109,6 +109,10 @@ Poynting定理または受動符号規約で、境界からの流入、場への
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体への接続
+
+半導体では断面積分の定義は同じですが、局所電流密度にdriftとdiffusionが共存します。[半導体中の電流](../part06_semiconductor_bridge/04_drift_diffusion_and_current.md)へ進みます。
+
 ## ナビゲーション
 
 - 前：[電場から電圧へ](01_voltage_from_electric_field.md)
