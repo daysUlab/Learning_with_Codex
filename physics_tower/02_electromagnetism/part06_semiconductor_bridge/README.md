@@ -73,3 +73,5 @@ $$
 - 前：[回路応用](../part05_circuit_applications/README.md)
 - 次：[現代の半導体製品](../part07_semiconductor_products/README.md)
 - 親：[電磁気学](../00_overview.md)
+- 統計力学で回収：[Fermi準位・carrier密度・Einstein関係](../../05_statistical_mechanics/part03_quantum_and_applications/02_semiconductor_carriers_and_einstein_relation.md)
+- 量子力学へ保留：[量子力学overview](../../07_quantum_mechanics/00_overview.md)

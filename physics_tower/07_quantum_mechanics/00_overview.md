@@ -12,6 +12,10 @@
 
 [電磁気学の半導体bridge](../02_electromagnetism/part06_semiconductor_bridge/README.md)で保留した、band gap、有効質量、トンネル、量子閉じ込め、微細MOSFETの波動性を本章で再訪します。Poisson方程式や端子容量の説明を複製せず、「許される状態と遷移」の微視的理由を担当します。
 
+## 解析力学・統計力学から受け取るもの
+
+[解析力学](../03_analytical_mechanics/00_overview.md)からHamiltonian、作用、Poisson括弧、canonical momentumを受け取ります。[統計力学](../05_statistical_mechanics/00_overview.md)からはFermi・Boseの占有を受け取ります。本章は占有公式を複製せず、量子state、演算子、測定、時間発展、bandやtunnelingの基礎を担当します。
+
 ## ナビゲーション
 - 親: [../README.md](../README.md)
 - 子:

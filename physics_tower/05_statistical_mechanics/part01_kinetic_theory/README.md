@@ -1,15 +1,13 @@
-# part01_kinetic_theory
+# part01 粒子運動から状態数へ
 
-part01_kinetic_theory の入口ページです。
-このディレクトリは章内の小区分として用意されており、本文はこれから追加します。
-最小限のナビゲーションのみ先に整備しています。
+1. [気体分子運動論](01_kinetic_theory_pressure_temperature.md)
+2. [microstate・macrostate・小さな数え上げ](02_microstate_macrostate_small_counting.md)
+3. [multiplicity・最頻状態・揺らぎ](03_multiplicity_fluctuations_einstein_solid.md)
 
-## この章で扱うこと
-- この区分の目的と範囲の確認
-- 追加予定ノートの整理
-- 上位章との対応関係の明確化
+圧力を壁への運動量移送として導き、coin、二準位、箱への粒子分配、Einstein solid、paramagnetで「多数では最頻状態付近が圧倒する」ことを確かめます。
 
 ## ナビゲーション
-- 親: [../00_overview.md](../00_overview.md)
-- 子:
-  - （準備中）
+
+- 親：[統計力学](../00_overview.md)
+- 前：[熱力学](../../04_thermodynamics/00_overview.md)
+- 次：[ensemble](../part02_classical_ensembles/README.md)
