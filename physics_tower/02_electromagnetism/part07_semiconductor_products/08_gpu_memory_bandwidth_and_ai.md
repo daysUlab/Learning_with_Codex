@@ -75,3 +75,8 @@ $$
 
 - 前：[HBM](07_hbm_and_vertical_integration.md)
 - 次：[信号品質と電力](09_interconnects_signal_integrity_and_power.md)
+
+## 参考資料
+
+- S. Williams, A. Waterman, and D. Patterson, “Roofline: An Insightful Visual Performance Model”。
+- [NVIDIA Data Center](https://www.nvidia.com/en-us/data-center/)（確認日：2026-07-26）。

@@ -49,3 +49,8 @@ $$
 - 前：[GPUと帯域](08_gpu_memory_bandwidth_and_ai.md)
 - 次：[packageと熱](10_packaging_tsv_chiplets_and_thermal_limits.md)
 - 正本：[伝送線路](../part05_circuit_applications/11_transmission_lines_as_distributed_circuits.md)
+
+## 参考資料
+
+- H. W. Johnson and M. Graham, *High-Speed Digital Design*。
+- E. Bogatin, *Signal and Power Integrity—Simplified*。

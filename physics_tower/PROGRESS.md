@@ -66,7 +66,7 @@
 | `physics_tower/01_dynamics/part04_applications/01_ballistic_pendulum.md` | DONE | 2026-02-15 | 弾道振り子ページを本文化。2段階解法、エネルギー損失評価、例題3題、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part04_applications/02_two_stage_strategy.md` | DONE | 2026-02-15 | 複合問題の一般戦略ページを本文化。段階分解テンプレ、対応表、二段階/三段階例、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part04_applications/03_checklist.md` | DONE | 2026-02-15 | 複合保存則問題のチェックリストを本文化。設計/立式/検算の実戦項目と答案テンプレを追加。 |
-| `physics_tower/02_electromagnetism/00_overview.md` | CONTENT_REVIEWED | 2026-07-26 | 既存リバイズ。30段階へ拡張し、半導体device・memory・AI hardware・企業・量子準備ルートを追加。数式・link・図検査対象。 |
+| `physics_tower/02_electromagnetism/00_overview.md` | CONTENT_REVIEWED | 2026-07-26 | 既存リバイズ。30段階へ拡張し、半導体device・memory・AI hardware・企業・量子準備ルートを追加。数式・link・図検査通過。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。章内位置、完成状態、前後ナビゲーションを追加。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/01_from_coulomb_to_gauss.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。電場定義、Gauss則の微分形、全電荷の条件、演習2問、導線を追加。 |
 | `physics_tower/02_electromagnetism/part01_build_maxwell/02_faraday_law.md` | TECH_REVIEWED | 2026-07-26 | 既存リバイズ。固定/移動回路の正本を維持し、L・変圧器・発電機へ接続。演習既存2問、数式・リンク検査通過。 |
@@ -108,33 +108,33 @@
 | `physics_tower/02_electromagnetism/qa/03_units_and_signs.md` | QA_PASS | 2026-07-26 | 新規本文化。SI単位、面/周回規約、境界条件、exp(-iωt)、演習8問＋全解答を追加。 |
 | `physics_tower/02_electromagnetism/qa/04_high_school_circuit_problem_strategy.md` | QA_PASS | 2026-07-26 | 新規本文化。受験頻出12テーマ対応表、モデル選択、捨てた場の情報。演習6問＋全解答、リンク・図検査通過。 |
 | `physics_tower/02_electromagnetism/qa/05_engineering_application_map.md` | QA_PASS | 2026-07-26 | 新規本文化。場→回路→機器・送電・高周波の地図と10_circuits境界。演習6問＋全解答、リンク・図検査通過。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | ユーザー指定一括batchの新規本文化。場→電荷→deviceの図、古典／量子境界、12記事導線。演習0、link・Mermaid検査対象。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/01_why_semiconductors_need_em_and_quantum.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。電磁気／量子統計の分業、導電率例、演習6問＋全解答。内容・符号・link・TeX検査対象。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/02_electric_potential_and_carrier_control.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。電子energyの符号、gate容量、2.15e16 m^-2例、演習6問＋全解答。量子境界・数式検査対象。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/03_poisson_equation_in_semiconductors.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。固定ion＋carrier、空乏近似、0.70 V例、演習6問＋全解答。Poisson符号・単位検査対象。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/04_drift_diffusion_and_current.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。drift/diffusionと局所Ohm則、1.60e4 A/m2例、演習6問＋全解答。電子／慣用電流検査対象。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | ユーザー指定一括batchの新規本文化。場→電荷→deviceの図、古典／量子境界、12記事導線。演習0、link・Mermaid検査通過。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/01_why_semiconductors_need_em_and_quantum.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。電磁気／量子統計の分業、導電率例、演習6問＋全解答。内容・符号・link・TeX検査通過。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/02_electric_potential_and_carrier_control.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。電子energyの符号、gate容量、2.15e16 m^-2例、演習6問＋全解答。量子境界・数式検査通過。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/03_poisson_equation_in_semiconductors.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。固定ion＋carrier、空乏近似、0.70 V例、演習6問＋全解答。Poisson符号・単位検査通過。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/04_drift_diffusion_and_current.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。drift/diffusionと局所Ohm則、1.60e4 A/m2例、演習6問＋全解答。電子／慣用電流検査通過。 |
 | `physics_tower/02_electromagnetism/part06_semiconductor_bridge/05_doping_depletion_and_junction_fields.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。donor/acceptor・空乏幅・内蔵場、濃度比例、演習6問＋全解答。carrier密度は統計へ保留。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/06_pn_junction_as_an_electrostatic_structure.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。拡散／drift平衡・bias・2.1 pF接合容量、演習6問＋全解答。図・降伏・量子境界検査対象。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/06_pn_junction_as_an_electrostatic_structure.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。拡散／drift平衡・bias・2.1 pF接合容量、演習6問＋全解答。図・降伏・量子境界検査通過。 |
 | `physics_tower/02_electromagnetism/part06_semiconductor_bridge/07_diode_from_field_to_terminal_model.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。非線形IV、小信号25.9Ω、整流・保護、演習6問＋全解答。式導出は統計輸送へ保留。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/08_mos_capacitor.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規中心記事。蓄積・空乏・反転、5nm膜2e8 V/m例、演習8問＋全解答。界面・破壊・符号検査対象。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/08_mos_capacitor.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規中心記事。蓄積・空乏・反転、5nm膜2e8 V/m例、演習8問＋全解答。界面・破壊・符号検査通過。 |
 | `physics_tower/02_electromagnetism/part06_semiconductor_bridge/09_mosfet_as_a_field_controlled_switch.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規中心記事。4端子・channel・長channel式・0.18mA例、演習8問＋全解答。微細化は量子へ保留。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/10_device_capacitance_leakage_and_breakdown.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。gate/接合/配線容量、漏れ・high-k・2.56µW例、演習6問＋全解答。信頼性範囲検査対象。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/11_switching_energy_and_rc_delay.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。CV2、13.8ps、6.4fJ、電圧／漏れtrade-off、演習6問＋全解答。Poynting・RC link検査対象。 |
-| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/12_limits_of_the_classical_picture.md` | CONTENT_REVIEWED | 2026-07-26 | 新規。band・tunnel・閉じ込め・ballistic・離散揺らぎの境界。演習6問＋全解答、量子／統計導線検査対象。 |
-| `physics_tower/02_electromagnetism/part07_semiconductor_products/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。物理→device→system→企業の階層図と13記事導線。演習0、link・Mermaid検査対象。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/10_device_capacitance_leakage_and_breakdown.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。gate/接合/配線容量、漏れ・high-k・2.56µW例、演習6問＋全解答。信頼性範囲検査通過。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/11_switching_energy_and_rc_delay.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。CV2、13.8ps、6.4fJ、電圧／漏れtrade-off、演習6問＋全解答。Poynting・RC link検査通過。 |
+| `physics_tower/02_electromagnetism/part06_semiconductor_bridge/12_limits_of_the_classical_picture.md` | CONTENT_REVIEWED | 2026-07-26 | 新規。band・tunnel・閉じ込め・ballistic・離散揺らぎの境界。演習6問＋全解答、量子／統計導線検査通過。 |
+| `physics_tower/02_electromagnetism/part07_semiconductor_products/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。物理→device→system→企業の階層図と13記事導線。演習0、link・Mermaid検査通過。 |
 | `physics_tower/02_electromagnetism/part07_semiconductor_products/01_logic_memory_and_storage.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。register/SRAM/DRAM/HBM/NAND/SSD/HDD比較、100GB転送例、演習6問＋全解答。 |
-| `physics_tower/02_electromagnetism/part07_semiconductor_products/02_cmos_logic_and_gpu_switching.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。MOS→CMOS→GPU、0.167 FLOP/byte例、演習6問＋全解答。Logic Tower相互link・図検査対象。 |
+| `physics_tower/02_electromagnetism/part07_semiconductor_products/02_cmos_logic_and_gpu_switching.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。MOS→CMOS→GPU、0.167 FLOP/byte例、演習6問＋全解答。Logic Tower相互link・図検査通過。 |
 | `physics_tower/02_electromagnetism/part07_semiconductor_products/03_sram_and_cache.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。6T cell・双安定・cache、32MiBで16.1億T例、演習6問＋全解答。 |
-| `physics_tower/02_electromagnetism/part07_semiconductor_products/04_dram_as_a_transistor_capacitor_cell.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規中心記事。1T1C・sense・refresh、24fC/15万電子例、演習8問＋全解答。図・電荷共有検査対象。 |
+| `physics_tower/02_electromagnetism/part07_semiconductor_products/04_dram_as_a_transistor_capacitor_cell.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規中心記事。1T1C・sense・refresh、24fC/15万電子例、演習8問＋全解答。図・電荷共有検査通過。 |
 | `physics_tower/02_electromagnetism/part07_semiconductor_products/05_nand_flash_and_floating_gate_or_charge_trap.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。電荷保持・Vt・SLC〜QLC・3D NAND、0.80V例、演習8問＋全解答。tunnelは量子へ保留。 |
-| `physics_tower/02_electromagnetism/part07_semiconductor_products/06_ssd_controller_and_nand_system.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。controller/ECC/FTL/GC、3.2GB/s例、演習6問＋全解答。NAND dieとの差・図検査対象。 |
-| `physics_tower/02_electromagnetism/part07_semiconductor_products/07_hbm_and_vertical_integration.md` | SOURCE_VERIFIED | 2026-07-26 | 新規中心記事。DRAM積層・TSV・1024bit/409.6GB/s例、演習8問＋全解答。Micron公式資料確認、図・熱境界検査対象。 |
-| `physics_tower/02_electromagnetism/part07_semiconductor_products/08_gpu_memory_bandwidth_and_ai.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。roofline・parameter/activation/KV cache、40TFLOP/s例、演習6問＋全解答。data path図検査対象。 |
-| `physics_tower/02_electromagnetism/part07_semiconductor_products/09_interconnects_signal_integrity_and_power.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。反射・crosstalk・PDN・eye、0.5nH/10A/ns例、演習6問＋全解答。伝送線路link検査対象。 |
+| `physics_tower/02_electromagnetism/part07_semiconductor_products/06_ssd_controller_and_nand_system.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。controller/ECC/FTL/GC、3.2GB/s例、演習6問＋全解答。NAND dieとの差・図検査通過。 |
+| `physics_tower/02_electromagnetism/part07_semiconductor_products/07_hbm_and_vertical_integration.md` | SOURCE_VERIFIED | 2026-07-26 | 新規中心記事。DRAM積層・TSV・1024bit/409.6GB/s例、演習8問＋全解答。Micron公式資料確認、図・熱境界検査通過。 |
+| `physics_tower/02_electromagnetism/part07_semiconductor_products/08_gpu_memory_bandwidth_and_ai.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。roofline・parameter/activation/KV cache、40TFLOP/s例、演習6問＋全解答。data path図検査通過。 |
+| `physics_tower/02_electromagnetism/part07_semiconductor_products/09_interconnects_signal_integrity_and_power.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。反射・crosstalk・PDN・eye、0.5nH/10A/ns例、演習6問＋全解答。伝送線路link検査通過。 |
 | `physics_tower/02_electromagnetism/part07_semiconductor_products/10_packaging_tsv_chiplets_and_thermal_limits.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。die/package/interposer/TSV/2.5D/3D、24K例、演習6問＋全解答。熱は熱力学へ保留。 |
 | `physics_tower/02_electromagnetism/part07_semiconductor_products/11_semiconductor_manufacturing_overview.md` | CONTENT_REVIEWED | 2026-07-26 | 新規。酸化・成膜・露光・etch・implant・anneal・配線・test、膜厚2%例、演習6問＋全解答。化学導線。 |
 | `physics_tower/02_electromagnetism/part07_semiconductor_products/12_company_map_kioxia_micron_skhynix_nvidia.md` | SOURCE_VERIFIED | 2026-07-26 | 新規。4社を製品・役割・物理・device・実装・接続・誤解で整理。演習8問＋全解答。公式一次資料・確認日2026-07-26。 |
-| `physics_tower/02_electromagnetism/part07_semiconductor_products/13_from_device_physics_to_ai_datacenter.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。MOSFET→GPU→HBM/network/SSD→rack、860kW例、演習8問＋全解答。階層図・電力検査対象。 |
+| `physics_tower/02_electromagnetism/part07_semiconductor_products/13_from_device_physics_to_ai_datacenter.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。MOSFET→GPU→HBM/network/SSD→rack、860kW例、演習8問＋全解答。階層図・電力検査通過。 |
 | `physics_tower/02_electromagnetism/qa/06_semiconductor_common_misconceptions.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規Q&A。古典／量子、空乏、gate、電子符号、NAND/HBM誤解。演習6問＋全解答。 |
 | `physics_tower/02_electromagnetism/qa/07_memory_product_comparison.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規Q&A。SRAM/DRAM/HBM/NAND/SSD選択。固有判断問題8問＋全解答。 |
 | `physics_tower/02_electromagnetism/qa/08_semiconductor_company_value_chain.md` | SOURCE_VERIFIED | 2026-07-26 | 新規Q&A。design/fab/package/memory/system分業図。企業配置8問＋全解答、公式一次資料の扱いを明記。 |

@@ -51,3 +51,8 @@ $$
 
 - 前：[NAND](05_nand_flash_and_floating_gate_or_charge_trap.md)
 - 次：[HBM](07_hbm_and_vertical_integration.md)
+
+## 参考資料
+
+- [Micron: What is an SSD?](https://www.micron.com/about/micron-glossary/solid-state-drives)（確認日：2026-07-26）。
+- NVM Express, [NVMe specifications](https://nvmexpress.org/specifications/)（確認日：2026-07-26）。

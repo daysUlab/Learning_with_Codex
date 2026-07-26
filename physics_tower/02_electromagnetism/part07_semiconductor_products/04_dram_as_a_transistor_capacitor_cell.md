@@ -80,3 +80,8 @@ DRAMは単に「速いメモリ」ではありません。微小容量、漏れ�
 - 前：[SRAM](03_sram_and_cache.md)
 - 次：[NAND](05_nand_flash_and_floating_gate_or_charge_trap.md)
 - 後：[HBM](07_hbm_and_vertical_integration.md)
+
+## 参考資料
+
+- [Micron: Introduction to Memory](https://www.micron.com/content/dam/micron/educatorhub/intro-to-memory/micron-intro-to-memory-presentation.pdf)（確認日：2026-07-26）。
+- B. Jacob, S. Ng, and D. Wang, *Memory Systems: Cache, DRAM, Disk*。

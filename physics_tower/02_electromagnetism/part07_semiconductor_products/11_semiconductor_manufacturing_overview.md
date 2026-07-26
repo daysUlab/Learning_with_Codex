@@ -47,3 +47,8 @@ $$
 - 前：[package](10_packaging_tsv_chiplets_and_thermal_limits.md)
 - 次：[企業マップ](12_company_map_kioxia_micron_skhynix_nvidia.md)
 - 関連：[化学](../../11_chemistry/00_overview.md)
+
+## 参考資料
+
+- J. D. Plummer, M. Deal, and P. Griffin, *Silicon VLSI Technology*。
+- S. M. Sze, *VLSI Technology*。

@@ -71,3 +71,8 @@ $$
 - 前：[MOSコンデンサ](08_mos_capacitor.md)
 - 次：[容量・漏れ・破壊](10_device_capacitance_leakage_and_breakdown.md)
 - 製品：[CMOSとGPU](../part07_semiconductor_products/02_cmos_logic_and_gpu_switching.md)
+
+## 参考資料
+
+- Y. Taur and T. H. Ning, *Fundamentals of Modern VLSI Devices*。
+- S. M. Sze and K. K. Ng, *Physics of Semiconductor Devices*。

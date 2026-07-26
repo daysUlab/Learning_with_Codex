@@ -93,3 +93,8 @@ $$
 - 前：[ダイオード](07_diode_from_field_to_terminal_model.md)
 - 次：[MOSFET](09_mosfet_as_a_field_controlled_switch.md)
 - 正本：[誘電体と容量](../part04_from_fields_to_circuits/04_capacitance_from_gauss_and_dielectrics.md)
+
+## 参考資料
+
+- S. M. Sze and K. K. Ng, *Physics of Semiconductor Devices*, MOS capacitor章。
+- Y. Taur and T. H. Ning, *Fundamentals of Modern VLSI Devices*, electrostatics章。

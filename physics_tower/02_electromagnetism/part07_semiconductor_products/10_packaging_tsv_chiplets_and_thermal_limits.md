@@ -56,3 +56,8 @@ $$
 - 前：[信号品質](09_interconnects_signal_integrity_and_power.md)
 - 次：[製造工程](11_semiconductor_manufacturing_overview.md)
 - 後で再訪：[熱力学](../../04_thermodynamics/00_overview.md)
+
+## 参考資料
+
+- IEEE Electronics Packaging Society, packaging technology resources。
+- JEDEC, high-bandwidth memory family standards（規格本文の公開範囲と版を確認して利用）。

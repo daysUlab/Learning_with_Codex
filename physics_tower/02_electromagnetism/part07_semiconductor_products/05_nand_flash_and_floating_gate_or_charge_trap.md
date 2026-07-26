@@ -60,3 +60,8 @@ cellを垂直方向へ積層し、面積当たり容量を増やします。word
 
 - 前：[DRAM](04_dram_as_a_transistor_capacitor_cell.md)
 - 次：[SSD](06_ssd_controller_and_nand_system.md)
+
+## 参考資料
+
+- [KIOXIA: NAND flash / memory products](https://www.kioxia.com/en-jp/business/memory.html)（確認日：2026-07-26）。
+- [Micron: NAND flash](https://www.micron.com/products/storage/nand-flash)（確認日：2026-07-26）。
