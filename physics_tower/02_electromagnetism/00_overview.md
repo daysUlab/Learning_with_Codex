@@ -1,6 +1,6 @@
-# 電磁気学――電荷から場・物質・放射まで
+# 電磁気学――電荷から場・回路・電気工学まで
 
-> 完成状態：電磁気学章の本文・Q&A・補習を本文化済み
+> 完成状態：場の理論から大学受験回路・工学初歩・伝送線路・アンテナへの入口まで本文化済み
 > 単位系：SI
 > 交流の時間規約：
 >
@@ -26,17 +26,20 @@ $$
 
 を通して物質へ作用します。
 
-## 1. 15段階のストーリー
+## 1. 24段階のストーリー
 
-この図は、静的な電荷から時間変化・物質応答・放射へ進む章全体の因果順序を示します。
+この図は、静的な電荷から場を組み立て、端子量へ縮約し、集中定数の限界で再び波動と放射へ戻る因果順序を示します。
 
 ```mermaid
 flowchart TD
   A["電荷・Coulomb・Gauss"] --> B["Faraday・Ampère–Maxwell"]
   B --> C["境界・波動・エネルギー"]
-  C --> D["誘電体・導体・放射"]
-  D --> E["問題選択・誤解整理"]
-  E --> F["必要な数学へ復帰"]
+  C --> D["物質応答・放射"]
+  D --> E["V・I・Q・磁束へ縮約"]
+  E --> F["R・C・L・Kirchhoff則"]
+  F --> G["直流・過渡・交流・機器"]
+  G --> H["伝送線路・アンテナ・限界"]
+  H --> I["問題選択・数学補習"]
 ```
 
 1. 電荷と電場
@@ -51,9 +54,18 @@ flowchart TD
 10. 誘電体と分極
 11. 導体と表皮効果
 12. 加速電荷と放射
-13. 問題の選び方
-14. 誤解・単位・符号の整理
-15. 必要な数学への復帰
+13. 電圧と電流への縮約
+14. 抵抗・容量・インダクタンス
+15. Kirchhoff則
+16. 集中定数回路
+17. 直流回路
+18. RC・RL過渡応答
+19. 交流・共振・電力
+20. 変圧器・モーター・発電機
+21. 伝送線路・アンテナ
+22. 回路理論の限界
+23. 問題選択・誤解整理
+24. 数学補習
 
 ## 2. Maxwell方程式を二つの記述で整理する
 
@@ -192,6 +204,23 @@ $$
 7. [誘電体](part03_phenomenology/01_dielectrics.md)
 8. [導体と表皮効果](part03_phenomenology/02_conductors_and_skin_effect.md)
 9. [放射](part03_phenomenology/03_radiation_basics.md)
+10. [場から回路への縮約](part04_from_fields_to_circuits/README.md)
+11. [回路応用](part05_circuit_applications/README.md)
+
+### 大学受験ルート
+
+1. [電圧・電流・RLCの由来](part04_from_fields_to_circuits/README.md)
+2. [直列・並列とコンデンサ](part05_circuit_applications/01_series_parallel_and_equivalent_resistance.md)
+3. [RC・RL・RLC](part05_circuit_applications/04_rc_charging_and_discharging.md)
+4. [大学受験回路の解法戦略](qa/04_high_school_circuit_problem_strategy.md)
+
+### 工学接続ルート
+
+1. [集中定数近似](part04_from_fields_to_circuits/07_lumped_element_approximation.md)
+2. [交流・共振・力率](part05_circuit_applications/07_ac_impedance_and_phasors.md)
+3. [変圧器・モーター・発電機](part05_circuit_applications/09_mutual_inductance_and_transformers.md)
+4. [伝送線路・アンテナ](part05_circuit_applications/11_transmission_lines_as_distributed_circuits.md)
+5. [10_circuitsで回路解析を深める](../10_circuits/00_overview.md)
 
 ### 数学補習ルート
 
@@ -212,6 +241,8 @@ $$
 2. 対応する本文の演習
 3. [頻出誤解](qa/01_common_misconceptions.md)
 4. [単位と符号](qa/03_units_and_signs.md)
+5. [大学受験回路の解法](qa/04_high_school_circuit_problem_strategy.md)
+6. [工学応用マップ](qa/05_engineering_application_map.md)
 
 ## 6. 各パートの完成状態
 
@@ -220,10 +251,14 @@ $$
 | [part01](part01_build_maxwell/README.md) | Maxwell方程式を組み立てる | 完成・技術レビュー済み |
 | [part02](part02_use_maxwell/README.md) | 境界・波動・エネルギーへ使う | 完成・技術レビュー済み |
 | [part03](part03_phenomenology/README.md) | 物質と放射へつなぐ | 新規本文化・レビュー済み |
-| [qa](qa/README.md) | 誤解・問題選択・検算 | 新規本文化済み |
+| [part04](part04_from_fields_to_circuits/README.md) | 場から端子量・RLC・Kirchhoff則へ縮約 | 本文化・QA済み |
+| [part05](part05_circuit_applications/README.md) | 大学受験回路から工学初歩へ接続 | 本文化・QA済み |
+| [qa](qa/README.md) | 誤解・問題選択・受験・工学マップ | 本文化済み |
 | [remedial](remedial/README.md) | 数学への最短復帰 | 新規本文化済み |
 
-## 7. 次章との接続
+## 7. 回路理論との役割分担と次章
+
+本章は、回路量が場からどう生まれ、どの近似で有効かを正本とします。[10_circuits](../10_circuits/00_overview.md) はThévenin・Norton、回路網解析、フィルタ、二端子対、オペアンプ、半導体、実装・計測を独立した工学体系として詳しく扱います。
 
 次章の解析力学では、場そのものではなく作用・変分・対称性から運動方程式と保存則を統一します。本章で使った
 
