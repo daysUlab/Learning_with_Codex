@@ -31,7 +31,7 @@
 
 | file_path | status | last_updated | notes |
 |---|---|---|---|
-| `physics_tower/README.md` | DONE | 2026-02-14 | 入口ページを教科書形式へ全面増補。学習目標〜演習・解答まで新設し、直観→導出→確認の流れを明示。 |
+| `physics_tower/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 全体READMEのconcept更新。model・近似・保存則・対称性、model化cycle、章間のmodel交代、既存力学・電磁気学の位置、読者route、品質基準を整理。3章本文batchとは別作業種別。link・Mermaid検査対象。 |
 | `physics_tower/00_physics_math_tools/00_overview.md` | DONE | 2026-02-14 | 物理数学ツールの全体像を教科書形式で増補。減衰振動を例に直観→導出→確認を実装し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/calculus_techniques/README.md` | DONE | 2026-02-14 | 微積分テクニックの入口を教科書化。連鎖律・部分積分・ヤコビアンを直観→導出→確認で整理し、演習10問＋解答を追加。 |
 | `physics_tower/00_physics_math_tools/calculus_techniques/partials_integrals_jacobian.md` | DONE | 2026-02-14 | 偏微分・部分積分・ヤコビアンの実践ページを執筆。境界項と測度変換を含む導出、例題3題、演習10問＋解答を追加。 |
@@ -142,20 +142,61 @@
 | `physics_tower/02_electromagnetism/remedial/01_vector_calc_for_em.md` | QA_PASS | 2026-07-26 | 新規本文化。grad/div/curl、Gauss/Stokes、Laplacian、Maxwell使用箇所、演習6問＋全解答。 |
 | `physics_tower/02_electromagnetism/remedial/02_ode_pde_refresh.md` | QA_PASS | 2026-07-26 | 新規本文化。Poisson/Laplace/波動/拡散、境界条件、変数分離、平面波、演習6問＋全解答。 |
 | `physics_tower/02_electromagnetism/remedial/03_complex_representation_ac.md` | QA_PASS | 2026-07-26 | 新規本文化。複素振幅、位相、インピーダンス、複素誘電率/波数、損失、演習7問＋全解答。 |
-| `physics_tower/03_analytical_mechanics/00_overview.md` | TODO | - |  |
-| `physics_tower/03_analytical_mechanics/part01_supplements/README.md` | TODO | - |  |
-| `physics_tower/03_analytical_mechanics/part02_basics/README.md` | TODO | - |  |
-| `physics_tower/03_analytical_mechanics/part03_variational/README.md` | TODO | - |  |
-| `physics_tower/03_analytical_mechanics/part04_gateway_to_qm/README.md` | TODO | - |  |
-| `physics_tower/03_analytical_mechanics/part05_infinite_dof/README.md` | TODO | - |  |
-| `physics_tower/03_analytical_mechanics/part06_canonical_em/README.md` | TODO | - |  |
-| `physics_tower/03_analytical_mechanics/part07_constraints/README.md` | TODO | - |  |
-| `physics_tower/04_thermodynamics/00_overview.md` | TODO | - |  |
-| `physics_tower/04_thermodynamics/part01_laws/README.md` | TODO | - |  |
-| `physics_tower/04_thermodynamics/part02_phenomenology/README.md` | TODO | - |  |
-| `physics_tower/05_statistical_mechanics/00_overview.md` | TODO | - |  |
-| `physics_tower/05_statistical_mechanics/part01_kinetic_theory/README.md` | TODO | - |  |
-| `physics_tower/05_statistical_mechanics/part02_classical_ensembles/README.md` | TODO | - |  |
+| `physics_tower/03_analytical_mechanics/00_overview.md` | STRUCTURE_QA_PASS | 2026-07-26 | 章設計を全面更新。Newtonと同じ運動の表現変更、残す／省略する情報、13記事、7比較例、他分野接続、限界を整理。 |
+| `physics_tower/03_analytical_mechanics/part01_supplements/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 座標選択と自由度の導線、前理論との接続、子2記事を整備。 |
+| `physics_tower/03_analytical_mechanics/part01_supplements/01_newton_lagrange_hamilton_comparison.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規本文化。三形式の比較、調和振動子、単純問題でNewton有利、固有演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part01_supplements/02_degrees_of_freedom_and_coordinates.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。自由度、holonomic拘束、円周数値例、固有演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part02_basics/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | Lagrange形式と比較4記事の目次、比較軸を整備。 |
+| `physics_tower/03_analytical_mechanics/part02_basics/01_virtual_work_and_euler_lagrange.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。仮想仕事からEL式を中心導出、振り子、固有演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part02_basics/02_incline_and_pendulum_comparison.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。斜面・振り子を変数、拘束力、保存量で比較。演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part02_basics/03_atwood_and_connected_bodies.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Atwood・慣性滑車をNewton/Lagrange比較、固有演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part02_basics/04_central_force_and_rotating_systems.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。中心力・惑星・回転輪bead、effective potential、演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part03_variational/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 作用・Noetherの役割と量子・場への境界を整備。 |
+| `physics_tower/03_analytical_mechanics/part03_variational/01_stationary_action.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。境界項を含む変分導出、停留と最小の区別、演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part03_variational/02_symmetry_cyclic_noether.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。cyclic coordinateとNoether charge、演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part04_gateway_to_qm/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | Hamilton形式から統計・量子への導線を整備。 |
+| `physics_tower/03_analytical_mechanics/part04_gateway_to_qm/01_legendre_transform_and_hamiltonian.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Legendre変換とHamilton方程式、energy一致条件、演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part04_gateway_to_qm/02_phase_space_and_poisson_brackets.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。phase space・Poisson・Liouville橋渡し、演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part05_infinite_dof/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | particleからfieldへの導線を整備。 |
+| `physics_tower/03_analytical_mechanics/part05_infinite_dof/01_from_particles_to_fields.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。弦のLagrangian密度からwave equationを導出、演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part06_canonical_em/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 電磁気へのcanonical接続を整備。 |
+| `physics_tower/03_analytical_mechanics/part06_canonical_em/01_charged_particle_and_gauge.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Lorentz force、canonical momentum、gauge、演習6問＋全解答。 |
+| `physics_tower/03_analytical_mechanics/part07_constraints/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 拘束・robot・simulationの工学routeを整備。 |
+| `physics_tower/03_analytical_mechanics/part07_constraints/01_constraints_robotics_and_simulation.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。未定乗数、robot equation、symplectic法、演習6問＋全解答。 |
+| `physics_tower/04_thermodynamics/00_overview.md` | STRUCTURE_QA_PASS | 2026-07-26 | 章設計を全面更新。古典力学から残す／捨てる情報、8記事、工学応用、統計との境界を整理。 |
+| `physics_tower/04_thermodynamics/part01_laws/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 第0〜第2法則の4記事導線を整備。 |
+| `physics_tower/04_thermodynamics/part01_laws/01_system_equilibrium_and_temperature.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。系・境界・平衡・第0法則、演習6問＋全解答。 |
+| `physics_tower/04_thermodynamics/part01_laws/02_first_law_heat_and_work.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。微視情報をinternal energyへ粗視化、第1法則、演習6問＋全解答。 |
+| `physics_tower/04_thermodynamics/part01_laws/03_equations_of_state_heat_capacity_enthalpy.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。ideal gas、heat capacity、enthalpy、断熱、演習6問＋全解答。 |
+| `physics_tower/04_thermodynamics/part01_laws/04_second_law_entropy_and_engines.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。第2法則、Carnot効率、entropy、演習6問＋全解答。 |
+| `physics_tower/04_thermodynamics/part02_phenomenology/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 不可逆・potential・工学・統計境界の4記事導線を整備。 |
+| `physics_tower/04_thermodynamics/part02_phenomenology/01_reversible_irreversible_and_entropy_generation.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。entropy balance、有限温度差、微視可逆性への導線、演習6問＋全解答。 |
+| `physics_tower/04_thermodynamics/part02_phenomenology/02_potentials_equilibrium_phase_chemical.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。potential・Maxwell関係・phase・chemical potential、演習6問＋全解答。 |
+| `physics_tower/04_thermodynamics/part02_phenomenology/03_engineering_energy_and_cooling.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。発電・冷却・battery・GPU/data center、数値例、演習6問＋全解答。 |
+| `physics_tower/04_thermodynamics/part02_phenomenology/04_thermodynamics_vs_statistical_mechanics.md` | CONTENT_REVIEWED | 2026-07-26 | 新規。熱力学を独立した巨視理論として整理し統計力学との役割を比較。演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/00_overview.md` | STRUCTURE_QA_PASS | 2026-07-26 | 章設計を全面更新。難しさ5層、10記事、古典／量子境界、半導体回収、応用routeを整理。 |
+| `physics_tower/05_statistical_mechanics/part01_kinetic_theory/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 気体→小さな数え上げ→揺らぎの導線を整備。 |
+| `physics_tower/05_statistical_mechanics/part01_kinetic_theory/01_kinetic_theory_pressure_temperature.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。momentum移送からpressure・temperatureを導出、N2数値例、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part01_kinetic_theory/02_microstate_macrostate_small_counting.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。coin・箱・paramagnetの小さな数え上げ、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part01_kinetic_theory/03_multiplicity_fluctuations_einstein_solid.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Einstein solid、最頻状態、relative fluctuation、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part02_classical_ensembles/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | ensembleとpartition functionの4記事導線を整備。 |
+| `physics_tower/05_statistical_mechanics/part02_classical_ensembles/01_microcanonical_entropy_temperature.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Boltzmann entropyからtemperature・pressure・chemical potential、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part02_classical_ensembles/02_canonical_boltzmann_partition.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。熱浴からBoltzmann因子、Z、平均・揺らぎを導出、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part02_classical_ensembles/03_grand_canonical_and_chemical_potential.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。grand partition・particle fluctuation・FD予告、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part02_classical_ensembles/04_classical_examples_and_equipartition.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。等分配、Maxwell速度、MD、古典破綻、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part03_quantum_and_applications/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | quantum統計・半導体・応用3記事の導線を新設。 |
+| `physics_tower/05_statistical_mechanics/part03_quantum_and_applications/01_classical_limit_fermi_bose.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。FD/BE/MB、thermal wavelength境界、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part03_quantum_and_applications/02_semiconductor_carriers_and_einstein_relation.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。半導体保留事項を回収。DOS・Fermi level・n/p・Boltzmann近似・Einstein関係、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/part03_quantum_and_applications/03_modern_applications_map.md` | CONTENT_REVIEWED | 2026-07-26 | 新規。半導体・磁性・相転移・ML・材料・生物・宇宙・計算と基礎概念、entropy差異、演習6問＋全解答。 |
+| `physics_tower/05_statistical_mechanics/remedial/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。力学・確率・数え上げ・翻訳・量子統計の5層diagnostic。 |
+| `physics_tower/cross_connections/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。7横断記事への導線。 |
+| `physics_tower/cross_connections/01_newton_lagrange_hamilton.md` | DRAFT_DONE | 2026-07-26 | 横断新規。三形式比較、演習6問＋全解答。 |
+| `physics_tower/cross_connections/02_mechanical_and_internal_energy.md` | DRAFT_DONE | 2026-07-26 | 横断新規。mechanical/internal/total energyのsystem境界、演習6問＋全解答。 |
+| `physics_tower/cross_connections/03_micro_macro_thermodynamic_state.md` | DRAFT_DONE | 2026-07-26 | 横断新規。粗視化の3解像度、演習6問＋全解答。 |
+| `physics_tower/cross_connections/04_micro_reversibility_macro_irreversibility.md` | DRAFT_DONE | 2026-07-26 | 横断新規。Loschmidt・Liouville・粗視化、演習6問＋全解答。 |
+| `physics_tower/cross_connections/05_legendre_in_mechanics_and_thermodynamics.md` | DRAFT_DONE | 2026-07-26 | 横断新規。二分野のLegendre変換を比較、演習6問＋全解答。 |
+| `physics_tower/cross_connections/06_symmetry_conservation_equilibrium_phase.md` | DRAFT_DONE | 2026-07-26 | 横断新規。Noetherと自発的対称性破れを区別、演習6問＋全解答。 |
+| `physics_tower/cross_connections/07_model_changes_to_quantum_statistics.md` | DRAFT_DONE | 2026-07-26 | 横断新規。古典力学→量子統計のmodel交代、半導体で統合、演習6問＋全解答。 |
 | `physics_tower/06_relativity/00_overview.md` | TODO | - |  |
 | `physics_tower/06_relativity/part01_special/README.md` | TODO | - |  |
 | `physics_tower/06_relativity/part02_coordinate_transform/README.md` | TODO | - |  |

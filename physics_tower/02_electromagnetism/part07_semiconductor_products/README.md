@@ -36,3 +36,5 @@ NVIDIAのGPUと、Micron・SK hynixなどのHBMは異なる層を担当します
 - 前：[半導体への橋](../part06_semiconductor_bridge/README.md)
 - 親：[電磁気学](../00_overview.md)
 - Q&A：[製品比較](../qa/07_memory_product_comparison.md)
+- 熱設計を再訪：[熱力学の工学応用](../../04_thermodynamics/part02_phenomenology/03_engineering_energy_and_cooling.md)
+- carrier統計を再訪：[統計力学](../../05_statistical_mechanics/00_overview.md)

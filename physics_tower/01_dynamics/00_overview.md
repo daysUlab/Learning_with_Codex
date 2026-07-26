@@ -307,6 +307,10 @@ $$
 
 - EMANの物理学（力学）: https://eman-physics.net/mechanics/
 
+## 次に解析力学へ進む理由
+
+一定力の一次元運動や拘束力そのものを求める問題では、Newton形式が今後も短く直観的です。一方、拘束力の成分計算が増える、自由度よりCartesian変数が多い、対称性と保存量を直接読みたい、多自由度・場・統計・量子へ一般化したい場合は、同じ運動を一般化座標と作用で書き直す[解析力学](../03_analytical_mechanics/00_overview.md)へ進みます。
+
 ## 9. ナビゲーション
 
 - 親: [../README.md](../README.md)
@@ -315,3 +319,4 @@ $$
 - 関連: [part02_energy_conservation/README.md](part02_energy_conservation/README.md)
 - 関連: [part03_angular_momentum/README.md](part03_angular_momentum/README.md)
 - 関連: [part04_applications/README.md](part04_applications/README.md)
+- 次: [03_analytical_mechanics](../03_analytical_mechanics/00_overview.md)
