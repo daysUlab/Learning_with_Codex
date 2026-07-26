@@ -417,6 +417,10 @@ $$
 - 構成方程式と基本法則を区別できる。
 - コンデンサで固定条件を先に判定できる。
 
+## 回路量への接続
+
+本記事の分極と境界条件を場の正本とし、[容量への縮約](../part04_from_fields_to_circuits/04_capacitance_from_gauss_and_dielectrics.md)では場の解から端子関係を取り出します。[コンデンサ接続](../part05_circuit_applications/03_capacitors_in_series_and_parallel.md)では電荷固定・電圧固定を切替問題へ応用します。
+
 ## ナビゲーション
 
 - 前：[ポインティングベクトル](../part02_use_maxwell/03_poynting_vector.md)

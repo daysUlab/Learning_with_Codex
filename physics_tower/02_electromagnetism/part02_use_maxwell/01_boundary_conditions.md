@@ -459,6 +459,10 @@ $$
 - 自由表面電荷と束縛表面電荷を区別できる。
 - 構成方程式の条件を境界条件そのものと混同しない。
 
+## 回路・伝送への接続
+
+境界条件は、コンデンサの端効果、導体表面の表面電荷、同軸線路の単位長さ容量・インダクタンスを決めます。[容量への縮約](../part04_from_fields_to_circuits/04_capacitance_from_gauss_and_dielectrics.md)と[伝送線路](../part05_circuit_applications/11_transmission_lines_as_distributed_circuits.md)へ進んでください。
+
 ## ナビゲーション
 
 - 前：[Ampère–Maxwell則](../part01_build_maxwell/03_ampere_maxwell.md)

@@ -472,6 +472,10 @@ $$
 - 変位電流を電荷の真空横断と混同しない。
 - Ampère–Maxwell則から電荷保存を再現できる。
 
+## 回路への接続
+
+変位電流は、コンデンサ間隙を含む閉路でも電流連続性を保ちます。[電流密度から電流へ](../part04_from_fields_to_circuits/02_current_from_current_density.md)と[Kirchhoff則の由来](../part04_from_fields_to_circuits/06_kirchhoff_laws_from_maxwell.md)では、節点電荷を無視できないときのKCL修正項として再登場します。
+
 ## ナビゲーション
 
 - 前：[Faraday則](02_faraday_law.md)

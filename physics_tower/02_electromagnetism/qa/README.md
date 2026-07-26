@@ -1,6 +1,6 @@
 # 電磁気学Q&A――混同をほどき、解法へ戻る
 
-> 章内位置：13〜14 / 15
+> 章内位置：23 / 24
 > 役割：本文を読み直す前に、混同した概念と選ぶべき道具を特定する
 
 ## このQ&Aの使い方
@@ -15,6 +15,8 @@ flowchart TD
   B -->|概念| C["01 誤解をほどく"]
   B -->|道具| D["02 問題選択"]
   B -->|計算| E["03 単位と符号"]
+  B -->|受験回路| G["04 回路問題戦略"]
+  B -->|工学接続| H["05 応用マップ"]
   C --> F["元の本文へ戻る"]
   D --> F
   E --> F
@@ -28,6 +30,10 @@ flowchart TD
    対称性、時間依存、媒質、境界、求める量から解法を選びます。
 3. [03_units_and_signs.md](03_units_and_signs.md)
    SI単位、面・周回方向、右手則、Faraday則、境界条件の符号を点検します。
+4. [04_high_school_circuit_problem_strategy.md](04_high_school_circuit_problem_strategy.md)
+   大学受験の回路・コンデンサ・コイル問題で、使った近似と捨てた場の情報まで確認します。
+5. [05_engineering_application_map.md](05_engineering_application_map.md)
+   Maxwell方程式から電気機器・送電・高周波へ進む地図です。
 
 ## 30秒診断
 
@@ -43,7 +49,7 @@ flowchart TD
 
 ## ナビゲーション
 
-- 前：[放射](../part03_phenomenology/03_radiation_basics.md)
+- 前：[回路応用](../part05_circuit_applications/README.md)
 - 次：[誤解をほどく](01_common_misconceptions.md)
 - 親：[電磁気学の全体像](../00_overview.md)
 - 補習：[remedial](../remedial/README.md)
