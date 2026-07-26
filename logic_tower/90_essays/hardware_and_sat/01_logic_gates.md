@@ -168,6 +168,8 @@ AとBをORし、その出力とCをANDします。
 
 ## ナビゲーション
 
+- 物理実装：[CMOS論理とGPU](../../../physics_tower/02_electromagnetism/part07_semiconductor_products/02_cmos_logic_and_gpu_switching.md)
+
 - 親：[README.md](README.md)
 - 前：[Boolean代数](00_boolean_algebra.md)
 - 次：[機能的完全性](02_functional_completeness.md)

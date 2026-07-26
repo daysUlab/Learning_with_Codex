@@ -8,6 +8,10 @@
 - 基本用語と前提の確認
 - 次に読むページへの導線
 
+## 半導体から戻ってくる問い
+
+[電磁気学の半導体bridge](../02_electromagnetism/part06_semiconductor_bridge/README.md)で保留した、band gap、有効質量、トンネル、量子閉じ込め、微細MOSFETの波動性を本章で再訪します。Poisson方程式や端子容量の説明を複製せず、「許される状態と遷移」の微視的理由を担当します。
+
 ## ナビゲーション
 - 親: [../README.md](../README.md)
 - 子:

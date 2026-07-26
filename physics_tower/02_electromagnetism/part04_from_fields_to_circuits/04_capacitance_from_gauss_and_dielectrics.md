@@ -99,6 +99,10 @@ Poynting定理または受動符号規約で、境界からの流入、場への
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体への接続
+
+酸化膜を誘電体、gateと半導体表面を電極と見ればMOS capacitorへ進みます。ただし半導体側電荷は固定金属電極と異なり、蓄積・空乏・反転で変わります。[MOS capacitor](../part06_semiconductor_bridge/08_mos_capacitor.md)を参照してください。
+
 ## ナビゲーション
 
 - 前：[局所Ohm則から抵抗へ](03_resistance_from_local_ohms_law.md)

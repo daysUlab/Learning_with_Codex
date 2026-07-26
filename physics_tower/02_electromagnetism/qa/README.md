@@ -17,9 +17,15 @@ flowchart TD
   B -->|計算| E["03 単位と符号"]
   B -->|受験回路| G["04 回路問題戦略"]
   B -->|工学接続| H["05 応用マップ"]
+  B -->|半導体| I["06 誤解"]
+  B -->|memory| J["07 製品比較"]
+  B -->|企業| K["08 value chain"]
   C --> F["元の本文へ戻る"]
   D --> F
   E --> F
+  I --> F
+  J --> F
+  K --> F
 ```
 
 ## 記事一覧
@@ -34,6 +40,12 @@ flowchart TD
    大学受験の回路・コンデンサ・コイル問題で、使った近似と捨てた場の情報まで確認します。
 5. [05_engineering_application_map.md](05_engineering_application_map.md)
    Maxwell方程式から電気機器・送電・高周波へ進む地図です。
+6. [06_semiconductor_common_misconceptions.md](06_semiconductor_common_misconceptions.md)
+   電磁気学と量子論の境界、電子・電流の符号、空乏・gate・NAND・HBMの誤解を修正します。
+7. [07_memory_product_comparison.md](07_memory_product_comparison.md)
+   SRAM、DRAM、HBM、NAND、SSDを用途と階層で選びます。
+8. [08_semiconductor_company_value_chain.md](08_semiconductor_company_value_chain.md)
+   設計・製造・memory・package・systemの分業へ企業を配置します。
 
 ## 30秒診断
 

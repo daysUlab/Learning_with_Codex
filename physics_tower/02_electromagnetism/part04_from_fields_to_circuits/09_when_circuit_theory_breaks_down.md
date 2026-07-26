@@ -84,6 +84,10 @@ Poynting定理または受動符号規約で、境界からの流入、場への
 - 数値例の単位・符号・極限を確認できる。
 - 集中定数モデルを使える条件と、場へ戻る条件を言える。
 
+## 半導体・packageへの接続
+
+GPU–HBM、chiplet、high-speed networkでは急峻なedgeと長い接続が反射・crosstalk・PDN共振を生みます。[signal integrityとpower](../part07_semiconductor_products/09_interconnects_signal_integrity_and_power.md)へ進みます。
+
 ## ナビゲーション
 
 - 前：[Poyntingベクトルと回路電力](08_power_and_poynting_flow.md)
