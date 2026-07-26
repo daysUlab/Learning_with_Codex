@@ -6,6 +6,7 @@
   1. `status=DOING` の行があれば、そのファイルを最優先で仕上げて `DONE` にする。
   2. `DOING` が無ければ、キュー先頭から最初の `TODO` を1件だけ選んで執筆する。
   3. 1回の実行で本文執筆は **必ず1ファイルのみ**。
+- ただし、ユーザーが対象ファイルまたは件数を明示した一括バッチでは指定範囲を優先する。対象・レビュー判定・検査結果を `notes` で区別する。
 - 執筆完了後は、この表の対象行を `DONE` に更新し、`last_updated` と `notes` を記録する。
 - 次の `TODO` は同一実行内で `DOING` にしない（次回実行時に選ばれるよう `TODO` のまま残す）。
 - 対象範囲は `physics_tower/` 配下のみ。
@@ -56,27 +57,27 @@
 | `physics_tower/01_dynamics/part04_applications/01_ballistic_pendulum.md` | DONE | 2026-02-15 | 弾道振り子ページを本文化。2段階解法、エネルギー損失評価、例題3題、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part04_applications/02_two_stage_strategy.md` | DONE | 2026-02-15 | 複合問題の一般戦略ページを本文化。段階分解テンプレ、対応表、二段階/三段階例、誤り対策を追加。 |
 | `physics_tower/01_dynamics/part04_applications/03_checklist.md` | DONE | 2026-02-15 | 複合保存則問題のチェックリストを本文化。設計/立式/検算の実戦項目と答案テンプレを追加。 |
-| `physics_tower/02_electromagnetism/00_overview.md` | DONE | 2026-02-15 | 電磁気章の入口を本文化。4本柱・学習マップ・解法フロー・力学との接続を追加。 |
-| `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | DONE | 2026-02-15 | マクスウェル構築パートのREADMEを本文化。学習順序・つまずき点・後続接続を追加。 |
-| `physics_tower/02_electromagnetism/part01_build_maxwell/01_from_coulomb_to_gauss.md` | DONE | 2026-02-15 | クーロン法則からガウス法則への導出、対称性例題、演習と解答まで本文化。 |
-| `physics_tower/02_electromagnetism/part01_build_maxwell/02_faraday_law.md` | DONE | 2026-02-15 | ファラデー法則の積分形・微分形、レンツの法則、例題、演習と解答まで本文化。 |
-| `physics_tower/02_electromagnetism/part01_build_maxwell/03_ampere_maxwell.md` | DONE | 2026-02-15 | アンペール・マクスウェル法則の補正理由、連続の式との整合、例題、演習と解答まで本文化。 |
-| `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | DONE | 2026-02-16 | part02の入口を本文化。境界条件→波動→エネルギー流の学習導線と注意点を整備。 |
-| `physics_tower/02_electromagnetism/part02_use_maxwell/01_boundary_conditions.md` | DONE | 2026-02-16 | 境界条件の法線/接線導出、導体条件、例題、演習と解答まで本文化。 |
-| `physics_tower/02_electromagnetism/part02_use_maxwell/02_em_waves.md` | DONE | 2026-02-16 | 真空中波動方程式の導出、平面波関係、ポインティングベクトル、演習と解答まで本文化。 |
-| `physics_tower/02_electromagnetism/part02_use_maxwell/03_poynting_vector.md` | DONE | 2026-02-16 | ポインティング定理の導出、エネルギー密度、平面波強度、演習と解答まで本文化。 |
-| `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | DONE | 2026-02-16 | 現象論パートの入口を本文化。誘電体→導体→放射の学習導線と近似の観点を整備。 |
-| `physics_tower/02_electromagnetism/part03_phenomenology/01_dielectrics.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
-| `physics_tower/02_electromagnetism/part03_phenomenology/02_conductors_and_skin_effect.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
-| `physics_tower/02_electromagnetism/part03_phenomenology/03_radiation_basics.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
-| `physics_tower/02_electromagnetism/qa/README.md` | TODO | - |  |
-| `physics_tower/02_electromagnetism/qa/01_common_misconceptions.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
-| `physics_tower/02_electromagnetism/qa/02_problem_selection.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
-| `physics_tower/02_electromagnetism/qa/03_units_and_signs.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
-| `physics_tower/02_electromagnetism/remedial/README.md` | TODO | - |  |
-| `physics_tower/02_electromagnetism/remedial/01_vector_calc_for_em.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
-| `physics_tower/02_electromagnetism/remedial/02_ode_pde_refresh.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
-| `physics_tower/02_electromagnetism/remedial/03_complex_representation_ac.md` | TODO | - | 新章突入時スケルトン作成。次回以降に本文化予定。 |
+| `physics_tower/02_electromagnetism/00_overview.md` | QA_PASS | 2026-07-26 | 内容リバイズ。15段階の物語、読者別ルート、真空中/物質中のMaxwell方程式、完成状態を統合。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/README.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。章内位置、完成状態、前後ナビゲーションを追加。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/01_from_coulomb_to_gauss.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。電場定義、Gauss則の微分形、全電荷の条件、演習2問、導線を追加。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/02_faraday_law.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。固定回路の誘導と移動回路の運動起電力を分離し、演習2問と導線を追加。 |
+| `physics_tower/02_electromagnetism/part01_build_maxwell/03_ampere_maxwell.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。真空中/物質中の源と場を区別し、変位電流の演習2問と導線を追加。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/README.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。章内位置、完成状態、前後ナビゲーションを追加。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/01_boundary_conditions.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。Hの接線条件、時間変化場、構成方程式の条件、演習2問、符号規約を追加。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/02_em_waves.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。exp(-iωt)、真空中同位相と損失媒質の区別、演習2問、導線を追加。 |
+| `physics_tower/02_electromagnetism/part02_use_maxwell/03_poynting_vector.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。E×H表記、物質中エネルギー密度の条件、流束と散逸の区別、演習2問を追加。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/README.md` | TECH_REVIEWED | 2026-07-26 | 内容リバイズ。D=εEを条件付き構成方程式として明示し、完成状態と導線を更新。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/01_dielectrics.md` | QA_PASS | 2026-07-26 | 新規本文化。微視的電荷、双極子、分極、自由/束縛電荷、D、固定Q/V、演習8問＋全解答。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/02_conductors_and_skin_effect.md` | QA_PASS | 2026-07-26 | 新規本文化。Ohm則、導体中Maxwell方程式、複素波数、表皮深さ、Joule損失、演習8問＋全解答。 |
+| `physics_tower/02_electromagnetism/part03_phenomenology/03_radiation_basics.md` | QA_PASS | 2026-07-26 | 新規本文化。遅延、近傍/放射場、双極子分布、Poynting流束、Larmor公式、演習8問＋全解答。 |
+| `physics_tower/02_electromagnetism/qa/README.md` | QA_PASS | 2026-07-26 | 新規本文化。概念・解法選択・計算検算の診断フローと子記事導線を整備。 |
+| `physics_tower/02_electromagnetism/qa/01_common_misconceptions.md` | QA_PASS | 2026-07-26 | 新規本文化。指定14概念を対比し、復帰マップ、確認問題6問＋全解答を追加。 |
+| `physics_tower/02_electromagnetism/qa/02_problem_selection.md` | QA_PASS | 2026-07-26 | 新規本文化。12道具の選択条件、対称性・時間・媒質・境界フロー、演習8問＋全解答を追加。 |
+| `physics_tower/02_electromagnetism/qa/03_units_and_signs.md` | QA_PASS | 2026-07-26 | 新規本文化。SI単位、面/周回規約、境界条件、exp(-iωt)、演習8問＋全解答を追加。 |
+| `physics_tower/02_electromagnetism/remedial/README.md` | QA_PASS | 2026-07-26 | 新規本文化。数学の一般論と重複せず、止まった操作から3補習へ戻る診断フローを整備。 |
+| `physics_tower/02_electromagnetism/remedial/01_vector_calc_for_em.md` | QA_PASS | 2026-07-26 | 新規本文化。grad/div/curl、Gauss/Stokes、Laplacian、Maxwell使用箇所、演習6問＋全解答。 |
+| `physics_tower/02_electromagnetism/remedial/02_ode_pde_refresh.md` | QA_PASS | 2026-07-26 | 新規本文化。Poisson/Laplace/波動/拡散、境界条件、変数分離、平面波、演習6問＋全解答。 |
+| `physics_tower/02_electromagnetism/remedial/03_complex_representation_ac.md` | QA_PASS | 2026-07-26 | 新規本文化。複素振幅、位相、インピーダンス、複素誘電率/波数、損失、演習7問＋全解答。 |
 | `physics_tower/03_analytical_mechanics/00_overview.md` | TODO | - |  |
 | `physics_tower/03_analytical_mechanics/part01_supplements/README.md` | TODO | - |  |
 | `physics_tower/03_analytical_mechanics/part02_basics/README.md` | TODO | - |  |
