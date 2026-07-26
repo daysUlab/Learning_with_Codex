@@ -1,15 +1,14 @@
-# part03_variational
+# part03 作用・変分・対称性
 
-part03_variational の入口ページです。
-このディレクトリは章内の小区分として用意されており、本文はこれから追加します。
-最小限のナビゲーションのみ先に整備しています。
+軌道を各時刻の力の釣合いとしてではなく、始点と終点を結ぶ経路全体の作用が停留する条件として表します。
 
-## この章で扱うこと
-- この区分の目的と範囲の確認
-- 追加予定ノートの整理
-- 上位章との対応関係の明確化
+1. [停留作用とEuler–Lagrange方程式](01_stationary_action.md)
+2. [cyclic coordinate・対称性・Noether](02_symmetry_cyclic_noether.md)
+
+作用最小とは限らず「停留」であること、境界条件、連続対称性と保存量の対応を中心にします。場・相対論・経路積分への入口ですが、量子力学の確率振幅は先取りしません。
 
 ## ナビゲーション
-- 親: [../00_overview.md](../00_overview.md)
-- 子:
-  - （準備中）
+
+- 親：[解析力学](../00_overview.md)
+- 前：[part02](../part02_basics/README.md)
+- 次：[Hamilton形式](../part04_gateway_to_qm/README.md)

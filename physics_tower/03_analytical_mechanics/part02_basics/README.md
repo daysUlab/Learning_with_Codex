@@ -1,15 +1,18 @@
-# part02_basics
+# part02 Lagrange形式と比較例題
 
-part02_basics の入口ページです。
-このディレクトリは章内の小区分として用意されており、本文はこれから追加します。
-最小限のナビゲーションのみ先に整備しています。
+仮想変位と一般化力からEuler–Lagrange方程式を導き、同じ問題をNewton形式と並べます。
 
-## この章で扱うこと
-- この区分の目的と範囲の確認
-- 追加予定ノートの整理
-- 上位章との対応関係の明確化
+| 記事 | 比較対象 | 見える利点 |
+|---|---|---|
+| [01](01_virtual_work_and_euler_lagrange.md) | 一般導出 | 拘束力を消す条件 |
+| [02](02_incline_and_pendulum_comparison.md) | 斜面・振り子 | 座標選択 |
+| [03](03_atwood_and_connected_bodies.md) | Atwood・滑車 | 一本の拘束式 |
+| [04](04_central_force_and_rotating_systems.md) | 惑星・回転輪 | 対称性・非慣性効果 |
+
+各例で変数、立式、拘束力、計算量、対称性、保存量、有利な形式を比較します。
 
 ## ナビゲーション
-- 親: [../00_overview.md](../00_overview.md)
-- 子:
-  - （準備中）
+
+- 親：[解析力学](../00_overview.md)
+- 前：[part01](../part01_supplements/README.md)
+- 次：[変分原理](../part03_variational/README.md)

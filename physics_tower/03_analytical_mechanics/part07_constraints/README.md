@@ -1,15 +1,11 @@
-# part07_constraints
+# part07 拘束・robotics・simulation
 
-part07_constraints の入口ページです。
-このディレクトリは章内の小区分として用意されており、本文はこれから追加します。
-最小限のナビゲーションのみ先に整備しています。
+[Lagrange未定乗数、multi-link robot、数値積分](01_constraints_robotics_and_simulation.md)を扱います。
 
-## この章で扱うこと
-- この区分の目的と範囲の確認
-- 追加予定ノートの整理
-- 上位章との対応関係の明確化
+拘束を座標へ完全に組み込めない場合は未定乗数から拘束力を回収します。roboticsでは質量行列、Coriolis項、gravity項へ整理し、長時間simulationではenergy driftを抑えるsymplectic法へ接続します。
 
 ## ナビゲーション
-- 親: [../00_overview.md](../00_overview.md)
-- 子:
-  - （準備中）
+
+- 親：[解析力学](../00_overview.md)
+- 前：[電磁場中の粒子](../part06_canonical_em/README.md)
+- 次：[熱力学](../../04_thermodynamics/00_overview.md)

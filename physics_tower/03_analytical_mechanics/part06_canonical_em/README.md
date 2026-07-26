@@ -1,15 +1,11 @@
-# part06_canonical_em
+# part06 電磁場中の荷電粒子
 
-part06_canonical_em の入口ページです。
-このディレクトリは章内の小区分として用意されており、本文はこれから追加します。
-最小限のナビゲーションのみ先に整備しています。
+[荷電粒子、canonical momentum、gauge](01_charged_particle_and_gauge.md)で、Lorentz力をLagrangianから再現します。
 
-## この章で扱うこと
-- この区分の目的と範囲の確認
-- 追加予定ノートの整理
-- 上位章との対応関係の明確化
+mechanical momentumとcanonical momentumを区別し、vector potentialが単なる計算補助ではなく作用に現れること、gauge変換が作用に境界項を加えることを示します。
 
 ## ナビゲーション
-- 親: [../00_overview.md](../00_overview.md)
-- 子:
-  - （準備中）
+
+- 親：[解析力学](../00_overview.md)
+- 関連：[電磁気学](../../02_electromagnetism/00_overview.md)
+- 次：[拘束と工学](../part07_constraints/README.md)
