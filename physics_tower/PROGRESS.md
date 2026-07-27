@@ -31,7 +31,7 @@
 
 | file_path | status | last_updated | notes |
 |---|---|---|---|
-| `physics_tower/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 全体READMEのconcept更新。model・近似・保存則・対称性、model化cycle、章間のmodel交代、既存力学・電磁気学の位置、読者route、品質基準を整理。3章本文batchとは別作業種別。link・Mermaid検査対象。 |
+| `physics_tower/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 全体conceptを維持し量子力学完成状態を更新。相対論より先に伏線回収した理由、相対論との並行分岐、解析/統計/半導体からのroute、量子化学・物性・量子情報・場への接続を追加。link・Mermaid検査通過。 |
 | `physics_tower/00_physics_math_tools/00_overview.md` | DONE | 2026-02-14 | 物理数学ツールの全体像を教科書形式で増補。減衰振動を例に直観→導出→確認を実装し、演習10問＋全解答を追加。 |
 | `physics_tower/00_physics_math_tools/calculus_techniques/README.md` | DONE | 2026-02-14 | 微積分テクニックの入口を教科書化。連鎖律・部分積分・ヤコビアンを直観→導出→確認で整理し、演習10問＋解答を追加。 |
 | `physics_tower/00_physics_math_tools/calculus_techniques/partials_integrals_jacobian.md` | DONE | 2026-02-14 | 偏微分・部分積分・ヤコビアンの実践ページを執筆。境界項と測度変換を含む導出、例題3題、演習10問＋解答を追加。 |
@@ -189,7 +189,7 @@
 | `physics_tower/05_statistical_mechanics/part03_quantum_and_applications/02_semiconductor_carriers_and_einstein_relation.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。半導体保留事項を回収。DOS・Fermi level・n/p・Boltzmann近似・Einstein関係、演習6問＋全解答。 |
 | `physics_tower/05_statistical_mechanics/part03_quantum_and_applications/03_modern_applications_map.md` | CONTENT_REVIEWED | 2026-07-26 | 新規。半導体・磁性・相転移・ML・材料・生物・宇宙・計算と基礎概念、entropy差異、演習6問＋全解答。 |
 | `physics_tower/05_statistical_mechanics/remedial/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。力学・確率・数え上げ・翻訳・量子統計の5層diagnostic。 |
-| `physics_tower/cross_connections/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。7横断記事への導線。 |
+| `physics_tower/cross_connections/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。量子batchの3記事を加え10横断記事への導線。 |
 | `physics_tower/cross_connections/01_newton_lagrange_hamilton.md` | DRAFT_DONE | 2026-07-26 | 横断新規。三形式比較、演習6問＋全解答。 |
 | `physics_tower/cross_connections/02_mechanical_and_internal_energy.md` | DRAFT_DONE | 2026-07-26 | 横断新規。mechanical/internal/total energyのsystem境界、演習6問＋全解答。 |
 | `physics_tower/cross_connections/03_micro_macro_thermodynamic_state.md` | DRAFT_DONE | 2026-07-26 | 横断新規。粗視化の3解像度、演習6問＋全解答。 |
@@ -197,6 +197,9 @@
 | `physics_tower/cross_connections/05_legendre_in_mechanics_and_thermodynamics.md` | DRAFT_DONE | 2026-07-26 | 横断新規。二分野のLegendre変換を比較、演習6問＋全解答。 |
 | `physics_tower/cross_connections/06_symmetry_conservation_equilibrium_phase.md` | DRAFT_DONE | 2026-07-26 | 横断新規。Noetherと自発的対称性破れを区別、演習6問＋全解答。 |
 | `physics_tower/cross_connections/07_model_changes_to_quantum_statistics.md` | DRAFT_DONE | 2026-07-26 | 横断新規。古典力学→量子統計のmodel交代、半導体で統合、演習6問＋全解答。 |
+| `physics_tower/cross_connections/08_classical_thermal_quantum_state.md` | EXERCISE_REVIEWED | 2026-07-26 | 横断新規。古典/熱/統計/量子stateの残す情報・確率・発展を比較。固有演習6問＋全解答。 |
+| `physics_tower/cross_connections/09_newton_hamilton_schrodinger.md` | EXERCISE_REVIEWED | 2026-07-26 | 横断新規。三つの時間発展をstate/初期条件/予測/Hamiltonianで比較。固有演習6問＋全解答。 |
+| `physics_tower/cross_connections/10_semiconductor_three_theories.md` | EXERCISE_REVIEWED | 2026-07-26 | 横断新規。量子=state、統計=占有、電磁気=電位/電流の役割分担。Mermaid 1図、固有演習6問＋全解答。 |
 | `physics_tower/06_relativity/00_overview.md` | TODO | - |  |
 | `physics_tower/06_relativity/part01_special/README.md` | TODO | - |  |
 | `physics_tower/06_relativity/part02_coordinate_transform/README.md` | TODO | - |  |
@@ -206,16 +209,51 @@
 | `physics_tower/06_relativity/part06_tests/README.md` | TODO | - |  |
 | `physics_tower/06_relativity/part07_free_study/README.md` | TODO | - |  |
 | `physics_tower/06_relativity/qa_special/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/00_overview.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/part01_mysteries/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/part03_angular_momentum_spin/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/part04_relativistic_qm/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/part05_many_body/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/part06_via_analytical_mech/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/part07_quantum_computing/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/part08_quantum_chemistry/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/remedial_room/README.md` | TODO | - |  |
+| `physics_tower/07_quantum_mechanics/00_overview.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ・batch正本。解析のHamiltonian/作用/Poisson/gauge、統計のFD/BE、半導体のband/tunnel/閉じ込め、電磁波・光子を回収。古典/量子比較、state/operator/measurement/time evolution、記号・Fourier規約、適用域、相対論・場への保留を明記。36新規本文・216固有演習＋全解答をレビュー。TeX 461 block、Mermaid 9図、相対link、行列・符号・単位検査通過。現代hardware出典は2026-07-26確認。 |
+| `physics_tower/07_quantum_mechanics/part01_mysteries/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。古典予測→観測→破綻前提→必要概念の3記事route。 |
+| `physics_tower/07_quantum_mechanics/part01_mysteries/01_radiation_quanta_and_photons.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。黒体・光電・Compton、photon energy/momentum、数値例。量子統計・量子場へ境界。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part01_mysteries/02_atomic_spectra_and_matter_waves.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Bohrの成果と限界、de Broglie、electron回折、150 V数値例。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part01_mysteries/03_single_particle_interference_and_spin.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。一粒子干渉、which-path、Stern–Gerlach、破れた古典前提。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。state→time evolution/measurement→結果/更新の図と5記事route。 |
+| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/01_state_wavefunction_born.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。一般stateと位置波動関数、Born則、規格化、次元、指数state導出。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/02_superposition_phase_quantum_probability.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。古典mix/重ね合わせ/relative phase、複素数、二準位比較。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/03_hilbert_operators_eigenvalues.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。bra-ket、Hermitian、固有値、射影、期待値、縮退。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/04_commutators_uncertainty_fourier.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。位置/運動量表示、commutator符号導出、Robertson、Fourier規約。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/05_measurement_decoherence_interpretations.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。unitary/確率/更新/decoherenceを分離し、主要解釈と未決着範囲を整理。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。Schrödinger→自由粒子→well/barrier→振動子→古典極限の5記事route。 |
+| `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/01_schrodinger_hamiltonian_continuity.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。TD/TI Schrödinger、Hamiltonian、continuity/currentを符号込み導出。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/02_free_particle_wave_packets.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。古典軌道/Hamilton/平面波/wave packet比較、group velocity数値例。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/03_wells_barriers_tunneling.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。無限/有限well、step、境界条件、WKB tunnel、NAND/STM/核融合。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/04_harmonic_oscillator_four_views.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Newton/Lagrange/Hamilton/量子の4形式、ladder、zero-point、古典極限。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/05_ehrenfest_wkb_classical_limit.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Ehrenfest、WKB、stationary phaseへの橋、複数の古典化条件。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part06_via_analytical_mech/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。Hamilton/Poisson/action/gauge回収と量子化非一意性の3記事route。 |
+| `physics_tower/07_quantum_mechanics/part06_via_analytical_mech/01_basis_matrices_and_pictures.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。basis/行列/unitary、Schrödinger/Heisenberg/interaction表示。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part06_via_analytical_mech/02_poisson_commutator_quantization.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Poisson↔commutator、正準量子化、順序/拘束/gaugeの限界。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part06_via_analytical_mech/03_action_path_integral_gauge.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。作用phase、path integral、古典極限、gauge phase、AB効果。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part03_angular_momentum_spin/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。軌道角運動量、spin、合成・磁性の3記事route。 |
+| `physics_tower/07_quantum_mechanics/part03_angular_momentum_spin/01_orbital_angular_momentum.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。回転代数、ladder、球面調和関数、量子数。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part03_angular_momentum_spin/02_spin_half_and_pauli.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。spinor、Pauli、軸別測定、古典自転誤解を修正。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part03_angular_momentum_spin/03_addition_magnetic_moments_atoms.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。角運動量合成、singlet/triplet、磁気moment、MRI/原子接続。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part08_quantum_chemistry/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。水素→分子→多電子近似の3記事route。 |
+| `physics_tower/07_quantum_mechanics/part08_quantum_chemistry/01_hydrogen_atom_and_spectra.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Coulomb、変数分離、量子数、縮退、selection rule。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part08_quantum_chemistry/02_molecular_orbitals_and_bonds.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。H2+/H2、bonding/antibonding、Pauli、Born–Oppenheimer。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part08_quantum_chemistry/03_many_electron_quantum_chemistry.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。電子相関、HF/post-HF/DFT近似地図、適用限界。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part10_solid_state_semiconductors/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。band→有効carrier→tunnel/閉じ込めの伏線回収route。 |
+| `physics_tower/07_quantum_mechanics/part10_solid_state_semiconductors/01_periodic_potentials_bloch_bands.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Bloch定理、band/gap、conductor/insulator/semiconductor。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part10_solid_state_semiconductors/02_effective_mass_electrons_holes.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。dispersion、有効質量、hole、doping、統計との分担。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part10_solid_state_semiconductors/03_tunneling_confinement_devices.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。NAND/MOS leakage、quantum well、LED/solar cell、微細化限界。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part05_many_body/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。同種粒子→mean field→density/decoherenceの3記事route。 |
+| `physics_tower/07_quantum_mechanics/part05_many_body/01_tensor_products_identical_particles.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。tensor product、交換対称性、Pauli、量子統計との分担。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part05_many_body/02_exchange_slater_mean_field.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Slater、exchange、many-body難度、Hartree–Fock。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part05_many_body/03_density_matrices_entanglement.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。pure/mixed、partial trace、entanglement/古典相関、decoherence。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part07_quantum_computing/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。Physics/Logic Tower役割分担と3記事route。 |
+| `physics_tower/07_quantum_mechanics/part07_quantum_computing/01_qubits_gates_no_cloning.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。qubit/Bloch/gate/no-cloningを導出。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part07_quantum_computing/02_entanglement_bell_algorithms.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Bell state/circuit、不等式、Grover/Shor位置づけ。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part07_quantum_computing/03_noise_error_correction_hardware.md` | SOURCE_VERIFIED | 2026-07-26 | 新規。noise/QEC/fault tolerance、5方式hardware、量子優位性の限定。NIST/IBM/Google公式を2026-07-26確認。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part04_relativistic_qm/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。相対論本編を先取りせず一粒子理論の境界へ限定。 |
+| `physics_tower/07_quantum_mechanics/part04_relativistic_qm/01_from_schrodinger_to_quantum_fields.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。KG/Dirac問題意識、spin/antiparticle、生成消滅とQFT必要性。相対論導出は保留。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/remedial_room/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。止まった式から既存数学正本と補習本文へ戻る診断表。 |
+| `physics_tower/07_quantum_mechanics/remedial_room/01_quantum_math_diagnostic.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。複素数、内積、固有値、Hermitian/unitary、ODE境界、Fourier、commutator、tensor。固有演習6問＋全解答。 |
 | `physics_tower/08_elementary_particle/00_overview.md` | TODO | - |  |
 | `physics_tower/08_elementary_particle/part01_basics/README.md` | TODO | - |  |
 | `physics_tower/08_elementary_particle/part02_lagrangian_density/README.md` | TODO | - |  |
