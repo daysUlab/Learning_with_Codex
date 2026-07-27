@@ -34,4 +34,3 @@ flowchart TD
 - 前：[歴史的実験](../part01_mysteries/README.md)
 - 次：[標準形式への橋](../part11_standard_formalism/README.md)
 - 数学補習：[量子数学診断](../remedial_room/README.md)
-

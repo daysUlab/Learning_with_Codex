@@ -93,19 +93,19 @@ $$
    $$
    \rho=\begin{pmatrix}0.7&0\\0&0.3\end{pmatrix}
    $$
-   がdensity operatorか判定せよ。  
+   がdensity operatorか判定せよ。
    **解答**：固有値は0.7, 0.3で非負、traceは1なので該当します。
 2.
    $$
    \rho=\begin{pmatrix}1&0\\0&-0.1\end{pmatrix}
    $$
-   はどうか。  
+   はどうか。
    **解答**：負固有値を持ち正値でないため該当しません。traceも0.9です。
 3. 古典三値分布
    $$
    (1/2,1/3,1/6)
    $$
-   のdensity matrixを書け。  
+   のdensity matrixを書け。
    **解答**：
    $$
    \operatorname{diag}(1/2,1/3,1/6)
@@ -115,14 +115,14 @@ $$
    A=\operatorname{diag}(1,4),\quad
    \rho=\operatorname{diag}(3/4,1/4)
    $$
-   の期待値を求めよ。  
+   の期待値を求めよ。
    **解答**：
    $$
    \operatorname{Tr}(\rho A)=3/4+1=7/4
    $$
-5. density operatorとdensity matrixを区別せよ。  
+5. density operatorとdensity matrixを区別せよ。
    **解答**：前者はbasis非依存の線形演算子、後者は特定basisで並べた成分です。
-6. 二つのdensity operatorの凸結合がtrace oneであることを示せ。  
+6. 二つのdensity operatorの凸結合がtrace oneであることを示せ。
    **解答**：
    $$
    \operatorname{Tr}[q\rho_1+(1-q)\rho_2]
@@ -135,4 +135,3 @@ $$
 - 参考：[なぜ密度演算子が出てくるのか？（qm大学物理）](https://qmcharge.com/article-without-wavefunction)（確認日：2026-07-27。古典期待値のtrace表示という視点を検討。唯一の導出とは扱わない）
 - 前：[状態準備](01_preparation_state_measurement.md)
 - 次：[pureとmixed](03_pure_mixed_state_vector.md)
-

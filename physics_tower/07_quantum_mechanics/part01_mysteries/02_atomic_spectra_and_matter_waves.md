@@ -6,7 +6,7 @@
 
 ## Bohr模型は何を説明し、何を仮定したか
 
-> 歴史的に導入されたmodel  
+> 歴史的に導入されたmodel
 > Bohr模型は1913年当時の半古典的modelです。以下のHamiltonian・遷移確率・photon detectionによる説明をBohr自身の考えとして遡及させません。
 
 水素原子に対して

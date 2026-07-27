@@ -235,4 +235,3 @@ PR #106の標準量子力学本文を維持しつつ、歴史を現代理論で�
 - 最初：[歴史的実験](part01_mysteries/README.md)
 - 一般構造：[part02](part02_modern_formalism/README.md)
 - 横断：[モデル交代](../cross_connections/README.md)
-

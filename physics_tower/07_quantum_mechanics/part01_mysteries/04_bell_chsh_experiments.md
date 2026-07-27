@@ -86,13 +86,13 @@ $$
    $$
    \pm2
    $$
-   であることを示せ。  
+   であることを示せ。
    **解答**：
    $$
    b_0=b_1
    $$
    なら差が0、異なれば和が0です。
-2. deterministic local assignmentで一回のCHSH量の絶対値を求めよ。  
+2. deterministic local assignmentで一回のCHSH量の絶対値を求めよ。
    **解答**：非zeroな括弧へ
    $$
    a_i=\pm1
@@ -102,7 +102,7 @@ $$
    $$
    |S|\leq2
    $$
-   となる理由を述べよ。  
+   となる理由を述べよ。
    **解答**：各
    $$
    \lambda
@@ -116,14 +116,14 @@ $$
    [-2,2]
    $$
    内です。
-4. 量子最大値はclassical boundの何倍か。  
+4. 量子最大値はclassical boundの何倍か。
    **解答**：
    $$
    (2\sqrt2)/2=\sqrt2
    $$
-5. Bell violationが超光速通信を意味しない理由を述べよ。  
+5. Bell violationが超光速通信を意味しない理由を述べよ。
    **解答**：各側単独の結果はrandomで、相関は後でclassical communicationにより照合して初めて分かるためです。
-6. Bellと量子algorithmを分ける理由を述べよ。  
+6. Bellと量子algorithmを分ける理由を述べよ。
    **解答**：Bellはlocal modelとcorrelationの制約、algorithmは計算problem・circuit・complexityの論点で、前提と結論が異なるためです。
 
 ## 参考・ナビゲーション
@@ -133,4 +133,3 @@ $$
 - 前：[一粒子干渉・Stern–Gerlach](03_single_particle_interference_and_spin.md)
 - 次：[現代量子論の一般構造](../part02_modern_formalism/README.md)
 - 発展：[合成系・entanglement](../part02_modern_formalism/08_composite_entanglement.md)
-

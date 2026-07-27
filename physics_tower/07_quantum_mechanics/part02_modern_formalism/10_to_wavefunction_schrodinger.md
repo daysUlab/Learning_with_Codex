@@ -114,17 +114,17 @@ $$
    $$
    \rho^2=\rho,\quad\operatorname{Tr}\rho=1
    $$
-   なら有限次元で何が言えるか。  
+   なら有限次元で何が言えるか。
    **解答**：固有値は0か1でtraceが1なのでrank one、すなわちpure stateです。
-2. wavefunctionからdensity kernelを書け。  
+2. wavefunctionからdensity kernelを書け。
    **解答**：
    $$
    \rho(\mathbf r,\mathbf r')
    =\psi(\mathbf r)\psi^*(\mathbf r')
    $$
-3. mixed stateが一つのwavefunctionで表せない理由を述べよ。  
+3. mixed stateが一つのwavefunctionで表せない理由を述べよ。
    **解答**：一つのwavefunctionはrank-one projectorしか作れず、rank 2以上のdensity operatorを表せないためです。
-4. position Born則をtrace式から導け。  
+4. position Born則をtrace式から導け。
    **解答**：
    $$
    \operatorname{Tr}[\rho P(\Delta)]
@@ -135,14 +135,14 @@ $$
    $$
    \Delta_j
    $$
-   ごとのideal有限分解能測定のeffectを書け。  
+   ごとのideal有限分解能測定のeffectを書け。
    **解答**：
    $$
    E_j=\int_{\Delta_j}|\mathbf r\rangle\langle\mathbf r|\,d^3r,
    \quad \sum_jE_j=I
    $$
    です。blurがあればより一般のPOVMになります。
-6. Schrödinger方程式が一般channelの式でない理由を述べよ。  
+6. Schrödinger方程式が一般channelの式でない理由を述べよ。
    **解答**：Hamiltonianが生成する連続unitaryへ限定し、system–environment相関によるdephasing・loss・measurementをsystem単独では含まないためです。
 
 ## 参考・ナビゲーション
@@ -150,4 +150,3 @@ $$
 - 前：[decoherenceとtomography](09_decoherence_tomography.md)
 - 次：[標準形式への橋](../part11_standard_formalism/README.md)
 - 計算：[Schrödinger dynamics](../part09_schrodinger_dynamics/README.md)
-

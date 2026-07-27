@@ -108,7 +108,7 @@ $$
    $$
    |0\rangle\otimes|1\rangle
    $$
-   を計算basisで書け。  
+   を計算basisで書け。
    **解答**：
    $$
    |01\rangle=(0,1,0,0)^\mathsf T
@@ -117,13 +117,13 @@ $$
    $$
    |\Phi^+\rangle
    $$
-   がproduct stateでない理由を述べよ。  
+   がproduct stateでない理由を述べよ。
    **解答**：係数行列
    $$
    \operatorname{diag}(1/\sqrt2,1/\sqrt2)
    $$
    のrankが2で、rank-oneの外積へ分解できません。
-3. Bell stateのA側reduced stateを計算せよ。  
+3. Bell stateのA側reduced stateを計算せよ。
    **解答**：
    $$
    \operatorname{Tr}_B|\Phi^+\rangle\langle\Phi^+|
@@ -134,19 +134,19 @@ $$
    $$
    \rho_c=\frac12(|00\rangle\langle00|+|11\rangle\langle11|)
    $$
-   のA側stateを求めよ。  
+   のA側stateを求めよ。
    **解答**：
    $$
    \rho_A=I/2
    $$
    でBell stateと同じlocal stateです。
-5. 上二状態を区別する測定を述べよ。  
+5. 上二状態を区別する測定を述べよ。
    **解答**：両側をx基底で測るとBell stateは同じ符号だけを返しますが、
    $$
    \rho_c
    $$
    は4組を各1/4で返します。
-6. entanglementが通信にならない理由を述べよ。  
+6. entanglementが通信にならない理由を述べよ。
    **解答**：相手のsettingを平均した自分側のmarginal
    $$
    p(a)=\operatorname{Tr}(\rho_AE_a)
@@ -159,4 +159,3 @@ $$
 - 前：[量子channel](07_channels_unitary.md)
 - 次：[decoherenceとtomography](09_decoherence_tomography.md)
 - 発展：[同種粒子・多体系](../part05_many_body/README.md)
-

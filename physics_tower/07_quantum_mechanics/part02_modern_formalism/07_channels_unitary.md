@@ -100,7 +100,7 @@ $$
 
 ## 演習と全解答
 
-1. unitary channelのKraus operatorを書け。  
+1. unitary channelのKraus operatorを書け。
    **解答**：一個の
    $$
    K_1=U
@@ -114,12 +114,12 @@ $$
    $$
    \mathcal E(\rho)=(1-p)\rho+pZ\rho Z
    $$
-   のKraus operatorを挙げよ。  
+   のKraus operatorを挙げよ。
    **解答**：
    $$
    K_0=\sqrt{1-p}\,I,\quad K_1=\sqrt p\,Z
    $$
-3. trace保存を確認せよ。  
+3. trace保存を確認せよ。
    **解答**：
    $$
    K_0^\dagger K_0+K_1^\dagger K_1
@@ -129,13 +129,13 @@ $$
    $$
    \rho\mapsto P_0\rho P_0+P_1\rho P_1
    $$
-   が一般に可逆でない理由を述べよ。  
+   が一般に可逆でない理由を述べよ。
    **解答**：off-diagonal成分を捨て、異なる入力が同じ出力へ写るためです。
 5.
    $$
    U(t)=e^{-iHt/\hbar}
    $$
-   からSchrödinger方程式を導け。  
+   からSchrödinger方程式を導け。
    **解答**：
    $$
    \frac d{dt}|\psi(t)\rangle
@@ -146,7 +146,7 @@ $$
    i\hbar
    $$
    を掛けます。
-6. open systemのsystem単独発展がunitaryでない例を挙げよ。  
+6. open systemのsystem単独発展がunitaryでない例を挙げよ。
    **解答**：environmentへwhich-path情報が漏れるdephasingではsystemのpurityが低下し、unitaryだけでは起こりません。
 
 ## 参考・ナビゲーション
@@ -154,4 +154,3 @@ $$
 - 参考：[ユニタリー時間発展とは？（qm大学物理）](https://qmcharge.com/article-double-ket-cptp-stinespring)（確認日：2026-07-27。CPTP・dilation・unitaryの包含関係を検討）
 - 前：[instrument](06_instruments_state_update.md)
 - 次：[合成系](08_composite_entanglement.md)
-

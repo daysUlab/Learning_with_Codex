@@ -92,7 +92,7 @@ z測定は同じ統計ですが、x測定では前者が `+` を確率1、後者
    $$
    \rho=\begin{pmatrix}1&0\\0&0\end{pmatrix}
    $$
-   のrankとpurityを求めよ。  
+   のrankとpurityを求めよ。
    **解答**：rank 1、
    $$
    \operatorname{Tr}\rho^2=1
@@ -102,7 +102,7 @@ z測定は同じ統計ですが、x測定では前者が `+` を確率1、後者
    $$
    \rho=I/2
    $$
-   のpurityを求めよ。  
+   のpurityを求めよ。
    **解答**：
    $$
    \operatorname{Tr}(I/4)=1/2
@@ -111,22 +111,22 @@ z測定は同じ統計ですが、x測定では前者が `+` を確率1、後者
    $$
    |-\rangle=(|0\rangle-|1\rangle)/\sqrt2
    $$
-   のdensity matrixを書け。  
+   のdensity matrixを書け。
    **解答**：
    $$
    \rho_-=\frac12
    \begin{pmatrix}1&-1\\-1&1\end{pmatrix}
    $$
-4. 0/1の半々mixと+/−の半々mixが同じことを示せ。  
+4. 0/1の半々mixと+/−の半々mixが同じことを示せ。
    **解答**：
    $$
    \frac12(|+\rangle\langle+|+|-\rangle\langle-|)
    =\frac12I
    $$
    で、off-diagonal成分が相殺します。
-5. pure superpositionとmixed stateを同義にできない理由を述べよ。  
+5. pure superpositionとmixed stateを同義にできない理由を述べよ。
    **解答**：superpositionはrank-one projectorでcoherenceを持ち、mixed stateは一般にrankが大きく、別basisの干渉統計が異なります。
-6. global phaseがdensity operatorから消えることを示せ。  
+6. global phaseがdensity operatorから消えることを示せ。
    **解答**：
    $$
    e^{i\chi}|\psi\rangle\langle\psi|e^{-i\chi}
@@ -138,4 +138,3 @@ z測定は同じ統計ですが、x測定では前者が `+` を確率1、後者
 - 参考：[波動関数とは何か？純粋状態と混合状態（qm大学物理）](https://qmcharge.com/article-wavefunction-pure-mixed)（確認日：2026-07-27）
 - 前：[密度演算子](02_classical_probability_density_operator.md)
 - 次：[POVM](04_generalized_born_povm.md)
-

@@ -10,7 +10,7 @@
 | 光電効果 | 強度で電子energy増加 | 最大energyは周波数で決まる | photon energy |
 | Compton散乱 | 波長は不変 | 散乱角依存の波長shift | photon momentum |
 
-> 時代区分  
+> 時代区分
 > Planck量子仮説、Einsteinの光量子、Comptonの粒子運動学は歴史的modelです。後段のquantized field、density operator、detectorによる説明は後世からの再構成です。
 
 Planck分布は

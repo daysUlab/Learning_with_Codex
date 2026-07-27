@@ -65,7 +65,7 @@ $$
    $$
    P_0=|0\rangle\langle0|,\quad P_1=|1\rangle\langle1|
    $$
-   がPVMであることを確認せよ。  
+   がPVMであることを確認せよ。
    **解答**：
    $$
    P_i^2=P_i,\quad P_0P_1=0,\quad P_0+P_1=I
@@ -74,7 +74,7 @@ $$
    $$
    \pm1
    $$
-   とした演算子を書け。  
+   とした演算子を書け。
    **解答**：
    $$
    Z=P_0-P_1
@@ -83,7 +83,7 @@ $$
    $$
    \rho=I/2
    $$
-   でZの期待値と分散を求めよ。  
+   でZの期待値と分散を求めよ。
    **解答**：
    $$
    \langle Z\rangle=0,\qquad
@@ -93,14 +93,14 @@ $$
    $$
    E=\operatorname{diag}(0.8,0.2)
    $$
-   がprojectorでないことを示せ。  
+   がprojectorでないことを示せ。
    **解答**：
    $$
    E^2=\operatorname{diag}(0.64,0.04)\ne E
    $$
-5. 同じPVMに結果labelを0,1と付ける場合と−1,+1と付ける場合で何が変わるか。  
+5. 同じPVMに結果labelを0,1と付ける場合と−1,+1と付ける場合で何が変わるか。
    **解答**：outcome probabilityは同じで、演算子の数値的期待値と分散が変わります。
-6. 「すべての測定はHermitian演算子」と言い切れない理由を述べよ。  
+6. 「すべての測定はHermitian演算子」と言い切れない理由を述べよ。
    **解答**：一般のnoisy・unsharp測定はPOVMを要し、さらにpost-measurement stateにはinstrumentが必要だからです。
 
 ## 参考・ナビゲーション
@@ -108,4 +108,3 @@ $$
 - 参考：[物理量が演算子であるとはどういうことか？（qm大学物理）](https://qmcharge.com/article-measurement-of-physical-quantities)（確認日：2026-07-27。POVMからsharp測定・PVMへ進む順序を検討）
 - 前：[POVM](04_generalized_born_povm.md)
 - 次：[instrument](06_instruments_state_update.md)
-

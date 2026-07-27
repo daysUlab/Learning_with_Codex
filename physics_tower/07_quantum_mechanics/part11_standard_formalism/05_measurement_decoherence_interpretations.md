@@ -27,17 +27,17 @@ decoherenceはpreferred basisとapparent classicalityを説明しますが、単
 
 ## 演習と全解答
 
-1. decoherenceとobjective collapseの違いを述べよ。  
+1. decoherenceとobjective collapseの違いを述べよ。
    **解答**：decoherenceは全体系unitaryとpartial traceで局所干渉を抑える標準過程、objective collapseはunitary以外の物理dynamicsを追加します。
-2. 多くの解釈を通常実験だけで区別しにくい理由を述べよ。  
+2. 多くの解釈を通常実験だけで区別しにくい理由を述べよ。
    **解答**：同じdensity operator、Born則、unitaryなどの操作的予測を共有するからです。
-3. instrumentと解釈は同じものか。  
+3. instrumentと解釈は同じものか。
    **解答**：違います。instrumentはoutcomeごとの確率とstate updateを計算する数理対象で、その存在論的な読み方は別問題です。
-4. many-worldsでdecoherenceが担う役割を述べよ。  
+4. many-worldsでdecoherenceが担う役割を述べよ。
    **解答**：environmentとの相関によりbranch間干渉を実用上抑え、安定な記録basisを選ぶ役割です。
-5. Bohm型理論が単純なlocal hidden-variable theoryでない理由を述べよ。  
+5. Bohm型理論が単純なlocal hidden-variable theoryでない理由を述べよ。
    **解答**：多粒子guiding equationはconfiguration全体に依存し、Bell相関を再現するためnonlocalです。
-6. 「意識が見るとcollapseする」が標準量子論の必須公理か。  
+6. 「意識が見るとcollapseする」が標準量子論の必須公理か。
    **解答**：必須ではありません。測定は物理的apparatus・environmentとの相互作用としてmodel化でき、意識を導入しない形式と解釈が多数あります。
 
 ## 参考・ナビゲーション

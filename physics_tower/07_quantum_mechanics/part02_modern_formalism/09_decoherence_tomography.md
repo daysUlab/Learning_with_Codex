@@ -54,7 +54,7 @@ $$
    $$
    \langle e_1|e_0\rangle=1
    $$
-   のpurityを求めよ。  
+   のpurityを求めよ。
    **解答**：元の
    $$
    |+\rangle
@@ -64,15 +64,15 @@ $$
    $$
    \langle e_1|e_0\rangle=0
    $$
-   のstateを求めよ。  
+   のstateを求めよ。
    **解答**：
    $$
    \rho_S=I/2
    $$
    でpurityは1/2です。
-3. populationsがdecoherenceだけで必ず変わるか。  
+3. populationsがdecoherenceだけで必ず変わるか。
    **解答**：pure dephasingでは対角成分は保たれ、off-diagonal成分だけが減衰します。energy relaxationは別channelです。
-4. qubit tomographyにz測定だけでは足りない理由を述べよ。  
+4. qubit tomographyにz測定だけでは足りない理由を述べよ。
    **解答**：
    $$
    r_z
@@ -88,7 +88,7 @@ $$
    \langle Y\rangle=0,\quad
    \langle Z\rangle=0.8
    $$
-   のdensity matrixを書け。  
+   のdensity matrixを書け。
    **解答**：
    $$
    \rho=\frac12
@@ -103,7 +103,7 @@ $$
    \end{pmatrix}
    $$
    Bloch vector長は1なのでpureです。
-6. 100回の二値測定と10000回では標準誤差が概ね何倍違うか。  
+6. 100回の二値測定と10000回では標準誤差が概ね何倍違うか。
    **解答**：
    $$
    1/\sqrt N
@@ -116,4 +116,3 @@ $$
 - 前：[合成系](08_composite_entanglement.md)
 - 次：[波動関数への橋](10_to_wavefunction_schrodinger.md)
 - 解釈：[標準形式側の解釈記事](../part11_standard_formalism/05_measurement_decoherence_interpretations.md)
-

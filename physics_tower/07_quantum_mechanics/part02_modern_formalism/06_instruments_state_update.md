@@ -83,7 +83,7 @@ $$
    $$
    M_0=|0\rangle\langle0|,\quad M_1=|1\rangle\langle1|
    $$
-   のcompletenessを確認せよ。  
+   のcompletenessを確認せよ。
    **解答**：
    $$
    M_0^\dagger M_0+M_1^\dagger M_1=I
@@ -92,35 +92,34 @@ $$
    $$
    |\psi\rangle=(3|0\rangle+4|1\rangle)/5
    $$
-   を上のinstrumentで測る確率を求めよ。  
+   を上のinstrumentで測る確率を求めよ。
    **解答**：
    $$
    p_0=9/25,\quad p_1=16/25
    $$
-3. 0を得たselective stateを求めよ。  
+3. 0を得たselective stateを求めよ。
    **解答**：
    $$
    \rho_0=|0\rangle\langle0|
    $$
-4. 結果を捨てたstateを求めよ。  
+4. 結果を捨てたstateを求めよ。
    **解答**：
    $$
    \rho'=\frac9{25}|0\rangle\langle0|
    +\frac{16}{25}|1\rangle\langle1|
    $$
    で、元のcoherenceは消えます。
-5. 同じPOVMでも異なる更新が可能な例を述べよ。  
+5. 同じPOVMでも異なる更新が可能な例を述べよ。
    **解答**：z結果をLüders ruleで残す装置と、z結果を記録後に常に
    $$
    |0\rangle
    $$
    を再準備する装置は同じz確率を持ちますがpost-stateが異なります。
-6. destructive photon detectorをprojectionだけで表しにくい理由を述べよ。  
+6. destructive photon detectorをprojectionだけで表しにくい理由を述べよ。
    **解答**：click確率に加えphoton吸収で入力system自体が失われ、出力空間やpost-stateの指定が必要だからです。
 
 ## 参考・ナビゲーション
 
-- 参考：[射影仮説と波束の収縮（qm大学物理）](https://qmcharge.com/article-projection-postulate)（確認日：2026-07-27。一般測定とLüders型更新の区別を検討）
+- 参考：[測定後状態とは何か？（qm大学物理）](https://qmcharge.com/article-post-measurement-state)、[射影仮説と波束の収縮](https://qmcharge.com/article-projection-postulate)（確認日：2026-07-27。条件付きstate、一般測定、Lüders型更新の区別を検討）
 - 前：[PVM](05_pvm_observables.md)
 - 次：[量子channel](07_channels_unitary.md)
-
