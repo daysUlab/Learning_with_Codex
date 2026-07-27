@@ -1,6 +1,8 @@
-# entanglement・Bell・量子回路・algorithm
+# entanglementを使う量子回路・algorithm
 
-## Bell stateを回路で作る
+Bell・CHSH不等式は[歴史編のBell実験](../part01_mysteries/04_bell_chsh_experiments.md)を正本とします。local realismの検証とalgorithm高速化を同じ論点として扱いません。
+
+## entangled stateを回路で作る
 
 $$
 |00\rangle
@@ -12,7 +14,7 @@ $$
 
 です。このstateは局所stateの積へ分解できません。
 
-Bell不等式はlocal hidden-variable modelが満たす相関上限を与えます。実験違反は、測定結果を事前の局所値で説明するmodelを排除しますが、超光速通信を許しません。
+このstateはBell testにも使えますが、Bell violationだけで任意のproblemが高速化されるわけではありません。
 
 ## algorithmの位置づけ
 
@@ -45,8 +47,8 @@ queryより少なくします。量子並列性だけで答えが読めるので
    $$
 2. Bell stateを一qubitずつ独立に準備できるか。
    **解答**：できません。積stateへ因数分解できません。
-3. entanglementで超光速messageを送れるか。
-   **解答**：局所結果は制御できず、相関確認には古典通信が必要なので送れません。
+3. Bell testとalgorithmの違いを述べよ。
+   **解答**：Bell testはlocal hidden-variable modelのcorrelation boundを検証し、algorithmは入力・出力・queryまたは計算量を比較します。
 4.
    $$
    N=10^6

@@ -1,5 +1,9 @@
 # 角運動量の合成・磁気モーメント・原子
 
+## 現代量子論から見ると
+
+tensor product上のpure eigenstateを中心に扱います。実際の原子ensemble、熱分布、relaxationはdensity operatorとopen-system channelを要します。
+
 ## tensor product上の合成
 
 二つの角運動量

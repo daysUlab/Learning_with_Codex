@@ -10,6 +10,6 @@
 
 各問題を「状態、運動方程式、初期・境界条件、観測量、energy、古典極限」で比較します。
 
-- 前：[状態と演算子](../part02_matrix_formalism/README.md)
+- 前：[状態と演算子](../part11_standard_formalism/README.md)
 - 次：[解析力学からの接続](../part06_via_analytical_mech/README.md)
 - 親：[章overview](../00_overview.md)

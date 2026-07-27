@@ -1,5 +1,10 @@
 # tunnel・量子閉じ込め・半導体device
 
+## 現代量子論から見ると
+
+barrier透過とbound levelはpure-state wave mechanicsを入口にしますが、device currentはcontactからのmixed carrier供給、open boundary、inelastic scattering、measurementを組み合わせる必要があります。
+
+
 ## 保留していた現象を回収する
 
 | device・現象 | 量子概念 | 他章の正本 |

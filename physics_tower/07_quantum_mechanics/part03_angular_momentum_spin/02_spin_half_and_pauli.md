@@ -1,5 +1,9 @@
 # spin 1/2・Pauli行列・Stern–Gerlach
 
+## 現代量子論から見ると
+
+Bloch sphere表面はpure qubit、内部はmixed stateを表します。軸方向のideal spin測定はPVMですが、実装noiseを含むStern–GerlachやreadoutはPOVM・instrumentで表します。
+
 ## 内部自由度
 
 spin

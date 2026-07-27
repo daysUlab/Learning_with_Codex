@@ -1,5 +1,9 @@
 # 調和振動子――Newton・Lagrange・Hamilton・量子
 
+## 現代量子論から見ると
+
+孤立したoscillatorのpure stateとunitary発展を主に扱います。thermal oscillatorはdensity operator、減衰・driving noiseはopen-system channelまたはmaster equationが必要です。
+
 ## 四つの表現
 
 | 軸 | Newton | Lagrange | Hamilton | 量子 |

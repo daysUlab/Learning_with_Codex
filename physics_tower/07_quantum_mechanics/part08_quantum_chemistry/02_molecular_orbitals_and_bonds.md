@@ -1,5 +1,9 @@
 # 分子軌道・化学結合・Born–Oppenheimer近似
 
+## 現代量子論から見ると
+
+主に閉鎖系の定常pure state、固定核近似、有限basisを用います。振動・溶媒・温度・chemical reaction environmentを含めるとmixed stateとopen-system dynamicsが必要です。
+
 ## 核とelectronのscaleを分ける
 
 分子の完全Hamiltonianには核・electronの運動とCoulomb相互作用が入ります。核が重く遅いことを使い、まず核位置

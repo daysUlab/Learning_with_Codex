@@ -1,5 +1,15 @@
 # 軌道角運動量・回転代数・球面調和関数
 
+## 現代量子論から見ると
+
+主にpure stateとangular-momentum PVMを用います。一般状態では確率は
+
+$$
+p(l,m)=\operatorname{Tr}(\rho P_{lm})
+$$
+
+で、measurement apparatusの有限分解能はPOVMになります。
+
 ## 古典円運動から何が変わるか
 
 古典では

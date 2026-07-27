@@ -1,5 +1,9 @@
 # 周期potential・Bloch状態・band構造
 
+## 現代量子論から見ると
+
+一電子またはquasiparticleの定常pure eigenstateと周期Hamiltonianを使うband modelです。実材料の占有はdensity operator・Fermi統計、散乱・relaxationはopen-systemまたはtransport modelへ渡します。
+
 ## 原子準位から結晶bandへ
 
 結晶では
