@@ -1,14 +1,28 @@
 # 重ね合わせ・相対位相・量子確率
 
+## 現代量子論から見ると
+
+ここではpure stateのcoherent superpositionと、density operatorのconvex mixtureを区別します。off-diagonal成分はbasis依存ですが、そのbasisにおけるinterference可能性を担います。
+
 ## 二準位系で三つを区別する
 
 | 記述 | state | Z測定 | X測定 |
 |---|---|---|---|
-| 古典的0/1確率混合 | 0と1を各1/2 | 各1/2 | 位相情報なし |
+| 古典的0/1確率混合 | $$\rho_{\rm mix}=I/2$$ | 各1/2 | 各1/2 |
 | 量子重ね合わせ | $$|+\rangle=(|0\rangle+|1\rangle)/\sqrt2$$ | 各1/2 | +が1 |
 | 位相を変えた重ね合わせ | $$|-\rangle=(|0\rangle-|1\rangle)/\sqrt2$$ | 各1/2 | -が1 |
 
 Z測定だけでは三者を区別できません。量子stateは確率に加えて相対phaseを残します。
+
+z基底では
+
+$$
+\rho_+=\frac12\begin{pmatrix}1&1\\1&1\end{pmatrix},
+\qquad
+\rho_{\rm mix}=\frac12\begin{pmatrix}1&0\\0&1\end{pmatrix}.
+$$
+
+対角成分は同じでも、coherent superpositionだけがoff-diagonal成分を持ち、x測定の干渉差を生みます。
 
 一般のpure qubitは
 

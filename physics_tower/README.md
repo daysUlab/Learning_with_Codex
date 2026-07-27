@@ -80,11 +80,11 @@ flowchart TD
 
 ### 量子力学：保留した問いを回収する
 
-[量子力学](07_quantum_mechanics/00_overview.md)は、本来の番号順の相対論より先に本文化しました。理由は、解析力学のHamiltonian・作用・Poisson括弧、統計力学のFermi・Bose占有、半導体のband・tunnel・量子閉じ込め、電磁気学の光と物質の相互作用という、既存章で明示的に保留した問いを一つのstate・operator・measurement・time evolutionへ結び直すためです。
+[量子力学](07_quantum_mechanics/00_overview.md)は、本来の番号順の相対論より先に本文化しました。歴史的実験を現代量子論で読み直し、density operator・POVM・instrument・channelという一般構造から、pure state・wavefunction・Schrödinger方程式という標準波動力学の特殊化へ進みます。解析力学のHamiltonian・作用・Poisson括弧、統計力学のthermal state・Fermi/Bose占有、半導体のband・tunnel・量子閉じ込めを回収します。
 
 相対論と量子力学は直列の「古い理論→新しい理論」ではありません。相対論は絶対時間・Galilei変換という時空の前提を、量子力学は粒子が同時に確定した古典値を持ち測定がそれを読むというstate・予測の前提を更新する並行分岐です。両方が必要な高energy・粒子生成消滅領域で量子場へ合流します。
 
-量子力学からは、水素原子・分子軌道・量子化学、Bloch state・物性・半導体、同種粒子・多体系、qubit・量子情報へ進めます。相対論的量子力学の詳細導出は相対論本編の完成後に再訪します。
+量子力学からは、水素原子・分子軌道・量子化学、Bloch state・物性・半導体、同種粒子・多体系、open system・qubit・量子情報へ進めます。photon生成消滅・相対論的量子論・場の詳細は、相対論本編の完成後に再訪します。
 
 ## 5. 本線・支線・補習・Q&A
 
@@ -114,7 +114,7 @@ flowchart TD
 | 04 熱力学 | 法則・entropy・potential・工学応用を本文化済み |
 | 05 統計力学 | 状態数・ensemble・量子統計・半導体・応用を本文化済み |
 | 06 相対論 | TODOのまま維持。時空の前提更新を担当 |
-| 07 量子力学 | 古典破綻→状態・測定・時間発展→原子・分子・固体・量子情報→場への境界まで本文化済み |
+| 07 量子力学 | 歴史実験→現代一般構造→標準波動力学→原子・固体・量子情報→場への境界まで本文化済み |
 | 08 素粒子以降 | `PROGRESS.md` の TODO |
 
 実際のレビュー状態は [PROGRESS.md](PROGRESS.md) を正本とします。

@@ -1,5 +1,21 @@
 # 量子状態・波動関数・Born則
 
+## 現代量子論から見ると
+
+このページでは一般状態
+
+$$
+\rho
+$$
+
+のうちpure state
+
+$$
+\rho=|\psi\rangle\langle\psi|
+$$
+
+へ限定し、position basisを選びます。wavefunctionはpure stateのposition representationで、一般のquantum stateそのものではありません。以下のBorn則は一般化Born則をideal position PVMへ特殊化したものです。現実の有限分解能detectorは一般にPOVMです。
+
 ## 何を状態として残すか
 
 古典一粒子のstateは位相空間の一点
@@ -8,7 +24,7 @@ $$
 (x,p)
 $$
 
-です。量子論では、同じ準備操作が将来の各測定結果へ与える確率振幅を一つのray
+です。この節ではpure stateに限定し、同じ準備操作が将来の各測定結果へ与える確率振幅を一つのray
 
 $$
 |\psi\rangle
@@ -140,6 +156,6 @@ $$
 
 Sakurai & Napolitano, *Modern Quantum Mechanics*, Ch.1.
 
-- 前：[実験](../part01_mysteries/03_single_particle_interference_and_spin.md)
+- 前：[一般形式からwavefunctionへ](../part02_modern_formalism/10_to_wavefunction_schrodinger.md)
 - 次：[重ね合わせと位相](02_superposition_phase_quantum_probability.md)
 - 補習：[数学診断](../remedial_room/README.md)

@@ -53,13 +53,21 @@
 
 ### 量子力学章の統一規約
 
-- `07_quantum_mechanics` は古典論の破綻実験から始め、state、operator、measurement、Hamiltonian time evolutionを一本の予測規則として組み立てる。
-- 一粒子位置波動関数、spinor、多粒子configuration-space wave function、一般state vector、density operatorを区別する。
-- 時間発展、測定確率、測定後state、decoherence、解釈問題を別の論点として扱い、意識によるcollapseを標準理論の確定事項としない。
+- `07_quantum_mechanics` は歴史的実験を現代量子論で読み直した後、一般構造から標準波動力学へ進む。
+- 一般状態はdensity operator、pure stateはrank-one projector、そのray representationがstate vector、position representationがwavefunctionである。
+- 一般測定はPOVM、sharp測定はPVM、実数label付きPVMはself-adjoint operatorとし、POVMとquantum instrumentを混同しない。
+- 一般のsystem単独変化はCPTP channel、閉鎖・可逆な場合はunitary、連続unitaryのpure-state表示がSchrödinger equationである。
+- 一粒子位置wavefunction、spinor、多粒子configuration-space wavefunction、density kernel、reduced stateを区別する。
+- unitary発展、測定確率、測定後state、decoherence、解釈問題を別の論点として扱い、意識によるcollapseを標準理論の確定事項としない。
+- 古典確率の非可換拡張、affine map、可逆性、tensor productによる説明は構造理解のための再構成であり、少数の前提から現在の量子論が唯一導出されるとは書かない。
 - Fourier規約は `exp(-ipx/ℏ)` を位置→運動量、時間発展は `exp(-iEt/ℏ)`、確率currentは `j=(ℏ/2mi)(ψ*∇ψ-ψ∇ψ*)` に統一する。
 - canonical relationは `[q_i,p_j]=iℏδ_ij` とし、Poisson括弧からcommutatorへの対応を量子化の一意な万能recipeとは扱わない。
 - spinを古典的自転と説明せず、軌道角運動量と内部自由度を区別する。
 - 量子力学はstate空間と交換対称性、統計力学は熱平衡の占有分布、電磁気学は電位・電荷・電流を正本とする。
+- 歴史記事は当時の問題・歴史的model・現在の標準理解・現代測定論的再解釈・量子場が必要な境界を時代区分する。
+- tunnelをenergy–time uncertaintyによるenergy借用と説明せず、stationary scattering、exponential solution、wave packet、detectorを区別する。
+- 原子spectraは原子固有値だけで完結させず、atom・field・interaction・photon detectionの境界を示す。
+- Bell不等式と量子algorithmを分け、decoherenceと解釈問題を分ける。
 - 相対論的量子論は境界の提示に留め、Lorentz構造の詳細は `06_relativity`、生成消滅とfield quantizationは `08_elementary_particle` へ保留する。
 
 ### 電磁気学章の統一規約

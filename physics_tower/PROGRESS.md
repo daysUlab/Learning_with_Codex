@@ -209,17 +209,28 @@
 | `physics_tower/06_relativity/part06_tests/README.md` | TODO | - |  |
 | `physics_tower/06_relativity/part07_free_study/README.md` | TODO | - |  |
 | `physics_tower/06_relativity/qa_special/README.md` | TODO | - |  |
-| `physics_tower/07_quantum_mechanics/00_overview.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ・batch正本。解析のHamiltonian/作用/Poisson/gauge、統計のFD/BE、半導体のband/tunnel/閉じ込め、電磁波・光子を回収。古典/量子比較、state/operator/measurement/time evolution、記号・Fourier規約、適用域、相対論・場への保留を明記。36新規本文・216固有演習＋全解答をレビュー。TeX 461 block、Mermaid 9図、相対link、行列・符号・単位検査通過。現代hardware出典は2026-07-26確認。 |
+| `physics_tower/07_quantum_mechanics/00_overview.md` | DRAFT_DONE | 2026-07-27 | 全面改稿。歴史→現代一般構造→標準波動力学の二層本線、density operator/POVM/instrument/channel/unitary/wavefunctionの包含関係、6読者route、相対論・場の境界を正本化。最終QA待ち。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/README.md` | DRAFT_DONE | 2026-07-27 | 新規。一般量子構造10記事のroute、再構成を唯一導出としない注意、Mermaid 1図。最終QA待ち。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/01_preparation_state_measurement.md` | DRAFT_DONE | 2026-07-27 | 新規。preparation/state/setting/outcome、反復実験、同じstate、tomography入口。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/02_classical_probability_density_operator.md` | DRAFT_DONE | 2026-07-27 | 新規。古典確率のtrace表示、positivity、trace one、convexity、operator/matrix区別。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/03_pure_mixed_state_vector.md` | DRAFT_DONE | 2026-07-27 | 新規。rank/purity/ray、ensemble分解非一意、superposition/mixture、reduced state入口。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/04_generalized_born_povm.md` | DRAFT_DONE | 2026-07-27 | 新規。effect、POVM、一般化Born則、noisy/unsharp測定、affine再構成の限界。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/05_pvm_observables.md` | DRAFT_DONE | 2026-07-27 | 新規。POVM→PVM→self-adjoint operatorの階層、期待値・分散。固有演習6問＋全解答、Mermaid 1図。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/06_instruments_state_update.md` | DRAFT_DONE | 2026-07-27 | 新規。instrument、Kraus、selective/non-selective、Lüders、destructive measurement。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/07_channels_unitary.md` | DRAFT_DONE | 2026-07-27 | 新規。CPTP、Kraus、Stinespring入口、unitary特殊化、Schrödinger接続。固有演習6問＋全解答、Mermaid 1図。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/08_composite_entanglement.md` | DRAFT_DONE | 2026-07-27 | 新規。tensor product、separable/entangled、partial trace、local POVM、no-signalling。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/09_decoherence_tomography.md` | DRAFT_DONE | 2026-07-27 | 新規。environment overlap、off-diagonal suppression、preferred basis、tomography、有限標本誤差。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part02_modern_formalism/10_to_wavefunction_schrodinger.md` | DRAFT_DONE | 2026-07-27 | 新規。density→pure→vector→wavefunction、position PVM、finite-resolution POVM、unitary→Schrödinger対応表。固有演習6問＋全解答、Mermaid 1図。 |
 | `physics_tower/07_quantum_mechanics/part01_mysteries/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。古典予測→観測→破綻前提→必要概念の3記事route。 |
 | `physics_tower/07_quantum_mechanics/part01_mysteries/01_radiation_quanta_and_photons.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。黒体・光電・Compton、photon energy/momentum、数値例。量子統計・量子場へ境界。固有演習6問＋全解答。 |
 | `physics_tower/07_quantum_mechanics/part01_mysteries/02_atomic_spectra_and_matter_waves.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。Bohrの成果と限界、de Broglie、electron回折、150 V数値例。固有演習6問＋全解答。 |
 | `physics_tower/07_quantum_mechanics/part01_mysteries/03_single_particle_interference_and_spin.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。一粒子干渉、which-path、Stern–Gerlach、破れた古典前提。固有演習6問＋全解答。 |
-| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。state→time evolution/measurement→結果/更新の図と5記事route。 |
-| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/01_state_wavefunction_born.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。一般stateと位置波動関数、Born則、規格化、次元、指数state導出。固有演習6問＋全解答。 |
-| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/02_superposition_phase_quantum_probability.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。古典mix/重ね合わせ/relative phase、複素数、二準位比較。固有演習6問＋全解答。 |
-| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/03_hilbert_operators_eigenvalues.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。bra-ket、Hermitian、固有値、射影、期待値、縮退。固有演習6問＋全解答。 |
-| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/04_commutators_uncertainty_fourier.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。位置/運動量表示、commutator符号導出、Robertson、Fourier規約。固有演習6問＋全解答。 |
-| `physics_tower/07_quantum_mechanics/part02_matrix_formalism/05_measurement_decoherence_interpretations.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。unitary/確率/更新/decoherenceを分離し、主要解釈と未決着範囲を整理。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part11_standard_formalism/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 既存リバイズ。state→time evolution/measurement→結果/更新の図と5記事route。 |
+| `physics_tower/07_quantum_mechanics/part11_standard_formalism/01_state_wavefunction_born.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。一般stateと位置波動関数、Born則、規格化、次元、指数state導出。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part11_standard_formalism/02_superposition_phase_quantum_probability.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。古典mix/重ね合わせ/relative phase、複素数、二準位比較。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part11_standard_formalism/03_hilbert_operators_eigenvalues.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。bra-ket、Hermitian、固有値、射影、期待値、縮退。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part11_standard_formalism/04_commutators_uncertainty_fourier.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。位置/運動量表示、commutator符号導出、Robertson、Fourier規約。固有演習6問＋全解答。 |
+| `physics_tower/07_quantum_mechanics/part11_standard_formalism/05_measurement_decoherence_interpretations.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。unitary/確率/更新/decoherenceを分離し、主要解釈と未決着範囲を整理。固有演習6問＋全解答。 |
 | `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/README.md` | STRUCTURE_QA_PASS | 2026-07-26 | 新規。Schrödinger→自由粒子→well/barrier→振動子→古典極限の5記事route。 |
 | `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/01_schrodinger_hamiltonian_continuity.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。TD/TI Schrödinger、Hamiltonian、continuity/currentを符号込み導出。固有演習6問＋全解答。 |
 | `physics_tower/07_quantum_mechanics/part09_schrodinger_dynamics/02_free_particle_wave_packets.md` | EXERCISE_REVIEWED | 2026-07-26 | 新規。古典軌道/Hamilton/平面波/wave packet比較、group velocity数値例。固有演習6問＋全解答。 |
