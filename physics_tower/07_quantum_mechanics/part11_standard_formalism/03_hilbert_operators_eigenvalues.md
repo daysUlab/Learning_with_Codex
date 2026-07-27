@@ -11,7 +11,11 @@ $$
 
 です。basisを替えてもstateは同じで、成分だけが変わります。
 
-## 観測量はHermitian演算子
+## 現代量子論から見ると
+
+一般測定はPOVM、sharpな測定はPVM、実数labelを付けたPVMがself-adjoint operatorです。ここではideal PVMへ限定します。装置のnoiseやpost-measurement stateまで一個の演算子が表すわけではありません。
+
+## PVMとself-adjoint演算子
 
 $$
 \hat A^\dagger=\hat A
@@ -23,7 +27,7 @@ $$
 \hat A|a_n\rangle=a_n|a_n\rangle
 $$
 
-理想射影測定では
+理想PVMでは
 
 $$
 P(a_n)=|\langle a_n|\psi\rangle|^2
@@ -88,8 +92,8 @@ $$
    $$
    1/2
    $$
-4. 非Hermitian演算子を観測量に使う問題を述べよ。
-   **解答**：固有値や期待値が複素数になり得て、実数の測定値と対応しません。
+4. 一般のPOVMを一つのHermitian演算子で完全に表せるか。
+   **解答**：一般にはできません。自己共役演算子は実数label付きPVMに対応し、unsharpなPOVMやstate updateは追加構造を要します。
 5. basis変換で物理stateは変わるか。
    **解答**：受動的basis変更なら変わらず、成分と演算子表示が整合して変わります。
 6. 縮退固有値を測ると一意のvectorへ必ず更新されるか。

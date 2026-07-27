@@ -1,5 +1,9 @@
 # 有効質量・electron・hole・doping
 
+## 現代量子論から見ると
+
+band eigenstateをwave packetへ組み、semiclassical dynamicsへ縮約します。carrier populationはmixed ensemble、phonon・impurity散乱はunitaryな一電子Schrödinger発展だけでは閉じません。
+
 ## band内の運動
 
 semiclassical wave packetでは

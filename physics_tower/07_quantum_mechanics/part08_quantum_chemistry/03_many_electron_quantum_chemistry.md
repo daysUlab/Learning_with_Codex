@@ -1,5 +1,9 @@
 # 多電子原子と量子化学――何を近似するか
 
+## 現代量子論から見ると
+
+多電子Hilbert空間上のpure ground stateを主対象にしますが、reduced density matrix、finite-temperature ensemble、electron correlation、environmentとのcouplingでは一つのwavefunctionだけに閉じない記述も使います。
+
 ## 難しさの源
 
 多電子Hamiltonianは概略

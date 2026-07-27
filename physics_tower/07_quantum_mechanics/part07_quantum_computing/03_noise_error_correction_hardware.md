@@ -2,9 +2,11 @@
 
 ## open systemとしての量子computer
 
+理想回路のpure stateとunitary gateだけで実験systemは完結しません。実機はstate preparation、control channel、environmental noise、POVM readout、tomography、classical feedbackを含みます。
+
 主なerrorはenergy relaxation、dephasing、gate・measurement error、leakage、crosstalkです。単純なbit flipだけでなくphase errorがあるため、classical redundancyをそのままcopyできません。
 
-量子誤り訂正はlogical stateを多くのphysical qubitへentangleして符号化し、stateそのものを測らずsyndromeを測ります。threshold以下のlocal errorと十分なresourceがあれば、code distanceを増やしてlogical errorを抑えられるのがfault toleranceの考えです。
+量子誤り訂正はlogical stateを多くのphysical qubitへentangleして符号化し、stateそのものを測らずsyndromeを測ります。threshold以下のlocal errorと十分なresourceがあれば、code distanceを増やしてlogical errorを抑えられるのがfault toleranceの考えです。初期化はreset channel、gateは目標unitaryにnoise channelが重なったprocess、読み出しは一般にnoisy POVMです。
 
 | modality | qubit例 | 主なtrade-off |
 |---|---|---|
@@ -38,5 +40,5 @@
 - [NIST Quantum Information Science](https://www.nist.gov/topics/quantum-information-science)
 - [IBM Quantum Learning](https://quantum.cloud.ibm.com/learning)
 - [Google Quantum AI](https://quantumai.google/)
-- 前：[Bellとalgorithm](02_entanglement_bell_algorithms.md)
+- 前：[entanglementとalgorithm](02_entanglement_bell_algorithms.md)
 - 次：[相対論・場](../part04_relativistic_qm/01_from_schrodinger_to_quantum_fields.md)

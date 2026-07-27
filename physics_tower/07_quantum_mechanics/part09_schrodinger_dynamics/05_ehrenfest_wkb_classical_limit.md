@@ -1,5 +1,9 @@
 # Ehrenfest・WKB・古典極限――どう以前の理論へ戻るか
 
+## 現代量子論から見ると
+
+pure-state wave mechanicsのsemiclassical approximationだけでなく、現実のclassicalityにはmixed state、coarse graining、environment-induced decoherenceも関わります。
+
 ## 期待値の運動
 
 Schrödinger式から

@@ -1,5 +1,15 @@
 # 水素原子――Coulomb potential・量子数・spectra
 
+## 現代量子論から見ると
+
+このページの固有値問題は主に
+
+$$
+H_{\rm atom}
+$$
+
+を扱います。energy differenceだけではabsorption・emission全過程は決まりません。quantized electromagnetic field、interaction、初期state、photon detectionが必要です。
+
 ## 中心問題
 
 固定したprotonを原点に置く近似では
@@ -53,6 +63,24 @@ $$
 
 がselection ruleです。energy差だけでなく遷移matrix elementが強度を決めます。
 
+## 原子・field・interaction
+
+全Hamiltonianの見取り図は
+
+$$
+H=H_{\rm atom}+H_{\rm field}+H_{\rm int}
+$$
+
+です。外場を古典場として扱う近似ではabsorptionとstimulated emissionを記述できますが、真空からphotonが生成されるspontaneous emissionにはfield quantizationが本質的です。transition rateは概略
+
+$$
+\Gamma_{i\to f}\propto
+|\langle f|H_{\rm int}|i\rangle|^2
+\times\text{final-state density}
+$$
+
+で、selection ruleはmatrix elementがzeroになる条件です。この構造はlaser、LED、spectroscopyへ接続します。
+
 ## 演習と全解答
 
 1.
@@ -104,9 +132,18 @@ $$
    なので単一photon E1遷移としては禁止です。
 6. Bohr模型とSchrödinger解のenergyが一致しても同じmodelでない理由を述べよ。
    **解答**：Bohrは量子化した周回軌道、Schrödingerは波動関数・演算子・確率を用い、角度分布や遷移も記述するためです。
+7. 原子のenergy eigenvalueだけでspontaneous emission rateが決まらない理由を述べよ。
+   **解答**：
+   $$
+   H_{\rm int}
+   $$
+   のmatrix element、photon mode密度、初期field stateが必要で、原子単独Hamiltonianはphoton生成を含まないためです。
+8. stimulated emissionとspontaneous emissionの違いを述べよ。
+   **解答**：前者は入射fieldの占有により誘起され、後者は初期photonがなくてもquantized fieldとの結合で生じます。
 
 ## ナビゲーション
 
 - 前：[角運動量](../part03_angular_momentum_spin/README.md)
 - 次：[分子軌道](02_molecular_orbitals_and_bonds.md)
 - 歴史：[Bohr模型](../part01_mysteries/02_atomic_spectra_and_matter_waves.md)
+- 参考：[原子spectraとHamiltonian（qm大学物理）](https://qmcharge.com/article-spectroscopy-hamiltonian)（確認日：2026-07-27）

@@ -1,5 +1,9 @@
 # Schrödinger方程式・Hamiltonian・確率保存
 
+## 現代量子論から見ると
+
+このページはpure state、孤立した閉鎖系、連続的で可逆なunitary発展へ限定します。一般のopen-system stateはCPTP channelで変化し、system単独ではSchrödinger方程式に従うとは限りません。
+
 ## 時間発展の中心式
 
 非相対論的一粒子で
@@ -53,7 +57,7 @@ $$
 
 ## 適用範囲
 
-potentialは外場または有効相互作用として与えます。光の生成消滅、相対論的粒子、散逸したopen systemはこの式だけでは閉じません。
+potentialは外場または有効相互作用として与えます。測定はinstrument、散逸したopen systemはchannel、光の生成消滅は量子場という別modelが必要です。
 
 ## 演習と全解答
 
@@ -94,6 +98,6 @@ potentialは外場または有効相互作用として与えます。光の生�
 
 ## ナビゲーション
 
-- 前：[測定](../part02_matrix_formalism/05_measurement_decoherence_interpretations.md)
+- 前：[測定](../part11_standard_formalism/05_measurement_decoherence_interpretations.md)
 - 次：[自由粒子](02_free_particle_wave_packets.md)
 - 解析力学：[Hamiltonian](../../03_analytical_mechanics/part04_gateway_to_qm/01_legendre_transform_and_hamiltonian.md)

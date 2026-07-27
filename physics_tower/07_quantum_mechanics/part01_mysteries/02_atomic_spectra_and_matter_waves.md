@@ -6,6 +6,9 @@
 
 ## Bohr模型は何を説明し、何を仮定したか
 
+> 歴史的に導入されたmodel
+> Bohr模型は1913年当時の半古典的modelです。以下のHamiltonian・遷移確率・photon detectionによる説明をBohr自身の考えとして遡及させません。
+
 水素原子に対して
 
 $$
@@ -81,6 +84,24 @@ $$
 $$
 
 の固有状態を求めます。「軌道 orbital」は古典trajectoryではありません。
+
+## 現在の標準的理解
+
+原子spectraはenergy eigenvalueだけで完結しません。少なくとも
+
+$$
+H=H_{\rm atom}+H_{\rm field}+H_{\rm int}
+$$
+
+と初期stateを指定し、absorption、stimulated emission、spontaneous emissionのtransition amplitude、selection rule、photon detector responseを考えます。一粒子Schrödinger方程式は
+
+$$
+H_{\rm atom}
+$$
+
+の準位を計算する重要な部分ですが、photon生成を含む全過程にはquantized fieldが要ります。
+
+de Broglie波とelectron回折は、粒子が古典的な物質波へ変身するという意味ではありません。各path amplitudeがphaseを持ち、detectorでは局在eventが記録されます。
 
 ## 演習と全解答
 

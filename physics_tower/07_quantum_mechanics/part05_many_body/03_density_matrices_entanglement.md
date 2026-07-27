@@ -1,5 +1,9 @@
 # density matrix・mixed state・entanglement・decoherence
 
+## 前半との役割分担
+
+density operator、pure/mixed、generalized Born ruleは[現代量子論の一般構造](../part02_modern_formalism/README.md)で導入済みです。このページは合成系固有のpartial trace、reduced state、entanglement、entropy、decoherenceへ焦点を移します。
+
 ## pureとmixed
 
 pure stateは
@@ -51,6 +55,20 @@ $$
 
 decoherenceはenvironmentとのentanglementによりreduced stateの干渉項を抑えます。全体系の情報が消滅したとは限らず、環境相関へ拡散します。
 
+entanglement entropyは全体pure stateに対して
+
+$$
+S(\rho_A)=-\operatorname{Tr}(\rho_A\log\rho_A)
+$$
+
+で、product stateなら0、二qubit Bell stateなら
+
+$$
+\log2
+$$
+
+です。
+
 ## 演習と全解答
 
 1.
@@ -96,4 +114,4 @@ decoherenceはenvironmentとのentanglementによりreduced stateの干渉項を
 
 - 前：[exchange](02_exchange_slater_mean_field.md)
 - 次：[量子情報](../part07_quantum_computing/01_qubits_gates_no_cloning.md)
-- 解釈：[測定とdecoherence](../part02_matrix_formalism/05_measurement_decoherence_interpretations.md)
+- 解釈：[測定とdecoherence](../part11_standard_formalism/05_measurement_decoherence_interpretations.md)

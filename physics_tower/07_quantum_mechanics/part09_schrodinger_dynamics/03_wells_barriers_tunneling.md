@@ -1,5 +1,9 @@
 # 井戸・階段・障壁――境界条件が作る離散準位とtunnel
 
+## 現代量子論から見ると
+
+ここでは一粒子pure state、position representation、時間に依らないpotential、閉鎖系unitaryを仮定します。透過率はstationary scattering stateの確率current比として求め、実験の到着eventはwave packetと位置detectorのPOVMで記述します。
+
 ## 箱の中の粒子
 
 無限深井戸
@@ -74,6 +78,14 @@ T\sim e^{-2\kappa a},\qquad
 $$
 
 です。これは粒子が障壁内で負の運動energyを持つ古典軌道を通る、という意味ではありません。
+
+次の説明も採りません。
+
+- energy–time uncertaintyから一時的にenergyを借りる
+- 障壁を抜ける瞬間だけenergy保存が破れる
+- 障壁内部で古典的に負の運動energyを持つ
+
+時間に依らないHamiltonianのenergy固有stateではtotal energyは保存され、障壁内の解がoscillatoryでなくexponentialになることが透過振幅を生みます。stationary stateは一定flux、localized wave packetは到着実験のmodelであり、両者を区別します。
 
 | 応用 | 障壁・tunnelの役割 |
 |---|---|

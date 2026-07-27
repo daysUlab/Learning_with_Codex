@@ -1,5 +1,9 @@
 # 自由粒子――古典軌道・平面波・波束
 
+## 現代量子論から見ると
+
+一粒子pure stateをposition representationで表し、自由Hamiltonianによる閉鎖系unitaryを扱います。平面波は規格化可能な単独stateではなく運動量PVMのgeneralized eigenstateで、実験的な有限分解能はwave packetとPOVMで扱います。
+
 ## 同じ問題を比較する
 
 | 軸 | 古典 | 量子 |
