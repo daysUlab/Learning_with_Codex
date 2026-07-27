@@ -25,6 +25,8 @@ $$
 
 which-path情報が環境へ記録され、対応する環境状態がほぼ直交すると干渉項は観測できなくなります。これは「人間が見るから」ではなく物理的相互作用です。
 
+現代的にはsourceのpreparation、二経路state、relative phase、screen上の有限分解能POVMを分けます。各eventは局在したdetector recordですが、分布はpath amplitudeを足してからBorn則を適用して得ます。which-path情報がenvironmentへ漏れる過程はchannelとdecoherenceで表します。
+
 ## Stern–Gerlach
 
 非一様磁場中の磁気moment
@@ -54,6 +56,8 @@ P(+x)=P(-x)=\frac12
 $$
 
 です。さらにz方向を測り直すと再び二分されます。各軸の成分が測定前から同時に確定している古典vector像では説明できません。
+
+現代的にはovenとmagnetをstate preparation、磁場方向をmeasurement setting、二本のspotをoutcomeとして分けます。idealizationではspin PVM、有限分解能・misalignmentを含めればPOVMです。結果確率とconditional state updateは別で、逐次測定はinstrumentとして扱います。
 
 ## どの前提が破れたか
 
@@ -100,4 +104,4 @@ $$
 Gerlach & Stern (1922)；Feynman, Leighton & Sands, *The Feynman Lectures on Physics*, Vol. III.
 
 - 前：[原子と物質波](02_atomic_spectra_and_matter_waves.md)
-- 次：[状態とBorn則](../part02_matrix_formalism/01_state_wavefunction_born.md)
+- 次：[Bell・CHSH](04_bell_chsh_experiments.md)

@@ -10,6 +10,9 @@
 | 光電効果 | 強度で電子energy増加 | 最大energyは周波数で決まる | photon energy |
 | Compton散乱 | 波長は不変 | 散乱角依存の波長shift | photon momentum |
 
+> 時代区分  
+> Planck量子仮説、Einsteinの光量子、Comptonの粒子運動学は歴史的modelです。後段のquantized field、density operator、detectorによる説明は後世からの再構成です。
+
 Planck分布は
 
 $$
@@ -58,6 +61,8 @@ $$
 
 です。強度は主に単位時間のphoton数を増やし、各電子の最大energyを直接増やしません。
 
+現代的には、quantized electromagnetic fieldのphoton state、金属中electronの初期state、interaction、final electron stateを組み合わせ、detectorでの電子検出をoutcomeとして予測します。「小球の衝突」だけでなくabsorption amplitudeとmaterial responseが必要です。
+
 ## Compton散乱
 
 photonに
@@ -73,6 +78,19 @@ $$
 $$
 
 を得ます。photonは小球だ、という結論ではありません。伝播の干渉は波、検出では離散的交換が現れ、両方を同じ量子状態で記述します。
+
+現代量子論では初期photon・electron stateへinteractionを作用させ、各final momentumへのscattering amplitudeと測定される運動量分布を求めます。上式はkinematicsが許すpeak位置を与えますが、断面積・偏光依存・生成消滅の完全な記述は量子電磁力学の領域です。
+
+## 黒体放射の現代的な位置づけ
+
+黒体は電磁場modeのthermal state
+
+$$
+\rho_{\rm th}=\frac{e^{-\beta H_{\rm field}}}
+{\operatorname{Tr}e^{-\beta H_{\rm field}}}
+$$
+
+として記述し、各modeのphoton数はBose統計に従います。Planck分布の導出は[量子統計](../../05_statistical_mechanics/part03_quantum_and_applications/01_classical_limit_fermi_bose.md)を正本とします。
 
 ## 限界と接続
 
