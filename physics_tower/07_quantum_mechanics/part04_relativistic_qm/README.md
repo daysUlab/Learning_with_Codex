@@ -1,15 +1,11 @@
-# part04_relativistic_qm
+# part04 相対論的量子力学・場への境界
 
-part04_relativistic_qm の入口ページです。
-このディレクトリは章内の小区分として用意されており、本文はこれから追加します。
-最小限のナビゲーションのみ先に整備しています。
+今回は相対論本編を先取りせず、Schrödinger理論がどこで不足するかだけを確定します。
 
-## この章で扱うこと
-- この区分の目的と範囲の確認
-- 追加予定ノートの整理
-- 上位章との対応関係の明確化
+- [Schrödinger方程式から場の量子論へ](01_from_schrodinger_to_quantum_fields.md)
 
-## ナビゲーション
-- 親: [../00_overview.md](../00_overview.md)
-- 子:
-  - （準備中）
+Klein–Gordon・Dirac方程式は問題意識と結果の位置づけに留め、Lorentz変換や四元vectorの導出は[相対論](../../06_relativity/00_overview.md)後に再訪します。
+
+- 前：[量子情報](../part07_quantum_computing/README.md)
+- 次：[素粒子スケルトン](../../08_elementary_particle/00_overview.md)
+- 親：[章overview](../00_overview.md)

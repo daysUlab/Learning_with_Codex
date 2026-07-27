@@ -1,15 +1,13 @@
-# part07_quantum_computing
+# part07 量子計算・量子情報
 
-part07_quantum_computing の入口ページです。
-このディレクトリは章内の小区分として用意されており、本文はこれから追加します。
-最小限のナビゲーションのみ先に整備しています。
+量子力学の状態・unitary・測定を「情報処理として設計する」と何が変わるかを扱います。
 
-## この章で扱うこと
-- この区分の目的と範囲の確認
-- 追加予定ノートの整理
-- 上位章との対応関係の明確化
+1. [qubit・Bloch sphere・gate・no-cloning](01_qubits_gates_no_cloning.md)
+2. [entanglement・Bell・回路・algorithm](02_entanglement_bell_algorithms.md)
+3. [noise・誤り訂正・hardware・量子優位性](03_noise_error_correction_hardware.md)
 
-## ナビゲーション
-- 親: [../00_overview.md](../00_overview.md)
-- 子:
-  - （準備中）
+Boolean関数、可逆計算、Toffoli、量子論理の意味は[Logic Tower](../../../logic_tower/90_essays/quantum_computing_and_logic/README.md)を正本とし、本パートは物理的状態と操作を補います。
+
+- 前：[多体系](../part05_many_body/README.md)
+- 次：[相対論・場への境界](../part04_relativistic_qm/README.md)
+- 親：[章overview](../00_overview.md)
