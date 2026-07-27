@@ -51,6 +51,17 @@
 - 熱力学は微視的構造を仮定しない独立した巨視理論、統計力学は微視的理由と物質固有値を説明する理論として役割を分ける。
 - 古典統計の適用域と量子統計が必要な低温・高密度・同種粒子領域を区別し、量子力学本編の状態・時間発展を先取りしない。
 
+### 量子力学章の統一規約
+
+- `07_quantum_mechanics` は古典論の破綻実験から始め、state、operator、measurement、Hamiltonian time evolutionを一本の予測規則として組み立てる。
+- 一粒子位置波動関数、spinor、多粒子configuration-space wave function、一般state vector、density operatorを区別する。
+- 時間発展、測定確率、測定後state、decoherence、解釈問題を別の論点として扱い、意識によるcollapseを標準理論の確定事項としない。
+- Fourier規約は `exp(-ipx/ℏ)` を位置→運動量、時間発展は `exp(-iEt/ℏ)`、確率currentは `j=(ℏ/2mi)(ψ*∇ψ-ψ∇ψ*)` に統一する。
+- canonical relationは `[q_i,p_j]=iℏδ_ij` とし、Poisson括弧からcommutatorへの対応を量子化の一意な万能recipeとは扱わない。
+- spinを古典的自転と説明せず、軌道角運動量と内部自由度を区別する。
+- 量子力学はstate空間と交換対称性、統計力学は熱平衡の占有分布、電磁気学は電位・電荷・電流を正本とする。
+- 相対論的量子論は境界の提示に留め、Lorentz構造の詳細は `06_relativity`、生成消滅とfield quantizationは `08_elementary_particle` へ保留する。
+
 ### 電磁気学章の統一規約
 
 - `physics_tower/02_electromagnetism/` は、真空中の全電荷・全電流による記述と、物質中の自由電荷・自由電流による巨視的記述を区別する。

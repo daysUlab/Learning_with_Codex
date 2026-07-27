@@ -2,6 +2,8 @@
 
 古典Boolean回路から可逆計算・量子ゲートへ進み、量子論理との違いを明確にします。
 
+物理的な量子state、Born則、unitary時間発展、entanglement、decoherenceの正本は[Physics Towerの量子力学](../../../physics_tower/07_quantum_mechanics/00_overview.md)です。本カテゴリはBoolean回路、可逆計算、qubitを三値論理と誤認しないこと、量子論理とprogrammingの違いを担当します。
+
 > 種別：発展・応用  
 > 状態：全10記事 本文化済み  
 > 前提：命題論理・線形代数の初歩
