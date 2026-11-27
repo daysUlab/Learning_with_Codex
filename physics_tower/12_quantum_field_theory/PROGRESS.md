@@ -19,12 +19,12 @@
 | 13 | [質量を持つベクトル場の自由度](chapters/13_massive_vector.qmd) | 未執筆 |
 | 14 | [電磁場のゲージ冗長性と量子化](chapters/14_gauge_fields.qmd) | 未執筆 |
 | 15 | [スピノル場・反交換関係・Grassmann変数](chapters/15_dirac_fields.qmd) | 未執筆 |
-| 16 | [φ4理論とLSZ簡約公式](chapters/16_phi4_lsz.qmd) | 未執筆 |
-| 17 | [φ4理論のファインマン則](chapters/17_phi4_feynman.qmd) | 未執筆 |
-| 18 | [φ4理論の有効作用](chapters/18_phi4_effective_action.qmd) | 未執筆 |
-| 19 | [φ4理論のくりこみ](chapters/19_phi4_renormalization.qmd) | 未執筆 |
-| 20 | [量子電磁力学――場の量子論は本物か?](chapters/20_qed.qmd) | 未執筆 |
-| 21 | [くりこみ群――場の量子論とはなんだろう?](chapters/21_renormalization_group.qmd) | 未執筆 |
+| 16 | [スカラー相互作用と散乱状態の接続](chapters/16_phi4_lsz.qmd) | 未執筆 |
+| 17 | [摂動展開から作るファインマン図](chapters/17_phi4_feynman.qmd) | 未執筆 |
+| 18 | [相関関数と量子有効作用](chapters/18_phi4_effective_action.qmd) | 未執筆 |
+| 19 | [発散の処理と物理パラメータ](chapters/19_phi4_renormalization.qmd) | 未執筆 |
+| 20 | [電子と光子の相互作用・QED](chapters/20_qed.qmd) | 未執筆 |
+| 21 | [スケール変換と有効場の理論](chapters/21_renormalization_group.qmd) | 未執筆 |
 
 次の作業: HTML/PDF CI、iPhone/iPadの表示確認、第1章のレビュー、第2章のレビュー、第3章のレビュー、第4章のレビュー、第5章のレビュー、第6章のレビュー、第7章のレビュー、第8章のレビュー、第9章の執筆。
 
@@ -44,3 +44,5 @@
 2026-11-28: 第1〜5章のPages deploy成功を確認。第7章初稿（段差、散乱振幅、Born近似、部分波、Dyson展開、黄金律、S行列）・図5点・演習8問。mainの成功ビルドごとにPDFをコミット別のプレリリースに保存するジョブを追加。新ジョブの検証待ち。
 
 2026-11-28: 第8章初稿、図4点・演習8問。公開目次の参考元を明記。独自章名への更新を開始。全履歴・他教材の権利や秘密情報の監査は未実施。
+
+2026-11-28: 全21章の章名の独自化を完了。学習対象と番号・ファイルパスは維持。原著との照合・法的評価、公開履歴の監査は別途必要。
