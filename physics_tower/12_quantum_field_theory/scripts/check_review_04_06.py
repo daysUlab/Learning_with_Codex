@@ -13,7 +13,7 @@ def kernel(x,T):
 K=kernel(2,1)
 close(abs(K),1/math.sqrt(2*math.pi))
 close(cmath.phase(K),2-math.pi/4)
-close([K.real,K.imag],[.138744163,.374039003],atol=3e-4)
+close([K.real,K.imag],[.13911521307778965,.37390092348403814])
 close(math.pi**2*.1**2/(4*.05),.4934802200544679)
 close(math.pi**2*.5**2/(4*.05),12.337005501361697)
 close((1+math.cos(math.pi/3))/2,.75)
