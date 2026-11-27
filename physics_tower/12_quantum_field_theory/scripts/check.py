@@ -10,6 +10,6 @@ assert set(paths) == {str(p.relative_to(root)) for p in (root/"chapters").glob("
 for p in [root/"index.qmd", *(root/p for p in paths)]:
     s = p.read_text()
     assert s.startswith("# "), p
-    assert len(re.findall(r"^\s*\$\$\s*$", s, re.M)) % 2 == 0, p
+    assert len(re.findall(r"^\s*\$\$(?:\s+\{#eq-[^}]+\})?\s*$", s, re.M)) % 2 == 0, p
 print("21 chapters: OK")
 
