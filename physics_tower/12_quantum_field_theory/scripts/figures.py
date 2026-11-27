@@ -844,3 +844,98 @@ ax.legend(fontsize=8)
 ax.grid(alpha=.2,which="both")
 fig.savefig(out/"vector_mass_limit.png",dpi=220)
 plt.close(fig)
+
+# 第15章：相互作用・Wick縮約・散乱
+fig,ax=plt.subplots(figsize=(5.6,3.2),layout="constrained")
+xx=np.linspace(-4,4,300)
+ax.plot(xx,xx**2/2,color="#64748b",ls="--",label="Free")
+ax.plot(xx,xx**2/2+.6*xx**4/24,color="#2166ac",label="Interacting")
+ax.set(xlabel="Field amplitude",ylabel="Potential density",title="Quartic interaction")
+ax.legend(fontsize=8)
+ax.grid(alpha=.15)
+fig.savefig(out/"interaction_potential.png",dpi=220)
+plt.close(fig)
+fig,axs=plt.subplots(1,3,figsize=(5.8,2.3),layout="constrained")
+pts=np.array([[-.8,.8],[.8,.8],[-.8,-.8],[.8,-.8]])
+for ax,pairs,title in zip(axs,[[(0,1),(2,3)],[(0,2),(1,3)],[(0,3),(1,2)]],["12 | 34","13 | 24","14 | 23"]):
+    for i,j in pairs:
+        ax.plot(pts[[i,j],0],pts[[i,j],1],color="#2166ac",lw=2)
+    ax.scatter(pts[:,0],pts[:,1],color="#d97706",s=25,zorder=3)
+    for j,(x,y) in enumerate(pts):
+        ax.text(x,y+.17,str(j+1),ha="center",fontsize=9)
+    ax.set(xlim=(-1.15,1.15),ylim=(-1.1,1.2),aspect="equal",title=title)
+    ax.axis("off")
+fig.savefig(out/"wick_pairings.png",dpi=220)
+plt.close(fig)
+fig,ax=plt.subplots(figsize=(4.6,3.1),layout="constrained")
+for i,(x,y) in enumerate(pts):
+    ax.plot([0,x],[0,y],color="#2166ac",lw=2)
+    ax.scatter([x],[y],color="#64748b",s=28)
+    ax.text(x,y+.15,f"x{i+1}",ha="center")
+ax.scatter([0],[0],color="#d97706",s=70,zorder=3)
+ax.text(.12,.03,"z",fontsize=11)
+ax.text(0,-1.1,"-i lambda at the vertex",ha="center",fontsize=10)
+ax.set(xlim=(-1.15,1.15),ylim=(-1.25,1.15),aspect="equal")
+ax.axis("off")
+fig.savefig(out/"phi4_vertex.png",dpi=220)
+plt.close(fig)
+fig,axs=plt.subplots(1,2,figsize=(5.7,2.8),layout="constrained")
+for ax,amp in [(axs[0],False),(axs[1],True)]:
+    for x,y in pts:
+        start=.65 if amp else 1
+        ax.plot([0,x*start],[0,y*start],color="#2166ac",lw=2,ls="--" if amp else "-")
+        if not amp:
+            ax.scatter([x],[y],color="#64748b",s=20)
+    ax.scatter([0],[0],color="#d97706",s=50,zorder=3)
+    ax.set(xlim=(-1.12,1.12),ylim=(-1.1,1.1),aspect="equal",title="Amputated amplitude" if amp else "Connected correlator")
+    ax.axis("off")
+fig.savefig(out/"lsz_amputation.png",dpi=220)
+plt.close(fig)
+fig,ax=plt.subplots(figsize=(4.8,3.3),layout="constrained")
+ang=np.pi/3
+for vec,col in [(np.array([1.,0.]),"#64748b"),(np.array([np.cos(ang),np.sin(ang)]),"#2166ac")]:
+    for sign in [-1,1]:
+        ax.annotate("",xy=sign*vec,xytext=(0,0),arrowprops=dict(arrowstyle="->",color=col,lw=2))
+a=np.linspace(0,ang,60)
+ax.plot(.35*np.cos(a),.35*np.sin(a),color="#d97706")
+ax.text(.43,.19,"theta",fontsize=10)
+ax.text(1.02,.06,"p1",fontsize=9)
+ax.text(-1.05,.07,"p2",fontsize=9)
+ax.text(.55,.92,"p3",fontsize=9)
+ax.text(-.72,-.94,"p4",fontsize=9)
+ax.set(xlim=(-1.25,1.25),ylim=(-1.13,1.13),aspect="equal",title="Center-of-momentum frame")
+ax.axis("off")
+fig.savefig(out/"scalar_scattering_cm.png",dpi=220)
+plt.close(fig)
+fig,axs=plt.subplots(1,2,figsize=(5.8,3.0),layout="constrained")
+lam=np.linspace(0,1,150)
+axs[0].plot(lam,lam**2/(32*np.pi*20)*389400,color="#2166ac")
+axs[0].scatter([.6],[.36/(32*np.pi*20)*389400],color="#d97706",zorder=3)
+axs[0].set(xlabel="Coupling lambda",ylabel="Cross section [nb]",title="Fixed s=20 GeV^2")
+energy=np.linspace(2.01,10,200)
+axs[1].plot(energy,.36/(32*np.pi*energy**2)*389400,color="#16857c")
+axs[1].set(xlabel="CM energy [GeV]",ylabel="Cross section [nb]",title="Fixed lambda=0.6")
+for ax in axs:
+    ax.grid(alpha=.15)
+fig.savefig(out/"scalar_cross_section.png",dpi=220)
+plt.close(fig)
+fig,axs=plt.subplots(2,2,figsize=(5.7,4.7),layout="constrained")
+ax=axs[0,0]
+for x,y in pts:
+    ax.plot([0,x],[0,y],color="#2166ac",lw=1.7)
+ax.scatter([0],[0],color="#d97706",s=40)
+ax.set_title("Tree")
+for ax,labels,title in [(axs[0,1],["1","2","3","4"],"s channel"),(axs[1,0],["1","3","2","4"],"t channel"),(axs[1,1],["1","4","2","3"],"u channel")]:
+    for x0,sgn,labpair in [(-.4,-1,labels[:2]),(.4,1,labels[2:])]:
+        for y,lab in zip([.65,-.65],labpair):
+            ax.plot([x0,sgn*1.],[0,y],color="#2166ac",lw=1.7)
+            ax.text(sgn*1.04,y,lab,ha="center",fontsize=9)
+    a=np.linspace(0,2*np.pi,150)
+    ax.plot(.4*np.cos(a),.35*np.sin(a),color="#16857c",lw=1.8)
+    ax.scatter([-.4,.4],[0,0],color="#d97706",s=36,zorder=3)
+    ax.set_title(title)
+for ax in axs.flat:
+    ax.set(xlim=(-1.2,1.2),ylim=(-.9,.9),aspect="equal")
+    ax.axis("off")
+fig.savefig(out/"scalar_loop_channels.png",dpi=220)
+plt.close(fig)
