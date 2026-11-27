@@ -374,10 +374,13 @@ plt.close(fig)
 # 二光子による対生成の閾値（重心系）
 fig,ax=plt.subplots(figsize=(5.8,2.8),layout="constrained")
 ax.scatter([0],[0],marker="*",s=180,color="#d97706",zorder=4)
-for start,end,label,y0 in [((-2.3,0),(-.28,0),"gamma",.22),((2.3,0),(.28,0),"gamma",.22),((0,-.12),(-1.05,-1.0),"e-",-.8),((0,-.12),(1.05,-1.0),"e+",-.8)]:
+for start,end,label,y0 in [((-2.3,0),(-.28,0),"gamma",.22),((2.3,0),(.28,0),"gamma",.22)]:
     ax.add_patch(FancyArrowPatch(start,end,arrowstyle="->",mutation_scale=14,color="#2166ac" if label=="gamma" else "#16857c",lw=2))
     ax.text((start[0]+end[0])/2,y0,label,ha="center")
 ax.text(0,.65,"Initial total momentum = 0",ha="center")
+ax.scatter([-0.65,0.65],[-.8,-.8],s=85,color="#16857c")
+ax.text(-.65,-1.05,"e- (p=0)",ha="center",fontsize=9)
+ax.text(.65,-1.05,"e+ (p=0)",ha="center",fontsize=9)
 ax.text(0,-1.35,"At threshold: final particles at rest",ha="center",fontsize=9)
 ax.set(xlim=(-2.7,2.7),ylim=(-1.55,.95))
 ax.axis("off")
