@@ -233,3 +233,90 @@ ax.grid(alpha=.2)
 ax.legend(fontsize=8)
 fig.savefig(out/"euclidean_kernel.png",dpi=220)
 plt.close(fig)
+
+# 第5章：占有数の配置
+from matplotlib.patches import Circle, FancyArrowPatch
+fig,axs=plt.subplots(2,3,figsize=(6.2,3.4),layout="constrained")
+for row in range(2):
+    for j,(na,nb) in enumerate([(2,0),(1,1),(0,2)]):
+        ax=axs[row,j]
+        for x0,n,label in [(0,na,"A"),(1,nb,"B")]:
+            ax.plot([x0-.3,x0+.3],[0,0],color="#64748b",lw=1.5)
+            ax.text(x0,-.25,label,ha="center",fontsize=9)
+            for k0 in range(n):
+                ax.add_patch(Circle((x0,.16+.27*k0),.11,color="#2166ac" if row==0 else "#16857c"))
+        ax.set(xlim=(-.5,1.5),ylim=(-.4,.8),aspect="equal",title=f"({na},{nb})",xticks=[],yticks=[])
+        if row==1 and j!=1:
+            ax.text(.5,.67,"Forbidden",color="#b91c1c",ha="center",fontsize=9)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+axs[0,0].set_ylabel("Bosons")
+axs[1,0].set_ylabel("Fermions")
+fig.savefig(out/"occupation_two_modes.png",dpi=220)
+plt.close(fig)
+# 交換による干渉
+fig,ax=plt.subplots(figsize=(5.8,3.2),layout="constrained")
+xx=np.arange(3)
+for j,(probs,label,col) in enumerate([([.25,.5,.25],"Distinguishable","#94a3b8"),([.5,0,.5],"Bosons","#2166ac"),([0,1,0],"Fermions","#16857c")]):
+    ax.bar(xx+(j-1)*.24,probs,width=.22,label=label,color=col)
+ax.set(xticks=xx,xticklabels=["(2,0)","(1,1)","(0,2)"],xlabel="Output occupations",ylabel="Probability",ylim=(0,1.1))
+ax.legend(fontsize=8)
+ax.grid(axis="y",alpha=.2)
+fig.savefig(out/"exchange_interference.png",dpi=220)
+plt.close(fig)
+# 状態数
+from math import comb
+ns=np.arange(7)
+fig,ax=plt.subplots(figsize=(5.6,3.1),layout="constrained")
+ax.plot(ns,[comb(3+int(n),int(n)) for n in ns],"o-",color="#2166ac",label="Bosons")
+ax.plot(ns,[comb(4,int(n)) if n<=4 else 0 for n in ns],"s-",color="#16857c",label="Fermions")
+ax.set(xlabel="Particle number N (M=4)",ylabel="Number of states",xticks=ns)
+ax.grid(alpha=.25)
+ax.legend()
+fig.savefig(out/"fock_dimensions.png",dpi=220)
+plt.close(fig)
+# Fockセクターの模式図
+fig,ax=plt.subplots(figsize=(5.8,3.0),layout="constrained")
+for i in range(4):
+    ax.add_patch(Rectangle((i*1.45-.49,-.34),.98,.68,facecolor="#2166ac",alpha=.15,edgecolor="#2166ac"))
+    ax.text(i*1.45,0,f"N = {i}",ha="center",va="center")
+for i in range(3):
+    x0=i*1.45+.49
+    ax.add_patch(FancyArrowPatch((x0,.22),(x0+.47,.22),arrowstyle="->",mutation_scale=12,color="#2166ac"))
+    ax.add_patch(FancyArrowPatch((x0+.47,-.22),(x0,-.22),arrowstyle="->",mutation_scale=12,color="#d97706"))
+ax.text(2.17,.7,"Creation: N + 1",ha="center",color="#2166ac")
+ax.text(2.17,-.7,"Annihilation: N - 1",ha="center",color="#d97706")
+ax.text(5.05,0,"...",ha="center",va="center")
+ax.set(xlim=(-.65,5.35),ylim=(-1,1))
+ax.axis("off")
+fig.savefig(out/"fock_sectors.png",dpi=220)
+plt.close(fig)
+# 一モードの梯子
+fig,ax=plt.subplots(figsize=(4.6,3.5),layout="constrained")
+for n in range(4):
+    ax.plot([-.45,.45],[n,n],color="#64748b",lw=1.5)
+    ax.text(0,n+.1,f"|{n}>",ha="center")
+for n in range(3):
+    ax.add_patch(FancyArrowPatch((-.27,n+.14),(-.27,n+.86),arrowstyle="->",mutation_scale=12,color="#2166ac"))
+    ax.add_patch(FancyArrowPatch((.27,n+.86),(.27,n+.14),arrowstyle="->",mutation_scale=12,color="#d97706"))
+    ax.text(-.35,n+.5,f"√{n+1}",ha="right",va="center",color="#2166ac")
+    ax.text(.35,n+.5,f"√{n+1}",ha="left",va="center",color="#d97706")
+ax.text(-.4,3.43,"Creation",ha="center",color="#2166ac")
+ax.text(.4,3.43,"Annihilation",ha="center",color="#d97706")
+ax.set(xlim=(-1,1),ylim=(-.2,3.7))
+ax.axis("off")
+fig.savefig(out/"boson_ladder.png",dpi=220)
+plt.close(fig)
+# 生成順序と反交換符号
+fig,ax=plt.subplots(figsize=(5.8,3.5),layout="constrained")
+points={(0,0):(0,0),(1,0):(-1,1),(0,1):(1,1),(1,1):(0,2)}
+for state,(px,py) in points.items():
+    ax.text(px,py,f"|{state[0]},{state[1]}>",ha="center",va="center",bbox=dict(boxstyle="round",fc="#e8f2f7",ec="#64748b"),fontsize=11)
+for start,end,label,col,dx in [((0,0),(1,0),"cA†: +","#2166ac",-.22),((1,0),(1,1),"cB†: −","#b91c1c",-.22),((0,0),(0,1),"cB†: +","#16857c",.22),((0,1),(1,1),"cA†: +","#16857c",.22)]:
+    p0,p1=points[start],points[end]
+    ax.add_patch(FancyArrowPatch(p0,p1,arrowstyle="->",shrinkA=18,shrinkB=18,mutation_scale=12,color=col))
+    ax.text((p0[0]+p1[0])/2+dx,(p0[1]+p1[1])/2,label,ha="center",va="center",fontsize=9,color=col)
+ax.set(xlim=(-1.65,1.65),ylim=(-.3,2.3))
+ax.axis("off")
+fig.savefig(out/"fermion_sign.png",dpi=220)
+plt.close(fig)
