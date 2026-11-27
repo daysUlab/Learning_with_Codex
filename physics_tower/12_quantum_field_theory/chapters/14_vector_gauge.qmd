@@ -1,12 +1,445 @@
 # ベクトル場の物理的自由度とゲージ対称性
 
-::: {.callout-important title="執筆予定"}
-この章は独立した新しい学習設計に基づく予定章です。以下は学習項目であり、本文ではありません。
+## 四成分の場から何個の粒子状態が現れるか
+
+第11章では質量を持つスピン1粒子には三つの内部状態があり、光子には二つのヘリシティしかないことを学びました。ところが時空ベクトル場は四成分です。今回は作用と拘束条件から、この違いを具体的に導きます。
+
+自然単位系 c=ℏ=1、計量 $\eta=\operatorname{diag}(1,-1,-1,-1)$ を用います。四元ポテンシャルを $A^\mu=(A^0,\boldsymbol A)$ とします。空間ベクトルの添字は通常の三次元 Euclid 内積で扱います。
+
+## 電磁場を四元ポテンシャルで表す
+
+電場と磁場を
+
+$$
+\boldsymbol E=-\nabla A^0-\partial_t\boldsymbol A,
+\qquad
+\boldsymbol B=\nabla\times\boldsymbol A
+$$
+
+と定めます。四元的には反対称なテンソル
+
+$$
+F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu
+$$
+
+にまとめられます。例えば $F^{0i}=-E_i$ です。縮約を計算すると
+
+$$
+-\frac14F_{\mu\nu}F^{\mu\nu}
+=\frac12(\boldsymbol E^2-\boldsymbol B^2)
+$$
+
+となります。ポテンシャルの定義だけで磁場の発散が0であることと Faraday の法則が成り立ちます。残りの Maxwell 方程式を作用から求めます。
+
+## 質量を持つProca場
+
+まず質量 m>0 を持つ自由な実ベクトル場を考えます。ラグランジアン密度を
+
+$$
+\mathcal L_P=-\frac14F_{\mu\nu}F^{\mu\nu}
++\frac12m^2 A_\mu A^\mu
+$$ {#eq-proca-lag}
+
+と置きます。場の変分に対して
+
+$$
+\delta\mathcal L_P
+=-F^{\mu\nu}\partial_\mu\delta A_\nu
++m^2 A^\nu\delta A_\nu
+$$
+
+となります。反対称性を使い、部分積分して境界項を消すと、
+
+$$
+\partial_\mu F^{\mu\nu}+m^2A^\nu=0
+$$ {#eq-proca-eom}
+
+を得ます。これをProca方程式と呼びます。
+
+さらに $\partial_\nu$ を作用させると、反対称な F と対称な二階微分の縮約が0になるので、
+
+$$
+m^2\partial_\nu A^\nu=0
+$$
+
+です。m>0 なら
+
+$$
+\partial_\nu A^\nu=0,\qquad
+(\Box+m^2)A^\nu=0
+$$ {#eq-proca-constraint}
+
+となります。四つの成分がすべて独立なKlein–Gordon場なのではなく、一つの条件で結ばれています。この発散条件は運動方程式から従うものであり、後で学ぶMaxwell場のゲージ選択とは性質が異なります。
+
+## 偏極ベクトルと三つの自由度
+
+平面波の複素振幅を $\epsilon^\mu$ として
+
+$$
+A^\mu(x)=\epsilon^\mu e^{-ip\cdot x}
+$$
+
+と置きます（実場には実部を取ります）。@eq-proca-constraint から
+
+$$
+p^2=m^2,\qquad p_\mu\epsilon^\mu=0
+$$
+
+が得られます。静止系では p=(m,0,0,0) なので $\epsilon^0=0$。独立な偏極は三つの空間方向に対応します。
+
+運動量をz方向に取り、$p^\mu=(E,0,0,k)$ とします。実線形偏極の一つの規約は
+
+$$
+\begin{aligned}
+\epsilon_1^\mu&=(0,1,0,0),\\
+\epsilon_2^\mu&=(0,0,1,0),\\
+\epsilon_L^\mu&=(k/m,0,0,E/m)
+\end{aligned}
+$$ {#eq-proca-polarizations}
+
+です。最初の二つは横偏極、最後は縦偏極です。すべて $p\cdot\epsilon=0$、$\epsilon_\lambda\cdot\epsilon_{\lambda'}=-\delta_{\lambda\lambda'}$ を満たします。偏極の時空ノルムが負なのは計量の符号規約によるもので、粒子のHilbert空間のノルムが負という意味ではありません。
+
+![運動方向に垂直な二つの偏極と、質量を持つ場に許される縦偏極。](../figures/vector_polarizations.png){#fig-vector-polarizations}
+
+::: {.callout-note title="数値例：質量3、運動量4"}
+m=3、k=4 とすると E=5 です。縦偏極は (4/3,0,0,5/3) となります。
+
+$$
+p\cdot\epsilon_L=5\frac43-4\frac53=0
+$$
+
+$$
+\epsilon_L^2=\frac{16}{9}-\frac{25}{9}=-1
+$$
+
+時間成分が0でなくても、物理的な偏極は独立に四つあるわけではありません。
 :::
 
-## 学習項目
+偏極の完全性は
 
-- Proca場と質量を持つ偏極
-- 拘束と非独立成分
-- Maxwell場とゲージ変換
-- ゲージ固定・横偏極・保存電流
+$$
+\sum_{\lambda=1,2,L}\epsilon_\lambda^\mu
+\epsilon_\lambda^{\nu *}
+=-\eta^{\mu\nu}+\frac{p^\mu p^\nu}{m^2}
+$$ {#eq-proca-sum}
+
+と書けます。静止系では右辺が時間成分0、空間成分を単位行列とする行列になるので確かめられます。両辺をboostすると一般の運動量でも成り立ちます。
+
+![縦偏極の時間・空間成分と、Minkowskiノルムが一定であること。](../figures/vector_longitudinal.png){#fig-vector-longitudinal}
+
+## Hamilton形式で拘束を確認する
+
+$A^0$ と $\boldsymbol A$ を別々の座標として扱います。Procaラグランジアンを三次元の量で書くと、
+
+$$
+\mathcal L_P=
+\frac12(\partial_t\boldsymbol A+\nabla A^0)^2
+-\frac12\boldsymbol B^2+
+\frac12m^2[(A^0)^2-\boldsymbol A^2]
+$$
+
+です。$A^0$ の時間微分が含まれていません。共役運動量は
+
+$$
+\pi_0=0,\qquad
+\boldsymbol\pi=\partial_t\boldsymbol A+\nabla A^0
+=-\boldsymbol E
+$$
+
+です。$\pi_0=0$ は速度から運動量へ変換する際に生じる一次拘束です。$A^0$ の運動方程式、すなわち @eq-proca-eom の時間成分は
+
+$$
+\nabla\cdot\boldsymbol E+m^2A^0=0
+$$
+
+なので
+
+$$
+\nabla\cdot\boldsymbol\pi-m^2A^0=0
+$$ {#eq-proca-secondary}
+
+となります。m>0 では $A^0=(\nabla\cdot\boldsymbol\pi)/m^2$ と決まります。
+
+Hamiltonian を求めます。空間の境界項を捨てる条件で部分積分すれば、
+
+$$
+H=\int d^3x\left[
+\frac12\boldsymbol\pi^2+\frac12\boldsymbol B^2
++\frac12m^2\boldsymbol A^2
+-\frac12m^2(A^0)^2+A^0\nabla\cdot\boldsymbol\pi
+\right]
+$$
+
+です。@eq-proca-secondary を代入すると、独立な三組の正準変数で表したHamiltonianは
+
+$$
+H_{\mathrm{red}}=\frac12\int d^3x
+\left[\boldsymbol\pi^2+\boldsymbol B^2+
+m^2\boldsymbol A^2+
+\frac{(\nabla\cdot\boldsymbol\pi)^2}{m^2}\right]
+$$ {#eq-proca-reduced-h}
+
+となります。各項は非負です。時間成分のポテンシャルが独立の振動子にならないことを、Hamilton形式でも確認できました。
+
+## 自由Proca場の量子化
+
+運動方程式を満たす三つの偏極を使い、第12章と同じ連続モード規格化で
+
+$$
+\begin{aligned}
+A^\mu(x)=\sum_\lambda\int
+\frac{d^3p}{(2\pi)^3\sqrt{2E_{\boldsymbol p}}}
+\big[&
+\epsilon_\lambda^\mu(p)a_\lambda(\boldsymbol p)e^{-ip\cdot x}\\
++&\epsilon_\lambda^{\mu *}(p)
+a_\lambda^\dagger(\boldsymbol p)e^{ip\cdot x}\big]
+\end{aligned}
+$$
+
+と展開します。独立な正準モードを量子化した生成消滅演算子は
+
+$$
+[a_\lambda(\boldsymbol p),a_{\lambda'}^\dagger(\boldsymbol q)]
+=(2\pi)^3\delta^{(3)}(\boldsymbol p-\boldsymbol q)
+\delta_{\lambda\lambda'}
+$$
+
+を満たします。他の消滅演算子同士、生成演算子同士は交換します。真空エネルギーを引いた自由Hamiltonianは
+
+$$
+:H:=\sum_\lambda\int\frac{d^3p}{(2\pi)^3}
+E_{\boldsymbol p}a_\lambda^\dagger(\boldsymbol p)
+a_\lambda(\boldsymbol p)
+$$
+
+です。各運動量に三つのボース振動子があります。四つの独立なスカラー振動子を量子化したものではありません。
+
+## Maxwell場では何が変わるか
+
+m=0 として
+
+$$
+\mathcal L_M=-\frac14F_{\mu\nu}F^{\mu\nu}
+$$
+
+を考えます。任意の滑らかな関数 $\alpha(x)$ に対する変換
+
+$$
+A^\mu\longrightarrow A^\mu+\partial^\mu\alpha
+$$ {#eq-gauge-transformation}
+
+を行っても、
+
+$$
+F_{\mu\nu}\longrightarrow
+F_{\mu\nu}+\partial_\mu\partial_\nu\alpha
+-\partial_\nu\partial_\mu\alpha=F_{\mu\nu}
+$$
+
+です。これは同じ電場・磁場を表すポテンシャルの記述の自由です。ゲージ変換をしても物理的な電磁場は変わりません。
+
+::: {.callout-note title="数値例：純ゲージのポテンシャル"}
+局所的に α=2tx と置きます。零ポテンシャルから @eq-gauge-transformation を行えば $A^0=2x$、$\boldsymbol A=(-2t,0,0)$ です。電場のx成分は −2−(−2)=0、磁場も0になります。ポテンシャルは非零でも電磁場は零です。これは局所的な例で、無限遠の境界条件は別途指定します。
+:::
+
+![異なるポテンシャルから同じ電場・磁場が得られるゲージ変換。](../figures/vector_pure_gauge.png){#fig-vector-pure-gauge}
+
+Proca場の質量項は一般のゲージ変換で不変になりません。m=0 を代入することで理論の拘束構造そのものが変わります。
+
+## Gaussの法則とゲージ固定
+
+外部電流 $j^\mu=(\rho,\boldsymbol j)$ を加えた作用を
+
+$$
+\mathcal L=-\frac14F_{\mu\nu}F^{\mu\nu}-j_\mu A^\mu
+$$
+
+とします。変分から
+
+$$
+\partial_\mu F^{\mu\nu}=j^\nu
+$$
+
+を得ます。時間成分は $\nabla\cdot\boldsymbol E=\rho$、空間成分は Ampère–Maxwell の法則です。
+
+自由場では一次拘束 $\pi_0=0$ に加えて
+
+$$
+\nabla\cdot\boldsymbol\pi=0
+$$
+
+です。Proca場と異なり、この条件で $A^0$ を決定することはできません。$A^0$ はGauss拘束を課すための変数として現れます。
+
+ゲージ自由度を利用し、Coulombゲージ
+
+$$
+\nabla\cdot\boldsymbol A=0
+$$
+
+を選びます。自由場のGaussの法則はこの条件のもとで $\nabla^2 A^0=0$ になります。無限空間で適切な減衰条件を課し、残余ゲージを固定すれば $A^0=0$ とできます。外部電荷がある場合は一般に $A^0$ を0にはできません。
+
+この自由場では $\boldsymbol A$ と $\boldsymbol\pi$ の双方が横方向に制限され、二つの独立な正準対だけが残ります。
+
+| 理論 | 拘束の性質 | 物理的な正準対 |
+|---|---|---:|
+| Proca (m>0) | 時間成分を運動量から決定 | 3 |
+| Maxwell (m=0) | Gauss拘束とゲージ冗長性 | 2 |
+
+より形式的には、四成分からなる位相空間は各空間点で8次元です。Procaの二つの第二種拘束は2次元を除き6次元に、Maxwellの二つの第一種拘束は各拘束と対応するゲージ方向を合わせ4次元を除き4次元にします。この数え方は局所的な非零波数の自由度についてのもので、境界や零モードは別途扱います。
+
+![拘束を課す前後の位相空間次元。Procaでは6、Maxwellでは4が残る。](../figures/vector_constraint_count.png){#fig-vector-constraint-count}
+
+## 光子の二つの偏極
+
+Coulombゲージの自由波に
+
+$$
+\boldsymbol A=\boldsymbol\epsilon
+e^{-i\omega t+i\boldsymbol k\cdot\boldsymbol x}
+$$
+
+を代入すると、$\omega=|\boldsymbol k|$、$\boldsymbol k\cdot\boldsymbol\epsilon=0$ です。z方向に進む波はx、y方向の二つの独立な横偏極を持ちます。
+
+円偏極基底を
+
+$$
+\boldsymbol\epsilon_\pm
+=\frac1{\sqrt2}(1,\pm i,0)
+$$
+
+と取れば、z軸周りの回転で位相を受ける基底になります。符号の命名は回転と波の規約に依存しますが、二つの固有ヘリシティは ±1 です。第11章の質量ゼロ粒子の分類と一致します。
+
+![二つの線形偏極と、その位相差から作る円偏極。z方向に進む波を横から模式的に表示。](../figures/vector_circular.png){#fig-vector-circular}
+
+::: {.callout-note title="数値例：横方向への射影"}
+波数の方向を $\boldsymbol n=(3/5,0,4/5)$、仮の偏極を $\boldsymbol v=(1,0,0)$ とします。横方向成分は
+
+$$
+\boldsymbol v_T=\boldsymbol v-\boldsymbol n
+(\boldsymbol n\cdot\boldsymbol v)
+=(16/25,0,-12/25)
+$$
+
+です。内積 $\boldsymbol n\cdot\boldsymbol v_T=0$ を確認できます。長さは4/5です。規格化した横偏極は (4/5,0,−3/5) になります。
+:::
+
+## 横偏極の量子化
+
+Coulombゲージでは第12章と同様に、二つの横偏極について生成消滅演算子を導入します。
+
+$$
+\begin{aligned}
+\boldsymbol A_T(x)=\sum_{\lambda=1,2}\int
+\frac{d^3k}{(2\pi)^3\sqrt{2|\boldsymbol k|}}
+\big[&
+\boldsymbol\epsilon_\lambda(\boldsymbol k)
+a_\lambda(\boldsymbol k)e^{-ik\cdot x}\\
++&\boldsymbol\epsilon_\lambda^*(\boldsymbol k)
+a_\lambda^\dagger(\boldsymbol k)e^{ik\cdot x}\big]
+\end{aligned}
+$$
+
+演算子はProca場と同じボース交換関係を満たしますが、偏極ラベルは二つだけです。偏極和は
+
+$$
+\sum_{\lambda=1,2}\epsilon_{\lambda i}
+\epsilon_{\lambda j}^*
+=\delta_{ij}-\frac{k_i k_j}{|\boldsymbol k|^2}
+\equiv P^T_{ij}(\boldsymbol k)
+$$
+
+です。右辺は横方向への射影行列で、$P^T\boldsymbol k=0$、$(P^T)^2=P^T$ です。
+
+そのため独立な正準変数についての等時交換関係は、
+
+$$
+[A_{T,i}(t,\boldsymbol x),\pi_{T,j}(t,\boldsymbol y)]
+=i\int\frac{d^3k}{(2\pi)^3}
+P^T_{ij}(\boldsymbol k)e^{i\boldsymbol k\cdot(\boldsymbol x-\boldsymbol y)}
+$$
+
+となります。単純に三成分すべてに独立なデルタ関数を課したものではありません。これはゲージ固定されたポテンシャルの関係であり、ゲージ不変な局所観測量の微視的因果律とは区別します。
+
+## 共変なゲージ固定と光子の伝播関数
+
+Coulombゲージは物理的自由度が見えやすい反面、時空の共変性が式から見えにくくなります。散乱計算では共変なゲージ固定が便利です。
+
+自由なMaxwell作用の二次部分だけでは、純ゲージ方向に零固有値があるので逆演算子を定義できません。そこで計算上の規約として
+
+$$
+\mathcal L_{\mathrm{gf}}
+=-\frac1{2\xi}(\partial_\mu A^\mu)^2
+$$
+
+を加えます。ξ=1 はFeynmanゲージと呼ばれます。このとき部分積分により二次作用は
+
+$$
+S^{(2)}=\frac12\int d^4x\, A_\mu
+\eta^{\mu\nu}\Box A_\nu
+$$
+
+となります。運動量空間で $\Box\to-k^2$ を用い、Feynman処方で逆演算子を取れば
+
+$$
+D_F^{\mu\nu}(k)=\frac{-i\eta^{\mu\nu}}{k^2+i0}
+$$ {#eq-photon-propagator}
+
+を得ます。
+
+共変な伝播関数には時間成分や縦方向の成分が現れます。しかし、それらを独立な正ノルムの外部光子として数えてはいけません。共変な量子化には物理状態条件などが必要です。本書では外部状態を物理的な二偏極で扱い、内部の伝播関数には上の規約を用います。一般の拘束系の量子化や非Abelゲージ理論のghostの詳細は扱いません。
+
+## 保存電流とゲージ依存性
+
+電流との結合 $-j_\mu A^\mu$ を @eq-gauge-transformation で変換すると作用の変化は
+
+$$
+\delta S=-\int d^4x\, j^\mu\partial_\mu\alpha
+=\int d^4x\,\alpha\,\partial_\mu j^\mu
+$$
+
+です。境界項を消せる場合、電流が保存していれば作用はゲージ不変です。
+
+運動量空間では保存条件は $k_\mu j^\mu(k)=0$ です。したがって光子の伝播関数を保存電流で両側から縮約した場合、ゲージ選択によって変わる $k^\mu k^\nu$ に比例した項は寄与しません。実際の量子電磁力学でゲージ依存性を消す仕組みは、第17章のWard恒等式へつながります。
+
+## 質量を0に近づけるとどうなるか
+
+Procaの縦偏極の成分は $E/m$ や $k/m$ を含みます。m を小さくすると成分は大きくなるのに、規格化された時空ノルムは−1のままです。
+
+$$
+\epsilon_L^\mu-\frac{p^\mu}{m}
+=\frac{E-k}{m}(-1,0,0,1)
+$$
+
+ここでは k>0、$E-k=m^2/(E+k)$ です。保存電流との縮約では $p\cdot j=0$ なので、固定された非零運動量で m→0 とすると縦偏極との結合は抑制されます。
+
+![固定波数に対する縦偏極の成分の増大と、保存電流への結合を支配する残差の減少。](../figures/vector_mass_limit.png){#fig-vector-mass-limit}
+
+ただし三つの自由度を持つmassive理論を、質量パラメータを0にする操作だけで常に二自由度のMaxwell理論と同一視できるわけではありません。相互作用や追加の場も含めた極限を指定する必要があります。ここでは自由なProca場とMaxwell場の構造を比較しました。
+
+## 演習
+
+1. $F_{\mu\nu}$ がゲージ変換で不変であることを示してください。
+2. Proca方程式の発散を取ると、なぜ $\partial_\mu A^\mu=0$ になるのですか。
+3. m=4、k=3 の縦偏極とエネルギーを求め、$p\cdot\epsilon_L=0$ を確認してください。
+4. Procaの一次拘束と二次拘束から、時間成分が独立な正準対ではないことを説明してください。
+5. 自由Maxwell場のCoulombゲージで、適切な境界条件のもと $A^0=0$ となる理由を説明してください。
+6. 波数がz方向の場合の横射影行列 $P^T$ を書いてください。
+7. $\boldsymbol n=(0,3/5,4/5)$ に垂直な方向へ $\boldsymbol v=(0,1,0)$ を射影してください。
+8. 電流が保存される場合、電流とポテンシャルの結合がゲージ不変になる理由を説明してください。
+9. m=0.1、k=1 として縦偏極と $p^\mu/m$ の差の各非零成分の絶対値を求めてください。
+
+::: {.callout-tip collapse="true" title="解答・検算"}
+1. 二階偏微分の交換可能性から追加項が相殺する。
+2. Fの反対称性で二階微分の縮約が0になり、m²が非零なので発散が0になる。
+3. E=5、$\epsilon_L=(3/4,0,0,5/4)$。内積は 15/4−15/4=0。
+4. $\pi_0=0$、$A^0=(\nabla\cdot\boldsymbol\pi)/m^2$ であるため、時間成分とその運動量を独立に指定できない。
+5. Gaussの法則とCoulombゲージから $\nabla^2 A^0=0$。減衰条件と残余ゲージ固定により0とできる。
+6. diag(1,1,0)。
+7. $(0,16/25,-12/25)$。方向nとの内積は0。
+8. 部分積分後の作用の変化が $\int d^4x\,\alpha\partial_\mu j^\mu=0$ となる。
+9. $m/(E+k)=0.1/(\sqrt{1.01}+1)\simeq0.04988$。
+:::
+
+## 次章へ
+
+実スカラー場、Dirac場、ベクトル場の自由な粒子と伝播関数が揃いました。次章では相互作用を導入し、時間順序積とWickの定理から相関関数を計算します。LSZ簡約、ファインマン図、散乱振幅を結びつけ、初めて相互作用の強さから散乱の観測量を予測します。
