@@ -1,5 +1,9 @@
 # 連続対称性とスピンの代数
 
+::: {.callout-note title="この章で学ぶ理由"}
+離散的な変換の列挙では任意の角度の回転を扱いにくいため、Lie群と生成子を導入し、微小回転の代数から有限回転や量子スピンの性質を計算できるようにします。
+:::
+
 ## 回転角を連続的に変える
 
 第8章では正方形の対称性を有限群として扱いました。今度は回転角を任意の実数に変えます。回転を微小量ずつ繰り返すと有限の回転になる、という見方が連続対称性の出発点です。回転の生成子から角運動量を導き、電子などのスピンの性質へつなげます。
@@ -30,7 +34,7 @@ $$
 e^{\theta L}=I\cos\theta+L\sin\theta=R(\theta)
 $$ {#eq-rotation-exp}
 
-です。有限の回転を一つの行列 L から生成できました。L は角度0における R の微分でもあります。
+です。有限の回転を一つの行列 L から生成できました。L は角度0における R の微分でもあります。行列の微分は各成分を微分する操作です。$dR/d\theta=LR$ であり、角度0では R=I なので微分が L になります。例えば (1,0) の微小な変化は L(1,0)=(0,1) で、円の接線方向を向きます。
 
 ::: {.callout-note title="数値例：微小回転から90度回転"}
 角度を0.01 radにすると cos(0.01)≈0.99995、sin(0.01)≈0.00999983 です。一次近似 I+0.01L では (1,0) が (1,0.01) に移ります。ただし一次近似のままでは長さが厳密には保存されません。有限の回転は指数関数で計算します。角度 π/2 なら (1,0) が (0,1) に移ります。
@@ -58,7 +62,14 @@ $$
 
 を考えます。このような単位元での接ベクトルが Lie 代数を構成します。行列群では生成子 X から exp(tX) が群の曲線になります。
 
-直交条件を t で微分すると X の満たす条件が分かります。
+直交条件 $g(t)^{\mathsf T}g(t)=I$ を積の法則で微分して t=0 を代入すると、
+
+$$
+\left.\frac{d}{dt}(g^{\mathsf T}g)\right|_0
+=X^{\mathsf T}I+IX=0
+$$
+
+となり、X の満たす条件が分かります。
 
 $$
 X^{\mathsf T}+X=0
@@ -88,7 +99,7 @@ L_z=\begin{pmatrix}
 \end{pmatrix}
 $$
 
-例えば exp(θLz) は z 軸周りの回転です。Lx と Ly を実際に掛け合わせると
+例えば exp(θLz) は z 軸周りの回転です。Lx はベクトル (x,y,z) を (0,−z,y) へ、Ly は (z,0,−x) へ写すので、LxLy は (0,x,0)、LyLx は (y,0,0) を与えます。差は (−y,x,0) で、これは Lz の作用そのものです。従って
 
 $$
 [L_x,L_y]=L_z
@@ -115,7 +126,7 @@ e^{aX}e^{bY}e^{-aX}e^{-bY}
 =I+ab[X,Y]+\cdots
 $$
 
-です。一次の変化を相殺した後に残る変化が交換子です。省略項は a,b の合計次数3以上です。これは Lie 代数が群の局所的な積の構造を表す理由の一つです。
+です。例えば最初の三因子を二次まで展開すると $e^{aX}e^{bY}e^{-aX}=I+bY+b^2Y^2/2+ab(XY-YX)+\cdots$ となります。最後に $e^{-bY}$ を掛けると Y の一次項と二次項も消え、ab の交換子だけが残ります。一次の変化を相殺した後に残る変化が交換子です。省略項は a,b の合計次数3以上です。これは Lie 代数が群の局所的な積の構造を表す理由の一つです。
 
 ## 量子状態のユニタリ変換
 
@@ -125,7 +136,7 @@ $$
 U(\theta)=e^{-i\theta J_z/\hbar}
 $$
 
-と書くと、生成子 Jz はエルミート演算子です。J の次元を角運動量に取っています。SO(3) の Lie 代数に対応して、量子角運動量は
+と書きます。微小角で $U=I-i\theta J_z/\hbar+O(\theta^2)$ です。$U^\dagger U=I$ の一次の係数は $i(J_z^\dagger-J_z)/\hbar$ なので、ユニタリ性から生成子 Jz はエルミート演算子です。J の次元を角運動量に取っています。回転の表現は微小回転の積の関係を保ちます。実回転の L_i に対応するユニタリ表現の生成子を $X_i=-iJ_i/\hbar$ とすると、$[X_i,X_j]=\epsilon_{ijk}X_k$ です。左辺に代入すると $-[J_i,J_j]/\hbar^2=-i\epsilon_{ijk}J_k/\hbar$ となります。従って量子角運動量は
 
 $$
 [J_i,J_j]=i\hbar\epsilon_{ijk}J_k
@@ -139,7 +150,14 @@ $$
 \boldsymbol L=\boldsymbol x\times\boldsymbol p
 $$
 
-と定義できます。正準交換関係から @eq-angular-momentum-algebra が成立します。例えば Lz=xpy−ypx で、座標と運動量の同じ方向の成分だけが交換子 iℏ を持つことを使います。スピンは軌道運動とは別の内部自由度であり、小さな球の自転として扱うものではありません。
+と定義できます。正準交換関係から @eq-angular-momentum-algebra が成立します。例えば $L_x=yp_z-zp_y$、$L_y=zp_x-xp_z$ です。$[x_i,p_j]=i\hbar\delta_{ij}$ を使い、積を四項に分けると
+
+$$
+[L_x,L_y]=-i\hbar yp_x+i\hbar xp_y
+=i\hbar L_z
+$$
+
+となります。座標と運動量の同じ方向の成分だけが非零の交換子を持つことを使いました。スピンは軌道運動とは別の内部自由度であり、小さな球の自転として扱うものではありません。
 
 ## Pauli行列とSU(2)
 
@@ -160,7 +178,13 @@ $$
 [\sigma_i,\sigma_j]=2i\epsilon_{ijk}\sigma_k
 $$
 
-です。したがって S_i=ℏσ_i/2 と置けば、角運動量の代数と一致します。
+です。例えば $\sigma_x\sigma_y=i\sigma_z$、$\sigma_y\sigma_x=-i\sigma_z$ は二次元行列を掛ければ確認できます。二乗は各 $\sigma_i^2=I$ なので、さらに
+
+$$
+\sigma_i\sigma_j=\delta_{ij}I+i\epsilon_{ijk}\sigma_k
+$$
+
+が成立します。したがって S_i=ℏσ_i/2 と置けば、角運動量の代数と一致します。
 
 二次元複素ユニタリ行列のうち行列式が1の群が SU(2) です。
 
@@ -178,7 +202,7 @@ U(\boldsymbol n,\theta)=
 (\boldsymbol n\cdot\boldsymbol\sigma)
 $$ {#eq-spinor-rotation}
 
-です。これは指数関数 exp(−iθ n·σ/2) を展開して、(n·σ)²=I を使うと求められます。
+です。$\boldsymbol n\cdot\boldsymbol\sigma=n_x\sigma_x+n_y\sigma_y+n_z\sigma_z$ と定義します。この二乗では異なる添字の交差項が反交換で消えるので $(\boldsymbol n\cdot\boldsymbol\sigma)^2=(n_x^2+n_y^2+n_z^2)I=I$ です。指数関数 $\exp(-i\theta\boldsymbol n\cdot\boldsymbol\sigma/2)$ の偶数次・奇数次を分ければ上の式になります。
 
 ## SU(2) と SO(3) の違い
 
@@ -189,7 +213,27 @@ $$
 =U(\boldsymbol v\cdot\boldsymbol\sigma)U^\dagger
 $$
 
-はトレース0のエルミート行列を再び同じ種類の行列へ写し、行列式を保存するため v の長さも保存します。この対応は SO(3) の回転を与えます。すべての回転に対応する U があり、U と −U は同じ回転に対応します。SU(2) は SO(3) の二重被覆です。
+はトレース0のエルミート行列を再び同じ種類の行列へ写します。実際、
+
+$$
+\boldsymbol v\cdot\boldsymbol\sigma=
+\begin{pmatrix}
+v_z&v_x-iv_y\\
+v_x+iv_y&-v_z
+\end{pmatrix}
+$$
+
+であり、行列式は $-|\boldsymbol v|^2$ です。相似変換は行列式を保存するので長さも保存されます。Pauli行列の積の公式を使って @eq-spinor-rotation を左右に掛けると、
+
+$$
+\boldsymbol v'=\boldsymbol v\cos\theta
++(\boldsymbol n\times\boldsymbol v)\sin\theta
++\boldsymbol n(\boldsymbol n\cdot\boldsymbol v)(1-\cos\theta)
+$$
+
+を得ます。これは軸に沿う成分を固定し、垂直な成分を θ だけ回転する式です（Rodriguesの回転公式）。例えば $\boldsymbol n=(0,0,1)$、$\boldsymbol v=(1,0,0)$ なら $\boldsymbol v'=(\cos\theta,\sin\theta,0)$ です。
+
+任意の三次元の向きを保つ回転は回転軸と角度で表せるので、すべての SO(3) の元に対応する U が存在します。もし U がすべての v を不変にするなら全Pauli行列と交換します。σz と交換する行列は対角行列で、σx とも交換すれば両対角成分が等しくなります。従って U は単位行列の定数倍です。行列式1とユニタリ性から U=±I です。つまり対応の核が二元であり、U と −U は同じ回転に対応します。SU(2) は SO(3) の二重被覆です。
 
 @eq-spinor-rotation で角度を2πにすると U=−I、4πにすると U=I になります。
 
@@ -234,13 +278,20 @@ $$
 \sin\vartheta\sin\varphi,\cos\vartheta)
 $$
 
-です。純粋状態なら長さ1になります。これは内部状態の幾何学的表示であり、電子の実際の空間軌道ではありません。
+です。例えば状態の成分を a,b とすると $\langle\sigma_x\rangle=2\operatorname{Re}(a^*b)$、$\langle\sigma_y\rangle=2\operatorname{Im}(a^*b)$、$\langle\sigma_z\rangle=|a|^2-|b|^2$ です。上の a,b を代入すれば Bloch ベクトルの各成分が得られます。純粋状態なら長さ1になります。これは内部状態の幾何学的表示であり、電子の実際の空間軌道ではありません。
 
 ![x軸回転によるz方向の測定確率の変化。](../figures/spin_measurement.png){#fig-spin-measurement}
 
 ## 角運動量の既約表現を作る
 
-J²=Jx²+Jy²+Jz² と定義すると、各 J_i と交換します。また昇降演算子を
+J²=Jx²+Jy²+Jz² と定義すると、各 J_i と交換します。例えば交換子の積の法則から
+
+$$
+[J_z,J_x^2]=i\hbar(J_yJ_x+J_xJ_y),\qquad
+[J_z,J_y^2]=-i\hbar(J_xJ_y+J_yJ_x)
+$$
+
+となり相殺します。他の成分についても同じです。既約表現では第8章のSchurの補題により J² は単位行列の定数倍になります。また昇降演算子を
 
 $$
 J_\pm=J_x\pm iJ_y
@@ -252,7 +303,7 @@ $$
 [J_z,J_\pm]=\pm\hbar J_\pm
 $$
 
-を得ます。J² と Jz の同時固有状態を |j,m〉 と書きます。規格化された有限次元ユニタリ既約表現では
+を得ます。この式を $J_zJ_\pm=J_\pm J_z\pm\hbar J_\pm$ と書き直すと、固有値 ℏm の状態に J± を作用させた非零ベクトルは固有値 ℏ(m±1) を持つことが分かります。J² と Jz の同時固有状態を |j,m〉 と書きます。規格化された有限次元ユニタリ既約表現では
 
 $$
 J^2|j,m\rangle=\hbar^2j(j+1)|j,m\rangle
@@ -262,14 +313,21 @@ $$
 J_z|j,m\rangle=\hbar m|j,m\rangle
 $$
 
-です。この固有値の形は昇降演算子のノルムから導けます。J² の固有値を一旦 ℏ²λ とすると、
+です。この固有値の形は昇降演算子のノルムから導けます。J± の積を展開し、交換関係を使うと
+
+$$
+J_-J_+=J^2-J_z^2-\hbar J_z,\qquad
+J_+J_-=J^2-J_z^2+\hbar J_z
+$$
+
+です。例えば $\|J_+|j,m\rangle\|^2=\langle j,m|J_-J_+|j,m\rangle$ です。J² の固有値を一旦 ℏ²λ とすると、
 
 $$
 \|J_\pm|j,m\rangle\|^2
 =\hbar^2[\lambda-m(m\pm1)]
 $$
 
-となります。最高の m を j とすれば J+ がそこで消えるので λ=j(j+1)。最低の m は −j となり、1ずつの間隔でつながるため 2j は非負整数です。
+となります。最高の m を j とすれば J+ がそこで消えるので λ=j(j+1)。最低の m を m₀ とすると J− が消えるので $\lambda=m_0(m_0-1)$ です。$j(j+1)=m_0(m_0-1)$ の二解は m₀=−j と j+1 であり、最低値は最高値 j を超えられないので m₀=−j です。1ずつの間隔でつながるため 2j は非負整数です。この梯子で張られる空間は全 J_i に不変なので、既約性から表現全体を張ります。
 
 $$
 J_\pm|j,m\rangle
@@ -305,7 +363,14 @@ $$
 |\downarrow\uparrow\rangle}{\sqrt2}
 $$
 
-です。最高ウェイト状態 |↑↑〉 に全降下演算子を作用させれば triplet の残りの状態が得られます。singlet は全角運動量の各成分で消されます。
+です。最高ウェイト状態 |↑↑〉 に全降下演算子を作用させれば triplet の残りの状態が得られます。具体的には $J_-=S_-\otimes I+I\otimes S_-$ で、
+
+$$
+J_-|\uparrow\uparrow\rangle
+=\hbar(|\downarrow\uparrow\rangle+|\uparrow\downarrow\rangle)
+$$
+
+です。右辺を規格化すると m=0 の状態になり、さらに下降すると |↓↓〉 になります。反対称な状態では同じ計算の二項が相殺し、J− も J+ も0になります。singlet は全角運動量の各成分で消されます。
 
 $$
 \frac12\otimes\frac12=1\oplus0
@@ -320,7 +385,7 @@ $$
 =\frac12(J^2-S_1^2-S_2^2)
 $$
 
-なので triplet のエネルギーは g/4、singlet は −3g/4 です。g=4 meV ならそれぞれ1 meV と −3 meV で、差は4 meVになります。回転対称な相互作用のため triplet 内の三状態は縮退します。
+です。各スピンの二乗は $S_1^2=S_2^2=3\hbar^2/4$ です。triplet の全 J² は $2\hbar^2$ なので $H=g(2-3/2)/2=g/4$、singlet の全 J² は0なので $H=-3g/4$ です。g=4 meV ならそれぞれ1 meV と −3 meV で、差は4 meVになります。回転対称な相互作用のため triplet 内の三状態は縮退します。
 
 ## 演習
 

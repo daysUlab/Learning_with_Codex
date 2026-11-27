@@ -12,6 +12,10 @@ for p in [root/"index.qmd", *(root/p for p in paths)]:
     assert not re.search(r"^\$(?:[ \t]+\{#eq-[^}]+\})?[ \t]*$", s, re.M), f"single dollar delimiter: {p}"
     assert s.startswith("# "), p
     assert len(re.findall(r"^\s*\$\$(?:\s+\{#eq-[^}]+\})?\s*$", s, re.M)) % 2 == 0, p
+# 全章の冒頭に学習目的を明記する。内容の教育的妥当性は本文レビューで確認する。
+for path in paths:
+    s = (root/path).read_text()
+    assert re.match(r'^# [^\n]+\n\n::: \{\.callout-note title="この章で学ぶ理由"\}\n[^\n]+\n:::\n', s), f"missing chapter purpose: {path}"
 # 図参照・ラベルの重複は全章で検査する。
 figure_source = (root/"scripts/figures.py").read_text()
 labels = set()
