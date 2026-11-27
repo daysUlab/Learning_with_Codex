@@ -1257,3 +1257,24 @@ for ax,yy,title,col in zip(axs,[np.sin(xx),.5*np.sin(2*xx),np.sin(xx)+.5*np.sin(
 axs[-1].set(xticks=[0,np.pi,2*np.pi],xticklabels=["0","pi","2pi"],xlabel="x")
 fig.savefig(out/"review_fourier_sum.png",dpi=220)
 plt.close(fig)
+
+# 導入再レビュー：二状態の時間発展の行列積
+fig,ax=plt.subplots(figsize=(5.5,3.1),layout="constrained")
+for x0,ys,lab in [(0,[.5],"Start"),(1,[.8,.2],"Intermediate"),(2,[.5],"End")]:
+    for y0 in ys:
+        ax.scatter(x0,y0,s=85,color="#2166ac",zorder=3)
+    ax.text(x0,1.02,lab,ha="center",fontsize=9)
+for y0,sign in [(.8,"+"),(.2,"-")]:
+    ax.annotate("",xy=(1,y0),xytext=(0,.5),arrowprops=dict(arrowstyle="->",color="#16857c",lw=1.7))
+    ax.annotate("",xy=(2,.5),xytext=(1,y0),arrowprops=dict(arrowstyle="->",color="#d97706" if sign=="-" else "#16857c",lw=1.7))
+    ax.text(.5,(.5+y0)/2+(.07 if y0>.5 else -.08),"1/sqrt(2)",ha="center",fontsize=9)
+    ax.text(1.5,(.5+y0)/2+(.07 if y0>.5 else -.08),sign+"1/sqrt(2)",ha="center",fontsize=9)
+ax.text(-.08,.5,"0",ha="right")
+ax.text(1,.9,"0",ha="center")
+ax.text(1,.1,"1",ha="center")
+ax.text(2.08,.5,"1",ha="left")
+ax.text(1,-.04,"Amplitude: +1/2 - 1/2 = 0",ha="center",fontsize=11)
+ax.set(xlim=(-.25,2.25),ylim=(-.12,1.12))
+ax.axis("off")
+fig.savefig(out/"review_path_matrix.png",dpi=220)
+plt.close(fig)
