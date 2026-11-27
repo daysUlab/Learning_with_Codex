@@ -1,0 +1,388 @@
+# 古典力学の準備
+
+## なぜ場の量子論の前に古典力学を学ぶのか
+
+ボールの位置は時刻ごとに変わります。場の理論では位置そのものではなく、空間の各点に定義した量（例えば電場）が時刻ごとに変わります。しかし、どちらも「自由度」「時間発展」「作用」という共通の考え方で記述できます。この章ではまず自由度が一つの粒子を扱います。
+
+## 位置・速度・加速度
+
+直線上の位置を時刻の関数とみなします。速度は位置の時間変化率、加速度は速度の時間変化率です。
+
+$$
+v=\frac{dx}{dt},\qquad a=\frac{d^2x}{dt^2}
+$$
+
+質量が一定の物体の運動は、力がわかれば次の式で決まります。
+
+$$
+m\frac{d^2x}{dt^2}=F
+$$ {#eq-newton}
+
+::: {.callout-note title="数値例：一定の力"}
+質量2 kgの物体に6 Nの力を加え、初速度を0とします。加速度は3 m/s²です。初期位置を0とすると、
+
+$$
+v(t)=3t,\qquad x(t)=\frac32t^2
+$$
+
+となり、2秒後は速度6 m/s、位置6 mです。力の単位 N は kg m/s² なので次元も一致します。
+:::
+
+## ばねの運動
+
+自然長からの変位を x、ばね定数を k とします。摩擦のない線形ばねでは、復元力は変位に比例し反対方向を向きます。
+
+$$
+m\ddot{x}=-kx
+$$
+
+微分を表す点は時間微分です。初期位置 A、初速度0なら、余弦関数を2回微分すると元の関数に負の定数が掛かることから、
+
+$$
+x(t)=A\cos(\omega t),\qquad
+\omega=\sqrt{\frac{k}{m}}
+$$ {#eq-oscillator}
+
+を得ます。運動方程式へ代入すると左辺はマイナス mω²x となり、右辺と一致します。m=2 kg、k=8 N/m、A=0.5 m の場合、角振動数は2 rad/s、周期は π 秒です。
+
+![位置の時間変化（左）と位相空間の軌道（右）。右図の点は初期状態。](../figures/oscillator.png){#fig-oscillator}
+
+```{=html}
+<div class="qft-demo" id="oscillator-demo">
+<h3>操作教材：ばねの振動</h3>
+<label>質量 (kg) <output id="m-val">2</output><input id="m" type="range" min="0.5" max="5" step="0.5" value="2"></label>
+<label>ばね定数 (N/m) <output id="k-val">8</output><input id="k" type="range" min="1" max="16" step="1" value="8"></label>
+<label>振幅 (m) <output id="a-val">0.5</output><input id="amp" type="range" min="0.1" max="1" step="0.1" value="0.5"></label>
+<p id="osc-result" aria-live="polite"></p>
+<svg viewBox="0 0 340 180" role="img" aria-label="変位と時間のグラフ">
+<path d="M32 15V150H330 M32 82.5H330" fill="none" stroke="currentColor" opacity=".5"/>
+<text x="4" y="12" fill="currentColor" font-size="10">x (m)</text>
+<text x="315" y="171" fill="currentColor" font-size="10">t (s)</text>
+<text x="25" y="86" fill="currentColor" font-size="10" text-anchor="end">0</text>
+<text x="25" y="21" fill="currentColor" font-size="10" text-anchor="end">1</text>
+<text x="25" y="150" fill="currentColor" font-size="10" text-anchor="end">-1</text>
+<text x="32" y="162" fill="currentColor" font-size="10">0</text><text x="320" y="162" fill="currentColor" font-size="10">10</text>
+<polyline id="osc-curve" fill="none" stroke="#16857c" stroke-width="2.4"/>
+</svg>
+</div>
+<script>
+(() => {
+ const d=document.getElementById('oscillator-demo'), el=id=>d.querySelector('#'+id);
+ const update=()=>{
+ const m=+el('m').value,k=+el('k').value,A=+el('amp').value,w=Math.sqrt(k/m);
+ el('m-val').textContent=m;el('k-val').textContent=k;el('a-val').textContent=A;
+ el('osc-result').textContent='角振動数 '+w.toFixed(2)+' rad/s、周期 '+(2*Math.PI/w).toFixed(2)+' s、全エネルギー '+(k*A*A/2).toFixed(2)+' J';
+ el('osc-curve').setAttribute('points',Array.from({length:401},(_,i)=>(32+i*298/400)+','+(82.5-65*A*Math.cos(w*i/40))).join(' '));
+ };
+ d.querySelectorAll('input').forEach(e=>e.addEventListener('input',update));update();
+})();
+</script>
+```
+
+質量を大きくすると周期が長くなり、ばね定数を大きくすると周期が短くなります。この性質は場の各振動モードを考える際にも重要です。
+
+## 作用：経路全体から運動を決める
+
+Newtonの方程式は各時刻で成立します。一方、作用という量は経路全体に一つの値を割り当てます。運動エネルギー T、ポテンシャルエネルギー V を用い、ラグランジアンと作用を定義します。
+
+$$
+L=T-V=\frac12m\dot q^2-V(q),\qquad
+S[q]=\int_{t_1}^{t_2}L\,dt
+$$
+
+偏微分とは複数の変数のうち一つだけを変化させたときの微分です。L では q と速度を独立変数として偏微分します。経路 q に小さな変化 εη を加え、両端で η=0 とします。作用の ε に関する一次変化は
+
+$$
+\left.\frac{dS[q+\epsilon\eta]}{d\epsilon}\right|_{\epsilon=0}
+=\int_{t_1}^{t_2}\left(
+\frac{\partial L}{\partial q}\eta+
+\frac{\partial L}{\partial\dot q}\dot\eta
+\right)dt
+$$
+
+です。第2項を部分積分すると境界項は η=0 により消え、
+
+$$
+\delta S=\int_{t_1}^{t_2}
+\left(\frac{\partial L}{\partial q}-
+\frac{d}{dt}\frac{\partial L}{\partial\dot q}\right)\eta\,dt
+$$
+
+となります。任意の滑らかな η に対してこの値が0であるためには、括弧内が各点で0でなければなりません。よって、
+
+$$
+\frac{d}{dt}\frac{\partial L}{\partial\dot q}
+-\frac{\partial L}{\partial q}=0
+$$ {#eq-euler-lagrange}
+
+を得ます。これはオイラー・ラグランジュ方程式です。上の L を代入すれば m q̈ = −V′(q) となり、Newtonの式を再現します。
+
+::: {.callout-note title="数値例：自由粒子の経路を比較する"}
+質量1 kg、時刻0 sで位置0 m、1 sで位置1 mとします。候補経路を q(t)=t+a sin(πt)（SI単位での数値）と置くと、両端は共通です。
+
+$$
+S=\frac12\int_0^1(1+a\pi\cos(\pi t))^2dt
+=\frac12+\frac{a^2\pi^2}{4}
+$$
+
+a=0 なら0.500 J s、a=±0.3なら約0.722 J sです。この候補群では等速の経路が作用を最小にします。一般には作用は最小でなく停留（一次変化が0）すれば十分です。
+:::
+
+![同じ始点と終点を結ぶ3本の候補経路。](../figures/paths.png){#fig-paths}
+
+## ハミルトニアンと位相空間
+
+共役運動量を次のように定義します。
+
+$$
+p=\frac{\partial L}{\partial\dot q}=m\dot q
+$$
+
+速度を運動量で置き換え、ハミルトニアンを定義します。
+
+$$
+H=p\dot q-L=\frac{p^2}{2m}+V(q)
+$$
+
+この系の Hamilton 方程式は
+
+$$
+\dot q=\frac{\partial H}{\partial p},\qquad
+\dot p=-\frac{\partial H}{\partial q}
+$$
+
+であり、再び Newton の運動方程式と一致します。位置と運動量の組を点として表した空間が位相空間です。@fig-oscillator の右側の楕円はエネルギー一定の軌道です。
+
+ばね定数8 N/m、振幅0.5 mでは全エネルギーは1 Jです。平衡点では全て運動エネルギーになるため、質量2 kgの場合の速さは1 m/sとなります。
+
+## 数学の補足：偏微分・全微分とルジャンドル変換
+
+高校数学では一変数の関数を微分しました。二変数の関数の場合、例えば f(q,p)=q²+3p² なら q だけを動かして p を固定すると偏微分は 2q、反対に p だけを動かせば 6p です。q と p がともに時刻の関数なら、連鎖律によって
+
+$$
+\frac{df}{dt}=\frac{\partial f}{\partial q}\dot q+
+\frac{\partial f}{\partial p}\dot p
+$$
+
+となります。微小変化で表せば df=2q dq+6p dp です。q=1、p=2、dq=0.01、dp=−0.02 の場合、一次近似は −0.22、実際の変化は −0.2187 です（ここでは無次元の数値を使っています）。
+
+速度から運動量への変換は、単なる記号の置き換えではありません。関数の傾きを新たな変数とするルジャンドル変換です。L が速度について十分滑らかで、速度から運動量への対応が局所的に逆に解けると仮定します。時間も陽に含む場合、全微分を取ると、
+
+$$
+\begin{aligned}
+dH&=d(p\dot q-L)\\
+&=\dot q\,dp+p\,d\dot q-dL\\
+&=\dot q\,dp-
+\frac{\partial L}{\partial q}dq-
+\frac{\partial L}{\partial t}dt
+\end{aligned}
+$$
+
+となります。ここで p=∂L/∂q̇ によって速度の微小変化を含む項が相殺されました。オイラー・ラグランジュ方程式から ṗ=∂L/∂q なので、
+
+$$
+dH=\dot q\,dp-\dot p\,dq-\frac{\partial L}{\partial t}dt
+$$
+
+です。一方、H は q,p,t の関数であるため、係数を比較すれば Hamilton 方程式が導かれます。陽な時間依存性がなければエネルギー H は保存されます。拘束により変換が逆に解けない場合の扱いは、第13・14章の主題になります。
+
+## 複数の自由度と連成振動
+
+粒子が二つある場合など、独立に動ける量を一般化座標 q₁,q₂,…,qₙ と呼びます。各座標に共役運動量を対応させると、位相空間は 2n 次元になります。固定端の変分を座標ごとに行えば、
+
+$$
+\frac{d}{dt}\frac{\partial L}{\partial\dot q_i}
+=\frac{\partial L}{\partial q_i}
+$$
+
+が各 i について成り立ちます。
+
+質量 m の二つの物体をばね定数 k のばねで壁につなぎ、さらに互いをばね定数 κ のばねでつなぐモデルを考えます。変位を q₁,q₂ とすると、
+
+$$
+\begin{aligned}
+T&=\frac m2(\dot q_1^2+\dot q_2^2)\\
+V&=\frac k2(q_1^2+q_2^2)
++\frac\kappa2(q_1-q_2)^2
+\end{aligned}
+$$
+
+中央のばねの伸びは二つの変位の差です。q₁,q₂ についてそれぞれ微分すれば、
+
+$$
+\begin{aligned}
+m\ddot q_1&=-kq_1-\kappa(q_1-q_2)\\
+m\ddot q_2&=-kq_2+\kappa(q_1-q_2)
+\end{aligned}
+$$
+
+を得ます。二つの方程式を加えたり引いたりすると、互いに影響しない二つの運動に分解できます。
+
+$$
+\begin{aligned}
+Q_+&=\frac{q_1+q_2}{\sqrt2}\\
+Q_-&=\frac{q_1-q_2}{\sqrt2}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+m\ddot Q_+&=-kQ_+\\
+m\ddot Q_-&=-(k+2\kappa)Q_-
+\end{aligned}
+$$
+
+::: {.callout-note title="数値例：二つの振動モード"}
+m=1 kg、k=4 N/m、κ=6 N/m なら、同相モードの角振動数は2 rad/s、逆相モードは4 rad/sです。
+
+初期変位を q₁=0.2 m、q₂=0、初速度を両方0とすると、
+
+$$
+\begin{aligned}
+q_1(t)&=0.1(\cos 2t+\cos 4t)\\
+q_2(t)&=0.1(\cos 2t-\cos 4t)
+\end{aligned}
+$$
+
+です。t=π/2 s では q₁=0、q₂=−0.2 m となり、最初に変位していなかった物体が動きます。初期全エネルギーは壁ばね0.08 Jと中央ばね0.12 Jの合計0.20 Jです。
+:::
+
+![連成振動子の配置（上）と、同相・逆相のモード（下）。](../figures/coupled.png){#fig-coupled}
+
+これを多数の自由度へ一般化するには線形代数が便利です。さらに自由度を連続的に並べると、場の理論の振動モードにつながります。
+
+## ポアソン括弧：時間発展を一つの式にまとめる
+
+位相空間上の二つの関数 f,g に対して、
+
+$$
+\{f,g\}=\sum_i
+\left(
+\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}
+-\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}
+\right)
+$$ {#eq-poisson}
+
+をポアソン括弧と呼びます。括弧の中は引き算なので、順序を交換すると符号が逆転します。座標そのものについて計算すると、
+
+$$
+\{q_i,p_j\}=\delta_{ij},\quad
+\{q_i,q_j\}=\{p_i,p_j\}=0
+$$
+
+です。δᵢⱼ は i=j なら1、そうでなければ0の記号です。
+
+連鎖律と Hamilton 方程式を組み合わせると、任意の物理量 f の時間発展は
+
+$$
+\begin{aligned}
+\frac{df}{dt}
+&=\sum_i\left(
+\frac{\partial f}{\partial q_i}\dot q_i+
+\frac{\partial f}{\partial p_i}\dot p_i\right)
++\frac{\partial f}{\partial t}\\
+&=\{f,H\}+\frac{\partial f}{\partial t}
+\end{aligned}
+$$ {#eq-time-evolution}
+
+となります。H 自身では {H,H}=0 なので、H に陽な時間依存性がなければ保存されます。
+
+::: {.callout-note title="数値例：ばねの位置と運動量"}
+H=p²/(2m)+kq²/2 から {q,H}=p/m、{p,H}=−kq です。m=2 kg、k=8 N/m、q=0.25 m、p=1 kg m/s の瞬間では、速度0.5 m/s、運動量変化率−2 Nです。
+
+エネルギー変化率は運動エネルギーの −1 W とポテンシャルエネルギーの +1 W が相殺され0になります。
+:::
+
+ポアソン括弧の積の法則とヤコビ恒等式は、後の量子論の交換子とリー代数に共通する構造です。
+
+## 正準変換：座標を変えても同じ力学
+
+位相空間の変数を別の組 (Q,P) に変えても、ポアソン括弧の基本関係が保たれる（滑らかで可逆な）変換を正準変換と呼びます。例えば無次元の定数 a≠0 に対して、
+
+$$
+Q=aq,\qquad P=\frac pa
+$$
+
+とすると、
+
+$$
+\{Q,P\}=a\frac1a=1
+$$
+
+です。元のばねの Hamiltonian を新変数で表せば、
+
+$$
+K(Q,P)=\frac{a^2P^2}{2m}
++\frac{kQ^2}{2a^2}
+$$
+
+となります。a=2、q=0.25 m、p=1 kg m/s なら Q=0.5 m、P=0.5 kg m/s です。m=2 kg、k=8 N/m のとき新旧いずれの変数でもエネルギーは0.50 Jです。
+
+![同じ振動を異なる正準座標で表した位相空間。](../figures/canonical.png){#fig-canonical}
+
+この変換は時間に依存しません。時間に依存する一般の正準変換では、新しい Hamiltonian に追加項が現れます。量子化では古典的な正準関係に対応する交換関係を導入しますが、任意の古典量を機械的に演算子へ置き換えられるわけではありません。
+
+## 対称性と保存則：ネーターの定理
+
+なぜ運動量やエネルギーが保存されるのでしょうか。ラグランジアンが連続的な変換に対して不変であることが保存則を生みます。
+
+時刻を固定した微小変換 qᵢ→qᵢ+εξᵢ を考えます。ξᵢ は変換の方向を表し、速度の変化は ε dξᵢ/dt です。運動方程式を満たす経路上では、
+
+$$
+\begin{aligned}
+\frac{\delta L}{\epsilon}
+&=\sum_i\left(
+\frac{\partial L}{\partial q_i}\xi_i+
+p_i\frac{d\xi_i}{dt}\right)\\
+&=\frac{d}{dt}\sum_i p_i\xi_i
+\end{aligned}
+$$
+
+となります。ラグランジアンが微小変換で不変なら左辺は0、したがって Σpᵢξᵢ が保存されます。より一般に δL/ε=dB/dt であれば Σpᵢξᵢ−B が保存されます。これが時刻を固定した変換に対するネーターの定理です。
+
+自由粒子では位置をどれだけずらしても L=mq̇²/2 は同じです。ξ=1 とすれば保存量は p です。一方、ばねを固定壁につないだ系は位置の平行移動でポテンシャルが変わるため、この対称性を持ちません。
+
+空間でなく時間の並進に対して L が不変、すなわち ∂L/∂t=0 なら、
+
+$$
+\begin{aligned}
+\frac{dH}{dt}
+&=\sum_i\left(\dot p_i\dot q_i+
+p_i\ddot q_i-
+\frac{\partial L}{\partial q_i}\dot q_i-
+\frac{\partial L}{\partial\dot q_i}\ddot q_i\right)
+-\frac{\partial L}{\partial t}\\
+&=-\frac{\partial L}{\partial t}=0
+\end{aligned}
+$$
+
+です。時間並進の対称性がエネルギー保存につながることがわかります。回転対称性は角運動量保存につながります。第8・9章で対称性を群として整理し、第11章では場の理論へ拡張します。
+
+::: {.callout-note title="数値例：空間並進と運動量保存"}
+質量1 kgと2 kgの粒子が互いの距離だけに依存する力で相互作用するとします。外力はありません。初期速度がそれぞれ4 m/sと−1 m/sなら全運動量は2 kg m/sです。後に第1粒子が−2 m/sなら、第2粒子は2 m/sでなければなりません。個々の運動量は変化しても合計は不変です。
+:::
+
+## 演習
+
+1. 質量4 kg、ばね定数16 N/m、振幅0.25 mの振動子の角振動数、周期、全エネルギーを求めてください。
+2. ポテンシャルが V(q)=mgq の場合、@eq-euler-lagrange から運動方程式を求めてください。
+3. 自由粒子の経路の例で a=0.5 の作用を求めてください。
+4. f=q²、g=p² のポアソン括弧を計算し、q=2、p=3 での値を求めてください（無次元）。
+5. 正準変換 Q=3q、P=p/3 の基本括弧を確かめてください。
+6. 連成振動子で中央のばねを外すと二つの角振動数はどうなりますか。
+7. 外力のない二粒子系で全運動量2 kg m/s、第1粒子の質量1 kg、速度3 m/s、第2粒子の質量2 kgのとき、第2粒子の速度を求めてください。
+
+::: {.callout-tip collapse="true" title="解答・検算"}
+1. 角振動数2 rad/s、周期π s、全エネルギー0.5 J。
+2. L の q に関する偏微分は −mg、速度に関する偏微分は m q̇。したがって q̈=−g。
+3. 0.5+π²/16 ≈ 1.117 J s。
+4. 4qp=24。
+5. (∂Q/∂q)(∂P/∂p)=3×1/3=1。
+6. κ=0 なので両方とも √(k/m)。
+7. (2−3)/2=−0.5 m/s。
+:::
+
+## 次の段階
+
+ここまでで位置、運動量、作用、時間発展を導入しました。複数自由度・正準変換・ポアソン括弧・ネーターの定理までを導入しました。第2章では複数の自由度を扱うための線形代数を学びます。
+

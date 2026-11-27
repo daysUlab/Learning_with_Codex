@@ -1,0 +1,70 @@
+name: 場の量子論 教科書ビルド
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'physics_tower/12_quantum_field_theory/**'
+      - '.github/workflows/build_qft_book.yml'
+  pull_request:
+    paths:
+      - 'physics_tower/12_quantum_field_theory/**'
+      - '.github/workflows/build_qft_book.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.7.34'
+      - name: 日本語TeX環境を導入
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-science texlive-lang-english
+          kpsewhich luatexbase.sty
+          kpsewhich luatexja-fontspec.sty
+          kpsewhich fontawesome5.sty
+          lualatex --version
+      - name: 依存関係と原稿を確認
+        working-directory: physics_tower/12_quantum_field_theory
+        run: |
+          python3 -m pip install -r requirements.txt
+          python3 scripts/check.py
+      - name: HTMLとPDFを生成
+        working-directory: physics_tower/12_quantum_field_theory
+        run: |
+          quarto render
+          test -s _book/index.html
+          test -s _book/qft.pdf
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          if-no-files-found: ignore
+          name: qft-book
+          path: physics_tower/12_quantum_field_theory/_book
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          path: physics_tower/12_quantum_field_theory/_book
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: qft-pages
+      cancel-in-progress: false
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
