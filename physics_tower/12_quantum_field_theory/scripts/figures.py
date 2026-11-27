@@ -401,7 +401,7 @@ fig,ax=plt.subplots(figsize=(5.6,3.6),layout="constrained")
 for y0 in [-1,-.5,0,.5,1]:
     ax.add_patch(FancyArrowPatch((-2.6,y0),(-.25,y0),arrowstyle="->",mutation_scale=12,color="#2166ac",alpha=.7))
 ax.add_patch(Circle((0,0),.22,color="#d97706"))
-for theta0 in np.linspace(-1.35,1.35,7):
+for theta0 in np.linspace(0,2*np.pi,12,endpoint=False):
     ax.add_patch(FancyArrowPatch((.24*np.cos(theta0),.24*np.sin(theta0)),(2*np.cos(theta0),2*np.sin(theta0)),arrowstyle="->",mutation_scale=12,color="#16857c",alpha=.75))
 ax.text(-1.5,1.35,"Incident wave",ha="center")
 ax.text(1.4,1.6,"Scattered wave",ha="center")
