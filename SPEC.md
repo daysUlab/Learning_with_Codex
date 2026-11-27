@@ -113,4 +113,4 @@
 ## 場の量子論 Quarto Book
 - `physics_tower/12_quantum_field_theory/` に全21章の独立書籍を追加。既存Markdown教材は維持する。
 - 正本はqmd、章順は_quarto.yml、進捗は同ディレクトリのPROGRESS.md。生成物はコミットしない。
-- GitHub ActionsでHTML/PDFを生成・検査し、mainからPagesへ公開する（Pages初期設定は別途必要）。第1〜5章は初稿・レビュー待ち、第6章以降は未執筆。日本語TeX環境はUbuntuパッケージを明示導入する。
+- GitHub ActionsでHTML/PDFを生成・検査し、mainからPagesへ公開する（Pages初期設定は別途必要）。第1〜6章は初稿・レビュー待ち、第7章以降は未執筆。日本語TeX環境はUbuntuパッケージを明示導入する。

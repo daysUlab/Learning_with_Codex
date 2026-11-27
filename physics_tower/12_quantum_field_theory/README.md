@@ -29,3 +29,7 @@ GitHub Pages の Settings → Pages → Source を GitHub Actions に設定す�
 - 章追加時は `_quarto.yml`、`PROGRESS.md`、`scripts/check.py` の整合を確認する。
 - PRではHTML/PDFビルドを確認する。実機表示未確認の状態を完成扱いにしない。
 
+
+## iPhone・iPadで読む
+
+GitHub Pages公開後は Safari で https://daysulab.github.io/Learning_with_Codex/ を開きます。PDFの直接URLは https://daysulab.github.io/Learning_with_Codex/qft.pdf です。ZIP成果物はバックアップ・オフライン用に残します。公開はリポジトリの Pages 設定と deploy ジョブ成功を前提とします。
