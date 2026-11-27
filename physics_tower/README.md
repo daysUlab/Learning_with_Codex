@@ -136,4 +136,4 @@ flowchart TD
 - 量子力学：[07_quantum_mechanics](07_quantum_mechanics/00_overview.md)
 
 ## 場の量子論（独立書籍）
-- [高校数学から学ぶ場の量子論（5部18章・Quarto版）](12_quantum_field_theory/README.md)：古典力学からくりこみ群まで。第1〜9章初稿、以降は執筆予定。
+- [高校数学から学ぶ場の量子論（5部18章・Quarto版）](12_quantum_field_theory/README.md)：古典力学からくりこみ群まで。第1〜10章初稿、以降は執筆予定。

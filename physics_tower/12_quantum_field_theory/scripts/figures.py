@@ -531,3 +531,66 @@ ax.set(xlim=(-.5,3.5),ylim=(-1.8,1.8),xticks=range(4),xticklabels=["j=0","j=1/2"
 ax.grid(axis="y",alpha=.15)
 fig.savefig(out/"spin_multiplets.png",dpi=220)
 plt.close(fig)
+
+# 第10章：連成振動子から連続体へ
+fig,axs=plt.subplots(3,1,figsize=(5.8,4.1),layout="constrained")
+for ax,n in zip(axs,[6,16,1000]):
+    x=np.linspace(0,1,n)
+    y=.3*np.sin(2*np.pi*x)
+    ax.axhline(0,color="#94a3b8",lw=.7)
+    ax.plot(x,y,color="#2166ac",lw=1.5)
+    if n<1000:
+        ax.scatter(x,y,color="#d97706",s=35 if n==6 else 17,zorder=3)
+    ax.set(xlim=(-.03,1.03),ylim=(-.45,.45),yticks=[],xticks=[],ylabel=f"N={n}" if n<1000 else "Field")
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+fig.savefig(out/"field_chain.png",dpi=220)
+plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.6,3.1),layout="constrained")
+ka=np.linspace(0,np.pi,300)
+ax.plot(ka,2*np.sin(ka/2),color="#2166ac",label="Discrete chain")
+ax.plot(ka,ka,color="#d97706",ls="--",label="Continuum")
+ax.set(xlabel="ka",ylabel="omega a / v",xticks=[0,np.pi/2,np.pi],xticklabels=["0","π/2","π"])
+ax.legend(fontsize=8)
+ax.grid(alpha=.2)
+fig.savefig(out/"field_dispersion.png",dpi=220)
+plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.6,3.3),layout="constrained")
+x=np.linspace(0,1,300)
+for n,col in [(1,"#2166ac"),(2,"#16857c"),(3,"#d97706")]:
+    ax.plot(x,np.sin(n*np.pi*x),label=f"n={n}",color=col)
+ax.scatter([0,1],[0,0],color="#64748b",zorder=4)
+ax.axhline(0,color="#94a3b8",lw=.8)
+ax.set(xlabel="x / length",ylabel="Normalized displacement")
+ax.legend(fontsize=8)
+ax.grid(alpha=.15)
+fig.savefig(out/"field_modes.png",dpi=220)
+plt.close(fig)
+fig,axs=plt.subplots(2,1,figsize=(5.6,3.8),layout="constrained")
+x=np.linspace(0,2,400)
+rho=.02
+tension=2.
+amp=.01
+wave_k=2*np.pi
+omega=10*wave_k
+axs[0].plot(x,amp*np.cos(wave_k*x),color="#2166ac")
+axs[0].set(ylabel="u [m]")
+energy=rho*(omega*amp*np.sin(wave_k*x))**2
+axs[1].plot(x,energy,color="#d97706",label="Energy density")
+axs[1].set(xlabel="x [m]",ylabel="Energy [J/m]")
+ax2=axs[1].twinx()
+ax2.plot(x,10*energy,color="#16857c",ls="--",label="Energy flux")
+ax2.set_ylabel("Flux [W]")
+axs[1].legend(fontsize=8,loc="upper left")
+ax2.legend(fontsize=8,loc="upper right")
+fig.savefig(out/"field_energy_flux.png",dpi=220)
+plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.6,3.1),layout="constrained")
+kk=np.linspace(0,5,300)
+for mass,col in [(0,"#64748b"),(1,"#2166ac"),(2,"#16857c")]:
+    ax.plot(kk,np.sqrt(kk**2+mass**2),color=col,label=f"m={mass}")
+ax.set(xlabel="Wave number |k|",ylabel="Frequency omega (c=1)")
+ax.grid(alpha=.2)
+ax.legend(fontsize=8)
+fig.savefig(out/"field_kg_dispersion.png",dpi=220)
+plt.close(fig)

@@ -1,12 +1,393 @@
 # 連続体の運動と保存則
 
-::: {.callout-important title="執筆予定"}
-この章は独立した新しい学習設計に基づく予定章です。以下は学習項目であり、本文ではありません。
+## 粒子の座標から場へ
+
+これまでの力学では、粒子の位置や振動子の変位を有限個の座標で表しました。弦の振動では、弦のどの場所がどれだけ変位しているかを指定する必要があります。変位を時刻と位置の関数として表すと、自由度が連続的に分布する場になります。
+
+この章では、身近な弦の振動から場の作用と運動方程式を導き、相対論的なスカラー場へ進みます。まだ量子化は行いません。
+
+## 連成振動子の鎖
+
+間隔 a で並べた質点をばねでつなぎます。各質点の横方向変位を q_j(t)、質量を m、隣接質点間のばね定数を K とします。小振幅近似のもとで、鎖のラグランジアンを
+
+$$
+L=\sum_j\left[
+\frac m2\dot q_j^2
+-\frac K2(q_{j+1}-q_j)^2
+\right]
+$$
+
+とします。境界については、例えば周期的に端同士をつなぐと考えます。
+
+第1章の Euler–Lagrange 方程式を各 q_j に適用すると、左と右のばねが力を加えるため、
+
+$$
+m\ddot q_j=K(q_{j+1}-2q_j+q_{j-1})
+$$ {#eq-chain-motion}
+
+になります。
+
+![離散的な振動子の鎖と、間隔を小さくした連続的な変位。](../figures/field_chain.png){#fig-field-chain}
+
+### 波の形を代入してみる
+
+複素指数関数を使って q_j=A exp[i(kja−ωt)] と仮定します。実際の変位には実部を取ります。@eq-chain-motion に代入すると、
+
+$$
+-m\omega^2=K(e^{ika}-2+e^{-ika})
+$$
+
+$$
+\omega^2=\frac{4K}{m}\sin^2\frac{ka}{2}
+$$ {#eq-chain-dispersion}
+
+です。波数 k と角振動数 ω の関係を分散関係と呼びます。
+
+::: {.callout-note title="数値例：質点の鎖"}
+m=0.1 kg、K=10 N/m、a=0.2 m とします。波長 λ=2π/k が0.8 mなら ka=π/2 です。角振動数は √200≈14.14 rad/s、振動数は約2.25 Hz になります。
+
+同じ模型で波長を長くすると、ω は k にほぼ比例するようになります。
 :::
 
-## 学習項目
+## 連続極限を取る
 
-- 連成振動子から連続極限へ
-- 場の作用・Euler–Lagrange方程式
-- 波動方程式とFourierモード
-- Noether電流・エネルギー運動量
+弦の長さを一定にして質点の間隔 a を小さくします。このとき m と K を固定したままではなく、単位長さあたりの質量密度 ρ と張力 T を固定するように、
+
+$$
+m=\rho a,\qquad K=\frac{T}{a}
+$$
+
+と選びます。変位を滑らかな関数 u(t,x) で近似して q_j(t)=u(t,ja) と置きます。Taylor 展開により、
+
+$$
+\begin{aligned}
+u(x+a)&=u(x)+au_x+\frac{a^2}{2}u_{xx}
++\cdots\\
+u(x-a)&=u(x)-au_x+\frac{a^2}{2}u_{xx}
++\cdots
+\end{aligned}
+$$
+
+です。和を取ると一次微分が消え、
+
+$$
+\frac{q_{j+1}-2q_j+q_{j-1}}{a^2}
+\longrightarrow \partial_x^2u
+$$
+
+となります。十分滑らかな場について間隔を0へ近づけると、
+
+$$
+\rho\,\partial_t^2u=T\,\partial_x^2u
+$$ {#eq-string-wave}
+
+を得ます。これは波動方程式です。波の速さを v=√(T/ρ) と置けます。
+
+分散関係 @eq-chain-dispersion に m=ρa、K=T/a を代入すると、長波長の極限では ω≈v|k| になります。格子間隔に比べて波長が十分長いという条件が重要です。
+
+![格子上の分散関係と連続極限の直線。横軸を格子間隔で無次元化して比較。](../figures/field_dispersion.png){#fig-field-dispersion}
+
+## 場のラグランジアン密度
+
+離散系の和を Riemann 和と考えると、ラグランジアンの連続極限は
+
+$$
+L(t)=\int dx\,\mathcal L(u,\partial_tu,\partial_xu)
+$$
+
+$$
+\mathcal L=\frac{\rho}{2}(\partial_tu)^2
+-\frac T2(\partial_xu)^2
+$$
+
+です。積分される量をラグランジアン密度と呼びます。弦の例ではエネルギーを長さで割った次元を持ちます。作用は時間と空間の両方で積分した
+
+$$
+S[u]=\int_{t_1}^{t_2}dt\int_{x_1}^{x_2}dx\,
+\mathcal L
+$$
+
+です。場 u の値を各時空点で少し変えて、作用の一次変化が消える条件を求めます。
+
+## 場の変分と運動方程式
+
+u を u+εδu に変え、ε の一次の係数を取ります。
+
+$$
+\delta S=\int dt\,dx\left[
+\frac{\partial\mathcal L}{\partial u}\delta u+
+\frac{\partial\mathcal L}{\partial u_t}\partial_t\delta u+
+\frac{\partial\mathcal L}{\partial u_x}\partial_x\delta u
+\right]
+$$
+
+ここで u_t は時間微分、u_x は空間微分です。時間と空間についてそれぞれ部分積分します。変分が積分領域の境界で0であると仮定すれば、境界項が消えます。
+
+$$
+\delta S=\int dt\,dx\left[
+\frac{\partial\mathcal L}{\partial u}
+-\partial_t\frac{\partial\mathcal L}{\partial u_t}
+-\partial_x\frac{\partial\mathcal L}{\partial u_x}
+\right]\delta u
+$$
+
+任意の変分 δu についてこれが0となる条件は、
+
+$$
+\frac{\partial\mathcal L}{\partial u}
+-\partial_t\frac{\partial\mathcal L}{\partial u_t}
+-\partial_x\frac{\partial\mathcal L}{\partial u_x}=0
+$$ {#eq-field-el}
+
+です。弦のラグランジアン密度を代入すると、@eq-string-wave が再び得られます。第1章の変分原理が連続的な自由度へ拡張されました。境界を固定しない問題では境界項から別途境界条件を求める必要があります。
+
+## Fourierモードと定在波
+
+長さ l の弦の両端を固定すると、
+
+$$
+u(t,0)=u(t,l)=0
+$$
+
+です。空間的な形を sin(nπx/l) と置けば境界条件を満たします。波動方程式から角振動数は
+
+$$
+\omega_n=\frac{n\pi v}{l},\qquad n=1,2,\ldots
+$$
+
+となります。任意の適切な初期変位・速度を Fourier 正弦級数で展開することで、
+
+$$
+u(t,x)=\sum_{n=1}^\infty
+Q_n(t)\sqrt{\frac2l}\sin\frac{n\pi x}{l}
+$$
+
+と表せます。各モードは独立に
+
+$$
+\ddot Q_n+\omega_n^2Q_n=0
+$$
+
+を満たします。直交性を使って作用に代入すれば、
+
+$$
+L=\sum_n\frac{\rho}{2}
+(\dot Q_n^2-\omega_n^2Q_n^2)
+$$
+
+になります。連続的な場を独立な調和振動子の集まりに書き直せました。ここが第12章での自由場の量子化の重要な準備です。
+
+::: {.callout-note title="数値例：長さ1 mの弦"}
+ρ=0.02 kg/m、T=2 N なら波の速さは10 m/sです。基本振動数は v/(2l)=5 Hz、第2、第3モードは10 Hz、15 Hzです。
+
+二つ以上のモードが含まれていても、線形な波動方程式ではそれぞれの時間発展を足し合わせられます。
+:::
+
+![固定端の弦の第1〜3モード。縦軸は各モードの変位を規格化した値。](../figures/field_modes.png){#fig-field-modes}
+
+## 共役運動量とエネルギー密度
+
+第1章の Hamilton 形式と同様に、場の共役運動量密度を
+
+$$
+\pi(t,x)=\frac{\partial\mathcal L}
+{\partial(\partial_tu)}
+$$
+
+と定義します。弦では π=ρu_t です。ルジャンドル変換により Hamiltonian 密度は
+
+$$
+\mathcal H=\pi u_t-\mathcal L
+=\frac{\pi^2}{2\rho}+\frac T2u_x^2
+$$ {#eq-field-hamiltonian}
+
+です。積分 H=∫dx H密度 が系の全エネルギーになります。
+
+局所的なエネルギー密度 e とその流束 j_E を
+
+$$
+e=\frac{\rho}{2}u_t^2+\frac T2u_x^2,
+\qquad j_E=-Tu_tu_x
+$$
+
+と定義します。時間微分と空間微分を計算すると、
+
+$$
+\begin{aligned}
+\partial_t e+\partial_xj_E
+&=u_t(\rho u_{tt}-Tu_{xx})\\
+&=0
+\end{aligned}
+$$ {#eq-field-energy-continuity}
+
+です。第7章の確率保存と同じ形の連続の式が現れました。区間全体で積分すれば、
+
+$$
+\frac{d}{dt}\int_{x_1}^{x_2}e\,dx
+=j_E(x_1)-j_E(x_2)
+$$
+
+になります。エネルギーがその場所で消えるのではなく、境界を通って出入りするという意味です。
+
+::: {.callout-note title="数値例：右向きの進行波"}
+ρ=0.02 kg/m、T=2 N、振幅 A=0.01 m、波長 λ=1 m の波を考えます。v=10 m/s、ω=20π rad/s です。
+
+u=A cos(kx−ωt) とすると、u_t=ωA sin(kx−ωt)、u_x=−kA sin(kx−ωt) なので、エネルギー流束は正です。時間平均は TωkA²/2≈0.0395 W となります。エネルギー密度の時間平均は約0.00395 J/m で、これに波の速さ10 m/sを掛けた値と一致します。
+:::
+
+![右向き進行波と、その局所エネルギー密度・エネルギー流束。](../figures/field_energy_flux.png){#fig-field-energy-flux}
+
+## 相対論的な実スカラー場
+
+ここから第6章の自然単位系 c=ℏ=1、計量 (+,−,−,−) を使います。相対論的なスカラー場 φ(x) は座標をローレンツ変換したとき、同じ時空点での値が変わらない場です。
+
+$$
+\phi'(x')=\phi(x)
+$$
+
+上付き微分を計量で定義すると、ラグランジアン密度を
+
+$$
+\mathcal L=
+\frac12\partial_\mu\phi\,\partial^\mu\phi
+-\frac12m^2\phi^2
+$$ {#eq-kg-lagrangian}
+
+と書けます。最初の項は時間微分の二乗から空間勾配の二乗を引いたものです。m は非負の質量パラメータです。
+
+作用は S=∫d⁴x L密度 です。Lorentz変換は微分の縮約と四次元体積要素を保つので、この作用は不変になります。
+
+場の Euler–Lagrange 方程式は
+
+$$
+\frac{\partial\mathcal L}{\partial\phi}
+-\partial_\mu
+\frac{\partial\mathcal L}{\partial(\partial_\mu\phi)}
+=0
+$$
+
+です。@eq-kg-lagrangian を代入して、
+
+$$
+(\partial_t^2-\nabla^2+m^2)\phi=0
+$$ {#eq-klein-gordon-classical}
+
+を得ます。これを Klein–Gordon 方程式と呼びます。実スカラー場はまだ古典的な波の変数であり、この式だけで量子状態や確率を定義したわけではありません。
+
+平面波 exp(−iωt+ik·x) を代入すると
+
+$$
+\omega^2=|\boldsymbol k|^2+m^2
+$$
+
+になります。自由場の Fourier モードが持つ振動数は、第6章の相対論的エネルギー・運動量関係と同じ形です。
+
+![質量を持つ場と質量ゼロの場の分散関係。](../figures/field_kg_dispersion.png){#fig-field-kg-dispersion}
+
+位相速度は ω/|k|、群速度は dω/d|k|=|k|/ω です。質量がある場合、位相速度は1を超えますが、群速度は1未満です。位相の移動速度を信号の伝播速度と同一視しないことが大切です。
+
+例えば m=2、|k|=3 なら ω=√13≈3.606、群速度は約0.832です。質量ゼロの極限では非零波数について ω=|k| になります。
+
+## Noether電流：対称性を保存則に変える
+
+場の変換 φ→φ+εδφ に対し、ラグランジアン密度の変化が全微分 ∂_μ B^μ であるとします。ε は定数の微小パラメータで、その一次の係数を考えます。
+
+Euler–Lagrange 方程式を満たす場について変分を整理すると、
+
+$$
+\delta\mathcal L=
+\partial_\mu\left[
+\frac{\partial\mathcal L}
+{\partial(\partial_\mu\phi)}\delta\phi
+\right]
+$$
+
+なので、
+
+$$
+j^\mu=
+\frac{\partial\mathcal L}
+{\partial(\partial_\mu\phi)}\delta\phi-B^\mu,
+\qquad \partial_\mu j^\mu=0
+$$ {#eq-noether-current}
+
+です。これが場に対する Noether の定理です。複数の場があれば各場についての寄与を足します。
+
+時間成分を空間で積分した Q=∫d³x j⁰ は、境界からの流束が0なら保存します。局所保存則と全体での保存則を区別してください。
+
+### 時空並進とエネルギー運動量
+
+座標に陽に依存しないラグランジアン密度では、場を一定量だけ平行移動しても作用は不変です。変分 δφ=ε^ν∂_νφ を用いると、各 ν についての保存電流をまとめた正準エネルギー運動量テンソルが得られます。
+
+$$
+T^\mu{}_\nu=
+\frac{\partial\mathcal L}
+{\partial(\partial_\mu\phi)}\partial_\nu\phi
+-\delta^\mu{}_\nu\mathcal L
+$$
+
+$$
+\partial_\mu T^\mu{}_\nu=0
+$$ {#eq-field-stress-energy}
+
+です。実スカラー場の場合は
+
+$$
+T^{\mu\nu}=
+\partial^\mu\phi\,\partial^\nu\phi
+-\eta^{\mu\nu}\mathcal L
+$$
+
+となり、時間成分は
+
+$$
+T^{00}=\frac12(\partial_t\phi)^2+
+\frac12|\nabla\phi|^2+\frac12m^2\phi^2
+$$
+
+です。共役運動量 π=∂_tφ による Hamiltonian 密度と一致します。空間成分 T^{0i} を積分すると全運動量 P^i が得られます。
+
+### 内部対称性の例：複素場の位相
+
+二つの実場をまとめて複素場 ψ とし、
+
+$$
+\mathcal L=
+\partial_\mu\psi^*\partial^\mu\psi
+-m^2\psi^*\psi
+$$
+
+とします。ψ→exp(−iα)ψ、ψ*→exp(iα)ψ* という一定の位相変換はラグランジアン密度を保ちます。二つの場を独立に変分して得られる電流は
+
+$$
+j^\mu=i(\psi^*\partial^\mu\psi
+-\psi\partial^\mu\psi^*)
+$$
+
+です。位相変換の符号規約を逆にすると電流の符号も逆になります。運動方程式を使って発散が0になることを直接確かめられます。第17章ではこの対称性を局所化し、電磁場との相互作用を考えます。
+
+## 演習
+
+1. 質点鎖の運動方程式をラグランジアンから導いてください。
+2. ρ=0.04 kg/m、T=4 N の弦の波の速さを求めてください。
+3. 長さ2 m、波の速さ12 m/s の固定端の弦の第3モードの振動数を求めてください。
+4. u=A cos(kx−ωt) が波動方程式を満たす条件を求めてください。
+5. エネルギーの連続の式を区間で積分して、固定端で全エネルギーが保存することを示してください。
+6. 相対論的な実スカラー場で m=3、|k|=4 の角振動数と群速度を求めてください。
+7. 実スカラー場の Hamiltonian 密度が非負であることを確認してください。
+8. 複素場 ψ=A exp(−iωt)（A は実定数）について位相対称性の電流の時間成分を求めてください。
+
+::: {.callout-tip collapse="true" title="解答・検算"}
+1. q_j を含む二つの隣接ばねの項を微分すると K(q_{j+1}−2q_j+q_{j−1})、運動項から m q̈_j を得る。
+2. √(4/0.04)=10 m/s。
+3. 3×12/(2×2)=9 Hz。
+4. ω²=v²k²。
+5. 固定端では u_t=0 なので両端のエネルギー流束が0となる。
+6. ω=5、群速度4/5。
+7. 運動項・勾配項・質量項の二乗の和であり、実場と m²≥0 のもと非負。
+8. j⁰=2ωA²。位相変換の符号規約は本文に従う。
+:::
+
+## 次章へ
+
+有限個の振動子から連続的な場を導き、作用、運動方程式、保存電流を求めました。次章では時空の対称性が量子状態の分類をどう制約するかを学びます。その後、自由スカラー場の各モードを調和振動子として量子化します。

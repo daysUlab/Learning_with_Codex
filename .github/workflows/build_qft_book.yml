@@ -92,37 +92,3 @@ jobs:
           else
             gh release create "$tag" book/qft.pdf --target "$GITHUB_SHA" --prerelease --latest=false --title "場の量子論 初稿 $tag" --notes "原稿コミット: $GITHUB_SHA。未完成の初稿。最新版HTML/PDF: https://daysulab.github.io/Learning_with_Codex/"
           fi
-
-  cleanup-legacy-qft:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: deploy
-    runs-on: ubuntu-24.04
-    permissions:
-      actions: write
-    steps:
-      - name: 旧版の教科書ビルド成果物と実行履歴のみ削除
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          # 旧版QFTの確認済み実行IDのみ。新しい実行・他ワークフローには触れない。
-          for id in 46020137739 46020200872 46021137113 46021191272 46021519437 46021873254 46022235451 46022642008 46023629944 46023881894 46024729223 46025372762 46025424106 46025473052 46025518949 46025590931 46026267761; do
-            if ! meta=$(gh api "repos/$GH_REPO/actions/runs/$id" 2>&1); then
-              if [[ "$meta" == *"HTTP 404"* ]]; then
-                echo "Already absent: $id"
-                continue
-              fi
-              echo "$meta" >&2
-              exit 1
-            fi
-            [[ "$(jq -r .path <<< "$meta")" == ".github/workflows/build_qft_book.yml" ]] || exit 1
-            [[ "$id" != "$GITHUB_RUN_ID" ]] || exit 1
-            [[ "$(jq -r .status <<< "$meta")" == "completed" ]] || { echo "Old run not complete: $id" >&2; exit 1; }
-            gh api --paginate "repos/$GH_REPO/actions/runs/$id/artifacts" --jq '.artifacts[].id' | while read -r aid; do
-              gh api -X DELETE "repos/$GH_REPO/actions/artifacts/$aid"
-            done
-            gh api -X DELETE "repos/$GH_REPO/actions/runs/$id"
-            echo "Deleted legacy QFT run: $id"
-          done
