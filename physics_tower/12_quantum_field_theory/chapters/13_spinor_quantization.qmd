@@ -1,12 +1,415 @@
 # スピノルとフェルミ粒子
 
-::: {.callout-important title="執筆予定"}
-この章は独立した新しい学習設計に基づく予定章です。以下は学習項目であり、本文ではありません。
+## スピン1/2の場を作る
+
+前章の実スカラー場はスピン0の粒子を記述しました。電子のようなスピン1/2の粒子を記述するには、第9章のスピノルを時空の各点に割り当てる必要があります。
+
+この章では、自然単位系 c=ℏ=1、計量 $\eta=\operatorname{diag}(1,-1,-1,-1)$ を使い、質量 m>0 の自由Dirac場を構成します。まず古典的な波動方程式を考え、次に場の量子化へ進みます。
+
+## エネルギーを一次の微分で表す
+
+相対論的な質量殻は
+
+$$
+E^2=\boldsymbol p^2+m^2
+$$
+
+です。Klein–Gordon方程式は時間について二階ですが、量子力学の Schrödinger 方程式のような一階の時間発展を持つ線形な方程式を探してみます。空間微分についても一階とする仮定のもとで、
+
+$$
+i\partial_t\psi=H_D\psi,\qquad
+H_D=-i\boldsymbol\alpha\cdot\nabla+\beta m
+$$ {#eq-dirac-hamiltonian}
+ 
+と置きます。$\alpha_i,\beta$ は定数行列です。平面波では $H_D=\boldsymbol\alpha\cdot\boldsymbol p+\beta m$ です。その二乗が $(\boldsymbol p^2+m^2)I$ になる条件を求めると、
+
+$$
+\{\alpha_i,\alpha_j\}=2\delta_{ij}I,\qquad
+\{\alpha_i,\beta\}=0,\qquad \beta^2=I
+$$
+
+を得ます。ここで反交換子は
+
+$$
+\{A,B\}=AB+BA
+$$
+
+です。交換子とは異なり、順序を交換した積を足します。
+
+Pauli行列は三つの互いに反交換する行列を与えますが、二次元複素行列のままでは第四の非零行列を追加できません。三つのPauli行列すべてと反交換する二次元行列は零行列だからです。四次元の表現なら、
+
+$$
+\alpha_i=
+\begin{pmatrix}
+0&\sigma_i\\
+\sigma_i&0
+\end{pmatrix},\qquad
+\beta=
+\begin{pmatrix}
+I_2&0\\
+0&-I_2
+\end{pmatrix}
+$$
+
+と取れます。各ブロックは二次元行列です。第9章のPauli行列の積から上の反交換関係を確認できます。
+
+## ガンマ行列と共変な方程式
+
+$\gamma^0=\beta$、$\gamma^i=\beta\alpha_i$ と定義します。すると
+
+$$
+\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}I_4
+$$ {#eq-clifford}
+
+を満たします。この関係をClifford代数と呼びます。@eq-dirac-hamiltonian の左から $\gamma^0$ を掛ければ、
+
+$$
+(i\gamma^\mu\partial_\mu-m)\psi=0
+$$ {#eq-dirac-equation}
+
+となります。これがDirac方程式です。$\gamma^\mu\partial_\mu$ を $\not\!\partial$ と省略する記法も使います。
+
+左右の微分は交換するため、反交換関係 @eq-clifford によって対称な部分だけが残ります。すなわち、
+
+$$
+(i\gamma^\mu\partial_\mu+m)
+(i\gamma^\nu\partial_\nu-m)
+=-(\Box+m^2)I_4
+$$
+
+です。Dirac方程式の各成分はKlein–Gordon方程式を満たします。しかし逆に、四つの任意のKlein–Gordon解を並べただけではDirac方程式を満たすとは限りません。一階の方程式が成分間の関係を制約します。
+
+## 平面波解と正・負の周波数
+
+正周波数の解を $\psi(x)=u_s(p)e^{-ip\cdot x}$ とすると、
+
+$$
+(\not p-m)u_s(p)=0,\qquad
+\not p=\gamma^\mu p_\mu
+$$
+
+となります。負周波数の解 $\psi(x)=v_s(p)e^{ip\cdot x}$ は
+
+$$
+(\not p+m)v_s(p)=0
+$$
+
+を満たします。どちらもここでは $p^0=E_{\boldsymbol p}>0$ としています。
+
+静止系では $H_D=m\beta$ なので、固有値は +m と −m がそれぞれ二つあります。二成分の正規直交基底を $\chi_s$ とすると、一般の運動量に対する一つの規約は
+
+$$
+u_s(p)=\sqrt{E+m}
+\begin{pmatrix}
+\chi_s\\
+\frac{\boldsymbol\sigma\cdot\boldsymbol p}{E+m}\chi_s
+\end{pmatrix}
+$$
+
+$$
+v_s(p)=\sqrt{E+m}
+\begin{pmatrix}
+\frac{\boldsymbol\sigma\cdot\boldsymbol p}{E+m}\chi_s\\
+\chi_s
+\end{pmatrix}
+$$
+
+です。反粒子のスピン基底の選び方には規約の自由があります。
+
+![自由Dirac Hamiltonianの正・負のエネルギー枝。各運動量で二重に縮退する。](../figures/dirac_branches.png){#fig-dirac-branches}
+
+::: {.callout-note title="数値例：z方向へ運動するスピノル"}
+m=2、$p_z=3$、$p_x=p_y=0$ とします。E=√13≈3.606 です。上向きの二成分基底を選ぶと、u の成分は第1成分と第3成分だけが非零になります。下側成分と上側成分の比は 3/(√13+2)≈0.535 です。
+
+全成分の二乗和で割った下側成分の割合は $(E-m)/(2E)\simeq0.223$ です。これは反粒子が22.3%混ざっているという意味ではありません。正周波数の一粒子モードの内部成分比です。
 :::
 
-## 学習項目
+![運動量の増加とともに正エネルギースピノルの下側成分の割合が増える。](../figures/dirac_components.png){#fig-dirac-components}
 
-- Dirac方程式とガンマ行列
-- 粒子・反粒子のモード
-- 反交換関係とHamiltonian
-- Grassmann変数とフェルミオン積分
+## ローレンツ変換とDirac共役
+
+スピノル場の変換を
+
+$$
+\psi'(x')=S(\Lambda)\psi(x),\qquad x'=\Lambda x
+$$
+
+と書きます。Dirac方程式が同じ形を保つには
+
+$$
+S(\Lambda)^{-1}\gamma^\mu S(\Lambda)
+=\Lambda^\mu{}_\nu\gamma^\nu
+$$
+
+が必要です。回転では第9章のSU(2)が現れ、boostでは一般にSはユニタリではありません。例えばz軸方向の能動boostをラピディティ ξ で表すと、上の規約で $S=\exp(\xi\alpha_z/2)$ です。
+
+スピノルのDirac共役を
+
+$$
+\bar\psi=\psi^\dagger\gamma^0
+$$
+
+と定義します。$\bar\psi$ は $\bar\psi'=\bar\psi S^{-1}$ と変換するので、$\bar\psi\psi$ はローレンツスカラーです。一方、$\bar\psi\gamma^\mu\psi$ は四元ベクトルになります。
+
+例えば先ほどの正エネルギースピノルについて、
+
+$$
+u_s^\dagger(p)u_r(p)=2E\delta_{sr},
+\qquad
+\bar u_s(p)u_r(p)=2m\delta_{sr}
+$$
+
+です。負周波数のスピノルでは $v_s^\dagger v_r=2E\delta_{sr}$、$\bar v_s v_r=-2m\delta_{sr}$ です。Dirac共役による積は正定値の確率ノルムではない点に注意します。
+
+## 作用と保存電流
+
+自由Dirac場のラグランジアン密度を
+
+$$
+\mathcal L_D=\bar\psi(i\gamma^\mu\partial_\mu-m)\psi
+$$
+
+と定めます。$\psi$ と $\bar\psi$ を独立に変分するとDirac方程式とその共役方程式が得られます。共役方程式は
+
+$$
+i(\partial_\mu\bar\psi)\gamma^\mu+m\bar\psi=0
+$$
+
+です。作用の境界項を無視できる条件では、微分項を左右対称な形に書いても同じ運動方程式になります。
+
+一定の位相変換 $\psi\to e^{-i\theta}\psi$ は作用を不変にします。第10章のNoetherの定理から、
+
+$$
+j^\mu=\bar\psi\gamma^\mu\psi,\qquad
+\partial_\mu j^\mu=0
+$$
+
+を得ます。時間成分は $j^0=\psi^\dagger\psi$ です。古典的な複素数値のDirac波動関数については非負です。量子化した場の正規順序された電荷密度では、粒子と反粒子が反対符号で寄与します。
+
+## 場を量子化する：なぜ反交換関係か
+
+第12章と同様、モードごとに生成消滅演算子を導入します。ただしDirac場では交換子ではなく反交換子を使います。
+
+まず有限の周期箱で考えます。モード展開は
+
+$$
+\begin{aligned}
+\psi(x)=\frac1{\sqrt V}\sum_{\boldsymbol p,s}
+\frac1{\sqrt{2E_{\boldsymbol p}}}\big[
+&b_{\boldsymbol p,s}u_s(p)e^{-ip\cdot x}\\
++&d^\dagger_{\boldsymbol p,s}v_s(p)e^{ip\cdot x}
+\big]
+\end{aligned}
+$$ {#eq-dirac-mode}
+
+です。b は粒子の消滅演算子、d は反粒子の消滅演算子です。負周波数の項には反粒子の生成演算子を割り当てます。
+
+正準反交換関係は
+
+$$
+\{b_{\boldsymbol p,s},b^\dagger_{\boldsymbol q,r}\}
+=\{d_{\boldsymbol p,s},d^\dagger_{\boldsymbol q,r}\}
+=\delta_{\boldsymbol p\boldsymbol q}\delta_{sr}
+$$
+
+で、それ以外の二演算子の反交換子は0です。場の成分については同時刻に
+
+$$
+\{\psi_a(t,\boldsymbol x),
+\psi_b^\dagger(t,\boldsymbol y)\}
+=\delta_{ab}\delta^{(3)}(\boldsymbol x-\boldsymbol y)
+$$
+
+となります。箱では周期的デルタ関数、カットオフがあれば射影核です。
+
+反交換関係から同一モードの生成演算子の二乗は0になります。
+
+$$
+(b^\dagger)^2=0
+$$
+
+したがって粒子数固有値は0または1です。排他原理はこの代数に直接組み込まれます。ただし、運動量が同じでもスピンが異なるなら別モードです。
+
+![ボース粒子とフェルミ粒子の単一モードの占有数。フェルミ粒子では0または1に限られる。](../figures/dirac_occupation.png){#fig-dirac-occupation}
+
+### エネルギーの正値性
+
+古典的なDirac Hamiltonianをモード展開に代入すると、正周波数の寄与と負周波数の寄与は概略として
+
+$$
+H=\sum_{\boldsymbol p,s}E_{\boldsymbol p}
+(b^\dagger b-dd^\dagger)
+$$
+
+になります。各項の添字は省略しています。反交換関係を使えば $dd^\dagger=1-d^\dagger d$ です。よって
+
+$$
+H=\sum_{\boldsymbol p,s}E_{\boldsymbol p}
+(b^\dagger b+d^\dagger d-1)
+$$
+
+となります。真空エネルギーを差し引いた自由Hamiltonianは
+
+$$
+:H:=\sum_{\boldsymbol p,s}E_{\boldsymbol p}
+(b^\dagger b+d^\dagger d)
+$$ {#eq-dirac-energy}
+
+です。粒子と反粒子はいずれも正のエネルギーを持ちます。
+
+もし同じ負周波数モードに通常の正ノルムのボース交換関係を使うと、$dd^\dagger=1+d^\dagger d$ となり、反粒子の励起を増やしてエネルギーを際限なく下げられます。この問題は真空エネルギーを引くだけでは解決しません。
+
+これは自由Dirac場で反交換関係が必要になる事情の一例です。一般のスピン統計定理そのものの証明ではありません。相対論的局所性、正エネルギー、正定値の状態空間などの仮定のもとで、半整数スピンとフェルミ統計の関係が成立します。
+
+## 粒子と反粒子の電荷
+
+Noether電荷を正規順序にすると、単位の粒子電荷を q として、
+
+$$
+Q=q\sum_{\boldsymbol p,s}(b^\dagger b-d^\dagger d)
+$$
+
+となります。自由Dirac場の粒子と反粒子は反対の電荷を持ちます。電子の電荷を −e とすれば、陽電子の電荷は +e です。
+
+![電子と陽電子の励起はいずれも正エネルギーを持つが、電荷は逆符号である。](../figures/dirac_particle_charge.png){#fig-dirac-particle-charge}
+
+::: {.callout-note title="数値例：電子1個と陽電子1個"}
+質量0.511 MeVの電子と陽電子が、自由な模型で静止していると考えます。真空に対する全エネルギーは1.022 MeV、全電荷は0、全運動量は0です。電荷が打ち消されてもエネルギーは打ち消されません。相互作用による束縛エネルギーはこの例では無視しています。
+:::
+
+## スピン和とDirac伝播関数
+
+先ほどの規格化では、スピン和は
+
+$$
+\sum_s u_s(p)\bar u_s(p)=\not p+m
+$$
+
+$$
+\sum_s v_s(p)\bar v_s(p)=\not p-m
+$$
+
+です。例えば静止系の正エネルギー側では、左辺は上側の二成分に2m、下側に0を持つ行列になり、右辺 $m(\gamma^0+I)$ と一致します。一般の運動量の式はこの結果をboostすることで得られます。
+
+フェルミオンの時間順序積は、時刻を入れ替える際に演算子の順序も入れ替わるので符号を伴います。
+
+$$
+S_F(x-y)=
+\langle0|T\{\psi(x)\bar\psi(y)\}|0\rangle
+$$
+
+ここで x の時刻が y より前の場合は $-\bar\psi(y)\psi(x)$ の順序を、対応する成分の添字を保って取ります。場のモード展開とスピン和を使うと、
+
+$$
+S_F(x-y)=\int\frac{d^4p}{(2\pi)^4}
+\frac{i(\not p+m)}{p^2-m^2+i0}e^{-ip\cdot(x-y)}
+$$ {#eq-dirac-propagator}
+
+です。Dirac演算子を作用させると、
+
+$$
+(i\not\!\partial-m)S_F(x)=i\delta^{(4)}(x)I_4
+$$
+
+となります。第12章のスカラー伝播関数と分母は同じですが、分子にスピノル構造があります。
+
+局所性については、自由Dirac場の場同士の適切な反交換子が空間的間隔で0になります。観測量として使う偶数個のフェルミ場から作られた局所演算子は、空間的に離れた領域で交換します。
+
+## Grassmann変数：反交換する数
+
+経路積分でフェルミ場を扱うには、通常の実数・複素数とは異なる変数を使います。二つのGrassmann変数を θ₁、θ₂ とすると、
+
+$$
+\theta_1\theta_2=-\theta_2\theta_1,\qquad
+\theta_1^2=\theta_2^2=0
+$$
+
+です。例えば一変数の関数は
+
+$$
+f(\theta)=a+b\theta
+$$
+
+で打ち切られます。Grassmann変数は生成消滅演算子そのものではなく、反交換する形式的な積分変数です。
+
+Berezin積分を
+
+$$
+\int d\theta\,1=0,\qquad
+\int d\theta\,\theta=1
+$$
+
+と定義します。普通の実数の積分と異なり、Grassmann変数の最高次数の係数を取り出す代数的な操作です。
+
+独立な二変数 $\bar\theta,\theta$ の積分について、ここでは
+
+$$
+\int d\bar\theta\,d\theta\,\theta\bar\theta=1
+$$
+
+という順序規約を採用します。すると数 a に対して、
+
+$$
+e^{-\bar\theta a\theta}=1+a\theta\bar\theta
+$$
+
+なので、
+
+$$
+\int d\bar\theta\,d\theta\,
+e^{-\bar\theta a\theta}=a
+$$
+
+になります。積分順序や被積分関数の順序を変えると符号が変わる点に注意してください。
+
+多変数では適切に揃えた積分順序を用いると、
+
+$$
+\int\prod_{i=1}^n(d\bar\theta_i\,d\theta_i)
+\exp(-\bar\theta_i A_{ij}\theta_j)=\det A
+$$ {#eq-grassmann-gaussian}
+
+を得ます。繰り返し添字 i,j は和を取ります。指数を展開し、各変数が一回ずつ現れる項を集めると、反交換による符号付きの置換の和、すなわち行列式になります。
+
+一方、正定値の実対称行列Aに対する通常の実Gaussian積分は、
+
+$$
+\int d^nx\,e^{-x^{\mathsf T}Ax/2}
+=\frac{(2\pi)^{n/2}}{\sqrt{\det A}}
+$$
+
+です。実ボース場とフェルミ場のGaussian積分が行列式の異なる冪を生むことは、量子補正を計算する際に重要になります。
+
+![通常の実Gaussian積分とGrassmann Gaussian積分のスケーリングの違い。一変数模型で比較。](../figures/grassmann_gaussian.png){#fig-grassmann-gaussian}
+
+::: {.callout-note title="数値例：二変数のGrassmann積分"}
+行列 A=((2,1),(1,3)) の行列式は 2×3−1=5 です。上の規約でGrassmann Gaussian積分は5になります。同じ行列を通常の二次元実Gaussian積分に使うと 2π/√5≈2.810 です。
+:::
+
+## 演習
+
+1. Pauli行列を使って $\alpha_x\beta+\beta\alpha_x=0$ を確かめてください。
+2. Dirac Hamiltonianの二乗が $(\boldsymbol p^2+m^2)I$ になる理由を説明してください。
+3. m=3、$p_z=4$ の正エネルギースピノルについて、下側成分と上側成分の比を求めてください。
+4. 同じ粒子モードの生成演算子を二回作用させると0になることを示してください。
+5. 電子2個、陽電子1個の全電荷を求めてください。
+6. 静止系の正エネルギースピノルのスピン和を求めてください。
+7. Grassmann変数について $(\theta_1+\theta_2)^2$ を求めてください。
+8. A=diag(2,5) の二変数Grassmann Gaussian積分を求めてください。
+9. 質量mの粒子・反粒子をそれぞれ一つずつ生成した静止状態の真空からのエネルギー差はいくらですか。
+
+::: {.callout-tip collapse="true" title="解答・検算"}
+1. $\alpha_x\beta$ と $\beta\alpha_x$ の非対角ブロックの符号が反対になる。
+2. 反交換関係により異なる成分間の交差項と質量との交差項が消え、対角項だけが残る。
+3. E=5、比は4/(5+3)=1/2（z方向上向き基底）。
+4. $\{b^\dagger,b^\dagger\}=2(b^\dagger)^2=0$。
+5. −e。
+6. $m(\gamma^0+I)$。上側二成分に2m、下側に0。
+7. 各二乗が0で交差項も相殺するので0。
+8. det A=10。
+9. 2m。
+:::
+
+## 次章へ
+
+スピン1/2の自由場を量子化し、反粒子、排他原理、Dirac伝播関数を得ました。次章では時空ベクトルの場を考えます。四成分の場から質量を持つスピン1の三状態、質量ゼロの光子の二状態がどのように取り出されるかを、拘束条件とゲージ対称性から理解します。
