@@ -6,7 +6,7 @@ project:
 lang: ja
 book:
   title: "高校数学から学ぶ場の量子論"
-  subtitle: "古典力学からくりこみ群まで"
+  subtitle: "運動・対称性・相関関数から物理予測へ"
   author: "Learning with Codex"
   output-file: qft
   search: true
@@ -14,27 +14,34 @@ book:
   downloads: [pdf]
   chapters:
     - index.qmd
-    - chapters/01_classical_mechanics.qmd
-    - chapters/02_linear_algebra.qmd
-    - chapters/03_quantum_mechanics.qmd
-    - chapters/04_path_integral.qmd
-    - chapters/05_many_particles.qmd
-    - chapters/06_relativity.qmd
-    - chapters/07_scattering.qmd
-    - chapters/08_groups.qmd
-    - chapters/09_lie_groups.qmd
-    - chapters/10_relativistic_particles.qmd
-    - chapters/11_free_fields.qmd
-    - chapters/12_scalar_fields.qmd
-    - chapters/13_massive_vector.qmd
-    - chapters/14_gauge_fields.qmd
-    - chapters/15_dirac_fields.qmd
-    - chapters/16_phi4_lsz.qmd
-    - chapters/17_phi4_feynman.qmd
-    - chapters/18_phi4_effective_action.qmd
-    - chapters/19_phi4_renormalization.qmd
-    - chapters/20_qed.qmd
-    - chapters/21_renormalization_group.qmd
+    - part: "第I部　運動・状態・測定"
+      chapters:
+        - chapters/01_classical_mechanics.qmd
+        - chapters/02_linear_algebra.qmd
+        - chapters/03_quantum_mechanics.qmd
+    - part: "第II部　振幅・粒子・散乱"
+      chapters:
+        - chapters/04_path_integral.qmd
+        - chapters/05_many_particles.qmd
+        - chapters/06_relativity.qmd
+        - chapters/07_scattering.qmd
+    - part: "第III部　対称性と場の数学"
+      chapters:
+        - chapters/08_groups.qmd
+        - chapters/09_lie_groups.qmd
+        - chapters/10_classical_fields.qmd
+        - chapters/11_particle_symmetry.qmd
+    - part: "第IV部　自由場から相互作用へ"
+      chapters:
+        - chapters/12_scalar_quantization.qmd
+        - chapters/13_spinor_quantization.qmd
+        - chapters/14_vector_gauge.qmd
+        - chapters/15_correlations_scattering.qmd
+    - part: "第V部　量子補正と予測の限界"
+      chapters:
+        - chapters/16_quantum_corrections.qmd
+        - chapters/17_electrodynamics.qmd
+        - chapters/18_effective_theories.qmd
     - references.qmd
 
 format:

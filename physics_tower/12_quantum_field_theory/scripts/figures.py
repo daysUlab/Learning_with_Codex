@@ -235,7 +235,7 @@ fig.savefig(out/"euclidean_kernel.png",dpi=220)
 plt.close(fig)
 
 # 第5章：占有数の配置
-from matplotlib.patches import Circle, FancyArrowPatch
+from matplotlib.patches import Circle, FancyArrowPatch, Polygon
 fig,axs=plt.subplots(2,3,figsize=(6.2,3.4),layout="constrained")
 for row in range(2):
     for j,(na,nb) in enumerate([(2,0),(1,1),(0,2)]):
