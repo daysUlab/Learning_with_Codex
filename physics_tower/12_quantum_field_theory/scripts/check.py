@@ -12,5 +12,18 @@ for p in [root/"index.qmd", *(root/p for p in paths)]:
     assert not re.search(r"^\$(?:[ \t]+\{#eq-[^}]+\})?[ \t]*$", s, re.M), f"single dollar delimiter: {p}"
     assert s.startswith("# "), p
     assert len(re.findall(r"^\s*\$\$(?:\s+\{#eq-[^}]+\})?\s*$", s, re.M)) % 2 == 0, p
+# 図参照・ラベルの重複は全章で検査する。
+figure_source = (root/"scripts/figures.py").read_text()
+labels = set()
+for p in [root/"index.qmd", *(root/p for p in paths)]:
+    s = p.read_text()
+    for label in re.findall(r"\{#((?:eq|fig)-[^}\s]+)\}", s):
+        assert label not in labels, f"duplicate cross-reference label: {label} ({p})"
+        labels.add(label)
+    for name in re.findall(r"\]\(\.\./figures/([^)\s]+)\)", s):
+        assert f'"{name}"' in figure_source or f"'{name}'" in figure_source, f"missing figure generator: {name} ({p})"
 print("18 chapters: OK")
+# レビュー済み範囲の数値検査
+import runpy
+runpy.run_path(str(root/"scripts/check_review_01_03.py"), run_name="__main__")
 
