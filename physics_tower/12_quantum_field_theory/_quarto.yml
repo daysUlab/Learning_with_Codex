@@ -1,0 +1,58 @@
+project:
+  type: book
+  output-dir: _book
+  pre-render: python3 scripts/figures.py
+
+lang: ja
+book:
+  title: "高校数学から学ぶ場の量子論"
+  subtitle: "古典力学からくりこみ群まで"
+  author: "Learning with Codex"
+  output-file: qft
+  search: true
+  repo-url: https://github.com/daysUlab/Learning_with_Codex
+  downloads: [pdf]
+  chapters:
+    - index.qmd
+    - chapters/01_classical_mechanics.qmd
+    - chapters/02_linear_algebra.qmd
+    - chapters/03_quantum_mechanics.qmd
+    - chapters/04_path_integral.qmd
+    - chapters/05_many_particles.qmd
+    - chapters/06_relativity.qmd
+    - chapters/07_scattering.qmd
+    - chapters/08_groups.qmd
+    - chapters/09_lie_groups.qmd
+    - chapters/10_relativistic_particles.qmd
+    - chapters/11_free_fields.qmd
+    - chapters/12_scalar_fields.qmd
+    - chapters/13_massive_vector.qmd
+    - chapters/14_gauge_fields.qmd
+    - chapters/15_dirac_fields.qmd
+    - chapters/16_phi4_lsz.qmd
+    - chapters/17_phi4_feynman.qmd
+    - chapters/18_phi4_effective_action.qmd
+    - chapters/19_phi4_renormalization.qmd
+    - chapters/20_qed.qmd
+    - chapters/21_renormalization_group.qmd
+    - references.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    html-math-method: mathjax
+    toc: true
+    css: styles.css
+  pdf:
+    pdf-engine: lualatex
+    documentclass: scrreprt
+    papersize: a5
+    fontsize: 11pt
+    geometry: margin=17mm
+    toc: true
+    include-in-header: japanese.tex
+
+bibliography: references.bib
+

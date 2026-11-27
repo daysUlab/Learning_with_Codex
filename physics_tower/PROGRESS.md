@@ -304,3 +304,6 @@
 | `physics_tower/90_topics_from_conversations/depth_from_binocular_disparity.md` | TODO | - |  |
 | `physics_tower/90_topics_from_conversations/meissner_effect.md` | TODO | - |  |
 | `physics_tower/PROGRESS.md` | DONE | 2026-02-14 | 進捗管理ルールと全mdキューを新規作成。次回以降は本表を単一の実行基準として利用。 |
+
+## 場の量子論（Quarto独立書籍）
+2026-11-27: [専用進捗](12_quantum_field_theory/PROGRESS.md) を正本として新設。既存の執筆キューは変更しない。

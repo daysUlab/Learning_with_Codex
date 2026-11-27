@@ -1,0 +1,9 @@
+body { line-height: 1.85; }
+#quarto-document-content { max-width: 48rem; }
+mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; padding: .3rem 0; }
+img, svg { max-width: 100%; height: auto; }
+.qft-demo { border: 1px solid var(--bs-border-color); border-radius: .6rem; padding: 1rem; }
+.qft-demo label { display: block; margin-top: .5rem; }
+.qft-demo input { display: block; width: 100%; }
+@media(max-width: 600px) { body { font-size: 16px; } #quarto-document-content { padding-inline: .8rem; } }
+
