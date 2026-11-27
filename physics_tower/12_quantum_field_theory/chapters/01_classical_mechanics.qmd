@@ -159,16 +159,16 @@ $$
 
 高校数学では一変数の関数を微分しました。二変数の関数の場合、例えば f(q,p)=q²+3p² なら q だけを動かして p を固定すると偏微分は 2q、反対に p だけを動かせば 6p です。q と p がともに時刻の関数なら、連鎖律によって
 
-$
+$$
 \frac{df}{dt}=\frac{\partial f}{\partial q}\dot q+
 \frac{\partial f}{\partial p}\dot p
-$
+$$
 
 となります。微小変化で表せば df=2q dq+6p dp です。q=1、p=2、dq=0.01、dp=−0.02 の場合、一次近似は −0.22、実際の変化は −0.2187 です（ここでは無次元の数値を使っています）。
 
 速度から運動量への変換は、単なる記号の置き換えではありません。関数の傾きを新たな変数とするルジャンドル変換です。L が速度について十分滑らかで、速度から運動量への対応が局所的に逆に解けると仮定します。時間も陽に含む場合、全微分を取ると、
 
-$
+$$
 \begin{aligned}
 dH&=d(p\dot q-L)\\
 &=\dot q\,dp+p\,d\dot q-dL\\
@@ -176,13 +176,13 @@ dH&=d(p\dot q-L)\\
 \frac{\partial L}{\partial q}dq-
 \frac{\partial L}{\partial t}dt
 \end{aligned}
-$
+$$
 
 となります。ここで p=∂L/∂q̇ によって速度の微小変化を含む項が相殺されました。オイラー・ラグランジュ方程式から ṗ=∂L/∂q なので、
 
-$
+$$
 dH=\dot q\,dp-\dot p\,dq-\frac{\partial L}{\partial t}dt
-$
+$$
 
 です。一方、H は q,p,t の関数であるため、係数を比較すれば Hamilton 方程式が導かれます。陽な時間依存性がなければエネルギー H は保存されます。拘束により変換が逆に解けない場合の扱いは、第13・14章の主題になります。
 
@@ -190,59 +190,59 @@ $
 
 粒子が二つある場合など、独立に動ける量を一般化座標 q₁,q₂,…,qₙ と呼びます。各座標に共役運動量を対応させると、位相空間は 2n 次元になります。固定端の変分を座標ごとに行えば、
 
-$
+$$
 \frac{d}{dt}\frac{\partial L}{\partial\dot q_i}
 =\frac{\partial L}{\partial q_i}
-$
+$$
 
 が各 i について成り立ちます。
 
 質量 m の二つの物体をばね定数 k のばねで壁につなぎ、さらに互いをばね定数 κ のばねでつなぐモデルを考えます。変位を q₁,q₂ とすると、
 
-$
+$$
 \begin{aligned}
 T&=\frac m2(\dot q_1^2+\dot q_2^2)\\
 V&=\frac k2(q_1^2+q_2^2)
 +\frac\kappa2(q_1-q_2)^2
 \end{aligned}
-$
+$$
 
 中央のばねの伸びは二つの変位の差です。q₁,q₂ についてそれぞれ微分すれば、
 
-$
+$$
 \begin{aligned}
 m\ddot q_1&=-kq_1-\kappa(q_1-q_2)\\
 m\ddot q_2&=-kq_2+\kappa(q_1-q_2)
 \end{aligned}
-$
+$$
 
 を得ます。二つの方程式を加えたり引いたりすると、互いに影響しない二つの運動に分解できます。
 
-$
+$$
 \begin{aligned}
 Q_+&=\frac{q_1+q_2}{\sqrt2}\\
 Q_-&=\frac{q_1-q_2}{\sqrt2}
 \end{aligned}
-$
+$$
 
-$
+$$
 \begin{aligned}
 m\ddot Q_+&=-kQ_+\\
 m\ddot Q_-&=-(k+2\kappa)Q_-
 \end{aligned}
-$
+$$
 
 ::: {.callout-note title="数値例：二つの振動モード"}
 m=1 kg、k=4 N/m、κ=6 N/m なら、同相モードの角振動数は2 rad/s、逆相モードは4 rad/sです。
 
 初期変位を q₁=0.2 m、q₂=0、初速度を両方0とすると、
 
-$
+$$
 \begin{aligned}
 q_1(t)&=0.1(\cos 2t+\cos 4t)\\
 q_2(t)&=0.1(\cos 2t-\cos 4t)
 \end{aligned}
-$
+$$
 
 です。t=π/2 s では q₁=0、q₂=−0.2 m となり、最初に変位していなかった物体が動きます。初期全エネルギーは壁ばね0.08 Jと中央ばね0.12 Jの合計0.20 Jです。
 :::
@@ -255,26 +255,26 @@ $
 
 位相空間上の二つの関数 f,g に対して、
 
-$
+$$
 \{f,g\}=\sum_i
 \left(
 \frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}
 -\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}
 \right)
-$ {#eq-poisson}
+$$ {#eq-poisson}
 
 をポアソン括弧と呼びます。括弧の中は引き算なので、順序を交換すると符号が逆転します。座標そのものについて計算すると、
 
-$
+$$
 \{q_i,p_j\}=\delta_{ij},\quad
 \{q_i,q_j\}=\{p_i,p_j\}=0
-$
+$$
 
 です。δᵢⱼ は i=j なら1、そうでなければ0の記号です。
 
 連鎖律と Hamilton 方程式を組み合わせると、任意の物理量 f の時間発展は
 
-$
+$$
 \begin{aligned}
 \frac{df}{dt}
 &=\sum_i\left(
@@ -283,7 +283,7 @@ $
 +\frac{\partial f}{\partial t}\\
 &=\{f,H\}+\frac{\partial f}{\partial t}
 \end{aligned}
-$ {#eq-time-evolution}
+$$ {#eq-time-evolution}
 
 となります。H 自身では {H,H}=0 なので、H に陽な時間依存性がなければ保存されます。
 
@@ -299,22 +299,22 @@ H=p²/(2m)+kq²/2 から {q,H}=p/m、{p,H}=−kq です。m=2 kg、k=8 N/m、q=0
 
 位相空間の変数を別の組 (Q,P) に変えても、ポアソン括弧の基本関係が保たれる（滑らかで可逆な）変換を正準変換と呼びます。例えば無次元の定数 a≠0 に対して、
 
-$
+$$
 Q=aq,\qquad P=\frac pa
-$
+$$
 
 とすると、
 
-$
+$$
 \{Q,P\}=a\frac1a=1
-$
+$$
 
 です。元のばねの Hamiltonian を新変数で表せば、
 
-$
+$$
 K(Q,P)=\frac{a^2P^2}{2m}
 +\frac{kQ^2}{2a^2}
-$
+$$
 
 となります。a=2、q=0.25 m、p=1 kg m/s なら Q=0.5 m、P=0.5 kg m/s です。m=2 kg、k=8 N/m のとき新旧いずれの変数でもエネルギーは0.50 Jです。
 
@@ -328,7 +328,7 @@ $
 
 時刻を固定した微小変換 qᵢ→qᵢ+εξᵢ を考えます。ξᵢ は変換の方向を表し、速度の変化は ε dξᵢ/dt です。運動方程式を満たす経路上では、
 
-$
+$$
 \begin{aligned}
 \frac{\delta L}{\epsilon}
 &=\sum_i\left(
@@ -336,7 +336,7 @@ $
 p_i\frac{d\xi_i}{dt}\right)\\
 &=\frac{d}{dt}\sum_i p_i\xi_i
 \end{aligned}
-$
+$$
 
 となります。ラグランジアンが微小変換で不変なら左辺は0、したがって Σpᵢξᵢ が保存されます。より一般に δL/ε=dB/dt であれば Σpᵢξᵢ−B が保存されます。これが時刻を固定した変換に対するネーターの定理です。
 
@@ -344,7 +344,7 @@ $
 
 空間でなく時間の並進に対して L が不変、すなわち ∂L/∂t=0 なら、
 
-$
+$$
 \begin{aligned}
 \frac{dH}{dt}
 &=\sum_i\left(\dot p_i\dot q_i+
@@ -354,7 +354,7 @@ p_i\ddot q_i-
 -\frac{\partial L}{\partial t}\\
 &=-\frac{\partial L}{\partial t}=0
 \end{aligned}
-$
+$$
 
 です。時間並進の対称性がエネルギー保存につながることがわかります。回転対称性は角運動量保存につながります。第8・9章で対称性を群として整理し、第11章では場の理論へ拡張します。
 

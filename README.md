@@ -22,4 +22,4 @@
 - 進捗管理は `*/PROGRESS.md` と `PROGRESS.md` を併用して確認します。
 
 ## Quarto版教科書
-- [高校数学から学ぶ場の量子論](physics_tower/12_quantum_field_theory/README.md)（HTML・PDF生成対応、試作版）
+- [高校数学から学ぶ場の量子論](physics_tower/12_quantum_field_theory/README.md)（HTML・PDF生成対応、初稿版）
