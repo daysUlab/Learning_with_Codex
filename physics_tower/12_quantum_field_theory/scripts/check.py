@@ -25,5 +25,6 @@ for p in [root/"index.qmd", *(root/p for p in paths)]:
 print("18 chapters: OK")
 # レビュー済み範囲の数値検査
 import runpy
-runpy.run_path(str(root/"scripts/check_review_01_03.py"), run_name="__main__")
+for test_path in sorted((root/"scripts").glob("check_review_*.py")):
+    runpy.run_path(str(test_path), run_name="__main__")
 
