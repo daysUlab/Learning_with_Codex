@@ -33,3 +33,10 @@ GitHub Pages の Settings → Pages → Source を GitHub Actions に設定す�
 ## iPhone・iPadで読む
 
 GitHub Pages公開後は Safari で https://daysulab.github.io/Learning_with_Codex/ を開きます。PDFの直接URLは https://daysulab.github.io/Learning_with_Codex/qft.pdf です。ZIP成果物はバックアップ・オフライン用に残します。公開はリポジトリの Pages 設定と deploy ジョブ成功を前提とします。
+
+## 成果物の保存と版管理
+
+- 最新版HTML: https://daysulab.github.io/Learning_with_Codex/
+- 最新版PDF: https://daysulab.github.io/Learning_with_Codex/qft.pdf
+- 過去版PDF: https://github.com/daysUlab/Learning_with_Codex/releases （mainの公開成功ごとに qft-コミット短縮SHA のプレリリースを作成）。
+- Actionsの qft-book ZIP はHTMLのオフライン利用・一時バックアップ用。生成物は原稿ブランチにコミットしない。

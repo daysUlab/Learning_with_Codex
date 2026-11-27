@@ -68,3 +68,27 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
+
+  release:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: [build, deploy]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: qft-book
+          path: book
+      - name: PDFの版をReleaseに保存
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          test -s book/qft.pdf
+          tag="qft-${GITHUB_SHA:0:12}"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" book/qft.pdf --clobber
+          else
+            gh release create "$tag" book/qft.pdf --target "$GITHUB_SHA" --prerelease --latest=false --title "場の量子論 初稿 $tag" --notes "原稿コミット: $GITHUB_SHA。未完成の初稿。最新版HTML/PDF: https://daysulab.github.io/Learning_with_Codex/"
+          fi
