@@ -98,7 +98,7 @@ $$ {#eq-scattering-asymptotic}
 微小立体角 dΩ の範囲に出ていく散乱流を入射流密度で割った量を微分断面積と呼びます。弾性散乱では入射と散乱の波数が等しく、遠方で
 
 $$
-j_{\rm sc}\simeq
+j_{\mathrm{sc}}\simeq
 \frac{\hbar k}{m}\frac{|f|^2}{r^2}
 $$
 
