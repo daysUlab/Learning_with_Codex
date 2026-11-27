@@ -1278,3 +1278,17 @@ ax.set(xlim=(-.25,2.25),ylim=(-.12,1.12))
 ax.axis("off")
 fig.savefig(out/"review_path_matrix.png",dpi=220)
 plt.close(fig)
+
+# 第12章の補足：実モードと進行波
+fig,axs=plt.subplots(2,2,figsize=(5.6,3.8),sharex=True,sharey=True,layout="constrained")
+xx=np.linspace(0,2*np.pi,300)
+for ax,yy,title,col in zip(axs.flat,[np.cos(xx),np.sin(xx),np.cos(xx-np.pi/3),np.cos(xx+np.pi/3)],["Cosine mode","Sine mode","Right moving (t=pi/3)","Left moving (t=pi/3)"],["#2166ac","#d97706","#16857c","#2166ac"]):
+    ax.plot(xx,yy,color=col,lw=1.8)
+    ax.axhline(0,color="#94a3b8",lw=.7)
+    ax.set_title(title,fontsize=9)
+    ax.set_ylim(-1.2,1.2)
+for ax in axs[1]:
+    ax.plot(xx,np.cos(xx),color="#94a3b8",ls="--",lw=1)
+    ax.set(xticks=[0,np.pi,2*np.pi],xticklabels=["0","pi","2pi"])
+fig.savefig(out/"review_scalar_modes.png",dpi=220)
+plt.close(fig)

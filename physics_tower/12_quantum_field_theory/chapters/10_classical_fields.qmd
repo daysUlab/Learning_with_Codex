@@ -10,6 +10,11 @@
 
 この章では、身近な弦の振動から場の作用と運動方程式を導き、相対論的なスカラー場へ進みます。まだ量子化は行いません。
 
+::: {.callout-note title="数学の準備：時間と空間の偏微分"}
+温度分布も場の一例です。弦では温度の代わりに変位を各位置へ割り当てます。例えば $u(t,x)=x^2\cos(2t)$ なら、場所を固定した時間微分は $\partial_tu=-2x^2\sin(2t)$、時刻を固定した空間微分は $\partial_xu=2x\cos(2t)$ です。二回微分すれば $\partial_t^2u=-4x^2\cos(2t)$、$\partial_x^2u=2\cos(2t)$ です。このような偏微分を含む未知関数の方程式を偏微分方程式と呼びます。
+:::
+
+
 ## 連成振動子の鎖
 
 間隔 a で並べた質点をばねでつなぎます。各質点の横方向変位を q_j(t)、質量を m、隣接質点間のばね定数を K とします。小振幅近似のもとで、鎖のラグランジアンを
@@ -23,7 +28,14 @@ $$
 
 とします。境界については、例えば周期的に端同士をつなぐと考えます。
 
-第1章の Euler–Lagrange 方程式を各 q_j に適用すると、左と右のばねが力を加えるため、
+第1章の Euler–Lagrange 方程式を各 q_j に適用します。q_j を含むばねの項は左右二本だけです。$-\frac K2(q_j-q_{j-1})^2-\frac K2(q_{j+1}-q_j)^2$ を q_j で微分すると
+
+$$
+\frac{\partial L}{\partial q_j}
+=-K(q_j-q_{j-1})+K(q_{j+1}-q_j)
+$$
+
+です。運動項から $\partial L/\partial\dot q_j=m\dot q_j$ なので、
 
 $$
 m\ddot q_j=K(q_{j+1}-2q_j+q_{j-1})
@@ -35,7 +47,7 @@ $$ {#eq-chain-motion}
 
 ### 波の形を代入してみる
 
-複素指数関数を使って q_j=A exp[i(kja−ωt)] と仮定します。実際の変位には実部を取ります。@eq-chain-motion に代入すると、
+複素指数関数を使って q_j=A exp[i(kja−ωt)] と仮定します。実際の変位には実部を取ります。k=2π/λ は単位長さあたりの位相変化、ω=2πf は単位時間あたりの位相変化です。$q_{j+1}=e^{ika}q_j$、$q_{j-1}=e^{-ika}q_j$、$\ddot q_j=-\omega^2q_j$ なので元の波で割り、$e^{ika}+e^{-ika}=2\cos ka$、$1-\cos ka=2\sin^2(ka/2)$ を使います。@eq-chain-motion に代入すると、
 
 $$
 -m\omega^2=K(e^{ika}-2+e^{-ika})
@@ -61,7 +73,9 @@ $$
 m=\rho a,\qquad K=\frac{T}{a}
 $$
 
-と選びます。変位を滑らかな関数 u(t,x) で近似して q_j(t)=u(t,ja) と置きます。Taylor 展開により、
+と選びます。弦の小さい傾き $(q_{j+1}-q_j)/a$ について、区間の長さの増加は $\sqrt{a^2+(\Delta q)^2}-a\simeq(\Delta q)^2/(2a)$ です。張力Tによるエネルギー増加 $T(\Delta q)^2/(2a)$ とばねのエネルギー $K(\Delta q)^2/2$ を比較すると K=T/a です。例えば ρ=0.02 kg/m、T=2 N で a=0.1 m なら m=0.002 kg、K=20 N/m、a=0.05 m なら m=0.001 kg、K=40 N/m です。質量密度と張力は変わりません。
+
+変位を滑らかな関数 u(t,x) で近似して q_j(t)=u(t,ja) と置きます。Taylor 展開により、
 
 $$
 \begin{aligned}
@@ -79,7 +93,7 @@ $$
 \longrightarrow \partial_x^2u
 $$
 
-となります。十分滑らかな場について間隔を0へ近づけると、
+となります。例えば $u(x)=x^2$ では $(x+a)^2-2x^2+(x-a)^2=2a^2$ なので a² で割ると二階微分2に一致します。@eq-chain-motion に m=ρa、K=T/a を代入して a で割れば $\rho\ddot q_j=T(q_{j+1}-2q_j+q_{j-1})/a^2$ です。十分滑らかな場について間隔を0へ近づけると、
 
 $$
 \rho\,\partial_t^2u=T\,\partial_x^2u
@@ -93,7 +107,14 @@ $$ {#eq-string-wave}
 
 ## 場のラグランジアン密度
 
-離散系の和を Riemann 和と考えると、ラグランジアンの連続極限は
+離散系の和を次のように書き直します。
+
+$$
+L=\sum_j a\left[\frac\rho2\dot q_j^2
+-\frac T2\left(\frac{q_{j+1}-q_j}{a}\right)^2\right]
+$$
+
+括弧内は単位長さあたりの量、外の a は区間幅です。第3章の確率密度の積分と同じく、和の極限を積分で表せます。差分が空間微分へ近づくので、ラグランジアンの連続極限は
 
 $$
 L(t)=\int dx\,\mathcal L(u,\partial_tu,\partial_xu)
@@ -125,7 +146,15 @@ $$
 \right]
 $$
 
-ここで u_t は時間微分、u_x は空間微分です。時間と空間についてそれぞれ部分積分します。変分が積分領域の境界で0であると仮定すれば、境界項が消えます。
+ここで u_t は時間微分、u_x は空間微分です。時間微分の項では x を固定して通常の部分積分を行います。
+
+$$
+\int_{t_1}^{t_2}dt\,A\,\partial_t\delta u
+=[A\delta u]_{t_1}^{t_2}
+-\int_{t_1}^{t_2}dt\,(\partial_t A)\delta u
+$$
+
+ここで $A=\partial\mathcal L/\partial u_t$ です。空間微分も時刻を固定して同じ操作を行います。変分が積分領域の境界で0であると仮定すれば、境界項が消えます。
 
 $$
 \delta S=\int dt\,dx\left[
@@ -143,7 +172,7 @@ $$
 -\partial_x\frac{\partial\mathcal L}{\partial u_x}=0
 $$ {#eq-field-el}
 
-です。弦のラグランジアン密度を代入すると、@eq-string-wave が再び得られます。第1章の変分原理が連続的な自由度へ拡張されました。境界を固定しない問題では境界項から別途境界条件を求める必要があります。
+です。弦では $\partial\mathcal L/\partial u=0$、$\partial\mathcal L/\partial u_t=\rho u_t$、$\partial\mathcal L/\partial u_x=-Tu_x$ です。従って $-\rho u_{tt}+Tu_{xx}=0$ となり、@eq-string-wave が再び得られます。第1章の変分原理が連続的な自由度へ拡張されました。境界を固定しない問題では境界項から別途境界条件を求める必要があります。
 
 ## Fourierモードと定在波
 
@@ -153,7 +182,7 @@ $$
 u(t,0)=u(t,l)=0
 $$
 
-です。空間的な形を sin(nπx/l) と置けば境界条件を満たします。波動方程式から角振動数は
+です。まず時間だけの関数 Q(t) と空間だけの関数 f(x) の積 $u=Qf$ を試します。波動方程式から $\ddot Q f=v^2 Qf''$、非零のところで割ると $\ddot Q/(v^2Q)=f''/f$ です。左辺は時刻だけ、右辺は位置だけに依存するので両辺は同じ定数です。定数を $-k^2$ とすると $f''=-k^2 f$ となり、第1章の単振動と同じ形です。固定端条件を満たす非零解は $\sin(n\pi x/l)$ に比例します。波動方程式から角振動数は
 
 $$
 \omega_n=\frac{n\pi v}{l},\qquad n=1,2,\ldots
@@ -172,7 +201,7 @@ $$
 \ddot Q_n+\omega_n^2Q_n=0
 $$
 
-を満たします。直交性を使って作用に代入すれば、
+を満たします。$f_n=\sqrt{2/l}\sin(n\pi x/l)$ と略記します。積和公式と積分から $\int_0^l f_nf_m dx=\delta_{nm}$、部分積分から $\int_0^l f_n'f_m' dx=(m\pi/l)^2\delta_{nm}$ です（ここで m はモード番号）。例えば $\int dx\,u_t^2=\sum_{nm}\dot Q_n\dot Q_m\int dx\,f_nf_m=\sum_n\dot Q_n^2$ です。空間微分も同様なので作用に代入すれば、
 
 $$
 L=\sum_n\frac{\rho}{2}
@@ -249,7 +278,7 @@ $$
 \phi'(x')=\phi(x)
 $$
 
-上付き微分を計量で定義すると、ラグランジアン密度を
+普通の弦には媒質があり、その静止系で波の速さを定義しました。ここからは特定の媒質の静止系を選ばない場を構成します。第6章の計量では $\partial_\mu=(\partial_t,\partial_x,\partial_y,\partial_z)$、$\partial^\mu=(\partial_t,-\partial_x,-\partial_y,-\partial_z)$ です。$\nabla^2=\partial_x^2+\partial_y^2+\partial_z^2$ を Laplace 演算子と呼びます。上付き微分を計量で定義すると、ラグランジアン密度を
 
 $$
 \mathcal L=
@@ -270,7 +299,7 @@ $$
 =0
 $$
 
-です。@eq-kg-lagrangian を代入して、
+です。@eq-kg-lagrangian の各変数を独立に偏微分すると $\partial\mathcal L/\partial\phi=-m^2\phi$、$\partial\mathcal L/\partial(\partial_\mu\phi)=\partial^\mu\phi$ です。従って $-m^2\phi-\partial_\mu\partial^\mu\phi=0$ であり、$\partial_\mu\partial^\mu=\partial_t^2-\nabla^2$ なので、
 
 $$
 (\partial_t^2-\nabla^2+m^2)\phi=0
@@ -288,7 +317,7 @@ $$
 
 ![質量を持つ場と質量ゼロの場の分散関係。](../figures/field_kg_dispersion.png){#fig-field-kg-dispersion}
 
-位相速度は ω/|k|、群速度は dω/d|k|=|k|/ω です。質量がある場合、位相速度は1を超えますが、群速度は1未満です。位相の移動速度を信号の伝播速度と同一視しないことが大切です。
+二つの近い波数 k±Δk/2 の波を足すと、加法公式で速い余弦波に $\cos[(\Delta k\,x-\Delta\omega\,t)/2]$ というゆっくり変わる包絡線が掛かります。その一定位相を追う速度は Δω/Δk なので、差を小さくすると dω/dk です。位相速度は ω/|k|、群速度は dω/d|k|=|k|/ω です。質量がある場合、位相速度は1を超えますが、群速度は1未満です。位相の移動速度を信号の伝播速度と同一視しないことが大切です。
 
 例えば m=2、|k|=3 なら ω=√13≈3.606、群速度は約0.832です。質量ゼロの極限では非零波数について ω=|k| になります。
 
@@ -296,7 +325,14 @@ $$
 
 場の変換 φ→φ+εδφ に対し、ラグランジアン密度の変化が全微分 ∂_μ B^μ であるとします。ε は定数の微小パラメータで、その一次の係数を考えます。
 
-Euler–Lagrange 方程式を満たす場について変分を整理すると、
+連鎖律で $\delta\mathcal L=\mathcal L_\phi\delta\phi+A^\mu\partial_\mu\delta\phi$、ただし $A^\mu=\partial\mathcal L/\partial(\partial_\mu\phi)$ です。積の微分を逆に使うと
+
+$$
+\delta\mathcal L=(\mathcal L_\phi-\partial_\mu A^\mu)\delta\phi+
+\partial_\mu(A^\mu\delta\phi)
+$$
+
+です。最初の括弧は運動方程式で0になるため、
 
 $$
 \delta\mathcal L=
@@ -321,7 +357,7 @@ $$ {#eq-noether-current}
 
 ### 時空並進とエネルギー運動量
 
-座標に陽に依存しないラグランジアン密度では、場を一定量だけ平行移動しても作用は不変です。変分 δφ=ε^ν∂_νφ を用いると、各 ν についての保存電流をまとめた正準エネルギー運動量テンソルが得られます。
+座標に陽に依存しないラグランジアン密度では、場を一定量だけ平行移動しても作用は不変です。変分 δφ=ε^ν∂_νφ を用いると、一定の並進なので $\delta\mathcal L=\epsilon^\nu\partial_\nu\mathcal L=\partial_\mu(\epsilon^\mu\mathcal L)$ です。Noether電流の式で $B^\mu=\epsilon^\mu\mathcal L$ とし各 ε の係数を取り出すと、各 ν についての保存電流をまとめた正準エネルギー運動量テンソルが得られます。
 
 $$
 T^\mu{}_\nu=
@@ -361,7 +397,7 @@ $$
 -m^2\psi^*\psi
 $$
 
-とします。ψ→exp(−iα)ψ、ψ*→exp(iα)ψ* という一定の位相変換はラグランジアン密度を保ちます。二つの場を独立に変分して得られる電流は
+とします。ψ→exp(−iα)ψ、ψ*→exp(iα)ψ* という一定の位相変換はラグランジアン密度を保ちます。微小角 α では $\delta\psi=-i\psi$、$\delta\psi^*=i\psi^*$（αの係数）です。$B^\mu=0$ で $\partial\mathcal L/\partial(\partial_\mu\psi)=\partial^\mu\psi^*$、共役場については $\partial^\mu\psi$ です。Noether電流に代入して足せば、
 
 $$
 j^\mu=i(\psi^*\partial^\mu\psi
@@ -369,6 +405,10 @@ j^\mu=i(\psi^*\partial^\mu\psi
 $$
 
 です。位相変換の符号規約を逆にすると電流の符号も逆になります。運動方程式を使って発散が0になることを直接確かめられます。第17章ではこの対称性を局所化し、電磁場との相互作用を考えます。
+
+## 初読の到達目標
+
+質点の差分が空間微分になること、ラグランジアンの和が密度の積分へ変わること、波を独立な振動子へ分解すること、連続の式の意味を説明できるようにしてください。第12章ではこの振動子を量子化します。
 
 ## 演習
 
