@@ -1232,3 +1232,28 @@ for ax in axs:
     ax.grid(alpha=.2)
 fig.savefig(out/"eft_matching_error.png",dpi=220)
 plt.close(fig)
+
+# 高校数学からの再レビュー：基底変換・Fourierの準備
+fig,ax=plt.subplots(figsize=(5.4,4),layout="constrained")
+for x0 in range(-1,6):
+    ax.axvline(x0,color="#cbd5e1",lw=.5)
+for y0 in range(-1,6):
+    ax.axhline(y0,color="#cbd5e1",lw=.5)
+for a0,b0,col in [((0,0),(3,0),"#64748b"),((3,0),(3,4),"#64748b"),((0,0),(3.5,3.5),"#2166ac"),((3.5,3.5),(3,4),"#d97706"),((0,0),(3,4),"#16857c")]:
+    ax.annotate("",xy=b0,xytext=a0,arrowprops=dict(arrowstyle="->",color=col,lw=2))
+ax.text(1.4,1.8,"3.5 u1",color="#2166ac",fontsize=9)
+ax.text(3.65,3.85,"-0.5 u2",color="#d97706",fontsize=9)
+ax.text(3,4.25,"v=(3,4)",color="#16857c",ha="center")
+ax.set(xlim=(-.5,5),ylim=(-.5,5),aspect="equal",xlabel="x",ylabel="y")
+fig.savefig(out/"review_basis_coordinates.png",dpi=220)
+plt.close(fig)
+fig,axs=plt.subplots(3,1,figsize=(5.6,4.4),sharex=True,layout="constrained")
+xx=np.linspace(0,2*np.pi,300)
+for ax,yy,title,col in zip(axs,[np.sin(xx),.5*np.sin(2*xx),np.sin(xx)+.5*np.sin(2*xx)],["sin x","0.5 sin 2x","Sum"],["#2166ac","#d97706","#16857c"]):
+    ax.plot(xx,yy,color=col,lw=2)
+    ax.axhline(0,color="#94a3b8",lw=.6)
+    ax.set_ylabel(title,fontsize=9)
+    ax.grid(alpha=.12)
+axs[-1].set(xticks=[0,np.pi,2*np.pi],xticklabels=["0","pi","2pi"],xlabel="x")
+fig.savefig(out/"review_fourier_sum.png",dpi=220)
+plt.close(fig)
