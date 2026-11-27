@@ -67,7 +67,7 @@ $$
 (i\gamma^\mu\partial_\mu-m)\psi=0
 $$ {#eq-dirac-equation}
 
-となります。これがDirac方程式です。$\gamma^\mu\partial_\mu$ を $\not\!\partial$ と省略する記法も使います。
+となります。これがDirac方程式です。$\gamma^\mu\partial_\mu$ を $\gamma^\mu\partial_\mu$ と省略する記法も使います。
 
 左右の微分は交換するため、反交換関係 @eq-clifford によって対称な部分だけが残ります。すなわち、
 
@@ -84,14 +84,13 @@ $$
 正周波数の解を $\psi(x)=u_s(p)e^{-ip\cdot x}$ とすると、
 
 $$
-(\not p-m)u_s(p)=0,\qquad
-\not p=\gamma^\mu p_\mu
+(\gamma^\mu p_\mu-m)u_s(p)=0
 $$
 
 となります。負周波数の解 $\psi(x)=v_s(p)e^{ip\cdot x}$ は
 
 $$
-(\not p+m)v_s(p)=0
+(\gamma^\mu p_\mu+m)v_s(p)=0
 $$
 
 を満たします。どちらもここでは $p^0=E_{\boldsymbol p}>0$ としています。
@@ -282,11 +281,11 @@ $$
 先ほどの規格化では、スピン和は
 
 $$
-\sum_s u_s(p)\bar u_s(p)=\not p+m
+\sum_s u_s(p)\bar u_s(p)=\gamma^\mu p_\mu+m
 $$
 
 $$
-\sum_s v_s(p)\bar v_s(p)=\not p-m
+\sum_s v_s(p)\bar v_s(p)=\gamma^\mu p_\mu-m
 $$
 
 です。例えば静止系の正エネルギー側では、左辺は上側の二成分に2m、下側に0を持つ行列になり、右辺 $m(\gamma^0+I)$ と一致します。一般の運動量の式はこの結果をboostすることで得られます。
@@ -302,13 +301,13 @@ $$
 
 $$
 S_F(x-y)=\int\frac{d^4p}{(2\pi)^4}
-\frac{i(\not p+m)}{p^2-m^2+i0}e^{-ip\cdot(x-y)}
+\frac{i(\gamma^\mu p_\mu+m)}{p^2-m^2+i0}e^{-ip\cdot(x-y)}
 $$ {#eq-dirac-propagator}
 
 です。Dirac演算子を作用させると、
 
 $$
-(i\not\!\partial-m)S_F(x)=i\delta^{(4)}(x)I_4
+(i\gamma^\mu\partial_\mu-m)S_F(x)=i\delta^{(4)}(x)I_4
 $$
 
 となります。第12章のスカラー伝播関数と分母は同じですが、分子にスピノル構造があります。
