@@ -4,13 +4,13 @@
 
 | 章 | タイトル | 状態 |
 |---|---|---|
-| 1 | [古典力学の準備](chapters/01_classical_mechanics.qmd) | 初稿・レビュー待ち |
-| 2 | [線形代数の準備](chapters/02_linear_algebra.qmd) | 初稿・レビュー待ち |
-| 3 | [量子力学の準備](chapters/03_quantum_mechanics.qmd) | 初稿・レビュー待ち |
-| 4 | [経路積分による量子力学](chapters/04_path_integral.qmd) | 初稿・レビュー待ち |
-| 5 | [多粒子系の量子力学と生成消滅演算子](chapters/05_many_particles.qmd) | 初稿・レビュー待ち |
-| 6 | [特殊相対性理論の準備](chapters/06_relativity.qmd) | 初稿・レビュー待ち |
-| 7 | [量子の散乱現象](chapters/07_scattering.qmd) | 初稿・レビュー待ち |
+| 1 | [作用から組み立てる古典力学](chapters/01_classical_mechanics.qmd) | 初稿・レビュー待ち |
+| 2 | [量子状態を記述する線形代数](chapters/02_linear_algebra.qmd) | 初稿・レビュー待ち |
+| 3 | [状態・測定・時間発展の量子力学](chapters/03_quantum_mechanics.qmd) | 初稿・レビュー待ち |
+| 4 | [時間発展を経路の和で表す](chapters/04_path_integral.qmd) | 初稿・レビュー待ち |
+| 5 | [占有数と多粒子状態の演算子](chapters/05_many_particles.qmd) | 初稿・レビュー待ち |
+| 6 | [時空の幾何と相対論的運動](chapters/06_relativity.qmd) | 初稿・レビュー待ち |
+| 7 | [散乱振幅から実験の断面積へ](chapters/07_scattering.qmd) | 初稿・レビュー待ち |
 | 8 | [離散対称性を群と行列で表す](chapters/08_groups.qmd) | 初稿・レビュー待ち |
 | 9 | [リー群とその既約表現](chapters/09_lie_groups.qmd) | 未執筆 |
 | 10 | [相対論的な1粒子状態](chapters/10_relativistic_particles.qmd) | 未執筆 |
