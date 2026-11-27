@@ -1,10 +1,10 @@
 # 進捗
 
-2026-11-27 初期構築。第1章は試作（運動・作用・Hamilton形式の入口）、第2章以降は未執筆。
+2026-11-27 初期構築。第1章は初稿（運動・作用・Hamilton形式・複数自由度・正準変換・ポアソン括弧・ネーターの定理）、第2章以降は未執筆。
 
 | 章 | タイトル | 状態 |
 |---|---|---|
-| 1 | [古典力学の準備](chapters/01_classical_mechanics.qmd) | 試作 |
+| 1 | [古典力学の準備](chapters/01_classical_mechanics.qmd) | 初稿・レビュー待ち |
 | 2 | [線形代数の準備](chapters/02_linear_algebra.qmd) | 未執筆 |
 | 3 | [量子力学の準備](chapters/03_quantum_mechanics.qmd) | 未執筆 |
 | 4 | [経路積分による量子力学](chapters/04_path_integral.qmd) | 未執筆 |
@@ -26,5 +26,7 @@
 | 20 | [量子電磁力学――場の量子論は本物か?](chapters/20_qed.qmd) | 未執筆 |
 | 21 | [くりこみ群――場の量子論とはなんだろう?](chapters/21_renormalization_group.qmd) | 未執筆 |
 
-次の作業: HTML/PDF CI、iPhone/iPadの表示確認、第1章の不足項目（正準変換・ネーターの定理など）の補完、第2章の執筆。
+次の作業: HTML/PDF CI、iPhone/iPadの表示確認、第1章のレビュー、第2章の執筆。
 
+
+2026-11-28: PDFビルドの luatexbase.sty 不足を受け、日本語TeX環境をUbuntuのパッケージで明示導入する構成に変更。CI再検証待ち。

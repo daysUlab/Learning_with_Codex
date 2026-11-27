@@ -3,7 +3,7 @@
 原稿の正本は `.qmd`。HTMLと日本語PDFを同じ原稿から生成する独立したQuarto Bookです。既存Markdown教材は移行しません。
 
 ## ビルド
-Quarto 1.x、Python 3、Matplotlib、NumPy、LuaLaTeX（TinyTeX等）、luatexja-fontspec、Noto Serif/Sans CJK JP が必要です。
+Quarto 1.x、Python 3、Matplotlib、NumPy、LuaLaTeX（日本語対応のTeX Live等）、luatexja-fontspec、Noto Serif/Sans CJK JP が必要です。
 
 ```sh
 cd physics_tower/12_quantum_field_theory
@@ -12,6 +12,8 @@ python3 scripts/check.py
 quarto render
 quarto preview --to html
 ```
+
+CIではUbuntu 24.04の texlive-luatex、texlive-lang-japanese、texlive-latex-extra、texlive-fonts-recommended、texlive-science、texlive-lang-english と日本語フォントを導入します。
 
 生成物は `_book/`。HTMLの入口は `index.html`、PDFは `qft.pdf`。生成物はコミットしません。
 

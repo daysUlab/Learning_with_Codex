@@ -14,7 +14,7 @@ permissions:
   contents: read
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,9 +23,13 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: '1.7.34'
-          tinytex: true
-      - name: 日本語フォントを導入
-        run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+      - name: 日本語TeX環境を導入
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-science texlive-lang-english
+          kpsewhich luatexbase.sty
+          kpsewhich luatexja-fontspec.sty
+          lualatex --version
       - name: 依存関係と原稿を確認
         working-directory: physics_tower/12_quantum_field_theory
         run: |
@@ -48,7 +52,7 @@ jobs:
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
