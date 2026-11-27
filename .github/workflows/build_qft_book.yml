@@ -26,9 +26,10 @@ jobs:
       - name: 日本語TeX環境を導入
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-science texlive-lang-english
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-science texlive-lang-english
           kpsewhich luatexbase.sty
           kpsewhich luatexja-fontspec.sty
+          kpsewhich fontawesome5.sty
           lualatex --version
       - name: 依存関係と原稿を確認
         working-directory: physics_tower/12_quantum_field_theory
@@ -42,7 +43,9 @@ jobs:
           test -s _book/index.html
           test -s _book/qft.pdf
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
+          if-no-files-found: ignore
           name: qft-book
           path: physics_tower/12_quantum_field_theory/_book
       - uses: actions/upload-pages-artifact@v3

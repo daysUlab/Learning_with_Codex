@@ -124,3 +124,54 @@ ax.grid(alpha=.2)
 ax.legend()
 fig.savefig(out/"unitary.png",dpi=220)
 plt.close(fig)
+
+# 第3章：測定基底と確率
+fig,axs=plt.subplots(1,2,figsize=(5.8,2.8),layout="constrained",sharey=True)
+for ax,labels,probs,title in [(axs[0],["0","1"],[.75,.25],"Z basis"),(axs[1],["+","-"],[(2+np.sqrt(3))/4,(2-np.sqrt(3))/4],"X basis")]:
+    ax.bar(labels,probs,color=["#2166ac","#16857c"])
+    ax.set(ylim=(0,1.08),title=title)
+    for i,v in enumerate(probs):
+        ax.text(i,v+.025,f"{v:.3f}",ha="center",fontsize=9)
+axs[0].set_ylabel("Probability")
+fig.savefig(out/"measurement.png",dpi=220)
+plt.close(fig)
+# 二状態系の時間発展
+t=np.linspace(0,np.pi,400)
+fig,ax=plt.subplots(figsize=(5.6,3),layout="constrained")
+ax.plot(t,np.cos(t)**2,label="P(0)",color="#2166ac")
+ax.plot(t,np.sin(t)**2,label="P(1)",color="#d97706")
+ax.set(xlabel="t [s]",ylabel="Probability",ylim=(-.03,1.03),xticks=[0,np.pi/2,np.pi],xticklabels=["0","π/2","π"])
+ax.legend()
+ax.grid(alpha=.25)
+fig.savefig(out/"two_state.png",dpi=220)
+plt.close(fig)
+# ガウス波束、hbar=1, p0=0
+x=np.linspace(-6,6,700)
+p=np.linspace(-4,4,700)
+fig,axs=plt.subplots(1,2,figsize=(6.4,3.1),layout="constrained")
+for s,col in [(.5,"#2166ac"),(2,"#d97706")]:
+    dp=1/(2*s)
+    axs[0].plot(x,np.exp(-x*x/(2*s*s))/(np.sqrt(2*np.pi)*s),color=col,label=f"s={s:g}")
+    axs[1].plot(p,np.exp(-p*p/(2*dp*dp))/(np.sqrt(2*np.pi)*dp),color=col,label=f"s={s:g}")
+for ax,label in zip(axs,["x","p"]):
+    ax.set(xlabel=label,ylabel="Probability density")
+    ax.grid(alpha=.25)
+    ax.legend(fontsize=8)
+fig.savefig(out/"gaussian_packet.png",dpi=220)
+plt.close(fig)
+# 調和振動子：無次元 y=sqrt(m*omega/hbar)*x
+y=np.linspace(-3.6,3.6,600)
+base=np.pi**(-.25)*np.exp(-y*y/2)
+states=[base,np.sqrt(2)*y*base,(2*y*y-1)/np.sqrt(2)*base]
+fig,ax=plt.subplots(figsize=(5.8,4.2),layout="constrained")
+ax.plot(y,y*y/2,color="#94a3b8",label="Potential")
+for n,psi in enumerate(states):
+    level=n+.5
+    ax.axhline(level,color="#64748b",ls="--",lw=.8)
+    ax.plot(y,level+.75*psi**2,color=["#2166ac","#16857c","#d97706"][n])
+    ax.text(3.65,level,f"n={n}",va="center",fontsize=9)
+ax.set(xlim=(-3.6,4.2),ylim=(0,4.5),xlabel="Dimensionless position",ylabel="Energy / hbar omega")
+ax.legend(fontsize=8)
+ax.grid(alpha=.15)
+fig.savefig(out/"quantum_oscillator.png",dpi=220)
+plt.close(fig)

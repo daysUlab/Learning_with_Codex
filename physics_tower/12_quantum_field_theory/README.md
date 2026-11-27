@@ -13,7 +13,7 @@ quarto render
 quarto preview --to html
 ```
 
-CIではUbuntu 24.04の texlive-luatex、texlive-lang-japanese、texlive-latex-extra、texlive-fonts-recommended、texlive-science、texlive-lang-english と日本語フォントを導入します。
+CIではUbuntu 24.04の texlive-luatex、texlive-lang-japanese、texlive-latex-extra、texlive-fonts-recommended、texlive-fonts-extra、texlive-science、texlive-lang-english と日本語フォントを導入します。
 
 生成物は `_book/`。HTMLの入口は `index.html`、PDFは `qft.pdf`。生成物はコミットしません。
 
