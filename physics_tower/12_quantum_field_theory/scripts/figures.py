@@ -71,3 +71,56 @@ for a,xx,yy,xlabel,ylabel in [(ax[0],q,p,"q [m]","p [kg m/s]"),(ax[1],2*q,p/2,"Q
     a.grid(alpha=.25)
 fig.savefig(out/"canonical.png",dpi=220)
 plt.close(fig)
+
+# 第2章：線形写像と単位正方形
+from matplotlib.patches import Polygon
+A=np.array([[2,1],[1,1]])
+square=np.array([[0,0],[1,0],[1,1],[0,1]])
+fig,axs=plt.subplots(1,2,figsize=(6.5,3.3),layout="constrained")
+for ax,M,title in zip(axs,[np.eye(2),A],["Original","After A"]):
+    ax.add_patch(Polygon(square@M.T,closed=True,facecolor="#2166ac",alpha=.16,edgecolor="#2166ac"))
+    for v,col in zip(M.T,["#2166ac","#16857c"]):
+        ax.quiver(0,0,*v,angles="xy",scale_units="xy",scale=1,color=col)
+    ax.set(xlim=(-.5,3.5),ylim=(-.5,3.5),xlabel="x",ylabel="y",title=title,aspect="equal")
+    ax.grid(alpha=.2)
+fig.savefig(out/"linear_map.png",dpi=220)
+plt.close(fig)
+# 複素平面上の位相加算
+fig,ax=plt.subplots(figsize=(4,3.6),layout="constrained")
+theta=np.linspace(0,2*np.pi,400)
+ax.plot(np.cos(theta),np.sin(theta),color="#94a3b8")
+for a,label,col in [(np.pi/6,"30°","#2166ac"),(np.pi/3,"60°","#16857c"),(np.pi/2,"30° + 60°","#d97706")]:
+    ax.quiver(0,0,np.cos(a),np.sin(a),angles="xy",scale_units="xy",scale=1,color=col,label=label)
+ax.axhline(0,color="#94a3b8",lw=.7)
+ax.axvline(0,color="#94a3b8",lw=.7)
+ax.set(xlim=(-1.15,1.15),ylim=(-1.15,1.15),aspect="equal",xlabel="Re z",ylabel="Im z")
+ax.legend(fontsize=8,loc="lower left")
+fig.savefig(out/"complex_phase.png",dpi=220)
+plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.8,3.0),layout="constrained")
+ax.plot(theta,(1+np.cos(theta))/2,color="#2166ac")
+ax.set(xlabel="Relative phase [rad]",ylabel="Squared amplitude",ylim=(-.04,1.04),xticks=[0,np.pi,2*np.pi],xticklabels=["0","π","2π"])
+ax.grid(alpha=.25)
+fig.savefig(out/"interference.png",dpi=220)
+plt.close(fig)
+# 固有方向と一般のベクトルを比較（出力を16で割って描画）
+D=np.array([[10,-6],[-6,10]])
+fig,ax=plt.subplots(figsize=(4.6,4.2),layout="constrained")
+for v,col,label in [(np.array([1.,1.])/np.sqrt(2),"#2166ac","In phase"),(np.array([1.,-1.])/np.sqrt(2),"#16857c","Out of phase"),(np.array([1.,0.]),"#d97706","Other")]:
+    dest=D@v/16
+    ax.quiver(0,0,*v,angles="xy",scale_units="xy",scale=1,color=col,alpha=.4,width=.013)
+    ax.quiver(0,0,*dest,angles="xy",scale_units="xy",scale=1,color=col,label=label,width=.007)
+ax.set(xlim=(-1.1,1.2),ylim=(-1.1,1.2),aspect="equal",xlabel="q1",ylabel="q2",title="v (faint), Dv/16 (solid)")
+ax.grid(alpha=.2)
+ax.legend(fontsize=8)
+fig.savefig(out/"eigenvectors.png",dpi=220)
+plt.close(fig)
+fig,ax=plt.subplots(figsize=(4,3.7),layout="constrained")
+ax.plot(np.cos(theta),np.sin(theta),color="#94a3b8")
+for a,col,label in [(0,"#2166ac","v"),(np.pi/3,"#16857c","Uv")]:
+    ax.quiver(0,0,np.cos(a),np.sin(a),angles="xy",scale_units="xy",scale=1,color=col,label=label)
+ax.set(xlim=(-1.15,1.15),ylim=(-1.15,1.15),aspect="equal",xlabel="x",ylabel="y",title="Rotation by 60°")
+ax.grid(alpha=.2)
+ax.legend()
+fig.savefig(out/"unitary.png",dpi=220)
+plt.close(fig)
