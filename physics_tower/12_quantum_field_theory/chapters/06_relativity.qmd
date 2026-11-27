@@ -217,7 +217,7 @@ $$
 \Lambda^\mathsf{T}\eta\Lambda=\eta
 $$
 
-です。実際、変換後の内積は $(\Lambda u)^{\mathsf T}\eta(\Lambda v)=u^{\mathsf T}\Lambda^{\mathsf T}\eta\Lambda v$ です。任意の u,v で元の内積に等しいための条件が上の行列式です。普通の直交行列がユークリッド内積を保つのに対し、ローレンツ変換はミンコフスキー内積を保ちます。
+です。実際、変換後の内積は $(\Lambda u)^{\mathsf T}\eta(\Lambda v)=u^{\mathsf T}\Lambda^{\mathsf T}\eta\Lambda v$ です。任意の u,v で元の内積に等しいための条件が上の行列等式です。普通の直交行列がユークリッド内積を保つのに対し、ローレンツ変換はミンコフスキー内積を保ちます。
 
 さらに x 方向の変換について、ラピディティ χ を
 
