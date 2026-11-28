@@ -22,6 +22,7 @@ book:
     - chapters/06_origin_of_elements.qmd
     - chapters/07_exoplanets.qmd
     - chapters/08_habitability.qmd
+    - chapters/09_neutron_stars.qmd
 
 format:
   html:

@@ -172,6 +172,26 @@
       "date": "2023-09-11",
       "type": "実測スペクトルと当時のモデル・想像図の合成",
       "chapter": 8
+    },
+    {
+      "file": "rxj1856_hubble.jpg",
+      "url": "https://cdn.esahubble.org/archives/images/large/opo9732a.jpg",
+      "source": "https://esahubble.org/images/opo9732a/",
+      "policy": "https://esahubble.org/copyright/",
+      "credit": "Fred Walter (State University of New York at Stony Brook) and NASA/ESA",
+      "date": "1997-09-24",
+      "type": "紫外・可視光観測合成（公式注釈付き）",
+      "chapter": 9
+    },
+    {
+      "file": "vela_remnant.jpg",
+      "url": "https://cdn.eso.org/images/publicationjpg/vela-snr-schmidtourcomp.jpg",
+      "source": "https://www.eso.org/public/images/vela-snr-schmidtourcomp/",
+      "policy": "https://www.eso.org/public/copyright/",
+      "credit": "ESO",
+      "date": "2009-12-03",
+      "type": "可視光観測画像（超新星残骸）",
+      "chapter": 9
     }
   ]
 }

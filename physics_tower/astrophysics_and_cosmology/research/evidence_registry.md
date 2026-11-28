@@ -92,3 +92,15 @@
 | TRAPPIST-1 eの透過スペクトル | A/B/C | [ESA/Webb 2025](https://esawebb.org/images/trappist1e/)、[NASA](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-is-webb-revealing-about-the-trappist-1-system/) | 大気なしもありも残る。厚い水素主体大気は否定的 |
 | TRAPPIST-1 b/cの厚い大気の否定的証拠 | A/B | [Nature Astronomy 2026](https://doi.org/10.1038/s41550-026-02806-9) | e/f/gとは別の観測対象 |
 | K2-18 bのDMS/DMDS | C | [Madhusudhan 2025](https://arxiv.org/abs/2504.12267)、[Nature Astronomy 2026](https://doi.org/10.1038/s41550-025-02730-4)、[A&A 2026](https://doi.org/10.1051/0004-6361/202557718) | 代替モデル・データ処理への依存。分子同定と生命起源を分離。公開概要参照 |
+
+## 第9章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 孤立中性子星・残骸の観測 | A | [ESA/Hubble 1997](https://esahubble.org/images/opo9732a/)、[ESO 2009](https://www.eso.org/public/images/vela-snr-schmidtourcomp/) | 光点・残骸の画像は内部の解像像ではない |
+| 内部構造・状態方程式 | B/C | [2026年レビュー](https://doi.org/10.1140/epjs/s11734-026-02286-y) | 表面重力・平均密度は代表値からのニュートン近似、組成は未確定 |
+| 核パスタ | C | [Caplan et al. 2018](https://doi.org/10.1103/PhysRevLett.121.132701) | 分子動力学予測であって直接観測ではない |
+| J0437−4715 と J0740+6620 | A/B | [NICER 2024](https://doi.org/10.3847/2041-8213/ad5a6f)、[NICER/XMM 2024](https://doi.org/10.3847/1538-4357/ad5f1f) | 68%周辺信用区間。独立の質量事前分布・モデルに依存 |
+| J0952−0607の質量推定 | A/B | [Romani 2022](https://doi.org/10.3847/2041-8213/ac8007)、[2026年刊行](https://arxiv.org/abs/2512.05099) | 2.35±0.11太陽質量は統計誤差。伴星光学モデル・回転補正の不確実性。TOV限界とは区別 |
+| GW170817の潮汐変形 | A/B | [LIGO/Virgo 2018](https://doi.org/10.1103/PhysRevLett.121.161101) | 波形から状態方程式を制約 |
+| クォーク物質 | C | [Annala 2023](https://doi.org/10.1038/s41467-023-44051-y) | ベイズ推定の枠組み依存。直接同定なし、混成星とクォーク星を区別 |
