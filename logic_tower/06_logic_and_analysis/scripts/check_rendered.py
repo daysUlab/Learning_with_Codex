@@ -18,39 +18,20 @@ class Doc(HTMLParser):
             self.urls.append(("image",a["src"]))
         if tag=="a" and a.get("href"):
             self.urls.append(("link",a["href"]))
-parts=re.findall(r'^\s*- part: "([^"]+)"\s*
+parts=re.findall(r'^\s*- part: "([^"]+)"\s*$',(root/"_quarto.yml").read_text(),re.M)
+assert len(parts)==5
+errors=[]
 for page in pages:
     assert page.is_file() and page.stat().st_size>0, page
     source=page.read_text(encoding="utf-8")
     # Verify part labels are in the actual left navigation, not just the body.
-    sidebar=re.search(r'<nav\b[^>]*\bid=["\']quarto-sidebar["\'][^>]*>(.*?)</nav>',source,re.S)
+    sidebar=re.search(r'<nav\b[^>]*\bid=["\x27]quarto-sidebar["\x27][^>]*>(.*?)</nav>',source,re.S)
     assert sidebar, f"Missing left sidebar: {page}"
     sidebar_text=" ".join(unescape(re.sub(r"<[^>]+>"," ",sidebar.group(1))).split())
     for part in parts:
         assert " ".join(part.split()) in sidebar_text,(page,part)
     d=Doc()
     d.feed(source)
-    for kind,url in d.urls:
-        u=urlsplit(url)
-        if u.scheme or u.netloc or not u.path or u.path.startswith("/"):
-            continue
-        target=page.parent/unquote(u.path)
-        if kind=="image" or target.suffix in (".html",".pdf",".qmd"):
-            if not target.is_file():
-                errors.append(f"{page.name}: {url}")
-pdf=book/"logic.pdf"
-assert pdf.is_file() and pdf.stat().st_size>0
-with pdf.open("rb") as f:
-    assert f.read(5)==b"%PDF-"
-assert not errors, errors
-print(f"logic: {len(pages)} HTML pages, local links/images and PDF signature OK")
-,(root/"_quarto.yml").read_text(),re.M)
-assert len(parts)==5
-errors=[]
-for page in pages:
-    assert page.is_file() and page.stat().st_size>0, page
-    d=Doc()
-    d.feed(page.read_text(encoding="utf-8"))
     for kind,url in d.urls:
         u=urlsplit(url)
         if u.scheme or u.netloc or not u.path or u.path.startswith("/"):
