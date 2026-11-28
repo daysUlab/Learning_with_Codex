@@ -538,3 +538,55 @@ ax.text(5,.75,"All pairwise intersections = root",ha="center",fontsize=10)
 fig.savefig(out/"forcing_delta_system.png",dpi=220);plt.close(fig)
 diagram([(5,4.7,"ZFC (if consistent)"),(2.5,2.8,"Constructible universe L"),(7.5,2.8,"Many Cohen reals"),(2.5,.8,"CH"),(7.5,.8,"not CH")],[(0,1),(0,2),(1,3),(2,4)],"forcing_ch_independence.png")
 diagram([(5,4.8,"Logic / sets / Boolean algebra"),(1.7,3,"Ultrapower"),(5,3,"Boolean-valued names"),(8.3,3,"Generic filter"),(1.7,.9,"Infinitesimals"),(5,.9,"Descent"),(8.3,.9,"Forcing extension")],[(0,1),(0,2),(0,3),(1,4),(2,5),(3,6)],"logic_three_methods.png")
+
+# 補章1：独自の入門用模式図
+fig,axs=plt.subplots(1,2,figsize=(5.4,2.7),layout="constrained")
+for ax,pts,edges,spins in [(axs[0],[(0,1),(1,1),(1,0),(0,0)],[(0,1),(1,2),(2,3),(3,0)],[1,-1,1,-1]),(axs[1],[(.5,1),(0,0),(1,0)],[(0,1),(0,2),(1,2)],[1,-1,-1])]:
+    ax.set(xlim=(-.35,1.35),ylim=(-.3,1.3),aspect="equal");ax.axis("off")
+    for i,j in edges:
+        x,y=pts[i];X,Y=pts[j];ok=spins[i]!=spins[j]
+        ax.plot([x,X],[y,Y],lw=2.5,color="#16857c" if ok else "#b91c1c",ls="-" if ok else "--")
+    for (x,y),s in zip(pts,spins):
+        ax.scatter(x,y,s=500,color="#2166ac" if s==1 else "#b45309",zorder=3)
+        ax.text(x,y,"+" if s==1 else "-",ha="center",va="center",color="white",fontsize=14,zorder=4)
+axs[0].set_title("Minimum energy = 0");axs[1].set_title("Minimum energy = 1")
+fig.savefig(out/"supp1_spins.png",dpi=220);plt.close(fig)
+fig,axs=plt.subplots(1,2,figsize=(5.4,3),layout="constrained")
+for ax,L in zip(axs,[3,4]):
+    ax.set(xlim=(0,L),ylim=(0,L),aspect="equal");ax.axis("off");ax.set_title(str(L)+" x "+str(L))
+    for i,j in product(range(L),repeat=2):
+        ax.add_patch(Rectangle((i,j),.93,.93,fc="#e0eaf7" if i<3 else "#fee2e2",ec="#94a3b8"))
+        ax.text(i+.465,j+.465,str(i) if i<3 else "X",ha="center",va="center")
+fig.savefig(out/"supp1_counter_grid.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(4.8,3.2),layout="constrained")
+ax.set(xlim=(-.4,4.4),ylim=(-.4,4.4),aspect="equal");ax.axis("off")
+for x,y in product(range(5),repeat=2):
+    if x<4: ax.plot([x,x+1],[y,y],color="#2166ac",lw=2)
+    if y<4: ax.plot([x,x],[y,y+1],color="#16857c",lw=2)
+    ax.scatter(x,y,s=55,color="#64748b",zorder=3)
+ax.set_title("Horizontal and vertical bond terms")
+fig.savefig(out/"supp1_bonds.png",dpi=220);plt.close(fig)
+diagram([(5,5,"All lattice sizes"),(5,3.65,"Polynomial constraints"),(5,2.3,"Finite generating subset"),(5,.85,"One finite cutoff")],[(0,1),(1,2),(2,3)],"supp1_algebra.png",size=(5.4,3.6))
+from matplotlib.patches import Polygon
+fig,ax=plt.subplots(figsize=(5.4,2.0),layout="constrained")
+ax.set(xlim=(-.15,4.15),ylim=(-.3,1.3),aspect="equal");ax.axis("off")
+colors=[("#2166ac","#16857c","#d97706","#64748b"),("#d97706","#2166ac","#64748b","#16857c"),("#16857c","#d97706","#2166ac","#2166ac"),("#64748b","#16857c","#2166ac","#d97706")]
+for x,(top,right,bottom,left) in enumerate(colors):
+    for pts,c in [([(x,1),(x+1,1),(x+.5,.5)],top),([(x+1,1),(x+1,0),(x+.5,.5)],right),([(x+1,0),(x,0),(x+.5,.5)],bottom),([(x,0),(x,1),(x+.5,.5)],left)]:
+        ax.add_patch(Polygon(pts,fc=c,ec="white",lw=.7))
+    ax.add_patch(Rectangle((x,0),1,1,fill=False,ec="#334155",lw=1))
+ax.set_title("Matching adjacent edge colors")
+fig.savefig(out/"supp1_tiles.png",dpi=220);plt.close(fig)
+diagram([(5,5,"Consistency of ZFC"),(5,3.65,"Machine never halts"),(5,2.3,"Legal plane tiling"),(5,.85,"FF at every size")],[(0,1),(1,2),(2,3)],"supp1_logic_chain.png",size=(5.4,3.6))
+diagram([(2.5,4.9,"Fixed d = 2"),(2.5,3.2,"Hard-coded L(2)"),(2.5,1.5,"Decision machine"),(7.5,4.9,"Arbitrary d"),(7.5,3.2,"No computable cutoff"),(7.5,1.5,"No uniform machine")],[(0,1),(1,2),(3,4),(4,5)],"supp1_nonuniform.png")
+fig,ax=plt.subplots(figsize=(5.4,2.6),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,4));ax.axis("off")
+for y,lab in [(2.8,"Standard sizes"),(1.1,"Nonstandard model")]:
+    ax.plot([.5,9.5],[y,y],color="#94a3b8")
+    for i in range(1,7):
+        ax.scatter(i,y,s=45,color="#16857c",zorder=3);ax.text(i,y-.3,str(i),ha="center",fontsize=9)
+    ax.text(.5,y+.48,lab,fontsize=10)
+    ax.text(7,y,"...",fontsize=13,va="center")
+ax.scatter(9,1.1,s=100,color="#b91c1c",zorder=3);ax.text(9,.75,"H",ha="center")
+ax.text(9,1.55,"counterexample",ha="center",fontsize=9)
+fig.savefig(out/"supp1_nonstandard.png",dpi=220);plt.close(fig)

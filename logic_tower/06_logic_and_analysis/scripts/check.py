@@ -486,3 +486,23 @@ for i,expected in enumerate([4,4,4,3,3]):
     block=config.split('    - part: ')[i+1].split('    - references.qmd')[0]
     assert len(re.findall(r'^\s*- chapters/',block,re.M))==expected
 print("logic: five parts and all 18 chapters registered")
+
+# 補章1：有限の具体例のみの検算（原論文の一般定理を機械検証するものではない）
+for n in (3,4):
+    energies=[sum((1+s[i]*s[(i+1)%n])//2 for i in range(n)) for s in product([-1,1],repeat=n)]
+    assert min(energies)==n%2
+for d in range(2,7):
+    for L in range(2,9):
+        assert any(all(0<=start+j<d for j in range(L)) for start in range(d))==(L<=d)
+assert 2*2**4==32 and 2**4==16 and 2*2*(2-1)==4
+assert 2*3**4==162 and 3**4==81
+supp=root/"supplements/01_physics_unprovability.qmd"
+assert "supplements/01_physics_unprovability.qmd" in config
+s=supp.read_text()
+assert len(re.findall(r"^\$\$\s*$",s,re.M))%2==0
+assert not re.search(r"^\s*\$\s*$",s,re.M)
+for name in re.findall(r"\]\(\.\./figures/([^)]*)\)",s):
+    assert name in (root/"scripts/figures.py").read_text(),name
+assert len(re.findall(r"^\d+\. ",s.split("## 演習")[1].split("## 解答")[0],re.M))==15
+assert len(re.findall(r"^\d+\. ",s.split("## 解答")[1],re.M))==15
+print("supplement 1: finite spin/grid examples and structure OK")

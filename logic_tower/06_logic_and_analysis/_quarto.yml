@@ -41,6 +41,7 @@ book:
         - chapters/16_cohen_forcing.qmd
         - chapters/17_generic_extensions.qmd
         - chapters/18_independence_and_connections.qmd
+    - supplements/01_physics_unprovability.qmd
     - references.qmd
 format:
   html:
