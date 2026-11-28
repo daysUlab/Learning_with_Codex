@@ -19,6 +19,7 @@ book:
     - chapters/03_galaxies_cosmic_web.qmd
     - chapters/04_why_stars_shine.qmd
     - chapters/05_stellar_evolution.qmd
+    - chapters/06_origin_of_elements.qmd
 
 format:
   html:

@@ -6,18 +6,18 @@
 |---|---|---|---|---|
 | 1 | andromeda_heic2501a.jpg | 2025-01-16 | 観測モザイク | [公式画像](https://esahubble.org/images/heic2501a/)、NASA, ESA, B. Williams (University of Washington)、[利用条件](https://esahubble.org/copyright/) |
 | 2 | mom_z14_weic2603a.jpg | 2026-01-28 | 観測画像・拡大枠付き合成 | [公式画像](https://esawebb.org/images/weic2603a/)、NASA, ESA, CSA, STScI, R. Naidu (MIT), Image Processing: J. DePasquale (STScI)、[利用条件](https://esawebb.org/copyright/) |
-
 | 3 | ngc1300.jpg | 2005-01-11 | 観測画像（棒渦巻銀河） | [公式画像](https://esahubble.org/images/opo0501a/)、NASA, ESA, and The Hubble Heritage Team (STScI/AURA)、[利用条件](https://esahubble.org/copyright/) |
 | 3 | ngc1132.jpg | 2008-02-05 | 観測画像（楕円銀河） | [公式画像](https://esahubble.org/images/heic0804a/)、NASA, ESA and the Hubble Heritage (STScI/AURA)-ESA/Hubble Collaboration. Acknowledgment: M. West (ESO, Chile)、[利用条件](https://esahubble.org/copyright/) |
 | 3 | ic10.jpg | 2019-06-17 | 観測画像（不規則銀河） | [公式画像](https://esahubble.org/images/potw1924a/)、NASA, ESA and F. Bauer、[利用条件](https://esahubble.org/copyright/) |
 | 3 | abell2744.jpg | 2014-01-07 | 観測画像（銀河団） | [公式画像](https://esahubble.org/images/heic1401a/)、NASA, ESA, and J. Lotz, M. Mountain, A. Koekemoer, and the HFF Team (STScI).、[利用条件](https://esahubble.org/copyright/) |
 | 3 | cosmic_filament.jpg | 2025-01-29 | 観測画像（ガス放射の疑似色重ね合わせ） | [公式画像](https://www.eso.org/public/images/potw2504a/)、ESO/D. Tornotti et al./Hubble: M. Revalski, P. Francis et al.、[利用条件](https://www.eso.org/public/copyright/) |
-
 | 4 | protostar_l1527.jpg | 2022-11-16 | 近赤外線観測画像 | [公式画像](https://esawebb.org/images/weic2219a/)、NASA, ESA, CSA, and STScI, J. DePasquale (STScI)、[利用条件](https://esawebb.org/copyright/) |
 | 4 | pillars_creation.jpg | 2022-10-19 | 近赤外線観測画像 | [公式画像](https://esawebb.org/images/weic2216e/)、NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI).、[利用条件](https://esawebb.org/copyright/) |
-
 | 5 | ring_nebula.jpg | 2023-08-21 | 近赤外線観測画像（惑星状星雲） | [公式画像](https://esawebb.org/images/weic2320b/)、ESA/Webb, NASA, CSA, M. Barlow, N. Cox, R. Wesson、[利用条件](https://esawebb.org/copyright/) |
 | 5 | cassiopeia_a.jpg | 2023-12-11 | 近赤外線観測画像（超新星残骸） | [公式画像](https://esawebb.org/images/weic2330a/)、NASA, ESA, CSA, STScI, D. Milisavljevic (Purdue University), T. Temim (Princeton University), I. De Looze (University of Gent)、[利用条件](https://esawebb.org/copyright/) |
+
+| 6 | crab_nebula.jpg | 2005-12-01 | 可視光観測モザイク（超新星残骸） | [公式画像](https://esahubble.org/images/heic0515a/)、NASA, ESA and Allison Loll/Jeff Hester (Arizona State University). Acknowledgement: Davide De Martin (ESA/Hubble)、[利用条件](https://esahubble.org/copyright/) |
+| 6 | grb230307a.jpg | 2023-10-25 | 近赤外線観測合成画像（公式注釈付き） | [公式画像](https://esawebb.org/images/weic2325b/)、NASA, ESA, CSA, STScI, A. Levan (IMAPP, Warw), A. Pagan (STScI)、[利用条件](https://esawebb.org/copyright/) |
 
 ライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
