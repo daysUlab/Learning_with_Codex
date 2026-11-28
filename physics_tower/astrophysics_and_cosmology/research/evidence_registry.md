@@ -154,3 +154,11 @@
 ## 第14章（2026-11-29確認）
 - 光速不変・時間遅れ・同時性・双子： [Einstein Online](https://www.einstein-online.info/en/relativity_space_time/)、[光時計](https://www.einstein-online.info/en/spotlight/light-clocks-time-dilation/)、[同時性](https://www.einstein-online.info/en/spotlight/Now/)、[双子](https://www.einstein-online.info/en/spotlight/Twins/)（B）。測定と受信信号、固有時と座標時を区別。表・世界線は理想化した計算。
 - GPSの特殊・一般相対論補正：[NIST](https://www.nist.gov/atomic-clocks/a-powerful-tool-for-science/putting-einstein-test)（A/B）。−7、+45、+38 μs/日の概数。距離換算は測位誤差そのものではない。
+
+## 第15章（2026-11-29確認）
+- 等価原理・光の曲がり：[Einstein Online](https://www.einstein-online.info/en/spotlight/equivalence_principle/)、[光](https://www.einstein-online.info/en/spotlight/equivalence_light/)（B）。局所と潮汐・大域的効果を区別。
+- 水星の近日点移動：[Oregon State University](https://sites.science.oregonstate.edu/coursewikis/GGR/book/content/mercury)（A/B）。42.98秒角/世紀は主要な相対論的寄与。
+- 重力赤方偏移：[NIST 2022](https://www.nist.gov/news-events/news/2022/02/jila-atomic-clocks-measure-einsteins-general-relativity-millimeter-scale)（A/B）。高さ1mの時計差は弱重力近似。
+- 1919年日食：[Royal Society](https://www.royalsociety.org/blog/2024/08/observing-relativity/)、[NASA](https://science.gsfc.nasa.gov/attic/eclipse2017.gsfc.nasa.gov/testing-general-relativity.html)（A/B）。1.75秒角は理論値で歴史的観測は誤差あり。
+- 重力レンズ：[ESA/Webb 2025](https://esawebb.org/images/potm2503a/)、[2024](https://esawebb.org/images/potm2406a/)（A/B）。光源とレンズの像・回折を区別。
+- シャピロ遅延：[Bertotti et al. 2003](https://doi.org/10.1038/nature01997)（A/B）。パラメータの差0.000021±0.000023、周波数変化から推定。局所光速の変化ではない。

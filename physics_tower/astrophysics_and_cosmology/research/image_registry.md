@@ -34,6 +34,11 @@
 | 9 | j0030_hotspots_nasa.jpg | 2019-12-12 | NICER観測に基づく二つの表面温度分布モデルの可視化 | [公式画像](https://svs.gsfc.nasa.gov/13240/)、NASA's Goddard Space Flight Center、[NASA利用条件](https://www.nasa.gov/nasa-brand-center/images-and-media/) |
 | 11 | bh_optics_nasa.jpg | 2019-09-25 | 降着円盤の計算可視化・光路の解説図 | [公式画像](https://svs.gsfc.nasa.gov/13326/)、NASA's Goddard Space Flight Center/Jeremy Schnittman、[NASA利用条件](https://www.nasa.gov/nasa-brand-center/images-and-media/) |
 
+| 11 | bh_sim_angle1.jpg | 2019-09-25 | 降着円盤の計算可視化・静止画（斜めの視線） | [公式画像](https://svs.gsfc.nasa.gov/13326/)、NASA’s Goddard Space Flight Center/Jeremy Schnittman、[利用条件](https://www.nasa.gov/nasa-brand-center/images-and-media/) |
+| 11 | bh_sim_angle2.jpg | 2019-09-25 | 降着円盤の計算可視化・静止画（別の視線） | [公式画像](https://svs.gsfc.nasa.gov/13326/)、NASA’s Goddard Space Flight Center/Jeremy Schnittman、[利用条件](https://www.nasa.gov/nasa-brand-center/images-and-media/) |
+| 15 | einstein_ring_smacs0028.jpg | 2025-03-27 | Webb・Hubbleの観測合成画像 | [公式画像](https://esawebb.org/images/potm2503a/)、ESA/Webb, NASA & CSA, G. Mahler. Acknowledgement: M. A. McDonald、[利用条件](https://esawebb.org/copyright/) |
+| 15 | quasar_lens_rxj1131.jpg | 2024-07-05 | Webb MIRI赤外線観測画像 | [公式画像](https://esawebb.org/images/potm2406a/)、ESA/Webb, NASA & CSA, A. Nierenberg、[利用条件](https://esawebb.org/copyright/) |
+
 ESA・ESO図版のライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
 画像ファイルは公式配布URLからビルド前にダウンロードし、ローカルにキャッシュする。Quarto HTML/PDFの両方で同一のローカルファイルを参照する。今回の実行環境では外部CDNへの接続ができないため、バイナリ取得・描画は未検証。
@@ -41,3 +46,5 @@ ESA・ESO図版のライセンス：[CC BY 4.0](https://creativecommons.org/lice
 第12章：外部図版を追加せず、8点の独自SVGを収録。NASAの計算可視化は参考リンクのみで画像の転載なし。
 
 2026-11-29：NASA SVSの2点は静止画のみ、改変なし。個別配布ページ・JPEGをWebで表示確認、NASAのメディア利用規則で教育目的の利用条件を確認。動画・音楽・ロゴは使用しない。CC BY 4.0とは別の条件。CIでダウンロードと描画を確認する。
+
+2026-11-29：NASA可視化静止画2点・SMACSリングJPEGをWebで実画像確認。RX J1131は公式配布リンク・クレジット確認、JPEGはWebで取得失敗。CIで検証。NASAの動画は公式リンクのみ。

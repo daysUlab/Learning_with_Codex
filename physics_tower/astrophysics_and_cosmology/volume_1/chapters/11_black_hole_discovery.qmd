@@ -120,6 +120,18 @@ EHTの成果はブラックホールの周辺が一般相対論の予測と整�
 
 参考：[NASA SVS 2019年の降着円盤可視化](https://svs.gsfc.nasa.gov/13326/)、[NASA Black Hole Anatomy](https://science.nasa.gov/universe/black-holes/anatomy/)、[NASA 2024年の落下可視化](https://science.nasa.gov/universe/new-nasa-black-hole-visualization-takes-viewers-beyond-the-brink/)（確認日：2026-11-29）。
 
+### 観測方向を変えると見え方はどう変わるか
+
+NASAの同じ非回転ブラックホールの可視化を、二つの異なる方向から比較します。
+
+![円盤を斜めから見た計算画像。中心の暗い影を囲む明るい円盤と細いリングが見える。 Credit: NASA’s Goddard Space Flight Center/Jeremy Schnittman。[出典](https://svs.gsfc.nasa.gov/13326/) ／ [NASA Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/)。](../figures/external/bh_sim_angle1.jpg){#fig-bh-sim-angle1 width=75%}
+
+![別の方向から見た計算画像。円盤の見かけの幅や光の回り込み、左右の明るさが変わる。 Credit: NASA’s Goddard Space Flight Center/Jeremy Schnittman。[出典](https://svs.gsfc.nasa.gov/13326/) ／ [NASA Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/)。](../figures/external/bh_sim_angle2.jpg){#fig-bh-sim-angle2 width=75%}
+
+左側の明るさにはこちらへ近づく高速のガスの相対論的ビーミングが関係しています。円盤を真上から見れば、この方向による明るさの差は小さくなります。どちらも画像の色・形は数値可視化の表現で、実際の可視光観測写真ではありません。
+
+[NASA公式の回転する視点の動画・GIFを閲覧する](https://svs.gsfc.nasa.gov/13326/)。HTML版・PDF版では同じ静止画を掲載し、動画やGIFは公式ページへのリンクから参照します。
+
 ## 複数の証拠が一つの理解につながる
 
 | 方法 | 実際に観測するもの | 何が分かるか |

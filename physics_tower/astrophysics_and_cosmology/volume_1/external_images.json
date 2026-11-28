@@ -258,6 +258,58 @@
       "license": "NASA Media Usage Guidelines（米国政府制作物は原則米国著作権の対象外。第三者素材の例外あり）",
       "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
       "checked": "2026-11-29"
+    },
+    {
+      "file": "bh_sim_angle1.jpg",
+      "url": "https://svs.gsfc.nasa.gov/vis/a010000/a013300/a013326/Black_Hole_Accretion_Disk_Sim_4k_ProRes.00386_print.jpg",
+      "source": "https://svs.gsfc.nasa.gov/13326/",
+      "credit": "NASA’s Goddard Space Flight Center/Jeremy Schnittman",
+      "date": "2019-09-25",
+      "type": "降着円盤の計算可視化・静止画（斜めの視線）",
+      "chapter": 11,
+      "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license": "NASA Media Usage Guidelines",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "checked": "2026-11-29"
+    },
+    {
+      "file": "bh_sim_angle2.jpg",
+      "url": "https://svs.gsfc.nasa.gov/vis/a010000/a013300/a013326/BH_AccretionDisk_360_4k.00250_print.jpg",
+      "source": "https://svs.gsfc.nasa.gov/13326/",
+      "credit": "NASA’s Goddard Space Flight Center/Jeremy Schnittman",
+      "date": "2019-09-25",
+      "type": "降着円盤の計算可視化・静止画（別の視線）",
+      "chapter": 11,
+      "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license": "NASA Media Usage Guidelines",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "checked": "2026-11-29"
+    },
+    {
+      "file": "einstein_ring_smacs0028.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/large/potm2503a.jpg",
+      "source": "https://esawebb.org/images/potm2503a/",
+      "credit": "ESA/Webb, NASA & CSA, G. Mahler. Acknowledgement: M. A. McDonald",
+      "date": "2025-03-27",
+      "type": "Webb・Hubbleの観測合成画像",
+      "chapter": 15,
+      "policy": "https://esawebb.org/copyright/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "checked": "2026-11-29"
+    },
+    {
+      "file": "quasar_lens_rxj1131.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/large/potm2406a.jpg",
+      "source": "https://esawebb.org/images/potm2406a/",
+      "credit": "ESA/Webb, NASA & CSA, A. Nierenberg",
+      "date": "2024-07-05",
+      "type": "Webb MIRI赤外線観測画像",
+      "chapter": 15,
+      "policy": "https://esawebb.org/copyright/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "checked": "2026-11-29"
     }
   ]
 }

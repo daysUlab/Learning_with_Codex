@@ -28,6 +28,7 @@ book:
     - chapters/12_falling_into_black_holes.qmd
     - chapters/13_active_galaxies_and_bursts.qmd
     - chapters/14_special_relativity.qmd
+    - chapters/15_general_relativity_observations.qmd
 
 format:
   html:
