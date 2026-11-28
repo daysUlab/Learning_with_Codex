@@ -100,3 +100,31 @@ ax.text(8,3.75,"Rename bound y",ha="center",fontsize=9)
 ax.text(8.25,1.75,"Substitute y",ha="left",fontsize=9)
 fig.savefig(out/"substitution_capture.png",dpi=220)
 plt.close(fig)
+
+# 第4章：Henkin構成
+def diagram(nodes,edges,name,size=(5.4,3.0)):
+    fig,ax=plt.subplots(figsize=size,layout="constrained")
+    ax.set(xlim=(0,10),ylim=(0,6))
+    ax.axis("off")
+    for i,j in edges:
+        x,y,_=nodes[i]; X,Y,_=nodes[j]
+        ax.annotate("",xy=(X,Y),xytext=(x,y),arrowprops=dict(arrowstyle="->",color="#64748b",shrinkA=20,shrinkB=20))
+    for x,y,label in nodes:
+        ax.text(x,y,label,ha="center",va="center",fontsize=10,bbox=dict(boxstyle="round,pad=.45",fc="#e0eaf7",ec="#2166ac"))
+    fig.savefig(out/name,dpi=220)
+    plt.close(fig)
+diagram([(2.4,4.5,r"$\exists x\,P(x)$"),(7.5,4.5,"Fresh name c"),(5,1.6,r"$\exists x\,P(x)\;\to\;P(c)$")],[(0,2),(1,2)],"henkin_witness.png")
+diagram([(2,4.7,"L0, T0"),(5,4.7,"L1, T1"),(8,4.7,"L2, T2"),(5,1.4,"Union of all stages")],[(0,1),(1,2),(0,3),(1,3),(2,3)],"henkin_stages.png")
+diagram([(1.4,4.7,"a"),(3.8,4.7,"f(b)"),(6.2,4.7,"b"),(8.6,4.7,"f(a)"),(2.6,1.5,"[a]"),(7.4,1.5,"[b]")],[(0,4),(1,4),(2,5),(3,5)],"term_model.png")
+fig,ax=plt.subplots(figsize=(5.6,3.0),layout="constrained")
+ax.set(xlim=(-.3,10.8),ylim=(0,4.3))
+ax.axis("off")
+for y,n,label in [(3.4,2,"h > 2"),(2.4,5,"h > 5"),(1.4,8,"h > 8")]:
+    ax.hlines(y,0,10,color="#94a3b8")
+    ax.plot(range(11),[y]*11,"|",color="#64748b")
+    ax.hlines(y,n+.1,10,color="#16857c",lw=4)
+    ax.scatter([n+1],[y],color="#2166ac",zorder=3)
+    ax.text(0,y+.22,label,fontsize=9)
+ax.text(5,.35,"Any finite list: choose a larger integer",ha="center",fontsize=10)
+fig.savefig(out/"compactness_numbers.png",dpi=220)
+plt.close(fig)

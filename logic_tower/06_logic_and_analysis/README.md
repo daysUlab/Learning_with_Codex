@@ -7,6 +7,7 @@
 - [第1章](chapters/01_propositional_completeness.qmd)
 - [第2章](chapters/02_boolean_algebras.qmd)
 - [第3章](chapters/03_first_order.qmd)
+- [第4章](chapters/04_model_existence.qmd)
 - [執筆進捗](PROGRESS.md)
 - [レビュー記録](REVIEW.md)
 - [制作手順](../../TEXTBOOK_WORKFLOW.md)

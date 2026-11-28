@@ -16,6 +16,7 @@ book:
     - chapters/01_propositional_completeness.qmd
     - chapters/02_boolean_algebras.qmd
     - chapters/03_first_order.qmd
+    - chapters/04_model_existence.qmd
     - references.qmd
 format:
   html:
