@@ -430,3 +430,26 @@ for a,b in product(range(-3,4),repeat=2):
     roots=(cmath.sqrt(a),cmath.sqrt(b))
     assert all(abs(z*z-v)<1e-12 for z,v in zip(roots,(a,b)))
 print("chapter 15: finite component operations and root samples OK")
+
+# 第16章：有限条件の標本全列挙と両立性
+conditions=[{k:v for k,v in enumerate(vs) if v!=-1} for vs in product([-1,0,1],repeat=4)]
+stronger=lambda q,p:all(q.get(k)==v for k,v in p.items())
+for p in conditions:
+    assert stronger(p,{})
+    for q in conditions:
+        compatible=all(p[k]==q[k] for k in p.keys()&q.keys())
+        assert compatible==any(stronger(r,p) and stronger(r,q) for r in conditions)
+        if compatible:
+            union=p|q
+            assert stronger(union,p) and stronger(union,q)
+    for k in range(4):
+        q=p if k in p else p|{k:0}
+        assert stronger(q,p) and k in q
+    # 有限標本の外側に新しい添字を追加する（稠密性の例）
+    for a in product([0,1],repeat=5):
+        q=p|{4:1-a[4]}
+        assert stronger(q,p) and q[4]!=a[4]
+print("chapter 16: finite conditions and dense extension samples OK")
+# 冒頭の図の参照も検査
+for name in re.findall(r"\]\(figures/([^)]*)\)",(root/"index.qmd").read_text()):
+    assert name in (root/"scripts/figures.py").read_text(),name

@@ -27,3 +27,9 @@
 - [Boolean valued interpretation of Banach space theory and module structures of von Neumann algebras](https://www.cambridge.org/core/journals/nagoya-mathematical-journal/article/boolean-valued-interpretation-of-banach-space-theory-and-module-structures-of-von-neumann-algebras/4D74794FF43BC416E87A5697ABDAE929)：Banach加群への移行の論文概要を確認。
 
 2026-11-28確認。第15章のモニック多項式の根の移行例は引用した表現定理と代数学の基本定理・根の評価から本書で導出した例であり、文献からの転載ではない。
+
+## 冒頭と第16章の参考資料
+
+- R. M. Anderson, A non-standard representation for Brownian motion and Itô integration, Israel Journal of Mathematics 25 (1976), 15–46：超有限ランダムウォークとLoeb測度によるBrown運動の構成。論文の概要を確認、証明は本書の範囲外。
+- [Set Theory](https://plato.stanford.edu/entries/set-theory/), Stanford Encyclopedia of Philosophy：Cohen強制法とCH独立性の説明（2026-11-28確認）。
+- [The Continuum Hypothesis](https://plato.stanford.edu/entries/continuum-hypothesis/), Stanford Encyclopedia of Philosophy：Gödel・Cohenの相対的無矛盾性（2026-11-28確認）。

@@ -448,3 +448,41 @@ ax.axvspan(.5,1,color="#16857c",alpha=.2,label="Boolean value: r < f")
 ax.set(xlabel="t",ylabel="f(t)",xlim=(0,1),ylim=(0,1));ax.legend(fontsize=8)
 fig.savefig(out/"bva_cuts.png",dpi=220);plt.close(fig)
 diagram([(5,4.6,"Complex polynomial"),(5,3.3,"Root in V^B"),(2.5,1.1,"Measurable root"),(7.5,1.1,"Continuous root on K")],[(0,1),(1,2),(1,3)],"bva_transfer.png")
+
+# 冒頭：三つの数学的な世界と具体例
+diagram([(5,4.65,"Mathematical logic"),(1.7,2.7,"Number system"),(5,2.7,"Truth values"),(8.3,2.7,"Set universe"),(1.7,.8,"Infinitesimals"),(5,.8,"Transfer theorems"),(8.3,.8,"Independence")],[(0,1),(0,2),(0,3),(1,4),(2,5),(3,6)],"intro_three_worlds.png")
+fig,axs=plt.subplots(1,2,figsize=(5.5,2.8),layout="constrained")
+for ax,m,lab in [(axs[0],4,"Finite grid"),(axs[1],32,"Hyperfinite idea")]:
+    xx=[k/m for k in range(m)]
+    ax.bar(xx,[(x+1/m)**2 for x in xx],width=1/m,align="edge",color="#b4ddd5",edgecolor="#16857c",linewidth=.5)
+    xx=[k/100 for k in range(101)]
+    ax.plot(xx,[x*x for x in xx],color="#2166ac",lw=1.8)
+    ax.set(xlim=(0,1.02),ylim=(0,1.05),title=lab,xlabel="x")
+axs[0].set_ylabel("x squared")
+fig.savefig(out/"intro_hyperfinite.png",dpi=220);plt.close(fig)
+diagram([(5,4.6,"Complex polynomial has a root"),(5,3.1,"Boolean-valued universe"),(2.5,1.1,"Measurable root"),(7.5,1.1,"Continuous root on K")],[(0,1),(1,2),(1,3)],"intro_transfer.png")
+diagram([(5,4.6,"ZFC (if consistent)"),(2.5,2.6,"ZFC + CH"),(7.5,2.6,"ZFC + not CH"),(2.5,.8,"Constructible universe"),(7.5,.8,"Forcing extension")],[(0,1),(0,2),(1,3),(2,4)],"intro_forcing.png")
+# 第16章：条件の増加・稠密条件列・新しい列
+fig,ax=plt.subplots(figsize=(5.5,2.8),layout="constrained")
+ax.set(xlim=(-1.2,5.4),ylim=(0,3.6));ax.axis("off")
+for i,(label,vals) in enumerate([("p",[1,None,0,None,None]),("q",[1,1,0,None,None]),("r",[1,1,0,1,None])]):
+    y=2.7-i
+    ax.text(-.6,y+.3,label,ha="center",fontsize=12)
+    for k,v in enumerate(vals):
+        ax.add_patch(Rectangle((k,y),.78,.6,fc="#e0eaf7" if v is not None else "#f1f5f9",ec="#64748b"))
+        ax.text(k+.39,y+.3,"?" if v is None else str(v),ha="center",va="center",fontsize=11)
+ax.text(2,.2,"Stronger = more information",ha="center",fontsize=10)
+fig.savefig(out/"forcing_conditions.png",dpi=220);plt.close(fig)
+diagram([(1.1,4.6,"p0"),(3.7,3.4,"p1 in D0"),(6.3,2.2,"p2 in D1"),(8.8,1,"p3 in D2")],[(0,1),(1,2),(2,3)],"forcing_dense_chain.png")
+fig,ax=plt.subplots(figsize=(5.5,3),layout="constrained")
+ax.set(xlim=(-1.8,6.6),ylim=(0,4.8));ax.axis("off")
+rows=[("a0","000000"),("a1","111111"),("a2","010101"),("r","1010??")]
+for i,(lab,word) in enumerate(rows):
+    y=3.8-i
+    ax.text(-.6,y+.32,lab,ha="center",fontsize=11)
+    for k,v in enumerate(word):
+        marked=(i<3 and k==i) or (i==3 and k<3)
+        ax.add_patch(Rectangle((k,y),.78,.65,fc="#b4ddd5" if marked else "#f1f5f9",ec="#64748b"))
+        ax.text(k+.39,y+.32,v,ha="center",va="center",fontsize=10)
+ax.text(2.5,.23,"Different at a specified coordinate",ha="center",fontsize=10)
+fig.savefig(out/"forcing_new_real.png",dpi=220);plt.close(fig)

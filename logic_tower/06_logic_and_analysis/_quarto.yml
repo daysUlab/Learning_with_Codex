@@ -28,6 +28,7 @@ book:
     - chapters/13_complete_boolean_algebras.qmd
     - chapters/14_boolean_valued_universe.qmd
     - chapters/15_boolean_valued_analysis.qmd
+    - chapters/16_cohen_forcing.qmd
     - references.qmd
 format:
   html:
