@@ -48,3 +48,14 @@
 | 核融合・恒星進化・内部構造 | B | [NASA Stars](https://science.nasa.gov/universe/stars/)、[Sun](https://science.nasa.gov/sun/facts/) | 内部温度はモデル推定、核融合は圧力の維持に寄与 |
 | HR図の分布 | A/B | [ESA Gaia 2018](https://www.esa.int/media/gaia-s-hertzsprung-russell-diagram)、[OpenStax](https://openstax.org/books/astronomy/pages/18-4-the-h-r-diagram) | 模式図は実測点ではない |
 | 太陽ニュートリノの種類の変化 | A/B | [SNO 2002](https://pubmed.ncbi.nlm.nih.gov/12097025/)、[Nobel 2015](https://www.nobelprize.org/prizes/physics/2015/press-release/) | 電子成分と全活性成分を区別 |
+
+## 第5章（2026-11-28確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 質量と主系列寿命 | A/B | [OpenStax §22.1](https://openstax.org/books/astronomy-2e/pages/22-1-evolution-from-the-main-sequence-to-red-giants)、[§22.2](https://openstax.org/books/astronomy-2e/pages/22-2-star-clusters) | 0.4太陽質量の約2000億年はモデル推定。図の重い星500万年は代表値 |
+| 太陽の赤色巨星化 | B | [NASA Sun](https://science.nasa.gov/sun/facts/) | 約50億年後。地球の最終軌道は不確実 |
+| 惑星状星雲・白色矮星 | A/B | [ESA/Webb M57](https://esawebb.org/images/weic2320b/)、[NASA Stars Types](https://science.nasa.gov/universe/stars/types/) | 地球サイズ、質量は典型例 |
+| 褐色矮星 | A/B | [NASA Glossary](https://science.nasa.gov/mission/hubble/multimedia/hubble-glossary/) | 普通の水素の持続的核融合に至らない。形成過程の分類と質量境界を区別 |
+| 核崩壊型超新星と残骸 | A/B/C | [NASA Stars Types](https://science.nasa.gov/universe/stars/types/)、[ESA/Webb Cas A](https://esawebb.org/images/weic2330a/) | [Burrows & Vartanyan 2021](https://doi.org/10.1038/s41586-020-03059-w)、[Janka 2012](https://doi.org/10.1146/annurev-nucl-102711-094901) の概要も参照。限界質量の導出はTODO |
+| Ia型超新星 | A/B/C | [NASA Type Ia](https://science.nasa.gov/mission/roman-space-telescope/type-ia-supernovae/) | [2025年の専門レビュー](https://doi.org/10.1007/s00159-024-00158-9)も参照。白色矮星連星起源。複数経路、限界質量未満の爆発も考慮 |

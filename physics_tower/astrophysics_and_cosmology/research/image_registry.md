@@ -16,6 +16,9 @@
 | 4 | protostar_l1527.jpg | 2022-11-16 | 近赤外線観測画像 | [公式画像](https://esawebb.org/images/weic2219a/)、NASA, ESA, CSA, and STScI, J. DePasquale (STScI)、[利用条件](https://esawebb.org/copyright/) |
 | 4 | pillars_creation.jpg | 2022-10-19 | 近赤外線観測画像 | [公式画像](https://esawebb.org/images/weic2216e/)、NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI).、[利用条件](https://esawebb.org/copyright/) |
 
+| 5 | ring_nebula.jpg | 2023-08-21 | 近赤外線観測画像（惑星状星雲） | [公式画像](https://esawebb.org/images/weic2320b/)、ESA/Webb, NASA, CSA, M. Barlow, N. Cox, R. Wesson、[利用条件](https://esawebb.org/copyright/) |
+| 5 | cassiopeia_a.jpg | 2023-12-11 | 近赤外線観測画像（超新星残骸） | [公式画像](https://esawebb.org/images/weic2330a/)、NASA, ESA, CSA, STScI, D. Milisavljevic (Purdue University), T. Temim (Princeton University), I. De Looze (University of Gent)、[利用条件](https://esawebb.org/copyright/) |
+
 ライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
 画像ファイルは公式配布URLからビルド前にダウンロードし、ローカルにキャッシュする。Quarto HTML/PDFの両方で同一のローカルファイルを参照する。今回の実行環境では外部CDNへの接続ができないため、バイナリ取得・描画は未検証。
