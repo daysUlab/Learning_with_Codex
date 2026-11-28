@@ -17,7 +17,8 @@ jobs:
       - name: 日本語PDF環境
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended fonts-noto-cjk librsvg2-bin
+          sudo apt-get install -y texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra fonts-noto-cjk librsvg2-bin
+          kpsewhich fontawesome5.sty
       - name: 公式画像の取得と前編HTML・PDFの生成
         working-directory: physics_tower/astrophysics_and_cosmology/volume_1
         run: |
