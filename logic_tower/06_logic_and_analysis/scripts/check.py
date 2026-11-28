@@ -332,3 +332,17 @@ for a in map(Fraction,range(-3,4)):
             if a and a+h:
                 assert (1/(a+h)-1/a)/h==-1/(a*(a+h))
 print("chapter 11: finite difference samples OK")
+
+# 第12章：有限和公式、左右の差、区間の拡大を厳密有理数で検算
+for m in range(1,151):
+    e=Fraction(1,m)
+    right=sum(Fraction(k*k,m**3) for k in range(1,m+1))
+    left=sum(Fraction(k*k,m**3) for k in range(m))
+    assert right==Fraction(1,3)+e/2+e*e/6
+    assert left==Fraction(1,3)-e/2+e*e/6
+    assert right-left==e
+    assert sum(Fraction(k,m*m) for k in range(1,m+1))==Fraction(1,2)+e/2
+    assert sum(Fraction(k**3,m**4) for k in range(1,m+1))==Fraction(1,4)+e/2+e*e/4
+    assert 8*right==Fraction(8,3)+4*e+4*e*e/3
+    assert sum(Fraction((j+1)**3-j**3,m**3) for j in range(m))==1
+print("chapter 12: exact finite Riemann sums OK")

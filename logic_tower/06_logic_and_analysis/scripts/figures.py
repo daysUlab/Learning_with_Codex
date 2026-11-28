@@ -352,3 +352,31 @@ ax.plot([math.cos(t) for t in arc],[math.sin(t) for t in arc],color="#2166ac",lw
 ax.text(.21,.065,"t",fontsize=12);ax.text(1.03,.02,"A");ax.text(.79,.54,"B");ax.text(1.03,math.tan(theta),"C");ax.text(-.06,-.05,"O")
 ax.set(xlim=(-.12,1.23),ylim=(-.12,.82),aspect="equal");ax.axis("off")
 fig.savefig(out/"derivative_trig.png",dpi=220);plt.close(fig)
+
+# 第12章：有限分割・超有限区間・標識点の選択
+fig,axs=plt.subplots(1,2,figsize=(5.5,2.8),layout="constrained")
+for ax,m in zip(axs,[4,16]):
+    xs=[k/m for k in range(m)]
+    ax.bar(xs,[(x+1/m)**2 for x in xs],width=1/m,align="edge",color="#b4ddd5",edgecolor="#16857c",linewidth=.6)
+    curve=[j/100 for j in range(101)]
+    ax.plot(curve,[x*x for x in curve],color="#2166ac",lw=2)
+    ax.set(xlim=(0,1.02),ylim=(0,1.05),title=f"m = {m}",xlabel="x")
+axs[0].set_ylabel("f(x)")
+fig.savefig(out/"integral_rectangles.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,2.2),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,3));ax.axis("off")
+ax.hlines(1.5,.6,9.4,color="#64748b")
+for x,lab in [(1,"1"),(2,"2"),(3,"3"),(7,"H-2"),(8,"H-1"),(9,"H")]:
+    ax.scatter(x,1.5,color="#16857c",s=45);ax.text(x,1.1,lab,ha="center")
+ax.text(5,1.5,"...",ha="center",va="center",fontsize=16)
+ax.text(2,2.05,"standard indices",ha="center");ax.text(8,2.05,"nonstandard indices",ha="center")
+fig.savefig(out/"integral_hyperfinite.png",dpi=220);plt.close(fig)
+fig,axs=plt.subplots(2,1,figsize=(5.4,3.3),layout="constrained")
+for ax,v,label in [(axs[0],1,"Rational tags: sum = 1"),(axs[1],0,"Irrational tags: sum = 0")]:
+    m=8
+    for j in range(m):
+        ax.axvline(j/m,color="#94a3b8",lw=.7)
+        ax.scatter([(j+.45)/m],[v],color="#2166ac",s=20)
+    ax.axvline(1,color="#94a3b8",lw=.7)
+    ax.set(xlim=(0,1),ylim=(-.15,1.15),yticks=[0,1],title=label)
+fig.savefig(out/"integral_tags.png",dpi=220);plt.close(fig)

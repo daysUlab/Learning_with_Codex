@@ -24,6 +24,7 @@ book:
     - chapters/09_hyperreals.qmd
     - chapters/10_standard_part.qmd
     - chapters/11_infinitesimal_derivatives.qmd
+    - chapters/12_hyperfinite_integrals.qmd
     - references.qmd
 format:
   html:
