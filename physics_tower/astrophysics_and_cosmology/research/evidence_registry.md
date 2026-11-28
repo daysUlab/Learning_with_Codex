@@ -135,3 +135,13 @@
 | 光子球・ISCO | B | [NASA Anatomy](https://science.nasa.gov/universe/black-holes/anatomy/) | 非回転解の座標半径。影・地平面とは異なる |
 | 地平面・特異性 | B/C | [Einstein Online](https://www.einstein-online.info/en/spotlight/singularities/) | 古典理論。測地線不完全性と内部の微視的状態を区別 |
 | 回転と時空の引きずり | B | [Einstein Online](https://www.einstein-online.info/en/spotlight/Rotating-Black-Holes-Observations-and-Working-in-General-Relativity/)、[frame-dragging](https://www.einstein-online.info/en/explandict/frame-dragging/) | エルゴ領域と地平面を区別 |
+
+## 第13章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 降着円盤と活動銀河核 | A/B | [NASA AGN](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-are-active-galactic-nuclei/)、[Anatomy](https://science.nasa.gov/universe/black-holes/anatomy/) | 薄い円盤の5.7%は非回転解の理論値。現実の効率ではない |
+| J0529−4351の光度・質量 | A/B | [ESO 2024](https://www.eso.org/public/news/eso2402/) | 2024年の報告値、モデル依存 |
+| ジェット・ビーミング | A/B/C | [ESO Centaurus A](https://www.eso.org/public/images/eso0903a/)、[NASA AGN](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-are-active-galactic-nuclei/) | 地平面内部から出る物質ではない。発生機構は研究中 |
+| GRBの崩壊・合体起源 | A/B/C | [NASA GRB](https://science.nasa.gov/universe/gamma-ray-bursts-harvesting-knowledge-from-the-universes-most-powerful-explosions/) | 持続時間だけでは起源を特定できない |
+| 潮汐破壊現象 | A/B | [NASA TDE](https://science.nasa.gov/universe/black-holes/what-happens-when-something-gets-too-close-to-a-black-hole/)、[AT2024tvd](https://science.nasa.gov/missions/hubble/nasas-hubble-pinpoints-roaming-massive-black-hole/) | 破壊・残骸の降着と放射を区別 |

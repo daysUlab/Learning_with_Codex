@@ -29,6 +29,8 @@
 | 11 | m87_eht2019.jpg | 2019-04-10 | 電波干渉計観測からの再構成画像 | [公式画像](https://www.eso.org/public/images/eso1907a/)、EHT Collaboration、[利用条件](https://www.eso.org/public/copyright/) |
 | 11 | sgra_eht2022.jpg | 2022-05-12 | 電波干渉計観測からの平均再構成画像 | [公式画像](https://www.eso.org/public/images/eso2208-eht-mwa/)、EHT Collaboration、[利用条件](https://www.eso.org/public/copyright/) |
 
+| 13 | centaurus_a_jets.jpg | 2009-01-28 | 可視光・サブミリ波・X線の観測合成 | [公式画像](https://www.eso.org/public/images/eso0903a/)、ESO/WFI (Optical); MPIfR/ESO/APEX/A.Weiss et al. (Submillimetre); NASA/CXC/CfA/R.Kraft et al. (X-ray)、[利用条件](https://www.eso.org/public/copyright/) |
+
 ライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
 画像ファイルは公式配布URLからビルド前にダウンロードし、ローカルにキャッシュする。Quarto HTML/PDFの両方で同一のローカルファイルを参照する。今回の実行環境では外部CDNへの接続ができないため、バイナリ取得・描画は未検証。
