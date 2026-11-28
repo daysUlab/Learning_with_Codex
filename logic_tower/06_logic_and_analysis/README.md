@@ -5,6 +5,7 @@
 - [全18章の設計](PLAN.md)
 - [原稿の入口](index.qmd)
 - [第1章](chapters/01_propositional_completeness.qmd)
+- [第2章](chapters/02_boolean_algebras.qmd)
 - [執筆進捗](PROGRESS.md)
 - [レビュー記録](REVIEW.md)
 - [制作手順](../../TEXTBOOK_WORKFLOW.md)

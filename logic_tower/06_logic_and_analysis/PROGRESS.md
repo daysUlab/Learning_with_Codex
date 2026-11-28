@@ -4,8 +4,8 @@
 
 | 章 | ファイル | 状態 |
 |---|---|---|
-| 1 | [真理値と証明が一致する理由](chapters/01_propositional_completeness.qmd) | 初稿・CI待ち |
-| 2 | [真理値を集合と代数に拡張する](chapters/02_boolean_algebras.qmd) | TODO |
+| 1 | [真理値と証明が一致する理由](chapters/01_propositional_completeness.qmd) | 初稿・CI成功・main統合済み |
+| 2 | [真理値を集合と代数に拡張する](chapters/02_boolean_algebras.qmd) | 初稿・CI待ち |
 | 3 | [対象について述べる論理](chapters/03_first_order.qmd) | TODO |
 | 4 | [証明からモデルを作る](chapters/04_model_existence.qmd) | TODO |
 | 5 | [集合から数学の対象を作る](chapters/05_sets_and_ordinals.qmd) | TODO |
@@ -23,4 +23,6 @@
 | 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | TODO |
 | 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | TODO |
 
-次の作業：第1章CI確認、第2章。公開Pages共存設計は別工程。
+次の作業：第2章CI確認、第3章。公開Pages共存設計は別工程。
+
+2026-11-28：第1章CI 46095306289成功、PR #117統合（d14720a）。第2章初稿・演習9問・図3点・有限ブール代数とDNFの検査追加。最新CI未確認。
