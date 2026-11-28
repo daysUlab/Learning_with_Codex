@@ -411,3 +411,78 @@ for level in range(4):
             ax.plot([xp,x],[y+1,y],color="#94a3b8",lw=1)
         ax.text(x,y,"["+"".join(bits)+"]" if level else "X",ha="center",va="center",fontsize=9,bbox=dict(boxstyle="round,pad=.22",fc="#e0eaf7",ec="#2166ac"),zorder=3)
 fig.savefig(out/"cantor_cylinders.png",dpi=220);plt.close(fig)
+
+# 第14章：二つの状況、名前の階層、混合
+fig,ax=plt.subplots(figsize=(5.5,3.2),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,6));ax.axis("off")
+for x,label,values,col in [(2.5,"A",[1,2],"#2166ac"),(7.5,"B",[2,3],"#16857c")]:
+    ax.add_patch(plt.Rectangle((x-1.65,2.1),3.3,3,fc=col,alpha=.10,ec=col,lw=1.4))
+    ax.text(x,4.65,"Situation "+label,ha="center",fontsize=11)
+    for j,k in enumerate(values):
+        ax.text(x,3.85-j*.9,str(k),ha="center",fontsize=15,color=col)
+ax.text(5,1.4,"1: p       2: 1       3: q",ha="center",fontsize=11)
+ax.text(5,.65,"Boolean membership values",ha="center",fontsize=10)
+fig.savefig(out/"bname_membership.png",dpi=220);plt.close(fig)
+diagram([(5,4.8,"u"),(2,2.7,"check 1"),(5,2.7,"check 2"),(8,2.7,"check 3"),(5,.7,"Lower-rank names")],[(0,1),(0,2),(0,3),(1,4),(2,4),(3,4)],"bname_hierarchy.png")
+fig,ax=plt.subplots(figsize=(5.5,3.2),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,5));ax.axis("off")
+for x,lab,col in [(2.5,"p: {1, 2}","#2166ac"),(7.5,"q: {2, 3}","#16857c")]:
+    ax.text(x,4.1,lab,ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.4",fc=col,alpha=.15,ec=col))
+    ax.annotate("",xy=(5,2.3),xytext=(x,3.65),arrowprops=dict(arrowstyle="->",color=col,lw=1.8))
+ax.text(5,1.8,"Mixed name u",ha="center",fontsize=12)
+ax.text(5,1,"1: p    2: 1    3: q",ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.5",fc="#e0eaf7",ec="#2166ac"))
+fig.savefig(out/"bname_mixing.png",dpi=220);plt.close(fig)
+
+# 第15章：成分別演算、有理切断、移行の流れ
+fig,ax=plt.subplots(figsize=(5.5,3.2),layout="constrained")
+for i,(lab,vals) in enumerate([("x",(2,5)),("y",(3,1)),("x+y",(5,6)),("xy",(6,5))]):
+    ax.bar(i-.18,vals[0],width=.33,color="#2166ac",label="A" if i==0 else None)
+    ax.bar(i+.18,vals[1],width=.33,color="#16857c",label="B" if i==0 else None)
+ax.set_xticks(range(4),["x","y","x+y","xy"]);ax.set_ylabel("Value");ax.legend()
+fig.savefig(out/"bva_vectors.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,3.1),layout="constrained")
+xx=[j/100 for j in range(101)]
+ax.plot(xx,xx,color="#2166ac",label="f(t) = t")
+ax.axhline(.5,color="#64748b",ls="--",label="r = 1/2")
+ax.axvspan(.5,1,color="#16857c",alpha=.2,label="Boolean value: r < f")
+ax.set(xlabel="t",ylabel="f(t)",xlim=(0,1),ylim=(0,1));ax.legend(fontsize=8)
+fig.savefig(out/"bva_cuts.png",dpi=220);plt.close(fig)
+diagram([(5,4.6,"Complex polynomial"),(5,3.3,"Root in V^B"),(2.5,1.1,"Measurable root"),(7.5,1.1,"Continuous root on K")],[(0,1),(1,2),(1,3)],"bva_transfer.png")
+
+# 冒頭：三つの数学的な世界と具体例
+diagram([(5,4.65,"Mathematical logic"),(1.7,2.7,"Number system"),(5,2.7,"Truth values"),(8.3,2.7,"Set universe"),(1.7,.8,"Infinitesimals"),(5,.8,"Transfer theorems"),(8.3,.8,"Independence")],[(0,1),(0,2),(0,3),(1,4),(2,5),(3,6)],"intro_three_worlds.png")
+fig,axs=plt.subplots(1,2,figsize=(5.5,2.8),layout="constrained")
+for ax,m,lab in [(axs[0],4,"Finite grid"),(axs[1],32,"Hyperfinite idea")]:
+    xx=[k/m for k in range(m)]
+    ax.bar(xx,[(x+1/m)**2 for x in xx],width=1/m,align="edge",color="#b4ddd5",edgecolor="#16857c",linewidth=.5)
+    xx=[k/100 for k in range(101)]
+    ax.plot(xx,[x*x for x in xx],color="#2166ac",lw=1.8)
+    ax.set(xlim=(0,1.02),ylim=(0,1.05),title=lab,xlabel="x")
+axs[0].set_ylabel("x squared")
+fig.savefig(out/"intro_hyperfinite.png",dpi=220);plt.close(fig)
+diagram([(5,4.6,"Complex polynomial has a root"),(5,3.1,"Boolean-valued universe"),(2.5,1.1,"Measurable root"),(7.5,1.1,"Continuous root on K")],[(0,1),(1,2),(1,3)],"intro_transfer.png")
+diagram([(5,4.6,"ZFC (if consistent)"),(2.5,2.6,"ZFC + CH"),(7.5,2.6,"ZFC + not CH"),(2.5,.8,"Constructible universe"),(7.5,.8,"Forcing extension")],[(0,1),(0,2),(1,3),(2,4)],"intro_forcing.png")
+# 第16章：条件の増加・稠密条件列・新しい列
+fig,ax=plt.subplots(figsize=(5.5,2.8),layout="constrained")
+ax.set(xlim=(-1.2,5.4),ylim=(0,3.6));ax.axis("off")
+for i,(label,vals) in enumerate([("p",[1,None,0,None,None]),("q",[1,1,0,None,None]),("r",[1,1,0,1,None])]):
+    y=2.7-i
+    ax.text(-.6,y+.3,label,ha="center",fontsize=12)
+    for k,v in enumerate(vals):
+        ax.add_patch(Rectangle((k,y),.78,.6,fc="#e0eaf7" if v is not None else "#f1f5f9",ec="#64748b"))
+        ax.text(k+.39,y+.3,"?" if v is None else str(v),ha="center",va="center",fontsize=11)
+ax.text(2,.2,"Stronger = more information",ha="center",fontsize=10)
+fig.savefig(out/"forcing_conditions.png",dpi=220);plt.close(fig)
+diagram([(1.1,4.6,"p0"),(3.7,3.4,"p1 in D0"),(6.3,2.2,"p2 in D1"),(8.8,1,"p3 in D2")],[(0,1),(1,2),(2,3)],"forcing_dense_chain.png")
+fig,ax=plt.subplots(figsize=(5.5,3),layout="constrained")
+ax.set(xlim=(-1.8,6.6),ylim=(0,4.8));ax.axis("off")
+rows=[("a0","000000"),("a1","111111"),("a2","010101"),("r","1010??")]
+for i,(lab,word) in enumerate(rows):
+    y=3.8-i
+    ax.text(-.6,y+.32,lab,ha="center",fontsize=11)
+    for k,v in enumerate(word):
+        marked=(i<3 and k==i) or (i==3 and k<3)
+        ax.add_patch(Rectangle((k,y),.78,.65,fc="#b4ddd5" if marked else "#f1f5f9",ec="#64748b"))
+        ax.text(k+.39,y+.32,v,ha="center",va="center",fontsize=10)
+ax.text(2.5,.23,"Different at a specified coordinate",ha="center",fontsize=10)
+fig.savefig(out/"forcing_new_real.png",dpi=220);plt.close(fig)

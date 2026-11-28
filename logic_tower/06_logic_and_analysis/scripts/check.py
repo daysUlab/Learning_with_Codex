@@ -376,3 +376,80 @@ for depth in range(1,9):
     assert sum(map(len,parts))==2**depth-1
     assert set().union(*parts)==set(words)-{"0"*depth}
 print("chapter 13: finite Boolean families and cylinder samples OK (not infinite completion proof)")
+
+# 第14章：有限の名前の再帰計算（四元ブール代数）
+from functools import lru_cache
+@lru_cache(None)
+def bv_check(n):
+    return tuple((bv_check(k),3) for k in range(n))
+@lru_cache(None)
+def bv_member(u,v):
+    result=0
+    for t,b in v:
+        result|=b&bv_equal(u,t)
+    return result
+@lru_cache(None)
+def bv_subset(u,v):
+    result=3
+    for t,b in u:
+        result&=(3^b)|bv_member(t,v)
+    return result
+@lru_cache(None)
+def bv_equal(u,v):
+    return bv_subset(u,v)&bv_subset(v,u)
+@lru_cache(None)
+def bv_eval(u,bit):
+    return frozenset(bv_eval(t,bit) for t,b in u if b&bit)
+u=tuple((bv_check(k),b) for k,b in [(1,1),(2,3),(3,2)])
+v12=tuple((bv_check(k),3) for k in [1,2])
+v23=tuple((bv_check(k),3) for k in [2,3])
+v123=tuple((bv_check(k),3) for k in [1,2,3])
+assert [bv_member(bv_check(k),u) for k in range(1,5)]==[1,3,2,0]
+assert bv_equal(u,v12)==1 and bv_equal(u,v23)==2
+assert bv_equal(u,v123)==0 and bv_subset(u,v123)==3
+assert bv_equal((),(((),0),))==3
+names=[tuple((bv_check(k),b) for k,b in enumerate(bs)) for bs in product(range(4),repeat=3)]
+for x,y in product(names,repeat=2):
+    assert bv_equal(x,y)==sum(bit for bit in [1,2] if bv_eval(x,bit)==bv_eval(y,bit))
+    assert bv_member(x,y)==sum(bit for bit in [1,2] if bv_eval(x,bit) in bv_eval(y,bit))
+    mixed=tuple((bv_check(k),(x[k][1]&1)|(y[k][1]&2)) for k in range(3))
+    assert bv_equal(mixed,x)&1 and bv_equal(mixed,y)&2
+print("chapter 14: finite B-name recursion, atomic semantics, mixing samples OK")
+
+# 第15章：成分別演算・順序と複素多項式の有限例
+x,y=(2,5),(3,1)
+assert tuple(a+b for a,b in zip(x,y))==(5,6)
+assert tuple(a*b for a,b in zip(x,y))==(6,5)
+assert tuple(max(a,b) for a,b in zip(x,y))==(3,5)
+assert sum(bit for bit,a,b in zip([1,2],x,y) if a<=b)==1
+assert sum(bit for bit,a,b in zip([1,2],x,y) if b<=a)==2
+assert tuple(a*b for a,b in zip((1,0),(0,1)))==(0,0)
+assert tuple(z*z for z in (1,1j))==(1,-1)
+for a,b in product(range(-3,4),repeat=2):
+    import cmath
+    roots=(cmath.sqrt(a),cmath.sqrt(b))
+    assert all(abs(z*z-v)<1e-12 for z,v in zip(roots,(a,b)))
+print("chapter 15: finite component operations and root samples OK")
+
+# 第16章：有限条件の標本全列挙と両立性
+conditions=[{k:v for k,v in enumerate(vs) if v!=-1} for vs in product([-1,0,1],repeat=4)]
+stronger=lambda q,p:all(q.get(k)==v for k,v in p.items())
+for p in conditions:
+    assert stronger(p,{})
+    for q in conditions:
+        compatible=all(p[k]==q[k] for k in p.keys()&q.keys())
+        assert compatible==any(stronger(r,p) and stronger(r,q) for r in conditions)
+        if compatible:
+            union=p|q
+            assert stronger(union,p) and stronger(union,q)
+    for k in range(4):
+        q=p if k in p else p|{k:0}
+        assert stronger(q,p) and k in q
+    # 有限標本の外側に新しい添字を追加する（稠密性の例）
+    for a in product([0,1],repeat=5):
+        q=p|{4:1-a[4]}
+        assert stronger(q,p) and q[4]!=a[4]
+print("chapter 16: finite conditions and dense extension samples OK")
+# 冒頭の図の参照も検査
+for name in re.findall(r"\]\(figures/([^)]*)\)",(root/"index.qmd").read_text()):
+    assert name in (root/"scripts/figures.py").read_text(),name
