@@ -1,18 +1,27 @@
-name: 場の量子論 教科書ビルド
+name: 教科書共通ビルド・Pages公開
 on:
   push:
     branches: [main]
     paths:
       - 'physics_tower/12_quantum_field_theory/**'
+      - 'logic_tower/06_logic_and_analysis/**'
       - '.github/workflows/build_qft_book.yml'
+      - '.github/workflows/build_logic_book.yml'
   pull_request:
     paths:
       - 'physics_tower/12_quantum_field_theory/**'
+      - 'logic_tower/06_logic_and_analysis/**'
       - '.github/workflows/build_qft_book.yml'
+      - '.github/workflows/build_logic_book.yml'
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: textbook-build-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
+  logic:
+    uses: ./.github/workflows/build_logic_book.yml
   build:
     runs-on: ubuntu-24.04
     steps:
@@ -25,6 +34,8 @@ jobs:
           version: '1.7.34'
       - name: 日本語TeX環境を導入
         run: |
+          # 不要な外部APTリポジトリの障害を回避（署名検証は維持）
+          sudo rm -f /etc/apt/sources.list.d/microsoft-prod.list /etc/apt/sources.list.d/microsoft-prod.sources
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-science texlive-lang-english poppler-utils
           kpsewhich luatexbase.sty
@@ -63,13 +74,37 @@ jobs:
           if-no-files-found: error
           name: qft-book
           path: physics_tower/12_quantum_field_theory/_book
+  assemble:
+    needs: [build, logic]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: qft-book
+          path: site
+      - name: 既存サイトとの衝突を検査
+        run: |
+          test -s site/index.html
+          test -s site/qft.pdf
+          test ! -e site/logic
+      - uses: actions/download-artifact@v4
+        with:
+          name: logic-book
+          path: site/logic
+      - name: 二冊の生成物を確認
+        run: |
+          test -s site/index.html
+          test -s site/qft.pdf
+          test -s site/logic/index.html
+          test -s site/logic/logic.pdf
+          printf '%s\n' "$GITHUB_SHA" > site/textbook-version.txt
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
-          path: physics_tower/12_quantum_field_theory/_book
+          path: site
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: build
+    needs: assemble
     runs-on: ubuntu-24.04
     permissions:
       pages: write
@@ -77,16 +112,27 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    concurrency:
-      group: qft-pages
-      cancel-in-progress: false
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
-
+      - name: 二冊の公開と版を確認
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -euo pipefail
+          base="${SITE_URL%/}"
+          for i in $(seq 1 10); do
+            version=$(curl -fsSL --max-time 20 "$base/textbook-version.txt?v=$GITHUB_SHA" || true)
+            if [ "$version" = "$GITHUB_SHA" ]; then break; fi
+            sleep 10
+          done
+          test "$version" = "$GITHUB_SHA"
+          for path in / /qft.pdf /logic/ /logic/logic.pdf; do
+            curl -fsSL --retry 3 --max-time 60 "$base$path" -o /dev/null
+          done
   release:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: [build, deploy]
+    needs: [assemble, deploy]
     runs-on: ubuntu-24.04
     permissions:
       contents: write
@@ -94,16 +140,33 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: qft-book
-          path: book
-      - name: PDFの版をReleaseに保存
+          path: qft
+      - uses: actions/download-artifact@v4
+        with:
+          name: logic-book
+          path: logic
+      - name: 二冊のPDFを版別Releaseに保存
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          test -s book/qft.pdf
-          tag="qft-${GITHUB_SHA:0:12}"
-          if gh release view "$tag" >/dev/null 2>&1; then
-            gh release upload "$tag" book/qft.pdf --clobber
-          else
-            gh release create "$tag" book/qft.pdf --target "$GITHUB_SHA" --prerelease --latest=false --title "場の量子論 初稿 $tag" --notes "原稿コミット: $GITHUB_SHA。未完成の初稿。最新版HTML/PDF: https://daysulab.github.io/Learning_with_Codex/"
-          fi
+          set -euo pipefail
+          for book in qft logic; do
+            file="$book/$book.pdf"
+            test -s "$file"
+            tag="$book-${GITHUB_SHA:0:12}"
+            if [ "$book" = qft ]; then
+              title="場の量子論 $tag"
+              url="https://daysulab.github.io/Learning_with_Codex/"
+              status="全18章収録・目視と実読は継続検査。"
+            else
+              title="数理論理学と超準解析 執筆途中版 $tag"
+              url="https://daysulab.github.io/Learning_with_Codex/logic/"
+              status="執筆途中の版。未執筆章は収録しない。"
+            fi
+            if gh release view "$tag" >/dev/null 2>&1; then
+              gh release upload "$tag" "$file" --clobber
+            else
+              gh release create "$tag" "$file" --target "$GITHUB_SHA" --prerelease --latest=false --title "$title" --notes "原稿コミット: $GITHUB_SHA。$status 最新版: $url"
+            fi
+          done

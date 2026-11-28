@@ -143,3 +143,23 @@ for bits in product([False,True],repeat=9):
                 assert truth(B,s,bits)==truth(A,{**s,"x":value(t,s)},bits)
                 cases+=1
 print(f"chapter 3: substitution lemma checked in {cases} finite cases")
+
+# 第4章：二要素項モデル、証人の例、有限制約の充足
+def term_model_value(base,power):
+    return (base+power)%2
+for base,power in product(range(2),range(10)):
+    v=base
+    for _ in range(power):
+        v=1-v
+    assert v==term_model_value(base,power)
+assert term_model_value(0,5)==1 and term_model_value(0,6)==0
+assert any(x==1 for x in range(2)) and not (0==1)
+from fractions import Fraction
+for bounds in [(2,10,100),(0,),(1,2,3),(10,1000,2)]:
+    h=max(bounds)+1
+    assert all(n<h for n in bounds)
+    e=Fraction(1,h+1)
+    assert e>0 and all(n*e<1 for n in bounds)
+# 既存の名前を証人に固定する場合の反例
+assert any([False,True]) and not [False,True][0]
+print("chapter 4: finite term model and compactness examples OK (not a proof checker)")

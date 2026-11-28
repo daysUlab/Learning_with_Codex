@@ -127,8 +127,8 @@
 ## 数理論理学・超準解析 Quarto Book
 
 - ユーザー指定の新規書籍を `logic_tower/06_logic_and_analysis/` に設計。既存00〜05・90_essaysを維持。独立のPLAN.md/PROGRESS.md/REVIEW.mdを正本とし、1章ずつ執筆・3章単位レビューとする。
-- 18章計画のうち第1〜3章初稿を登録し、他は未執筆スケルトン。第1〜2章CI成功・main統合済み、第3章CI待ち。章冒頭に学ぶ理由、直感・定義・証明・具体例、演習と解答を配置。既存MarkdownのMermaid規則は維持し、本Quarto書籍ではPDF共通のPython生成静的図を採用する。
+- 18章計画のうち第1〜4章を登録し、他は未執筆スケルトン。第1〜3章一次レビューCI成功・main統合済み、第4章初稿CI待ち。章冒頭に学ぶ理由、直感・定義・証明・具体例、演習と解答を配置。既存MarkdownのMermaid規則は維持し、本Quarto書籍ではPDF共通のPython生成静的図を採用する。
 - 超実数は自由超フィルターによる超冪から構成し、移行の言語・内部外部を区別。ブール値解析は完全ブール代数・名・混合・下降を扱い、強制法では可算推移モデルの仮定と相対的無矛盾性を区別する。
-- CIでHTML/PDFを生成しlogic-book成果物を保存。既存QFT Pagesを上書きしないため、初期段階ではPages公開を行わない。共通公開サイトの統合設計後に公開・Releaseへ進む。
+- CIでHTML/PDFを生成しlogic-book成果物を保存。QFTと論理学を同じコミットからビルドし、共通workflowのassembleで統合。Pagesはmainのみ単一deployで公開し、qft-/logic-の版別PDF Releaseを作成する。既存QFTルートを維持、論理学は /logic/。初回共存公開確認待ち。
 
-- 数理論理学の第1〜3章一次レビュー修正済み（最新CI待ち）。Pages共存計画は `logic_tower/06_logic_and_analysis/PUBLICATION.md`。既存QFTのルートを維持し、論理学は `/logic/` に配置する案。共通deployへの切替は未実装。
+- 数理論理学の第1〜3章一次レビューCI成功・main統合済み。第4章初稿CI待ち。Pages共存構成は `logic_tower/06_logic_and_analysis/PUBLICATION.md`。共通deployへの切替を実装し、初回CI・main公開の確認待ち。
