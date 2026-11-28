@@ -175,3 +175,7 @@
 | `logic_tower/90_essays/ai_mathematics_and_logic/13_when_an_ai_proof_should_be_trusted.md` | EXPANSION_DONE | 2026-07-25 | 定理文・証明と公理・再現性を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
 | `logic_tower/90_essays/ai_mathematics_and_logic/14_human_ai_mathematical_collaboration.md` | EXPANSION_DONE | 2026-07-25 | 探索の分業・検証の分業・来歴管理を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
 | `logic_tower/90_essays/ai_mathematics_and_logic/15_why_math_is_good_for_verifiable_ai.md` | EXPANSION_DONE | 2026-07-25 | 安価な反証と検査・探索のスケール・境界を整理。Mermaid図、段階例、誤解と復帰手順、演習6問・全解答、学習チェック、前後リンクを整備。 |
+
+## 独立Quarto書籍（2026-11-28 新規キュー）
+
+ユーザー指定により [06_logic_and_analysis/PROGRESS.md](06_logic_and_analysis/PROGRESS.md) を独立書籍の正本とする。この書籍の「次」は同進捗の先頭TODOを対象にする。既存Markdownキューは維持する。

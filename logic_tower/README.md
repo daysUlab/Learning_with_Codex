@@ -146,3 +146,7 @@ Logic Towerは、論理体系を順番に覚えるだけでなく、**なぜそ�
   - [04_computability_and_automata/](04_computability_and_automata/)
   - [05_modal_and_nonclassical/](05_modal_and_nonclassical/)
   - [90_essays/](90_essays/)
+
+## 独立Quarto書籍
+
+[高校数学から学ぶ数理論理学と超準解析](06_logic_and_analysis/README.md)：完全性・モデル理論から超実数、ブール値解析、強制法へ。既存本線・発展記事はそのまま維持し、独立書籍は別の進捗表で管理します。

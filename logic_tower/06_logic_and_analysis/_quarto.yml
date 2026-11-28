@@ -1,0 +1,33 @@
+project:
+  type: book
+  output-dir: _book
+  pre-render: python3 scripts/figures.py
+lang: ja
+book:
+  title: "高校数学から学ぶ数理論理学と超準解析"
+  subtitle: "完全性・ブール値解析・強制法へ"
+  author: "Learning with Codex"
+  output-file: logic
+  search: true
+  repo-url: https://github.com/daysUlab/Learning_with_Codex
+  downloads: [pdf]
+  chapters:
+    - index.qmd
+    - chapters/01_propositional_completeness.qmd
+    - references.qmd
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    html-math-method: mathjax
+    toc: true
+    css: styles.css
+  pdf:
+    pdf-engine: lualatex
+    documentclass: scrreprt
+    papersize: a5
+    fontsize: 11pt
+    geometry: margin=17mm
+    toc: true
+    include-in-header: japanese.tex

@@ -26,3 +26,5 @@
 
 ## Quarto版教科書
 - [高校数学から学ぶ場の量子論](physics_tower/12_quantum_field_theory/README.md)（HTML・PDF生成対応、初稿版）
+
+- [高校数学から学ぶ数理論理学と超準解析](logic_tower/06_logic_and_analysis/README.md)（設計18章・第1章初稿）
