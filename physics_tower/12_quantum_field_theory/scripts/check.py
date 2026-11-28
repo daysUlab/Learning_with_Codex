@@ -4,14 +4,19 @@ import re
 root = Path(__file__).resolve().parents[1]
 config = (root/"_quarto.yml").read_text()
 paths = re.findall(r"^\s*- (chapters/[^\s]+\.qmd)\s*$", config, re.M)
-assert len(paths) == 18 and len(set(paths)) == 18, paths
-assert [int(Path(p).name[:2]) for p in paths] == list(range(1,19))
+assert len(paths) == 19 and len(set(paths)) == 19, paths
+assert [int(Path(p).name[:2]) for p in paths] == list(range(0,19))
 assert set(paths) == {str(p.relative_to(root)) for p in (root/"chapters").glob("*.qmd")}
 for p in [root/"index.qmd", *(root/p for p in paths)]:
     s = p.read_text()
     assert not re.search(r"^\$(?:[ \t]+\{#eq-[^}]+\})?[ \t]*$", s, re.M), f"single dollar delimiter: {p}"
+    assert not re.search(r"\\(?:rm|bf|it|tt|sf|sl|sc)\b", s), f"obsolete TeX font command: {p}"
     assert s.startswith("# "), p
     assert len(re.findall(r"^\s*\$\$(?:\s+\{#eq-[^}]+\})?\s*$", s, re.M)) % 2 == 0, p
+assert paths[0] == "chapters/00_physical_discoveries.qmd"
+assert (root/paths[0]).read_text().splitlines()[0].endswith("{.unnumbered}"), "chapter zero must not consume a chapter number"
+assert all("{.unnumbered}" not in (root/path).read_text().splitlines()[0] for path in paths[1:])
+assert config.index("    - index.qmd") < config.index("    - chapters/00_physical_discoveries.qmd") < config.index("    - part:")
 # 全章の冒頭に学習目的を明記する。内容の教育的妥当性は本文レビューで確認する。
 for path in paths:
     s = (root/path).read_text()
@@ -50,8 +55,8 @@ for p in sources:
     for cite in re.findall(r"\[@([\w-]+)", s):
         assert cite in bib_keys, f"missing bibliography key {cite}: {p}"
     for chapter in re.findall(r"第(\d+)章", s):
-        assert 1 <= int(chapter) <= 18, f"invalid chapter number: {p}"
-print("18 chapters, chapter goals, cross-references, glossary and source links: OK")
+        assert 0 <= int(chapter) <= 18, f"invalid chapter number: {p}"
+print("chapter 0 and 18 numbered chapters, chapter goals, cross-references, glossary and source links: OK")
 # レビュー済み範囲の数値検査
 import runpy
 for test_path in sorted((root/"scripts").glob("check_review_*.py")):
@@ -59,7 +64,7 @@ for test_path in sorted((root/"scripts").glob("check_review_*.py")):
 
 
 # 第1〜6章：各節・小節の直後に初読者向けの橋渡しを置く。
-for path in paths[:6]:
+for path in paths[1:7]:
     s = (root/path).read_text()
     headings = re.findall(r"^#{2,3} .+$", s, re.M)
     bridges = re.findall(r'^#{2,3} .+\n\n::: \{\.callout-tip title="高校数学からの橋渡し"\}\n[^\n]+\n:::$', s, re.M)
