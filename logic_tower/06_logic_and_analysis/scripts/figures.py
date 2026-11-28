@@ -128,3 +128,62 @@ for y,n,label in [(3.4,2,"h > 2"),(2.4,5,"h > 5"),(1.4,8,"h > 8")]:
 ax.text(5,.35,"Any finite list: choose a larger integer",ha="center",fontsize=10)
 fig.savefig(out/"compactness_numbers.png",dpi=220)
 plt.close(fig)
+
+# 第5章
+fig,ax=plt.subplots(figsize=(5.5,2.8),layout="constrained")
+ax.set(xlim=(-6.6,6.6),ylim=(-.5,3.5));ax.axis("off")
+colors=["#2166ac","#16857c","#d97706"]
+for r in range(3):
+    ax.text(-6.4,2.8-r,f"[{r}]",ha="left",va="center",color=colors[r])
+    for n in range(-5,7):
+        if n%3==r:
+            ax.scatter(n,2.8-r,color=colors[r],s=180)
+            ax.text(n,2.8-r,str(n),ha="center",va="center",fontsize=8,color="white")
+fig.savefig(out/"modulo_classes.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(4.6,3.6),layout="constrained")
+ax.set(xlim=(-.5,4.5),ylim=(-.5,4.5),aspect="equal",xlabel="m",ylabel="n")
+ax.set_xticks(range(5));ax.set_yticks(range(5));ax.grid(alpha=.2)
+for m,n in product(range(5),repeat=2):
+    k=m+n;idx=k*(k+1)//2+m
+    ax.scatter(m,n,color=colors[k%3],s=260,zorder=2)
+    ax.text(m,n,str(idx),ha="center",va="center",color="white",fontsize=8)
+for k in range(1,9):
+    pts=[(m,k-m) for m in range(5) if 0<=k-m<5]
+    if len(pts)>1:ax.plot(*zip(*pts),color=colors[k%3],alpha=.45)
+fig.savefig(out/"countable_pairs.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(4.8,3.5),layout="constrained")
+vals=[[0,1,0,1],[1,1,0,0],[0,0,1,0],[1,0,0,0]]
+vals.append([1-vals[i][i] for i in range(4)])
+ax.imshow(vals,cmap=matplotlib.colors.ListedColormap(["#eef2f7","#2166ac"]),aspect="auto",vmin=0,vmax=1)
+ax.set_xticks(range(4),["0","1","2","3"]);ax.set_yticks(range(5),["row 0","row 1","row 2","row 3","new"])
+for i,row in enumerate(vals):
+    for j,v in enumerate(row):
+        ax.text(j,i,str(v),ha="center",va="center",color="white" if v else "#334155")
+        if i==j or i==4:ax.add_patch(Rectangle((j-.48,i-.48),.96,.96,fill=False,ec="#d97706",lw=2))
+fig.savefig(out/"cantor_diagonal.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,2.6),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,3));ax.axis("off")
+for y,label in [(2,"omega"),(.8,"omega + 1")]:
+    ax.text(.2,y+.35,label,fontsize=10)
+    ax.hlines(y,.6,7.5,color="#94a3b8")
+    for i in range(5):
+        ax.scatter(1+i*1.1,y,color="#2166ac")
+        ax.text(1+i*1.1,y-.25,str(i),ha="center",fontsize=9)
+    ax.text(6.5,y,"...",va="center")
+ax.scatter(8.8,.8,color="#d97706",s=70);ax.text(8.8,.48,"last",ha="center",fontsize=10)
+fig.savefig(out/"ordinal_order.png",dpi=220);plt.close(fig)
+diagram([(1.5,4.5,"V0: 0"),(3.8,4.5,"V1: 1"),(6.2,4.5,"V2: 2"),(8.5,4.5,"V3: 4"),(5,1.4,"V_omega: union of finite stages")],[(0,1),(1,2),(2,3),(0,4),(1,4),(2,4),(3,4)],"cumulative_hierarchy.png")
+fig,ax=plt.subplots(figsize=(5.5,2.6),layout="constrained")
+ax.set(xlim=(0.8,2.05),ylim=(0,2.8));ax.axis("off")
+from math import sqrt
+r=sqrt(2)
+ax.hlines(1.25,.85,r,color="#2166ac",lw=4)
+ax.hlines(1.25,r,2,color="#d97706",lw=4)
+for q in [1,1.25,1.4,1.5,1.75,2]:
+    ax.scatter(q,1.25,color="#2166ac" if q<r else "#d97706",zorder=3)
+    ax.text(q,1.02,str(q),ha="center",fontsize=8)
+ax.axvline(r,ymin=.45,ymax=.72,color="#64748b",ls="--")
+ax.text(r,2.12,r"$\sqrt{2}$",ha="center",fontsize=12)
+ax.text(1.1,.45,"Lower cut",ha="center",fontsize=10,color="#2166ac")
+ax.text(1.77,.45,"Complement",ha="center",fontsize=10,color="#d97706")
+fig.savefig(out/"dedekind_cut.png",dpi=220);plt.close(fig)
