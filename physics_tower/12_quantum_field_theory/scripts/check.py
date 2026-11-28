@@ -10,6 +10,7 @@ assert set(paths) == {str(p.relative_to(root)) for p in (root/"chapters").glob("
 for p in [root/"index.qmd", *(root/p for p in paths)]:
     s = p.read_text()
     assert not re.search(r"^\$(?:[ \t]+\{#eq-[^}]+\})?[ \t]*$", s, re.M), f"single dollar delimiter: {p}"
+    assert not re.search(r"\\(?:rm|bf|it|tt|sf|sl|sc)\b", s), f"obsolete TeX font command: {p}"
     assert s.startswith("# "), p
     assert len(re.findall(r"^\s*\$\$(?:\s+\{#eq-[^}]+\})?\s*$", s, re.M)) % 2 == 0, p
 # 全章の冒頭に学習目的を明記する。内容の教育的妥当性は本文レビューで確認する。
