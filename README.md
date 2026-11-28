@@ -21,5 +21,8 @@
 - 演習や補足は `templates/` のテンプレートを利用します。
 - 進捗管理は `*/PROGRESS.md` と `PROGRESS.md` を併用して確認します。
 
+## 教材制作の手順
+- [教科書制作の進め方](TEXTBOOK_WORKFLOW.md)（場の量子論の制作経験を再利用する手順）
+
 ## Quarto版教科書
 - [高校数学から学ぶ場の量子論](physics_tower/12_quantum_field_theory/README.md)（HTML・PDF生成対応、初稿版）

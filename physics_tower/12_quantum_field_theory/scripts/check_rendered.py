@@ -59,7 +59,16 @@ assert pdf.is_file() and pdf.stat().st_size > 0
 info = subprocess.check_output(["pdfinfo", str(pdf)], text=True)
 (out/"pdfinfo.txt").write_text(info)
 xml = subprocess.check_output(["pdftotext", "-bbox", str(pdf), "-"], text=True)
-tree = ET.fromstring(xml)
+# Popplerの文字抽出にXML 1.0で許容されない制御文字が混入する場合がある。
+# 除去数を警告に残し、なお解析できない場合はHTML検査を維持してPDF診断の失敗を明示する。
+xml_clean, removed = re.subn(r"[\x00-\x08\x0b\x0c\x0e-\x1f\ud800-\udfff\ufffe\uffff]", "\ufffd", xml)
+if removed:
+    warnings.append(f"PDF bbox XML: replaced {removed} invalid XML characters")
+try:
+    tree = ET.fromstring(xml_clean)
+except ET.ParseError as exc:
+    (out/"bbox-invalid.xml").write_text(xml_clean, encoding="utf-8", errors="replace")
+    raise RuntimeError(f"PDF bbox XML parse failed after sanitization: {exc}") from exc
 def tag(e):
     return e.tag.split("}")[-1]
 pdfpages = [e for e in tree.iter() if tag(e) == "page"]
