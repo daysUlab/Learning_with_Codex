@@ -1,0 +1,39 @@
+name: 宇宙物理教科書 HTML・PDF 検証
+on:
+  pull_request:
+    paths:
+      - 'physics_tower/astrophysics_and_cosmology/**'
+      - '.github/workflows/astrophysics-book.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: 日本語PDF環境
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra fonts-noto-cjk librsvg2-bin
+          kpsewhich fontawesome5.sty
+      - name: 公式画像の取得と前編HTML・PDFの生成
+        working-directory: physics_tower/astrophysics_and_cosmology/volume_1
+        run: |
+          python3 scripts/fetch_images.py
+          quarto render
+          test -s _book/index.html
+          test -s _book/cosmic-romance.pdf
+      - name: 後編HTML・PDFの生成
+        working-directory: physics_tower/astrophysics_and_cosmology/volume_2
+        run: |
+          quarto render
+          test -s _book/index.html
+          test -s _book/cosmic-physics.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cosmic-books
+          path: physics_tower/astrophysics_and_cosmology/volume_*/_book/
+          if-no-files-found: error

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420">
+<rect width="720" height="420" fill="white"/>
+<g font-family="Noto Sans CJK JP, sans-serif" fill="#1e293b">
+<text x="24" y="36" font-size="23" font-weight="bold">光が届くまでの時間</text>
+<text x="24" y="62" font-size="15">月からアンドロメダ銀河まで（対数目盛）</text>
+<g stroke="#cbd5e1" stroke-width="1">
+<line x1="160" y1="85" x2="160" y2="342"/>
+<line x1="196" y1="85" x2="196" y2="342"/>
+<line x1="232" y1="85" x2="232" y2="342"/>
+<line x1="268" y1="85" x2="268" y2="342"/>
+<line x1="304" y1="85" x2="304" y2="342"/>
+<line x1="340" y1="85" x2="340" y2="342"/>
+<line x1="376" y1="85" x2="376" y2="342"/>
+<line x1="412" y1="85" x2="412" y2="342"/>
+<line x1="448" y1="85" x2="448" y2="342"/>
+<line x1="484" y1="85" x2="484" y2="342"/>
+<line x1="520" y1="85" x2="520" y2="342"/>
+<line x1="556" y1="85" x2="556" y2="342"/>
+<line x1="592" y1="85" x2="592" y2="342"/>
+<line x1="628" y1="85" x2="628" y2="342"/>
+<line x1="664" y1="85" x2="664" y2="342"/>
+</g>
+<text x="12" y="111" font-size="15">月</text><line x1="160" y1="106" x2="164.10196068304612" y2="106" stroke="#2563a6" stroke-width="5" stroke-linecap="round"/><circle cx="164.10196068304612" cy="106" r="5" fill="#2563a6"/><text x="172.10196068304612" y="97" text-anchor="start" font-size="15" font-weight="bold">1.3秒</text>
+<text x="12" y="161" font-size="15">太陽</text><line x1="160" y1="156" x2="257.1629201560967" y2="156" stroke="#2563a6" stroke-width="5" stroke-linecap="round"/><circle cx="257.1629201560967" cy="156" r="5" fill="#2563a6"/><text x="265.1629201560967" y="147" text-anchor="start" font-size="15" font-weight="bold">8分20秒</text>
+<text x="12" y="211" font-size="15">最寄りの恒星</text><line x1="160" y1="206" x2="452.5529136524066" y2="206" stroke="#2563a6" stroke-width="5" stroke-linecap="round"/><circle cx="452.5529136524066" cy="206" r="5" fill="#2563a6"/><text x="460.5529136524066" y="197" text-anchor="start" font-size="15" font-weight="bold">4.24年</text>
+<text x="12" y="261" font-size="15">銀河中心</text><line x1="160" y1="256" x2="589.4968383247917" y2="256" stroke="#2563a6" stroke-width="5" stroke-linecap="round"/><circle cx="589.4968383247917" cy="256" r="5" fill="#2563a6"/><text x="597.4968383247917" y="247" text-anchor="start" font-size="15" font-weight="bold">2.7万年</text>
+<text x="12" y="311" font-size="15">アンドロメダ銀河</text><line x1="160" y1="306" x2="660.2935831272616" y2="306" stroke="#2563a6" stroke-width="5" stroke-linecap="round"/><circle cx="660.2935831272616" cy="306" r="5" fill="#2563a6"/><text x="652.2935831272616" y="297" text-anchor="end" font-size="15" font-weight="bold">250万年</text>
+<line x1="160" y1="342" x2="664" y2="342" stroke="#475569"/>
+<text x="160" y="363" font-size="12" text-anchor="middle">10^0</text>
+<text x="268" y="363" font-size="12" text-anchor="middle">10^3</text>
+<text x="376" y="363" font-size="12" text-anchor="middle">10^6</text>
+<text x="484" y="363" font-size="12" text-anchor="middle">10^9</text>
+<text x="592" y="363" font-size="12" text-anchor="middle">10^12</text>
+<text x="664" y="363" font-size="12" text-anchor="middle">10^14</text>
+<text x="412" y="391" text-anchor="middle" font-size="15">光の移動時間（秒）</text>
+</g></svg>

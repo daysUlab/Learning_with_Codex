@@ -1,0 +1,34 @@
+project:
+  type: book
+  output-dir: _book
+  pre-render: python3 scripts/fetch_images.py
+
+lang: ja
+book:
+  title: "数式なしでわかる宇宙のロマン"
+  subtitle: "人類はどこまで宇宙を理解したのか"
+  author: "Learning with Codex"
+  output-file: cosmic-romance
+  search: true
+  repo-url: https://github.com/daysUlab/Learning_with_Codex
+  chapters:
+    - index.qmd
+    - chapters/01_cosmic_scale.qmd
+    - chapters/02_looking_back.qmd
+    - chapters/03_galaxies_cosmic_web.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    html-math-method: mathjax
+    toc: true
+  pdf:
+    pdf-engine: lualatex
+    documentclass: scrreprt
+    papersize: a5
+    fontsize: 11pt
+    geometry: margin=17mm
+    toc: true
+    include-in-header: japanese.tex

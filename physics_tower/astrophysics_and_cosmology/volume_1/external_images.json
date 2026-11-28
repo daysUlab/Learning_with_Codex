@@ -1,0 +1,77 @@
+{
+  "checked": "2026-11-28",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "assets": [
+    {
+      "file": "andromeda_heic2501a.jpg",
+      "url": "https://cdn.esahubble.org/archives/images/publicationjpg/heic2501a.jpg",
+      "source": "https://esahubble.org/images/heic2501a/",
+      "policy": "https://esahubble.org/copyright/",
+      "credit": "NASA, ESA, B. Williams (University of Washington)",
+      "date": "2025-01-16",
+      "type": "観測モザイク",
+      "chapter": 1
+    },
+    {
+      "file": "mom_z14_weic2603a.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/publicationjpg/weic2603a.jpg",
+      "source": "https://esawebb.org/images/weic2603a/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA, ESA, CSA, STScI, R. Naidu (MIT), Image Processing: J. DePasquale (STScI)",
+      "date": "2026-01-28",
+      "type": "観測画像・拡大枠付き合成",
+      "chapter": 2
+    },
+    {
+      "file": "ngc1300.jpg",
+      "url": "https://cdn.esahubble.org/archives/images/publicationjpg/opo0501a.jpg",
+      "source": "https://esahubble.org/images/opo0501a/",
+      "policy": "https://esahubble.org/copyright/",
+      "credit": "NASA, ESA, and The Hubble Heritage Team (STScI/AURA)",
+      "date": "2005-01-11",
+      "type": "観測画像（棒渦巻銀河）",
+      "chapter": 3
+    },
+    {
+      "file": "ngc1132.jpg",
+      "url": "https://cdn.esahubble.org/archives/images/large/heic0804a.jpg",
+      "source": "https://esahubble.org/images/heic0804a/",
+      "policy": "https://esahubble.org/copyright/",
+      "credit": "NASA, ESA and the Hubble Heritage (STScI/AURA)-ESA/Hubble Collaboration. Acknowledgment: M. West (ESO, Chile)",
+      "date": "2008-02-05",
+      "type": "観測画像（楕円銀河）",
+      "chapter": 3
+    },
+    {
+      "file": "ic10.jpg",
+      "url": "https://cdn.esahubble.org/archives/images/publicationjpg/potw1924a.jpg",
+      "source": "https://esahubble.org/images/potw1924a/",
+      "policy": "https://esahubble.org/copyright/",
+      "credit": "NASA, ESA and F. Bauer",
+      "date": "2019-06-17",
+      "type": "観測画像（不規則銀河）",
+      "chapter": 3
+    },
+    {
+      "file": "abell2744.jpg",
+      "url": "https://cdn.esahubble.org/archives/images/publicationjpg/heic1401a.jpg",
+      "source": "https://esahubble.org/images/heic1401a/",
+      "policy": "https://esahubble.org/copyright/",
+      "credit": "NASA, ESA, and J. Lotz, M. Mountain, A. Koekemoer, and the HFF Team (STScI).",
+      "date": "2014-01-07",
+      "type": "観測画像（銀河団）",
+      "chapter": 3
+    },
+    {
+      "file": "cosmic_filament.jpg",
+      "url": "https://cdn.eso.org/images/large/potw2504a.jpg",
+      "source": "https://www.eso.org/public/images/potw2504a/",
+      "policy": "https://www.eso.org/public/copyright/",
+      "credit": "ESO/D. Tornotti et al./Hubble: M. Revalski, P. Francis et al.",
+      "date": "2025-01-29",
+      "type": "観測画像（ガス放射の疑似色重ね合わせ）",
+      "chapter": 3
+    }
+  ]
+}
