@@ -164,3 +164,8 @@
 ### 宇宙物理学・宇宙論の二巻教科書
 - `physics_tower/astrophysics_and_cosmology/` はQuarto二巻構成。前編は数式なし、後編は高校数学から数式を導出。詳細は同教材の DESIGN.md、PROGRESS.md を正本とする。
 - 未執筆の章は成果カタログで管理し、Quartoのビルド対象は原稿が存在する章のみとする。前後編の参照は通し章番号とし、後編のレンダリング時の番号整合は本文追加時に検証する。
+
+### 教科書別CIと共通Pages公開（2026-11-29）
+- PRの通常の本文変更は該当教科書だけを検証する。場の量子論は `.github/workflows/qft-book.yml`、論理学は `.github/workflows/build_logic_book.yml`、宇宙物理二巻は `.github/workflows/astrophysics-book.yml`。各workflowは対象パスと自身の変更をトリガーとし、共通公開処理からworkflow_callでも再利用する。
+- `.github/workflows/build_qft_book.yml` は共通Pages公開の正本。mainの対象変更・手動実行では全四冊を生成・組立・公開し、既存URL・版の検査・QFT/logicのReleaseを維持する。このファイル自体のPR変更では全冊の組立を検証するが公開しない。
+- 各PRの最新headに対応する必要な検証が成功してから統合する。PRで対象外の教科書のCI完了を待たない。ブランチ保護で固定required checkを使用する場合、パスフィルタによる未起動で待ち続けない設定か別途確認する。mainの全冊生成は公開の整合性確保のため残す。未検証のキャッシュや既存サイトのコピーで公開物を置き換えない。

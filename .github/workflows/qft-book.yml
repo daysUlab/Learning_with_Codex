@@ -1,0 +1,63 @@
+name: 場の量子論 教科書ビルド
+on:
+  workflow_call:
+  pull_request:
+    paths:
+      - 'physics_tower/12_quantum_field_theory/**'
+      - '.github/workflows/qft-book.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.7.34'
+      - name: 日本語TeX環境を導入
+        run: |
+          # 不要な外部APTリポジトリの障害を回避（署名検証は維持）
+          sudo rm -f /etc/apt/sources.list.d/microsoft-prod.list /etc/apt/sources.list.d/microsoft-prod.sources
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-science texlive-lang-english poppler-utils
+          kpsewhich luatexbase.sty
+          kpsewhich luatexja-fontspec.sty
+          kpsewhich fontawesome5.sty
+          lualatex --version
+      - name: 依存関係と原稿を確認
+        working-directory: physics_tower/12_quantum_field_theory
+        run: |
+          python3 -m pip install -r requirements.txt
+          python3 scripts/check.py
+      - name: HTMLとPDFを生成
+        working-directory: physics_tower/12_quantum_field_theory
+        run: |
+          mkdir -p _quality
+          set -o pipefail
+          quarto render 2>&1 | tee _quality/render.log
+          test -s _book/index.html
+          test -s _book/qft.pdf
+          python3 scripts/check_rendered.py
+      - name: HTML画面幅別の表示診断
+        continue-on-error: true
+        working-directory: physics_tower/12_quantum_field_theory
+        run: |
+          python3 -m pip install playwright
+          python3 scripts/check_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          if-no-files-found: ignore
+          name: qft-quality
+          path: physics_tower/12_quantum_field_theory/_quality
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          if-no-files-found: error
+          name: qft-book
+          path: physics_tower/12_quantum_field_theory/_book

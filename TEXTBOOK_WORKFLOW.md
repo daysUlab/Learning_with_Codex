@@ -41,3 +41,7 @@
 | references.qmd / references.bib | 出典と参照範囲 |
 
 場の量子論では、全18章の初稿→3章ずつ6回のレビュー（第1〜6章は導入を再補強）→横断点検・索引→表示診断という順に進めた。詳細は[レビュー記録](physics_tower/12_quantum_field_theory/REVIEW.md)、現在の状態は[進捗](physics_tower/12_quantum_field_theory/PROGRESS.md)を参照する。これらの状態を上書きせず、本ファイルは再利用する制作手順に絞る。
+
+## 教科書別CI・共通公開（2026-11-29）
+
+PRの本文変更では対象教材のworkflowのみを起動する。複数教材を変更した場合は該当する各workflowを実行する。宇宙物理の前編・後編は一つの教材として同じCIで検証する。共通公開workflow自体を修正したPRでは全冊組立を検査する。main統合時は共通workflowが同じコミットから四冊を生成して単一のPages deployを実施し、従来の公開URLとReleaseを維持する。通常の執筆PRと、mainの公開結果を区別して記録する。初回の実行結果確認後に運用確定する。
