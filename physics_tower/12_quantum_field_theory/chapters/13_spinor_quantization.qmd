@@ -18,14 +18,22 @@ $$
 E^2=\boldsymbol p^2+m^2
 $$
 
-です。Klein–Gordon方程式は時間について二階ですが、量子力学の Schrödinger 方程式のような一階の時間発展を持つ線形な方程式を探してみます。空間微分についても一階とする仮定のもとで、
+です。第3章のSchrödinger方程式では初期状態だけで時間発展が決まりました。Klein–Gordon方程式では場の初期値と時間微分が必要です。$E=\sqrt{\boldsymbol p^2+m^2}$ をそのまま微分演算子にすると平方根の中に微分が入り、局所的な有限階の微分方程式として扱いにくくなります。そこで行列で質量殻の平方根を作ります。Klein–Gordon方程式は時間について二階ですが、量子力学の Schrödinger 方程式のような一階の時間発展を持つ線形な方程式を探してみます。空間微分についても一階とする仮定のもとで、
 
 $$
 i\partial_t\psi=H_D\psi,\qquad
 H_D=-i\boldsymbol\alpha\cdot\nabla+\beta m
 $$ {#eq-dirac-hamiltonian}
  
-と置きます。$\alpha_i,\beta$ は定数行列です。平面波では $H_D=\boldsymbol\alpha\cdot\boldsymbol p+\beta m$ です。その二乗が $(\boldsymbol p^2+m^2)I$ になる条件を求めると、
+と置きます。$\alpha_i,\beta$ は定数行列です。平面波では $H_D=\boldsymbol\alpha\cdot\boldsymbol p+\beta m$ です。未知の行列について二乗を展開すると、
+
+$$
+H_D^2=\sum_i\alpha_i^2p_i^2+
+\sum_{i<j}(\alpha_i\alpha_j+\alpha_j\alpha_i)p_ip_j+
+m\sum_i(\alpha_i\beta+\beta\alpha_i)p_i+m^2\beta^2
+$$
+
+です。任意の運動量について $(\boldsymbol p^2+m^2)I$ と一致するには交差項が0、二乗の係数が I なので、
 
 $$
 \{\alpha_i,\alpha_j\}=2\delta_{ij}I,\qquad
@@ -40,7 +48,7 @@ $$
 
 です。交換子とは異なり、順序を交換した積を足します。
 
-Pauli行列は三つの互いに反交換する行列を与えますが、二次元複素行列のままでは第四の非零行列を追加できません。三つのPauli行列すべてと反交換する二次元行列は零行列だからです。四次元の表現なら、
+Pauli行列は三つの互いに反交換する行列を与えますが、二次元複素行列のままでは第四の非零行列を追加できません。任意の2×2複素行列は $B=b_0I+\sum_i b_i\sigma_i$ と展開できます。第9章の積の公式から $\{B,\sigma_i\}=2b_0\sigma_i+2b_iI$ です。すべての i で0なら全係数が0です。互いに反交換し二乗がIとなる三つのエルミートな2×2行列もPauli行列と同じ構造を持ちます。四次元の表現なら、
 
 $$
 \alpha_i=
@@ -55,7 +63,14 @@ I_2&0\\
 \end{pmatrix}
 $$
 
-と取れます。各ブロックは二次元行列です。第9章のPauli行列の積から上の反交換関係を確認できます。
+と取れます。各ブロックは二次元行列です。普通の行列積と同じ方法で
+
+$$
+\alpha_i\beta=\begin{pmatrix}0&-\sigma_i\\\sigma_i&0\end{pmatrix},
+\qquad\beta\alpha_i=\begin{pmatrix}0&\sigma_i\\-\sigma_i&0\end{pmatrix}
+$$
+
+なので和は0です。$\alpha_i\alpha_j=\operatorname{diag}(\sigma_i\sigma_j,\sigma_i\sigma_j)$ から残りも確認できます。
 
 ## ガンマ行列と共変な方程式
 
@@ -71,9 +86,9 @@ $$
 (i\gamma^\mu\partial_\mu-m)\psi=0
 $$ {#eq-dirac-equation}
 
-となります。これがDirac方程式です。$\gamma^\mu\partial_\mu$ を $\gamma^\mu\partial_\mu$ と省略する記法も使います。
+となります。これがDirac方程式です。この章ではガンマ行列と四元微分の縮約を明示します。$\gamma^0$ の二乗は I ですが、$\gamma^i=\beta\alpha_i$ では反交換の符号により $(\gamma^i)^2=-I$ です。
 
-左右の微分は交換するため、反交換関係 @eq-clifford によって対称な部分だけが残ります。すなわち、
+微分同士は交換するため、和の添字を入れ替えると $\gamma^\mu\gamma^\nu\partial_\mu\partial_\nu=\frac12\{\gamma^\mu,\gamma^\nu\}\partial_\mu\partial_\nu=\Box I$ です。質量と微分の交差項も相殺します。すなわち、
 
 $$
 (i\gamma^\mu\partial_\mu+m)
@@ -99,7 +114,14 @@ $$
 
 を満たします。どちらもここでは $p^0=E_{\boldsymbol p}>0$ としています。
 
-静止系では $H_D=m\beta$ なので、固有値は +m と −m がそれぞれ二つあります。二成分の正規直交基底を $\chi_s$ とすると、一般の運動量に対する一つの規約は
+静止系では $H_D=m\beta$ なので、固有値は +m と −m がそれぞれ二つあります。一般の正周波数スピノルを二成分ずつ $(\xi,\zeta)^{\mathsf T}$ に分け、$H_Du=Eu$ を成分に直すと、
+
+$$
+(E-m)\xi=(\boldsymbol\sigma\cdot\boldsymbol p)\zeta,\qquad
+(E+m)\zeta=(\boldsymbol\sigma\cdot\boldsymbol p)\xi
+$$
+
+です。第二式を ζ について解き第一式に戻すと $(\boldsymbol\sigma\cdot\boldsymbol p)^2=\boldsymbol p^2I$ により質量殻と一致します。負周波数側も二成分の連立式で解けます。二成分の正規直交基底を $\chi_s$ とすると、一般の運動量に対する一つの規約は
 
 $$
 u_s(p)=\sqrt{E+m}
@@ -117,7 +139,7 @@ v_s(p)=\sqrt{E+m}
 \end{pmatrix}
 $$
 
-です。反粒子のスピン基底の選び方には規約の自由があります。
+です。係数 $\sqrt{E+m}$ は $u^\dagger u=2E$ という規格化から決まります。実際 $(E+m)[1+\boldsymbol p^2/(E+m)^2]=2E$ です。負周波数側も同じノルムです。反粒子のスピン基底の選び方には規約の自由があります。
 
 ![自由Dirac Hamiltonianの正・負のエネルギー枝。各運動量で二重に縮退する。](../figures/dirac_branches.png){#fig-dirac-branches}
 
@@ -144,7 +166,7 @@ S(\Lambda)^{-1}\gamma^\mu S(\Lambda)
 =\Lambda^\mu{}_\nu\gamma^\nu
 $$
 
-が必要です。回転では第9章のSU(2)が現れ、boostでは一般にSはユニタリではありません。例えばz軸方向の能動boostをラピディティ ξ で表すと、上の規約で $S=\exp(\xi\alpha_z/2)$ です。
+が必要です。連鎖律は $\partial'_\mu=(\Lambda^{-1})^\nu{}_\mu\partial_\nu$ です。変換後の方程式へ代入し左から $S^{-1}$ を掛けると、上の条件で元の方程式に戻ることが分かります。回転では第9章のSU(2)が現れ、boostでは一般にSはユニタリではありません。例えばz軸方向の能動boostをラピディティ ξ で表すと、上の規約で $S=\exp(\xi\alpha_z/2)$ です。
 
 スピノルのDirac共役を
 
@@ -152,7 +174,7 @@ $$
 \bar\psi=\psi^\dagger\gamma^0
 $$
 
-と定義します。$\bar\psi$ は $\bar\psi'=\bar\psi S^{-1}$ と変換するので、$\bar\psi\psi$ はローレンツスカラーです。一方、$\bar\psi\gamma^\mu\psi$ は四元ベクトルになります。
+と定義します。boostでは $S^\dagger\gamma^0 S=\gamma^0$ です。例えば z boost では $\alpha_z^\dagger=\alpha_z$、$\gamma^0\alpha_z=-\alpha_z\gamma^0$ なので指数の展開から $S^\dagger\gamma^0=\gamma^0 S^{-1}$ が得られます。このため $\psi'^\dagger\gamma^0=\bar\psi S^{-1}$ です。$\bar\psi$ は $\bar\psi'=\bar\psi S^{-1}$ と変換するので、$\bar\psi\psi$ はローレンツスカラーです。一方、$\bar\psi\gamma^\mu\psi$ は四元ベクトルになります。
 
 例えば先ほどの正エネルギースピノルについて、
 
@@ -172,7 +194,7 @@ $$
 \mathcal L_D=\bar\psi(i\gamma^\mu\partial_\mu-m)\psi
 $$
 
-と定めます。$\psi$ と $\bar\psi$ を独立に変分するとDirac方程式とその共役方程式が得られます。共役方程式は
+と定めます。$\bar\psi$ の変分の係数は $(i\gamma^\mu\partial_\mu-m)\psi$ です。$\psi$ の変分では微分項を部分積分すると $-i(\partial_\mu\bar\psi)\gamma^\mu-m\bar\psi$ になります。各係数を0にしてDirac方程式と共役方程式を得ます。共役方程式は
 
 $$
 i(\partial_\mu\bar\psi)\gamma^\mu+m\bar\psi=0
@@ -237,7 +259,7 @@ $$
 
 ### エネルギーの正値性
 
-古典的なDirac Hamiltonianをモード展開に代入すると、正周波数の寄与と負周波数の寄与は概略として
+古典的なDirac Hamiltonianの積分 $\int d^3x\,\psi^\dagger H_D\psi$ にモード展開を代入します。正周波数解には E、負周波数解（空間運動量は −p）には −E が掛かります。箱の直交性と $u^\dagger u=v^\dagger v=2E$ で規格化因子が相殺し、同じ空間運動量の正・負固有ベクトルの直交性で交差項が消えます。従って正周波数の寄与と負周波数の寄与は概略として
 
 $$
 H=\sum_{\boldsymbol p,s}E_{\boldsymbol p}
@@ -258,7 +280,7 @@ $$
 (b^\dagger b+d^\dagger d)
 $$ {#eq-dirac-energy}
 
-です。粒子と反粒子はいずれも正のエネルギーを持ちます。
+です。粒子と反粒子はいずれも正のエネルギーを持ちます。例えば E=3 の負周波数モードは $-3dd^\dagger=-3+3d^\dagger d$ です。真空の −3 を引けば占有数0,1のエネルギーは0,3です。通常のボース交換関係なら真空を引いても $-3d^\dagger d$ となります。
 
 もし同じ負周波数モードに通常の正ノルムのボース交換関係を使うと、$dd^\dagger=1+d^\dagger d$ となり、反粒子の励起を増やしてエネルギーを際限なく下げられます。この問題は真空エネルギーを引くだけでは解決しません。
 
@@ -266,7 +288,7 @@ $$ {#eq-dirac-energy}
 
 ## 粒子と反粒子の電荷
 
-Noether電荷を正規順序にすると、単位の粒子電荷を q として、
+Noether電荷 $q\int d^3x\,\psi^\dagger\psi$ はモード展開から $q\sum(b^\dagger b+dd^\dagger)$ です。エネルギーの場合と異なり負周波数側にも正符号があります。$dd^\dagger=1-d^\dagger d$ を使い真空の定数を除けば、
 
 $$
 Q=q\sum_{\boldsymbol p,s}(b^\dagger b-d^\dagger d)
@@ -292,7 +314,14 @@ $$
 \sum_s v_s(p)\bar v_s(p)=\gamma^\mu p_\mu-m
 $$
 
-です。例えば静止系の正エネルギー側では、左辺は上側の二成分に2m、下側に0を持つ行列になり、右辺 $m(\gamma^0+I)$ と一致します。一般の運動量の式はこの結果をboostすることで得られます。
+です。例えば静止系の正エネルギー側では、左辺は上側の二成分に2m、下側に0を持つ行列になり、右辺 $m(\gamma^0+I)$ と一致します。一般の運動量でも $\sum_s\chi_s\chi_s^\dagger=I_2$ を使い、$B=\boldsymbol\sigma\cdot\boldsymbol p$ とすれば、
+
+$$
+\sum_s u_s\bar u_s=
+\begin{pmatrix}(E+m)I_2&-B\\B&-(E-m)I_2\end{pmatrix}
+$$
+
+です。右下は $-B^2/(E+m)=-(E-m)I_2$ で、これが $\gamma^\mu p_\mu+m$ と一致します。vも同様です。また $\sum_s[u_s(p)u_s^\dagger(p)+v_s(-p)v_s^\dagger(-p)]=2EI_4$ となります。等時反交換子の負周波数側の運動量を反転してFourier位相を揃えると、これにより周期デルタ関数が得られます。
 
 フェルミオンの時間順序積は、時刻を入れ替える際に演算子の順序も入れ替わるので符号を伴います。
 
@@ -301,7 +330,7 @@ S_F(x-y)=
 \langle0|T\{\psi(x)\bar\psi(y)\}|0\rangle
 $$
 
-ここで x の時刻が y より前の場合は $-\bar\psi(y)\psi(x)$ の順序を、対応する成分の添字を保って取ります。場のモード展開とスピン和を使うと、
+ここで x の時刻が y より前の場合は $-\bar\psi(y)\psi(x)$ の順序を、対応する成分の添字を保って取ります。時間差が正なら $u\bar u$、負ならマイナス符号付きの $v\bar v$ が残ります。第12章の時間 Fourier 変換と同じように二つの分母を合わせます。別の確認として $(i\gamma^\mu\partial_\mu+m)D_F(x)$ に第12章のFourier表示を代入しても、分子は $\gamma^\mu p_\mu+m$ になります。場のモード展開とスピン和を使うと、
 
 $$
 S_F(x-y)=\int\frac{d^4p}{(2\pi)^4}
@@ -372,7 +401,14 @@ $$
 \exp(-\bar\theta_i A_{ij}\theta_j)=\det A
 $$ {#eq-grassmann-gaussian}
 
-を得ます。繰り返し添字 i,j は和を取ります。指数を展開し、各変数が一回ずつ現れる項を集めると、反交換による符号付きの置換の和、すなわち行列式になります。
+を得ます。繰り返し添字 i,j は和を取ります。二対の変数なら $X=\bar\theta_1(A_{11}\theta_1+A_{12}\theta_2)+\bar\theta_2(A_{21}\theta_1+A_{22}\theta_2)$ とすると指数の二次項だけが全変数を含み、
+
+$$
+\frac{X^2}{2}=(A_{11}A_{22}-A_{12}A_{21})
+\theta_1\bar\theta_1\theta_2\bar\theta_2
+$$
+
+です。対角項と非対角項の符号が反交換によって逆になります。積分がこの係数を取り出すので行列式になります。一般にも各変数が一回ずつ現れる項の符号付きの和になります。
 
 一方、正定値の実対称行列Aに対する通常の実Gaussian積分は、
 
@@ -388,6 +424,10 @@ $$
 ::: {.callout-note title="数値例：二変数のGrassmann積分"}
 行列 A=((2,1),(1,3)) の行列式は 2×3−1=5 です。上の規約でGrassmann Gaussian積分は5になります。同じ行列を通常の二次元実Gaussian積分に使うと 2π/√5≈2.810 です。
 :::
+
+## 初読の到達目標
+
+質量殻の平方根を行列で表す理由、スピノルの連立方程式、反交換によって反粒子の励起エネルギーが正になること、電荷が逆になる理由を確認してください。Grassmann積分はまず二対の変数で展開を再現することを目標にします。
 
 ## 演習
 
