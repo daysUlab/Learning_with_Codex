@@ -25,3 +25,29 @@ assert all(imp(min(p,q),p) for p,q in rows)
 assert all(not(max(p,q) and not p) or q for p,q in rows)
 assert 2**3-1==7
 print(f"{len(paths)} published chapter(s); introductory truth-table checks OK")
+
+# 第2章：有限ブール代数をビット集合として全列挙
+for n in range(1,5):
+    top=(1<<n)-1
+    elems=range(top+1)
+    for a,b,c in product(elems,repeat=3):
+        assert a&(b|c)==(a&b)|(a&c)
+        assert a|(b&c)==(a|b)&(a|c)
+        assert (top^(a|b))==((top^a)&(top^b))
+        assert (a&b==a)==(a&(top^b)==0)
+        assert ((top^a)|b==top)==(a&b==a)
+        assert a&((top^a)|c)==a&c
+    atoms=[a for a in elems if a and not any(b and b!=a and b&a==b for b in elems)]
+    assert len(atoms)==n
+    assert all(sum(b for b in atoms if b&a==b)==a for a in elems)
+# DNFの構成が全ての真理関数を再現する（3変数まで）
+for n in range(1,4):
+    assignments=list(product([0,1],repeat=n))
+    for mask in range(1<<len(assignments)):
+        terms=[v for i,v in enumerate(assignments) if mask&(1<<i)]
+        values=[int(any(all(x==y for x,y in zip(v,term)) for term in terms)) for v in assignments]
+        assert sum(val<<i for i,val in enumerate(values))==mask
+A={0,1,3}; B={1,2}; omega=set(range(4))
+assert A&B=={1} and A|B==omega and (omega-A)|B=={1,2}
+assert 2**(2**4)==65536
+print("chapter 2: finite Boolean algebra and DNF checks OK")
