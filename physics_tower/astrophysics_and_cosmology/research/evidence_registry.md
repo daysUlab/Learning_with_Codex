@@ -162,3 +162,11 @@
 - 1919年日食：[Royal Society](https://www.royalsociety.org/blog/2024/08/observing-relativity/)、[NASA](https://science.gsfc.nasa.gov/attic/eclipse2017.gsfc.nasa.gov/testing-general-relativity.html)（A/B）。1.75秒角は理論値で歴史的観測は誤差あり。
 - 重力レンズ：[ESA/Webb 2025](https://esawebb.org/images/potm2503a/)、[2024](https://esawebb.org/images/potm2406a/)（A/B）。光源とレンズの像・回折を区別。
 - シャピロ遅延：[Bertotti et al. 2003](https://doi.org/10.1038/nature01997)（A/B）。パラメータの差0.000021±0.000023、周波数変化から推定。局所光速の変化ではない。
+
+## 第16章（2026-11-29確認）
+- 重力波・連星パルサー：[NANOGrav](https://nanograv.org/15yr/Summary/Background)（A/B）。間接証拠と直接検出を区別。
+- 干渉計・GW150914：[LIGO](https://www.ligo.caltech.edu/page/what-is-ligo)、[GW150914](https://ligo.org/detections/gw150914/)、[GWOSC](https://gwosc.org/events/GW150914/)（A/B）。公式波形は処理済みデータ、差動長変化は代表値からの概算。SXSは数値可視化。
+- GW170817：[LIGO](https://ligo.org/science-summaries/GW170817GRB/)（A/B）。1.7秒の差は発生時刻・伝播効果の組み合わせ。
+- GW250114：[LVK 2025](https://doi.org/10.1103/kw5g-d732)、[Nature 2026](https://doi.org/10.1038/s41586-026-10696-0)（A/B）。公開要旨参照、地平面内部を観測したわけではない。
+- PTA：[NANOGrav 2023](https://arxiv.org/abs/2306.16213)（A/B/C）。67パルサーの相関、起源未確定。
+- 原始重力波：[BICEP/Keck 2021](https://doi.org/10.1103/PhysRevLett.127.151301)（C/D）。インフレーション起源の確立検出なし。限界と検出を区別。

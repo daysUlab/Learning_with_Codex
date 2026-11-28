@@ -39,6 +39,9 @@
 | 15 | einstein_ring_smacs0028.jpg | 2025-03-27 | Webb・Hubbleの観測合成画像 | [公式画像](https://esawebb.org/images/potm2503a/)、ESA/Webb, NASA & CSA, G. Mahler. Acknowledgement: M. A. McDonald、[利用条件](https://esawebb.org/copyright/) |
 | 15 | quasar_lens_rxj1131.jpg | 2024-07-05 | Webb MIRI赤外線観測画像 | [公式画像](https://esawebb.org/images/potm2406a/)、ESA/Webb, NASA & CSA, A. Nierenberg、[利用条件](https://esawebb.org/copyright/) |
 
+| 16 | gw150914_waveform.jpg | 2016-02-11 | 観測波形・理論波形の比較 | [公式画像](https://www.ligo.caltech.edu/image/ligo20160211a)、Caltech/MIT/LIGO Lab、[LIGO利用条件](https://www.ligo.caltech.edu/page/image-use-policy) |
+| 16 | gw150914_merger_sxs.jpg | 2016-02-11 | 数値相対論による合体の可視化 | [公式画像](https://www.ligo.caltech.edu/image/ligo20160211d)、The SXS (Simulating eXtreme Spacetimes) Project、[LIGO利用条件](https://www.ligo.caltech.edu/page/image-use-policy) |
+
 ESA・ESO図版のライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
 画像ファイルは公式配布URLからビルド前にダウンロードし、ローカルにキャッシュする。Quarto HTML/PDFの両方で同一のローカルファイルを参照する。今回の実行環境では外部CDNへの接続ができないため、バイナリ取得・描画は未検証。
@@ -50,3 +53,5 @@ ESA・ESO図版のライセンス：[CC BY 4.0](https://creativecommons.org/lice
 2026-11-29：NASA可視化静止画2点・SMACSリングJPEGをWebで実画像確認。RX J1131は公式配布リンク・クレジット確認、JPEGはWebで取得失敗。CIで検証。NASAの動画は公式リンクのみ。
 
 NASA SVSの取得エラー対策：run 46163747407 のHTTP 403を確認。NASAのみ実画像JPEGをSVGに内包してHTML/PDF共通で利用し、取得できなければ取得不可と明記するSVGを出力。公式リンクは常に保持する。代替の絵を観測・計算画像として掲載しない。新CIで実画像取得の成否を確認する。
+
+第16章：LIGO公式波形とSXS合体静止画を無改変・クレジット付きで利用。LIGO Image Use Policyを確認し、第三者素材SXSは教育用途のみ。商用利用の許諾は別途必要。公式静止画が取得できなければ明示した取得不可表示と公式リンクを残す。波形JPEGはWeb表示確認済み、SXS JPEGは取得未確認。

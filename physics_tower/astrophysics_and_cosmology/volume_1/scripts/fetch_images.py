@@ -1,4 +1,4 @@
-"""Download official images; for NASA SVS only, disclose unavailable images in the render."""
+"""Download official images; for explicitly flagged assets, disclose unavailable images in the render."""
 import base64
 import json
 import os
@@ -42,10 +42,10 @@ def download(asset):
             errors.append(f"{url}: {exc}")
     if not asset.get("allow_unavailable_notice", False):
         raise RuntimeError("Official image retrieval failed: " + "; ".join(errors))
-    print("::warning title=NASA image unavailable::" + "; ".join(errors))
+    print("::warning title=Official image unavailable::" + "; ".join(errors))
     return None
 
-def render_nasa(asset, data):
+def render_optional_image(asset, data):
     # An SVG envelope makes the real JPEG available to HTML and PDF alike.
     # It is never a fake JPEG or an unlabelled substitute. The caption links
     # the official page regardless of the fetch outcome.
@@ -57,7 +57,7 @@ def render_nasa(asset, data):
         content = (
             '<rect width="1000" height="220" rx="10" fill="#eef2f6" stroke="#9aaabb"/>'
             '<g font-family="sans-serif" text-anchor="middle" fill="#25364a">'
-            '<text x="500" y="85" font-size="32">Official NASA image unavailable in this build</text>'
+            '<text x="500" y="85" font-size="32">Official image unavailable in this build</text>'
             '<text x="500" y="135" font-size="22">See the official source link in the caption.</text>'
             f'<text x="500" y="178" font-size="18">{escape(asset["file"])}</text></g>'
         )
@@ -68,4 +68,4 @@ if __name__ == "__main__":
     for asset in json.loads((ROOT / "external_images.json").read_text(encoding="utf-8"))["assets"]:
         data = download(asset)
         if "render_file" in asset:
-            render_nasa(asset, data)
+            render_optional_image(asset, data)
