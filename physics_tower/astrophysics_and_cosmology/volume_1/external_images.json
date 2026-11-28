@@ -244,7 +244,16 @@
       "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
       "license": "NASA Media Usage Guidelines（米国政府制作物は原則米国著作権の対象外。第三者素材の例外あり）",
       "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-      "checked": "2026-11-29"
+      "checked": "2026-11-29",
+      "render_file": "j0030_hotspots_nasa.svg",
+      "allow_unavailable_notice": true,
+      "alternate_urls": [
+        "https://svs.gsfc.nasa.gov/vis/a010000/a013200/a013240/Two_NS_Model_Still_print.jpg"
+      ],
+      "render_size": [
+        1920,
+        1080
+      ]
     },
     {
       "file": "bh_optics_nasa.jpg",
@@ -257,7 +266,13 @@
       "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
       "license": "NASA Media Usage Guidelines（米国政府制作物は原則米国著作権の対象外。第三者素材の例外あり）",
       "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-      "checked": "2026-11-29"
+      "checked": "2026-11-29",
+      "render_file": "bh_optics_nasa.svg",
+      "allow_unavailable_notice": true,
+      "render_size": [
+        1920,
+        1305
+      ]
     },
     {
       "file": "bh_sim_angle1.jpg",
@@ -270,7 +285,13 @@
       "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
       "license": "NASA Media Usage Guidelines",
       "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-      "checked": "2026-11-29"
+      "checked": "2026-11-29",
+      "render_file": "bh_sim_angle1.svg",
+      "allow_unavailable_notice": true,
+      "render_size": [
+        1024,
+        1024
+      ]
     },
     {
       "file": "bh_sim_angle2.jpg",
@@ -283,7 +304,13 @@
       "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
       "license": "NASA Media Usage Guidelines",
       "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-      "checked": "2026-11-29"
+      "checked": "2026-11-29",
+      "render_file": "bh_sim_angle2.svg",
+      "allow_unavailable_notice": true,
+      "render_size": [
+        1024,
+        1024
+      ]
     },
     {
       "file": "einstein_ring_smacs0028.jpg",
