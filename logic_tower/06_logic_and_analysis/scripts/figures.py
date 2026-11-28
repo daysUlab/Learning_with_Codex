@@ -411,3 +411,24 @@ for level in range(4):
             ax.plot([xp,x],[y+1,y],color="#94a3b8",lw=1)
         ax.text(x,y,"["+"".join(bits)+"]" if level else "X",ha="center",va="center",fontsize=9,bbox=dict(boxstyle="round,pad=.22",fc="#e0eaf7",ec="#2166ac"),zorder=3)
 fig.savefig(out/"cantor_cylinders.png",dpi=220);plt.close(fig)
+
+# 第14章：二つの状況、名前の階層、混合
+fig,ax=plt.subplots(figsize=(5.5,3.2),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,6));ax.axis("off")
+for x,label,values,col in [(2.5,"A",[1,2],"#2166ac"),(7.5,"B",[2,3],"#16857c")]:
+    ax.add_patch(plt.Rectangle((x-1.65,2.1),3.3,3,fc=col,alpha=.10,ec=col,lw=1.4))
+    ax.text(x,4.65,"Situation "+label,ha="center",fontsize=11)
+    for j,k in enumerate(values):
+        ax.text(x,3.85-j*.9,str(k),ha="center",fontsize=15,color=col)
+ax.text(5,1.4,"1: p       2: 1       3: q",ha="center",fontsize=11)
+ax.text(5,.65,"Boolean membership values",ha="center",fontsize=10)
+fig.savefig(out/"bname_membership.png",dpi=220);plt.close(fig)
+diagram([(5,4.8,"u"),(2,2.7,"check 1"),(5,2.7,"check 2"),(8,2.7,"check 3"),(5,.7,"Lower-rank names")],[(0,1),(0,2),(0,3),(1,4),(2,4),(3,4)],"bname_hierarchy.png")
+fig,ax=plt.subplots(figsize=(5.5,3.2),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,5));ax.axis("off")
+for x,lab,col in [(2.5,"p: {1, 2}","#2166ac"),(7.5,"q: {2, 3}","#16857c")]:
+    ax.text(x,4.1,lab,ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.4",fc=col,alpha=.15,ec=col))
+    ax.annotate("",xy=(5,2.3),xytext=(x,3.65),arrowprops=dict(arrowstyle="->",color=col,lw=1.8))
+ax.text(5,1.8,"Mixed name u",ha="center",fontsize=12)
+ax.text(5,1,"1: p    2: 1    3: q",ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.5",fc="#e0eaf7",ec="#2166ac"))
+fig.savefig(out/"bname_mixing.png",dpi=220);plt.close(fig)

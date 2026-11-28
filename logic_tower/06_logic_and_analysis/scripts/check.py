@@ -376,3 +376,42 @@ for depth in range(1,9):
     assert sum(map(len,parts))==2**depth-1
     assert set().union(*parts)==set(words)-{"0"*depth}
 print("chapter 13: finite Boolean families and cylinder samples OK (not infinite completion proof)")
+
+# 第14章：有限の名前の再帰計算（四元ブール代数）
+from functools import lru_cache
+@lru_cache(None)
+def bv_check(n):
+    return tuple((bv_check(k),3) for k in range(n))
+@lru_cache(None)
+def bv_member(u,v):
+    result=0
+    for t,b in v:
+        result|=b&bv_equal(u,t)
+    return result
+@lru_cache(None)
+def bv_subset(u,v):
+    result=3
+    for t,b in u:
+        result&=(3^b)|bv_member(t,v)
+    return result
+@lru_cache(None)
+def bv_equal(u,v):
+    return bv_subset(u,v)&bv_subset(v,u)
+@lru_cache(None)
+def bv_eval(u,bit):
+    return frozenset(bv_eval(t,bit) for t,b in u if b&bit)
+u=tuple((bv_check(k),b) for k,b in [(1,1),(2,3),(3,2)])
+v12=tuple((bv_check(k),3) for k in [1,2])
+v23=tuple((bv_check(k),3) for k in [2,3])
+v123=tuple((bv_check(k),3) for k in [1,2,3])
+assert [bv_member(bv_check(k),u) for k in range(1,5)]==[1,3,2,0]
+assert bv_equal(u,v12)==1 and bv_equal(u,v23)==2
+assert bv_equal(u,v123)==0 and bv_subset(u,v123)==3
+assert bv_equal((),(((),0),))==3
+names=[tuple((bv_check(k),b) for k,b in enumerate(bs)) for bs in product(range(4),repeat=3)]
+for x,y in product(names,repeat=2):
+    assert bv_equal(x,y)==sum(bit for bit in [1,2] if bv_eval(x,bit)==bv_eval(y,bit))
+    assert bv_member(x,y)==sum(bit for bit in [1,2] if bv_eval(x,bit) in bv_eval(y,bit))
+    mixed=tuple((bv_check(k),(x[k][1]&1)|(y[k][1]&2)) for k in range(3))
+    assert bv_equal(mixed,x)&1 and bv_equal(mixed,y)&2
+print("chapter 14: finite B-name recursion, atomic semantics, mixing samples OK")

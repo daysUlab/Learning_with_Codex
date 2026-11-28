@@ -13,17 +13,17 @@
 | 7 | [無限集合で多数を定義する](chapters/07_ultrafilters.qmd) | 一次レビューCI成功・main統合済み |
 | 8 | [モデルの列から新しいモデルを作る](chapters/08_ultraproducts.qmd) | 一次レビューCI成功・main統合済み |
 | 9 | [超実数を数列から構成する](chapters/09_hyperreals.qmd) | 一次レビューCI成功・main統合済み |
-| 10 | [無限小と実数の接続](chapters/10_standard_part.qmd) | 初稿main統合済み・一次レビューCI待ち |
-| 11 | [無限小で微分を計算する](chapters/11_infinitesimal_derivatives.qmd) | 初稿main統合済み・一次レビューCI待ち |
-| 12 | [無限個の和で積分を計算する](chapters/12_hyperfinite_integrals.qmd) | 一次レビューCI待ち |
-| 13 | [真理値を完全ブール代数にする](chapters/13_complete_boolean_algebras.qmd) | 初稿・CI未確認 |
-| 14 | [集合の所属そのものをブール値にする](chapters/14_boolean_valued_universe.qmd) | TODO |
+| 10 | [無限小と実数の接続](chapters/10_standard_part.qmd) | 一次レビューCI成功・main統合済み |
+| 11 | [無限小で微分を計算する](chapters/11_infinitesimal_derivatives.qmd) | 一次レビューCI成功・main統合済み |
+| 12 | [無限個の和で積分を計算する](chapters/12_hyperfinite_integrals.qmd) | 一次レビューCI成功・main統合済み |
+| 13 | [真理値を完全ブール代数にする](chapters/13_complete_boolean_algebras.qmd) | 初稿CI成功・main統合済み |
+| 14 | [集合の所属そのものをブール値にする](chapters/14_boolean_valued_universe.qmd) | 初稿・CI未確認 |
 | 15 | [内部の実数から関数空間を取り出す](chapters/15_boolean_valued_analysis.qmd) | TODO |
 | 16 | [有限の条件から新しい実数を作る](chapters/16_cohen_forcing.qmd) | TODO |
 | 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | TODO |
 | 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | TODO |
 
-次の作業：第12〜13章CI・main統合・公開確認、第14章。
+次の作業：第14章CI・main統合・公開確認、第15章、第13〜15章一次レビュー。
 
 2026-11-28：第1章CI 46095306289成功、PR #117統合（d14720a）。第2章初稿・演習9問・図3点・有限ブール代数とDNFの検査追加。最新CI未確認。
 
@@ -56,3 +56,5 @@
 2026-11-28：第1〜11章CI 46126544107成功、PR #123統合（6fbdbe8）。第12章初稿・図3点・演習13問、第10〜12章一次レビューを反映。最新CI・目視・公開未確認。
 
 2026-11-28：第12章までのCI 46128509566実行中に第13章初稿（完全ブール代数、正則開集合、Cantor空間、原子性、完備化の存在と一意性、図4点・演習13問）を追加。最新CI未確認。
+
+2026-11-28：第1〜13章CI 46128929876成功、PR #124統合（29e2dd5）。第14章初稿・図3点・演習14問、有限名前の所属・等号・混合を検算。最新CI・目視・公開未確認。
