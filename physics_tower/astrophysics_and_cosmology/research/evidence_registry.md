@@ -145,3 +145,8 @@
 | ジェット・ビーミング | A/B/C | [ESO Centaurus A](https://www.eso.org/public/images/eso0903a/)、[NASA AGN](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-are-active-galactic-nuclei/) | 地平面内部から出る物質ではない。発生機構は研究中 |
 | GRBの崩壊・合体起源 | A/B/C | [NASA GRB](https://science.nasa.gov/universe/gamma-ray-bursts-harvesting-knowledge-from-the-universes-most-powerful-explosions/) | 持続時間だけでは起源を特定できない |
 | 潮汐破壊現象 | A/B | [NASA TDE](https://science.nasa.gov/universe/black-holes/what-happens-when-something-gets-too-close-to-a-black-hole/)、[AT2024tvd](https://science.nasa.gov/missions/hubble/nasas-hubble-pinpoints-roaming-massive-black-hole/) | 破壊・残骸の降着と放射を区別 |
+
+## 天体の見え方の補足（2026-11-29）
+- 第4章：恒星の表面温度と色、Webbの代表色、回折像。 [NASA](https://science.nasa.gov/exoplanets/stars/)、[ESA/Webb](https://esawebb.org/about/general/image-processing/)、[Cas A](https://esawebb.org/news/weic2330/)。色は観測波長・表示法に依存。
+- 第9章：J0030+0451のホットスポット（2019年NICER、二つの独立した解析）、[NASA SVS](https://svs.gsfc.nasa.gov/13240/) の公開本文と画像を確認。白い斑点は推定温度分布の表現で直接撮像ではない。
+- 第11章：[NASA SVS 2019](https://svs.gsfc.nasa.gov/13326/) の公開本文・光路図を確認。上下の弧は同じ円盤の重力レンズ像。白色は観測・表示条件に依存、EHT画像と数値可視化を区別。

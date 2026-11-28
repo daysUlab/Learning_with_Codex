@@ -232,6 +232,32 @@
       "date": "2009-01-28",
       "type": "可視光・サブミリ波・X線の観測合成",
       "chapter": 13
+    },
+    {
+      "file": "j0030_hotspots_nasa.jpg",
+      "url": "https://svs.gsfc.nasa.gov/vis/a010000/a013200/a013240/Two_NS_Model_Still.jpg",
+      "source": "https://svs.gsfc.nasa.gov/13240/",
+      "credit": "NASA's Goddard Space Flight Center",
+      "date": "2019-12-12",
+      "type": "NICER観測に基づく二つの表面温度分布モデルの可視化",
+      "chapter": 9,
+      "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license": "NASA Media Usage Guidelines（米国政府制作物は原則米国著作権の対象外。第三者素材の例外あり）",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "checked": "2026-11-29"
+    },
+    {
+      "file": "bh_optics_nasa.jpg",
+      "url": "https://svs.gsfc.nasa.gov/vis/a010000/a013300/a013326/BH_optics_explained.jpg",
+      "source": "https://svs.gsfc.nasa.gov/13326/",
+      "credit": "NASA's Goddard Space Flight Center/Jeremy Schnittman",
+      "date": "2019-09-25",
+      "type": "降着円盤の計算可視化・光路の解説図",
+      "chapter": 11,
+      "policy": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "license": "NASA Media Usage Guidelines（米国政府制作物は原則米国著作権の対象外。第三者素材の例外あり）",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "checked": "2026-11-29"
     }
   ]
 }
