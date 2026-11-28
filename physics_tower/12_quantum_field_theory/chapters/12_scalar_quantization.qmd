@@ -197,7 +197,7 @@ $$
 =\frac\omega2(aa^\dagger+a^\dagger a)
 $$
 
-です。$a^2$ と $(a^\dagger)^2$ が相殺します。進行波基底へ変えても粒子数の和 $a_c^\dagger a_c+a_s^\dagger a_s=a_{\boldsymbol k}^\dagger a_{\boldsymbol k}+a_{-\boldsymbol k}^\dagger a_{-\boldsymbol k}$ は変わりません。残った項を交換関係で整理すると、
+です。$a^2$ と $(a^\dagger)^2$ が相殺します。もしこれらが残れば励起数を二個変える項になるので、粒子数ごとにエネルギーを独立に指定することが難しくなります。自由場ではその項が消えることが重要です。進行波基底へ変えても粒子数の和 $a_c^\dagger a_c+a_s^\dagger a_s=a_{\boldsymbol k}^\dagger a_{\boldsymbol k}+a_{-\boldsymbol k}^\dagger a_{-\boldsymbol k}$ は変わりません。残った項を交換関係で整理すると、
 
 $$
 H=\sum_{\boldsymbol k}\omega_{\boldsymbol k}

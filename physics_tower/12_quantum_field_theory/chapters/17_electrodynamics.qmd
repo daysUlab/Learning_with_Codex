@@ -173,7 +173,7 @@ H_{\mu\nu}
 \end{aligned}
 $$
 
-なぜトレースが現れるのでしょうか。例えば入射側の電流 $J^\mu=\bar v\gamma^\mu u$ の複素共役は $(J^\nu)^*=\bar u\gamma^\nu v$ です（$\gamma^{\nu\dagger}=\gamma^0\gamma^\nu\gamma^0$）。二つを掛け、行列の成分を順に並べて $\operatorname{Tr}[(v\bar v)\gamma^\mu(u\bar u)\gamma^\nu]$ と書けます。スピンについて和を取れば $u\bar u,v\bar v$ が第13章のスピン和に置き換わります。ミューオン側も同様です。初期状態には2×2の組合せがあるため1/4を掛けます。行列のトレースは対角成分の和です。Clifford代数とトレースの巡回性から、
+スピン状態を一つずつ計算する代わりに、前章までに得たスピン和をそのまま使える行列の形にしたいところです。なぜトレースが現れるのでしょうか。例えば入射側の電流 $J^\mu=\bar v\gamma^\mu u$ の複素共役は $(J^\nu)^*=\bar u\gamma^\nu v$ です（$\gamma^{\nu\dagger}=\gamma^0\gamma^\nu\gamma^0$）。二つを掛け、行列の成分を順に並べて $\operatorname{Tr}[(v\bar v)\gamma^\mu(u\bar u)\gamma^\nu]$ と書けます。スピンについて和を取れば $u\bar u,v\bar v$ が第13章のスピン和に置き換わります。ミューオン側も同様です。初期状態には2×2の組合せがあるため1/4を掛けます。行列のトレースは対角成分の和です。Clifford代数とトレースの巡回性から、
 
 $$
 \operatorname{Tr}(\gamma^\mu\gamma^\nu)=4\eta^{\mu\nu}

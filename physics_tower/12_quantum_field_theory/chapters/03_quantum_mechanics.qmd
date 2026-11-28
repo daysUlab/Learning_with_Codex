@@ -132,7 +132,7 @@ $$
 
 です。古典的な数同士の積と異なり、演算子は一般に交換しません。
 
-観測量 A,B について、中心化した演算子を A'=A−〈A〉I、B'=B−〈B〉I とします。ここで $\|A'\psi\|^2=\langle\psi|(A')^\dagger A'|\psi\rangle=\langle(A-\langle A\rangle I)^2\rangle=(\Delta A)^2$ です。Bについても同じです。第2章で証明したCauchy–Schwarzの不等式をベクトル A'ψ と B'ψ に適用すると、
+測定値の平均そのものではなく、平均からのばらつきを比較したいので、平均値を引きます。観測量 A,B について、中心化した演算子を A'=A−〈A〉I、B'=B−〈B〉I とします。ここで $\|A'\psi\|^2=\langle\psi|(A')^\dagger A'|\psi\rangle=\langle(A-\langle A\rangle I)^2\rangle=(\Delta A)^2$ です。Bについても同じです。第2章で証明したCauchy–Schwarzの不等式をベクトル A'ψ と B'ψ に適用すると、
 
 $$
 \Delta A\,\Delta B

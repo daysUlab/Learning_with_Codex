@@ -29,7 +29,7 @@ i\partial_t\psi=H_D\psi,\qquad
 H_D=-i\boldsymbol\alpha\cdot\nabla+\beta m
 $$ {#eq-dirac-hamiltonian}
  
-と置きます。$\alpha_i,\beta$ は定数行列です。平面波では $H_D=\boldsymbol\alpha\cdot\boldsymbol p+\beta m$ です。未知の行列について二乗を展開すると、
+と置きます。$\alpha_i,\beta$ は定数行列です。平面波では $H_D=\boldsymbol\alpha\cdot\boldsymbol p+\beta m$ です。欲しいのは任意の運動量について相対論的な質量殻を再現する行列です。特定の運動量でだけ一致しても意味がないので、運動量の各べきの係数を比較します。未知の行列について二乗を展開すると、
 
 $$
 H_D^2=\sum_i\alpha_i^2p_i^2+
