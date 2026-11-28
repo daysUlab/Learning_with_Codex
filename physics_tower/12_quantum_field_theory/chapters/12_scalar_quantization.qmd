@@ -295,27 +295,27 @@ $$
 
 まず上の非共変規格化の演算子で一粒子波束を作ります。
 
-$
+$$
 |f\rangle=\int\frac{d^3k}{(2\pi)^3}
 f(\boldsymbol k)a^\dagger(\boldsymbol k)|0\rangle,
 \qquad
 \int\frac{d^3k}{(2\pi)^3}|f(\boldsymbol k)|^2=1.
-$
+$$
 
 これは第3章の運動量表示の係数を、生成演算子で表したものです。場を作用させて真空との重なりを取ると、生成演算子の項は粒子を二個に増やすため真空との重なりが0になり、消滅演算子の項だけが残ります。@eq-scalar-mode-continuum と交換関係から
 
-$
+$$
 \Phi_f(x)=\langle0|\phi(x)|f\rangle
 =\int\frac{d^3k}{(2\pi)^3}
 \frac{f(\boldsymbol k)}{\sqrt{2\omega_{\boldsymbol k}}}
 e^{-ik\cdot x}.
-$ {#eq-field-one-particle}
+$$ {#eq-field-one-particle}
 
 逆に時刻を固定した空間Fourier変換で、この一粒子振幅の係数を取り出し、$\sqrt{2\omega_{\boldsymbol k}}$ と時間位相を戻せば f が復元できます。場そのものは全Fock空間に作用しますが、この行列要素は普通の複素数の関数です。各平面波が質量殻条件を満たすので、$\Phi_f$ は正周波数のKlein–Gordon方程式を満たします。ただし $|\Phi_f|^2$ をそのまま相対論的な位置の確率密度とは呼べません。
 
 運動量が質量に比べて十分小さい場合は $\omega_{\boldsymbol k}=m+|\boldsymbol k|^2/(2m)+\cdots$ です。このとき
 
-$
+$$
 \begin{aligned}
 \psi_{\rm NR}(t,\boldsymbol x)
 &=\sqrt{2m}\,e^{imt}\Phi_f(t,\boldsymbol x)\\
@@ -323,7 +323,7 @@ $
 f(\boldsymbol k)e^{i\boldsymbol k\cdot\boldsymbol x
 -i|\boldsymbol k|^2t/(2m)}.
 \end{aligned}
-$
+$$
 
 最後の式は、第3章で学んだ自由粒子のSchrödinger波動関数です（自然単位系、Fourier規格化はここで明記したもの）。時刻で微分すると運動エネルギーが掛かるため $i\partial_t\psi_{\rm NR}\simeq-\nabla^2\psi_{\rm NR}/(2m)$ が得られます。近似では静止質量の速い位相と規格化を取り除きました。非常に長い時間では高次の位相誤差も考慮が必要です。
 
