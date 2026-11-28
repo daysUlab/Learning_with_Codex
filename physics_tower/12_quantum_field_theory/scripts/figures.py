@@ -1303,3 +1303,16 @@ ax.text(.26,.73,"t2 > t1\nH(t2) H(t1)",ha="center",fontsize=10)
 ax.set(xlim=(0,1),ylim=(0,1),aspect="equal",xlabel="t1",ylabel="t2",xticks=[0,1],yticks=[0,1],xticklabels=["t0","t"],yticklabels=["t0","t"])
 fig.savefig(out/"review_dyson_region.png",dpi=220)
 plt.close(fig)
+
+# 基準点を固定した一変数のくりこみ模型
+fig,ax=plt.subplots(figsize=(5.6,3.3),layout="constrained")
+xx=np.linspace(.3,4,300)
+for L,col in [(2,"#d97706"),(10,"#2166ac"),(100,"#16857c")]:
+    ax.plot(xx,3+np.log((L+xx)/(L+1))-np.log(xx),label=f"Cutoff {L}",color=col)
+ax.plot(xx,3-np.log(xx),color="#64748b",ls="--",label="Infinite cutoff")
+ax.scatter([1],[3],color="#d97706",zorder=5)
+ax.set(xlabel="E (reference E0=1)",ylabel="O(E)")
+ax.grid(alpha=.15)
+ax.legend(fontsize=8)
+fig.savefig(out/"review_renorm_anchor.png",dpi=220)
+plt.close(fig)
