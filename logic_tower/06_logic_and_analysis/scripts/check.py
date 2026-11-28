@@ -311,3 +311,12 @@ for n in range(501):
     if n>=1:
         assert 0<e**3<e**2<e<1
 print("chapter 9 and earlier sequence examples: exact rational samples OK")
+
+# 第10章：有限標本の厳密有理数による代表例
+for n in range(1,501):
+    e=Fraction(1,n+1)
+    assert (2+e)*(3-e)==6+e-e*e
+    assert (1+e)/(2-e)-Fraction(1,2)==3*e/(2*(2-e))
+    assert abs(2+(-1)**n*e-2)==e
+    assert 0<e/(2*(2+e))<e/4
+print("chapter 10: standard-part rational examples OK")

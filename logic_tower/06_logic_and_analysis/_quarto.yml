@@ -22,6 +22,7 @@ book:
     - chapters/07_ultrafilters.qmd
     - chapters/08_ultraproducts.qmd
     - chapters/09_hyperreals.qmd
+    - chapters/10_standard_part.qmd
     - references.qmd
 format:
   html:
