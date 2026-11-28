@@ -1,7 +1,9 @@
 project:
   type: book
   output-dir: _book
-  pre-render: python3 scripts/figures.py
+  pre-render:
+    - python3 scripts/fetch_external_images.py
+    - python3 scripts/figures.py
 
 lang: ja
 book:
