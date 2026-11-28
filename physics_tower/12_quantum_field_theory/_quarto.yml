@@ -42,6 +42,7 @@ book:
         - chapters/16_quantum_corrections.qmd
         - chapters/17_electrodynamics.qmd
         - chapters/18_effective_theories.qmd
+    - glossary.qmd
     - references.qmd
 
 format:

@@ -44,3 +44,11 @@ GitHub Pages公開後は Safari で https://daysulab.github.io/Learning_with_Cod
 ## 独立した学習設計と公開管理
 
 本書は5部18章構成。初期の学習範囲の参考元は references.qmd に明記する。公開済み教材から本文や図を転載しない。新版のPages公開後、旧版のActions実行17件と成果物の削除成功を確認した（run 46026432817）。一時削除ジョブは除去済み。古いPR・キャッシュ・第三者の保存物までは完全消去を保証しない。
+
+## 全章の横断検査と表示診断
+
+はじめにの学習ロードマップと用語・記号索引を参照してください。CIでは数式・図の参照、引用キー、章リンク、初読の到達目標を検査します。ビルド後に scripts/check_rendered.py でHTMLのローカル画像・リンク、PDFのページ数と抽出文字の座標を確認します。scripts/check_browser.py はChromeの幅390/820/1280pxで全ページの表示を診断します。Chromeとplaywrightが必要です。CI成果物 qft-quality にJSON、ビルドログ、サンプルPNGを保存します。ブラウザ診断の失敗は報告用でありビルドを止めません。PDFの抽出座標・警告やスクリーンショットは目視・Safari実機試験の代わりではありません。
+
+## 制作手順の再利用
+
+[教科書制作の進め方](../../TEXTBOOK_WORKFLOW.md) に、今回の設計・執筆・3章単位レビュー・横断点検・公開の手順をまとめています。詳細なレビュー記録は [REVIEW.md](REVIEW.md)、現在の状態は [PROGRESS.md](PROGRESS.md) を参照してください。
