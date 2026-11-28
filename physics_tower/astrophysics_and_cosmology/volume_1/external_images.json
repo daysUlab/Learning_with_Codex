@@ -92,6 +92,26 @@
       "date": "2022-10-19",
       "type": "近赤外線観測画像",
       "chapter": 4
+    },
+    {
+      "file": "ring_nebula.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/publicationjpg/weic2320b.jpg",
+      "source": "https://esawebb.org/images/weic2320b/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "ESA/Webb, NASA, CSA, M. Barlow, N. Cox, R. Wesson",
+      "date": "2023-08-21",
+      "type": "近赤外線観測画像（惑星状星雲）",
+      "chapter": 5
+    },
+    {
+      "file": "cassiopeia_a.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/publicationjpg/weic2330a.jpg",
+      "source": "https://esawebb.org/images/weic2330a/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA, ESA, CSA, STScI, D. Milisavljevic (Purdue University), T. Temim (Princeton University), I. De Looze (University of Gent)",
+      "date": "2023-12-11",
+      "type": "近赤外線観測画像（超新星残骸）",
+      "chapter": 5
     }
   ]
 }
