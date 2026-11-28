@@ -42,6 +42,8 @@
 
 天の川銀河は宇宙に一つしかないわけではありません。アンドロメダ銀河は約250万光年先にあります。私たちがその光を観測するとき、約250万年前に出た光を受け取っています。
 
+![アンドロメダ銀河の観測モザイク。Hubbleの多数の観測画像を合成したパノラマで、約2億個の恒星が写っている。Credit: NASA, ESA, B. Williams (University of Washington). [出典（2025年1月16日）](https://esahubble.org/images/heic2501a/) ／ [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。](../figures/external/andromeda_heic2501a.jpg){#fig-andromeda width=100%}
+
 銀河は単独で一様に散らばっているのではなく、集団や巨大な網目状の構造を作ります。その間には銀河の少ない領域もあります。これらの構造は第3章で再訪します。
 
 ## 宇宙の年齢と観測できる範囲

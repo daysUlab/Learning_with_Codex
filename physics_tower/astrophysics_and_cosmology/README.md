@@ -9,4 +9,4 @@
 - [前編原稿](volume_1/index.qmd)
 - [後編原稿](volume_2/index.qmd)
 
-既存の[教科書制作手順](../../TEXTBOOK_WORKFLOW.md)に従う。Quartoと日本語LuaLaTeXがある環境で各巻のディレクトリから quarto render を実行する。現在は初期原稿のみ。ビルド・公開・全テーマの検証は未完了。
+既存の[教科書制作手順](../../TEXTBOOK_WORKFLOW.md)に従う。Quartoと日本語LuaLaTeXがある環境で各巻のディレクトリから quarto render を実行する。前編の第1〜2章が初稿済み。公式観測画像の利用条件は[図版台帳](research/image_registry.md)に記載。ビルド前に Python 3 の取得スクリプトが公式画像をダウンロードするため、初回はインターネット接続が必要。ビルド・公開・全テーマの検証は未完了。

@@ -75,7 +75,9 @@ Ia型超新星はすべて全く同じ明るさではありませんが、光度
 
 ここで注意したいのは、望遠鏡が銀河の年齢を直接測ったわけではないことです。スペクトルを測定し、赤方偏移を推定し、宇宙論モデルにより宇宙の当時の年齢を求めています。銀河自体が何年生きていたかも別の問題です。
 
-この銀河の観測画像とスペクトルはNASAの公開資料[5]で確認できます。最遠記録は今後変わる可能性があるため、本書では観測例として扱います。
+![COSMOS領域のWebb NIRCam観測画像。右下の拡大枠にMoM-z14が写る。小さな黄色い像は想像図ではなく観測データから構成した画像である。Credit: NASA, ESA, CSA, STScI, R. Naidu (MIT), Image Processing: J. DePasquale (STScI). [出典（2026年1月28日）](https://esawebb.org/images/weic2603a/) ／ [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。](../figures/external/mom_z14_weic2603a.jpg){#fig-mom-z14 width=100%}
+
+スペクトルはNASAの公開資料[5]で確認できます。最遠記録は今後変わる可能性があるため、本書では観測例として扱います。
 
 ## 宇宙には見ることのできない場所がある
 

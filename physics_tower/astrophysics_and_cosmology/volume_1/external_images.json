@@ -1,0 +1,27 @@
+{
+  "checked": "2026-11-28",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "assets": [
+    {
+      "file": "andromeda_heic2501a.jpg",
+      "url": "https://cdn.esahubble.org/archives/images/publicationjpg/heic2501a.jpg",
+      "source": "https://esahubble.org/images/heic2501a/",
+      "policy": "https://esahubble.org/copyright/",
+      "credit": "NASA, ESA, B. Williams (University of Washington)",
+      "date": "2025-01-16",
+      "type": "観測モザイク",
+      "chapter": 1
+    },
+    {
+      "file": "mom_z14_weic2603a.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/publicationjpg/weic2603a.jpg",
+      "source": "https://esawebb.org/images/weic2603a/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA, ESA, CSA, STScI, R. Naidu (MIT), Image Processing: J. DePasquale (STScI)",
+      "date": "2026-01-28",
+      "type": "観測画像・拡大枠付き合成",
+      "chapter": 2
+    }
+  ]
+}
