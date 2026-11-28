@@ -20,3 +20,9 @@ img, svg { max-width: 100%; height: auto; }
 #quarto-document-content .callout mjx-container[display="true"] { max-width: 100%; overflow-x: auto; }
 #quarto-document-content table { max-width: 100%; }
 @media (max-width: 600px) { #quarto-document-content .callout-body { padding-inline: .6rem; } }
+
+/* 小さい画面で長い表をページ外に押し出さず、表内で横に読めるようにする。 */
+@media (max-width: 600px) {
+  #quarto-document-content table { display: block; width: 100%; max-width: 100%; overflow-x: auto; }
+  #quarto-document-content td, #quarto-document-content th { overflow-wrap: anywhere; }
+}
