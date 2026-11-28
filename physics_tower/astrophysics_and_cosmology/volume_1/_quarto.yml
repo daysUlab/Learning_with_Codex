@@ -29,6 +29,7 @@ book:
     - chapters/13_active_galaxies_and_bursts.qmd
     - chapters/14_special_relativity.qmd
     - chapters/15_general_relativity_observations.qmd
+    - chapters/16_gravitational_waves.qmd
 
 format:
   html:

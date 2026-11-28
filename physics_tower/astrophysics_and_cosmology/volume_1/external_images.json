@@ -337,6 +337,44 @@
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "checked": "2026-11-29"
+    },
+    {
+      "file": "gw150914_waveform.jpg",
+      "url": "https://www.ligo.caltech.edu/system/avm_image_sqls/binaries/45/huge/ligo20160211a.jpg?1455158181=",
+      "source": "https://www.ligo.caltech.edu/image/ligo20160211a",
+      "credit": "Caltech/MIT/LIGO Lab",
+      "type": "観測波形・理論波形の比較",
+      "render_size": [
+        1200,
+        1500
+      ],
+      "chapter": 16,
+      "date": "2016-02-11",
+      "policy": "https://www.ligo.caltech.edu/page/image-use-policy",
+      "license": "LIGO Image Use Policy（SXSの第三者素材は教育用途として利用）",
+      "license_url": "https://www.ligo.caltech.edu/page/image-use-policy",
+      "checked": "2026-11-29",
+      "render_file": "gw150914_waveform.svg",
+      "allow_unavailable_notice": true
+    },
+    {
+      "file": "gw150914_merger_sxs.jpg",
+      "url": "https://www.ligo.caltech.edu/system/avm_image_sqls/binaries/48/huge/ligo20160211d.jpg?1455160092=",
+      "source": "https://www.ligo.caltech.edu/image/ligo20160211d",
+      "credit": "The SXS (Simulating eXtreme Spacetimes) Project",
+      "type": "数値相対論による合体の可視化",
+      "render_size": [
+        1500,
+        844
+      ],
+      "chapter": 16,
+      "date": "2016-02-11",
+      "policy": "https://www.ligo.caltech.edu/page/image-use-policy",
+      "license": "LIGO Image Use Policy（SXSの第三者素材は教育用途として利用）",
+      "license_url": "https://www.ligo.caltech.edu/page/image-use-policy",
+      "checked": "2026-11-29",
+      "render_file": "gw150914_merger_sxs.svg",
+      "allow_unavailable_notice": true
     }
   ]
 }
