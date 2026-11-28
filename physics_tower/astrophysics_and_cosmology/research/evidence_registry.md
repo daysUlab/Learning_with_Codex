@@ -59,3 +59,13 @@
 | 褐色矮星 | A/B | [NASA Glossary](https://science.nasa.gov/mission/hubble/multimedia/hubble-glossary/) | 普通の水素の持続的核融合に至らない。形成過程の分類と質量境界を区別 |
 | 核崩壊型超新星と残骸 | A/B/C | [NASA Stars Types](https://science.nasa.gov/universe/stars/types/)、[ESA/Webb Cas A](https://esawebb.org/images/weic2330a/) | [Burrows & Vartanyan 2021](https://doi.org/10.1038/s41586-020-03059-w)、[Janka 2012](https://doi.org/10.1146/annurev-nucl-102711-094901) の概要も参照。限界質量の導出はTODO |
 | Ia型超新星 | A/B/C | [NASA Type Ia](https://science.nasa.gov/mission/roman-space-telescope/type-ia-supernovae/) | [2025年の専門レビュー](https://doi.org/10.1007/s00159-024-00158-9)も参照。白色矮星連星起源。複数経路、限界質量未満の爆発も考慮 |
+
+## 第6章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 原始水素・ヘリウムと微量の軽元素 | A/B | [NASA Universe Overview](https://science.nasa.gov/universe/overview/) | 約75対25は通常物質の質量比の概数 |
+| 炭素・窒素・酸素・鉄族・s過程 | A/B | [Kobayashi et al. 2020](https://arxiv.org/abs/2008.04660) | 元素別供給源はモデル・時代・同位体に依存。序論・元素別議論・結論参照 |
+| GW170817のストロンチウム | A/B | [ESO 2019](https://www.eso.org/public/news/eso1917/) | 金の個別スペクトル線の確実な同定とは別 |
+| GRB 230307Aのテルル解釈 | C | [Levan et al. 2023/2024](https://www.nature.com/articles/s41586-023-06759-1)、[Arunachalam et al. 2026](https://academic.oup.com/mnras/article/550/2/stag1158/8735174) | テルルはスペクトルの解釈。2026年研究は塵放射を仮定した場合のコンパクト連星起源との不整合を指摘 |
+| 太陽系の形成約46億年前 | A/B | [NASA Solar System](https://science.nasa.gov/solar-system/solar-system-facts/) | 物質の起源は複数の世代 |

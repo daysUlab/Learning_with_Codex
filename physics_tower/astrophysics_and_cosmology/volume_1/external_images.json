@@ -112,6 +112,26 @@
       "date": "2023-12-11",
       "type": "近赤外線観測画像（超新星残骸）",
       "chapter": 5
+    },
+    {
+      "file": "crab_nebula.jpg",
+      "url": "https://cdn.esahubble.org/archives/images/large/heic0515a.jpg",
+      "source": "https://esahubble.org/images/heic0515a/",
+      "policy": "https://esahubble.org/copyright/",
+      "credit": "NASA, ESA and Allison Loll/Jeff Hester (Arizona State University). Acknowledgement: Davide De Martin (ESA/Hubble)",
+      "date": "2005-12-01",
+      "type": "可視光観測モザイク（超新星残骸）",
+      "chapter": 6
+    },
+    {
+      "file": "grb230307a.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/large/weic2325b.jpg",
+      "source": "https://esawebb.org/images/weic2325b/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA, ESA, CSA, STScI, A. Levan (IMAPP, Warw), A. Pagan (STScI)",
+      "date": "2023-10-25",
+      "type": "近赤外線観測合成画像（公式注釈付き）",
+      "chapter": 6
     }
   ]
 }
