@@ -17,6 +17,17 @@ for path in paths:
     s = (root/path).read_text()
     assert re.match(r'^# [^\n]+\n\n::: \{\.callout-note title="この章で学ぶ理由"\}\n[^\n]+\n:::\n', s), f"missing chapter purpose: {path}"
     assert "## 初読の到達目標" in s, f"missing first-read goal: {path}"
+    # callout の開始・終了が独立した行にあることを確認。
+    depth = 0
+    for line in s.splitlines():
+        if line.startswith("::: {"):
+            depth += 1
+        elif line.strip() == ":::":
+            depth -= 1
+            assert depth >= 0, f"unmatched callout end: {path}"
+        elif ":::" in line:
+            raise AssertionError(f"malformed callout: {path}: {line}")
+    assert depth == 0, f"unclosed callout: {path}"
 # 図参照・ラベルの重複は全章で検査する。
 figure_source = (root/"scripts/figures.py").read_text()
 labels = set()
