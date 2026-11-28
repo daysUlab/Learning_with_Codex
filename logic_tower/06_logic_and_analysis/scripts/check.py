@@ -51,3 +51,32 @@ A={0,1,3}; B={1,2}; omega=set(range(4))
 assert A&B=={1} and A|B==omega and (omega-A)|B=={1,2}
 assert 2**(2**4)==65536
 print("chapter 2: finite Boolean algebra and DNF checks OK")
+
+# 第3章：有限構造での量化・反例・代入例
+D=range(3)
+f=lambda x:(x+1)%3
+E=lambda x:x in {0,2}
+assert f(f(2))==1 and E(f(2))
+assert [int(E(x) and E(f(x))) for x in D]==[0,0,1]
+assert not all(E(x) for x in D) and any(E(x) for x in D)
+assert all(any(x==y for y in D) for x in D)
+assert not any(all(x==y for x in D) for y in D)
+assert not all(any(x<y for y in D) for x in D)
+assert not any(all(x<y for x in D) for y in D)
+assert any(all(not(x<y) for y in D) for x in D)
+# 三要素集合上の二項関係512種類について量化の法則を検算
+for bits in product([False,True],repeat=9):
+    R=lambda x,y:bits[3*x+y]
+    all_exists=all(any(R(x,y) for y in D) for x in D)
+    exists_all=any(all(R(x,y) for x in D) for y in D)
+    assert not exists_all or all_exists
+    assert (not all_exists)==any(all(not R(x,y) for y in D) for x in D)
+    for y in D:
+        # 捕獲回避した forall z R(f(y),z) の値
+        assert all(R(f(y),z) for z in D)==all(R((y+1)%3,z) for z in D)
+# 変数条件を外した誤った推論の反例
+assert E(0) and not all(E(x) for x in D)
+assert any(E(x) for x in D) and not E(1)
+assert all(any(y!=z for z in D) for y in D)
+assert not any(y!=y for y in D)
+print("chapter 3: 512 finite relations and quantifier examples OK")

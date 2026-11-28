@@ -70,3 +70,33 @@ for i,row in enumerate(vals):
         ax.text(j,i,str(v),ha="center",va="center",fontsize=9,color="white" if v else "#334155")
 fig.savefig(out/"boolean_functions.png",dpi=220)
 plt.close(fig)
+
+# 第3章：量化の順序と変数捕獲
+fig,ax=plt.subplots(figsize=(4.6,3.6),layout="constrained")
+ax.imshow([[1,0,0],[0,1,0],[0,0,1]],cmap=matplotlib.colors.ListedColormap(["#eef2f7","#2166ac"]),vmin=0,vmax=1)
+ax.set_xticks(range(3),["0","1","2"])
+ax.set_yticks(range(3),["0","1","2"])
+ax.set_xlabel("y")
+ax.set_ylabel("x")
+for i in range(3):
+    for j in range(3):
+        ax.text(j,i,str(int(i==j)),ha="center",va="center",color="white" if i==j else "#334155",fontsize=13)
+ax.set_title("R(x,y): x = y")
+fig.savefig(out/"quantifier_matrix.png",dpi=220)
+plt.close(fig)
+
+fig,ax=plt.subplots(figsize=(5.5,3.2),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,5))
+ax.axis("off")
+nodes=[(5,4.4,r"$\exists y\;(x\ne y)$","#e0eaf7"),(2.4,2.4,r"$\exists y\;(y\ne y)$","#fbe5df"),(7.5,2.8,r"$\exists z\;(x\ne z)$","#e2f2ed"),(7.5,.75,r"$\exists z\;(y\ne z)$","#e2f2ed")]
+for x,y,lab,fc in nodes:
+    ax.text(x,y,lab,ha="center",va="center",fontsize=12,bbox=dict(boxstyle="round,pad=.4",fc=fc,ec="#64748b"))
+for i,j in [(0,1),(0,2),(2,3)]:
+    x,y,_,_=nodes[i]; X,Y,_,_=nodes[j]
+    ax.annotate("",xy=(X,Y+.35),xytext=(x,y-.35),arrowprops=dict(arrowstyle="->",color="#64748b"))
+ax.text(2.4,3.35,"Direct replacement",ha="center",fontsize=9)
+ax.text(2.4,1.65,"Captured y",ha="center",fontsize=9,color="#b45309")
+ax.text(8,3.75,"Rename bound y",ha="center",fontsize=9)
+ax.text(8.25,1.75,"Substitute y",ha="left",fontsize=9)
+fig.savefig(out/"substitution_capture.png",dpi=220)
+plt.close(fig)
