@@ -187,3 +187,29 @@ ax.text(r,2.12,r"$\sqrt{2}$",ha="center",fontsize=12)
 ax.text(1.1,.45,"Lower cut",ha="center",fontsize=10,color="#2166ac")
 ax.text(1.77,.45,"Complement",ha="center",fontsize=10,color="#d97706")
 fig.savefig(out/"dedekind_cut.png",dpi=220);plt.close(fig)
+
+# 第6章：公理とモデル
+diagram([(2.5,4.5,"All sets"),(7.5,4.5,"Existing set A"),(2.5,2.5,"Unrestricted collection"),(7.5,2.5,"Select within A"),(2.5,.65,"Contradiction"),(7.5,.65,"Subset of A")],[(0,2),(1,3),(2,4),(3,5)],"russell_separation.png")
+fig,ax=plt.subplots(figsize=(5.4,2.8),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,4));ax.axis("off")
+for i,x in enumerate([1.2,2.5,3.8]):
+    ax.scatter(x,3,color="#2166ac",s=250)
+    ax.text(x,3,str(i+1),ha="center",va="center",color="white")
+ax.text(2.5,3.65,"Input A",ha="center")
+for i,x in enumerate([1.2,2.5,3.8]):
+    ax.annotate("",xy=(6.5+i*1.25,1.15),xytext=(x,2.7),arrowprops=dict(arrowstyle="->",color="#16857c"))
+    ax.scatter(6.5+i*1.25,1,color="#16857c",s=250)
+    ax.text(6.5+i*1.25,1,str((i+1)**2),ha="center",va="center",color="white")
+ax.scatter(2.5,1,color="#2166ac",s=250);ax.text(2.5,1,"2",ha="center",va="center",color="white")
+ax.annotate("",xy=(2.5,1.3),xytext=(2.5,2.7),arrowprops=dict(arrowstyle="->",color="#2166ac",lw=2))
+ax.text(2.5,.35,"Separation",ha="center");ax.text(7.75,.35,"Replacement",ha="center")
+fig.savefig(out/"separation_replacement.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(4.8,2.6),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,4));ax.axis("off")
+for x in [2.5,7.5]:
+    ax.plot([5,x],[1,3],color="#94a3b8")
+for x,y,lab in [(5,1,"{a}"),(2.5,3,"{a,b}"),(7.5,3,"{a,c}")]:
+    ax.text(x,y,lab,ha="center",va="center",bbox=dict(boxstyle="round,pad=.4",fc="#e2f2ed" if y==3 else "#eef2f7",ec="#16857c"))
+ax.text(5,3.75,"Two maximal elements; no greatest element",ha="center",fontsize=10)
+fig.savefig(out/"maximal_elements.png",dpi=220);plt.close(fig)
+diagram([(5,4.7,"ZFC"),(2.5,2.3,"Model: CH"),(7.5,2.3,"Model: not CH"),(5,.55,"Same axioms, different truth")],[(0,1),(0,2),(1,3),(2,3)],"independence_models.png")

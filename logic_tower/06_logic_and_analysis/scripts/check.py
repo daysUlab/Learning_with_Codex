@@ -197,3 +197,21 @@ for r in qs:
         d=min(r/2,(r*r-2)/(4*r))
         assert r-d>0 and (r-d)**2>2
 print("chapter 5: pairs, diagonal enumeration, hierarchy and rational-cut examples OK")
+
+# 第6章：公理の有限例・極大元・モデルによる真偽
+A={1,2,3}
+assert len(powerset(A))==8
+assert {x for x in A if x%2==0}=={2}
+assert set.union({1,2},{2,3})==A
+assert {x*x for x in A}=={1,4,9}
+assert len(list(product(range(2),range(3),range(4))))==24
+P=[frozenset(s) for s in [{"a"},{"a","b"},{"a","c"}]]
+maximal=[x for x in P if not any(x<y for y in P)]
+greatest=[x for x in P if all(y<=x for y in P)]
+assert set(maximal)=={frozenset({"a","b"}),frozenset({"a","c"})}
+assert not greatest
+for C in powerset(P):
+    if all(x<=y or y<=x for x,y in product(C,repeat=2)):
+        assert any(all(x<=y for x in C) for y in P)
+assert any(x in {0} for x in [0]) and not any(x in set() for x in [0])
+print("chapter 6: finite axiom examples, choice functions and maximal elements OK")
