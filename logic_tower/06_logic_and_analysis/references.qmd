@@ -33,3 +33,9 @@
 - R. M. Anderson, A non-standard representation for Brownian motion and Itô integration, Israel Journal of Mathematics 25 (1976), 15–46：超有限ランダムウォークとLoeb測度によるBrown運動の構成。論文の概要を確認、証明は本書の範囲外。
 - [Set Theory](https://plato.stanford.edu/entries/set-theory/), Stanford Encyclopedia of Philosophy：Cohen強制法とCH独立性の説明（2026-11-28確認）。
 - [The Continuum Hypothesis](https://plato.stanford.edu/entries/continuum-hypothesis/), Stanford Encyclopedia of Philosophy：Gödel・Cohenの相対的無矛盾性（2026-11-28確認）。
+
+## 第17章の参考資料
+
+- Benedikt Löwe, [The Forcing Method (SS 2026)](https://www.math.uni-hamburg.de/spag/ml/Lehre/SS26_FM.html)：名前、強制定理、ZFC保存、鎖条件による基数保存の講義構成を確認。
+- Benedikt Löwe, [Forcing & the Continuum Hypothesis (L25)](https://www.math.uni-hamburg.de/home/loewe/Lent2025/)：一般強制定理、基数保存と相対的無矛盾性のメタ数学的区別の参考。
+- Stanford Encyclopedia of Philosophy, [Set Theory](https://plato.stanford.edu/entries/set-theory/)：強制拡大の概説。第17章の一般強制定理は引用し、Cohen条件のブール値表示による真理補題は本文で導出。

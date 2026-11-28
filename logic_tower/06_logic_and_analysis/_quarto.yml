@@ -29,6 +29,7 @@ book:
     - chapters/14_boolean_valued_universe.qmd
     - chapters/15_boolean_valued_analysis.qmd
     - chapters/16_cohen_forcing.qmd
+    - chapters/17_generic_extensions.qmd
     - references.qmd
 format:
   html:

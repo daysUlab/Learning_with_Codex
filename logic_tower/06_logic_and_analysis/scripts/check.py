@@ -453,3 +453,16 @@ print("chapter 16: finite conditions and dense extension samples OK")
 # 冒頭の図の参照も検査
 for name in re.findall(r"\]\(figures/([^)]*)\)",(root/"index.qmd").read_text()):
     assert name in (root/"scripts/figures.py").read_text(),name
+
+# 第17章：有限条件を全て決めたビット列に対する名前の評価
+def eval_pname(name, bits):
+    return frozenset(eval_pname(sub,bits) for sub,cond in name
+                     if all(bits[k]==v for k,v in cond))
+def pcheck(n):
+    return tuple((pcheck(k),()) for k in range(n))
+sample_name=((pcheck(2),((0,1),)),(pcheck(5),((0,0),)))
+for bits in product([0,1],repeat=4):
+    assert eval_pname(sample_name,bits)==frozenset([eval_pname(pcheck(2 if bits[0] else 5),bits)])
+    a_name=tuple((pcheck(k),((k,1),)) for k in range(4))
+    assert eval_pname(a_name,bits)==frozenset(eval_pname(pcheck(k),bits) for k in range(4) if bits[k])
+print("chapter 17: finite name evaluation samples OK (not genericity or ZFC proof)")
