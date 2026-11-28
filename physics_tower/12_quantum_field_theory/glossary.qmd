@@ -1,0 +1,118 @@
+# 用語・記号索引 {.unnumbered}
+
+本書で採用する規約の早見表です。式の詳しい成立条件は各章で確認してください。記号が同じでも章や文脈によって意味が異なるものは区別します。
+
+## 共通の規約
+
+- 第1〜5章では原則として通常の単位系で $\hbar$ を明示します。第6章で自然単位系 $c=\hbar=1$ を導入し、相対論的な場の理論では主にこれを使います。第7章の非相対論的散乱では $\hbar$ を戻します。
+- Minkowski計量は $\eta=\operatorname{diag}(1,-1,-1,-1)$。$p\cdot x=Et-\boldsymbol p\cdot\boldsymbol x$（自然単位系）、$p^2=E^2-\boldsymbol p^2$。Euclid運動量の二乗は正の和です。
+- 四元添字 $\mu,\nu$ は0〜3、空間添字 i,j は通常1〜3。繰り返した上下の四元添字を足します。空間の太字ベクトルの内積には普通の三次元内積を使います。
+- 第6章の受動的boostは座標系の変更、第13章の能動的boostは状態・場の変換です。同じ方向の変換を比較するときは符号の規約を確認します。
+- 第14章は $A^\mu\to A^\mu+\partial^\mu\alpha$、第17章は $A_\mu\to A_\mu-\partial_\mu\alpha$ と置きます。ゲージ関数の符号の取り方が逆で、変換の集合は同じです。
+
+## Fourier変換と状態の規格化
+
+第3章の一次元の波動関数は、変換と逆変換の両方に $1/\sqrt{2\pi\hbar}$ を置きます。一方、場の理論では自然単位系で次の測度を使用します。
+
+$$
+\int\frac{d^3p}{(2\pi)^3},\qquad
+\int\frac{d^4p}{(2\pi)^4}
+$$
+
+第12章の連続生成消滅演算子は
+
+$$
+[a(\boldsymbol p),a^\dagger(\boldsymbol q)]
+=(2\pi)^3\delta^{(3)}(\boldsymbol p-\boldsymbol q)
+$$
+
+です。第11章の相対論的一粒子状態への換算は
+
+$$
+|\boldsymbol p\rangle_{\mathrm{cov}}
+=\sqrt{2E_p}\,a^\dagger(\boldsymbol p)|0\rangle
+$$
+
+です。規格化された一粒子の完全性関係では $d^3p/[(2\pi)^3 2E_p]$ を使います。第7、15、17章の相対論的断面積はこの規格化に対応します。
+
+## 伝播関数・散乱の規約
+
+| 種類 | 運動量表示 |
+|---|---|
+| 実スカラー（12章） | $i/(p^2-m^2+i0)$ |
+| Dirac場（13章） | $i(\gamma^\mu p_\mu+m)/(p^2-m^2+i0)$ |
+| 光子（14章） | $-i\eta^{\mu\nu}/(p^2+i0)$ |
+
+本書の伝播関数は時間順序二点関数そのもので、分子に i を含みます。光子はFeynmanゲージの内部線です。第7章の非相対論的Green関数は $(\nabla^2+k^2)G=\delta^{(3)}$ を満たす別の関数です。
+
+散乱行列は $S=I+iT$ とし、連結な行列要素から運動量保存のデルタ関数を除いた不変振幅を $\mathcal M$ とします。実スカラー四次相互作用 $-\lambda\phi^4/4!$ の木レベル頂点は $-i\lambda$。QED頂点は電荷 q に対し $-iq\gamma^\mu$。終状態が同種なら全立体角での積分には二重計数を除く因子を用います。
+
+## よく使う記号
+
+| 記号 | 意味・注意 |
+|---|---|
+| $q,p$ | 一般化座標・共役運動量（1章）。QEDの q は電荷 |
+| $S,L,H$ | 作用、Lagrangian、Hamiltonian（1章）。S行列の S とは別 |
+| $\mathcal L,\mathcal H$ | Lagrangian密度、Hamiltonian密度 |
+| $I,\delta_{ij}$ | 単位行列、Kroneckerデルタ |
+| $\delta(x)$ | Diracデルタ分布（3章） |
+| $A^\dagger$ | 共役転置・随伴（2章） |
+| $[A,B],\{A,B\}$ | 交換子、反交換子（2、5章）。1章の波括弧はPoisson括弧 |
+| $a,a^\dagger$ | ボース消滅・生成演算子（3、5、12章） |
+| $b,d$ | フェルミ粒子・反粒子の消滅演算子（13章） |
+| $N,|0\rangle$ | 粒子数演算子、真空。3章の二状態の0は単なる基底名の場合あり |
+| $\omega,k$ | 角振動数、波数。自然単位系ではモードのエネルギー・運動量 |
+| $\phi,\pi$ | スカラー場・共役運動量（10、12章）。数の円周率も文脈で区別 |
+| $\psi,\bar\psi$ | スピノル場、Dirac共役（13章） |
+| $\eta,\gamma$ | 計量、Lorentz因子。$\gamma^\mu$ はDiracの行列 |
+| $\epsilon$ | 偏極、反対称テンソル、微小量。添字・文脈で区別 |
+| $s,t,u$ | Mandelstam変数（15章）。時刻 t とは別 |
+| $Z[J],W[J]$ | 生成汎関数とその対数に基づく量（15、16章） |
+| $Z_\phi,Z$ | 極の留数（15章）、裸の場の換算係数（16章） |
+| $\Gamma_E$ | Euclidの1PI有効作用（16章） |
+| $\Lambda,\mu$ | 規制のカットオフ、くりこみ尺度（16章）。6章の $\Lambda$ はLorentz行列 |
+| $\beta(g)$ | ベータ関数（18章）。6章の $\beta$ は速度比 |
+| $\alpha_{\rm em}$ | 微細構造定数（17章）。ゲージ関数の $\alpha$ とは別 |
+
+## 用語索引
+
+### 数学
+
+| 用語 | 参照章 |
+|---|---|
+| 偏微分・全微分・変分 | [1](chapters/01_classical_mechanics.qmd)、[10](chapters/10_classical_fields.qmd) |
+| Legendre変換 | [1](chapters/01_classical_mechanics.qmd)、[16](chapters/16_quantum_corrections.qmd) |
+| 固有値・基底・内積・射影 | [2](chapters/02_linear_algebra.qmd) |
+| Taylor展開・複素数 | [2](chapters/02_linear_algebra.qmd) |
+| Cauchy–Schwarz不等式 | [2](chapters/02_linear_algebra.qmd)、[3](chapters/03_quantum_mechanics.qmd) |
+| Fourier変換・デルタ関数 | [3](chapters/03_quantum_mechanics.qmd)、[11](chapters/11_particle_symmetry.qmd) |
+| Gaussian積分・Wick回転 | [4](chapters/04_path_integral.qmd)、[16](chapters/16_quantum_corrections.qmd) |
+| 発散定理・立体角 | [7](chapters/07_scattering.qmd) |
+| 群・既約表現・指標 | [8](chapters/08_groups.qmd) |
+| Lie群・Lie代数 | [9](chapters/09_lie_groups.qmd) |
+| Grassmann変数 | [13](chapters/13_spinor_quantization.qmd) |
+| 汎関数微分 | [15](chapters/15_correlations_scattering.qmd) |
+| ガンマ関数・次元正則化 | [16](chapters/16_quantum_corrections.qmd) |
+
+### 物理
+
+| 用語 | 参照章 |
+|---|---|
+| 作用原理・Noetherの定理 | [1](chapters/01_classical_mechanics.qmd)、[10](chapters/10_classical_fields.qmd) |
+| Born則・不確定性・量子振動子 | [3](chapters/03_quantum_mechanics.qmd) |
+| 経路積分 | [4](chapters/04_path_integral.qmd) |
+| Fock空間・排他原理 | [5](chapters/05_many_particles.qmd) |
+| Lorentz変換・質量殻 | [6](chapters/06_relativity.qmd) |
+| 散乱断面積・Born近似・S行列 | [7](chapters/07_scattering.qmd) |
+| SU(2)・スピン | [9](chapters/09_lie_groups.qmd) |
+| 古典場・Klein–Gordon方程式 | [10](chapters/10_classical_fields.qmd) |
+| Poincaré群・小群・ヘリシティ | [11](chapters/11_particle_symmetry.qmd) |
+| 正準量子化・真空・微視的因果律 | [12](chapters/12_scalar_quantization.qmd) |
+| Dirac方程式・反粒子 | [13](chapters/13_spinor_quantization.qmd) |
+| Proca場・ゲージ対称性・偏極 | [14](chapters/14_vector_gauge.qmd) |
+| Dyson展開・Wick縮約・LSZ | [15](chapters/15_correlations_scattering.qmd) |
+| 反項・1PI・有効作用 | [16](chapters/16_quantum_corrections.qmd) |
+| QED・Ward恒等式・磁気モーメント | [17](chapters/17_electrodynamics.qmd) |
+| ベータ関数・固定点・EFT | [18](chapters/18_effective_theories.qmd) |
+
+厳密な関数解析、スピン統計定理、Poincaré群の全既約表現の分類、一般の拘束系量子化、LSZ公式の証明、QEDの完全な高次計算などは発展内容です。本文で利用する結果と前提を確認した上で専門書へ進んでください。
