@@ -20,6 +20,6 @@ python3 scripts/check.py
 quarto render
 ```
 
-GitHub Actionsは初期段階ではHTML/PDFを成果物として保存します。既存の場の量子論Pagesを上書きしないよう、共通公開サイトとサブパスの設計・統合は別工程にします。
+GitHub Actionsは両書籍のHTML/PDFを生成・検査し、共通workflowで合体して公開する構成です。論理学の予定固定URLは https://daysulab.github.io/Learning_with_Codex/logic/ 、PDFは同配下の logic.pdf です。初回の共存公開はCI・main統合後に確認します。
 
 HTML・PDFの共存公開案は [PUBLICATION.md](PUBLICATION.md) を参照してください。既存QFTのURLを維持する方針です。

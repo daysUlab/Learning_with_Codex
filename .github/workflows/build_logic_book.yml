@@ -1,14 +1,6 @@
 name: 数理論理学 教科書ビルド
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'logic_tower/06_logic_and_analysis/**'
-      - '.github/workflows/build_logic_book.yml'
-  pull_request:
-    paths:
-      - 'logic_tower/06_logic_and_analysis/**'
-      - '.github/workflows/build_logic_book.yml'
+  workflow_call:
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,6 +17,8 @@ jobs:
           version: '1.7.34'
       - name: 日本語TeX環境
         run: |
+          # 不要な外部APTリポジトリの障害を回避（Ubuntuの署名検証は維持）
+          sudo rm -f /etc/apt/sources.list.d/microsoft-prod.list /etc/apt/sources.list.d/microsoft-prod.sources
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-science texlive-lang-english
       - name: 原稿検査とビルド
@@ -35,6 +29,7 @@ jobs:
           quarto render
           test -s _book/index.html
           test -s _book/logic.pdf
+          python3 scripts/check_rendered.py
       - uses: actions/upload-artifact@v4
         with:
           name: logic-book
