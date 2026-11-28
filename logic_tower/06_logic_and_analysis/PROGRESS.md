@@ -7,9 +7,9 @@
 | 1 | [真理値と証明が一致する理由](chapters/01_propositional_completeness.qmd) | 一次レビューCI成功・main統合済み |
 | 2 | [真理値を集合と代数に拡張する](chapters/02_boolean_algebras.qmd) | 一次レビューCI成功・main統合済み |
 | 3 | [対象について述べる論理](chapters/03_first_order.qmd) | 一次レビューCI成功・main統合済み |
-| 4 | [証明からモデルを作る](chapters/04_model_existence.qmd) | 初稿・CI成功・main統合済み |
-| 5 | [集合から数学の対象を作る](chapters/05_sets_and_ordinals.qmd) | PDF記法修正・最新CI待ち |
-| 6 | [公理が決める数学の世界](chapters/06_set_theories.qmd) | 初稿・CI待ち |
+| 4 | [証明からモデルを作る](chapters/04_model_existence.qmd) | 一次レビュー修正済み・最新CI待ち |
+| 5 | [集合から数学の対象を作る](chapters/05_sets_and_ordinals.qmd) | 一次レビュー修正済み・最新CI待ち |
+| 6 | [公理が決める数学の世界](chapters/06_set_theories.qmd) | 一次レビュー修正済み・最新CI待ち |
 | 7 | [無限集合で多数を定義する](chapters/07_ultrafilters.qmd) | TODO |
 | 8 | [モデルの列から新しいモデルを作る](chapters/08_ultraproducts.qmd) | TODO |
 | 9 | [超実数を数列から構成する](chapters/09_hyperreals.qmd) | TODO |
@@ -23,7 +23,7 @@
 | 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | TODO |
 | 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | TODO |
 
-次の作業：第5〜6章CI確認・main統合、第4〜6章一次レビュー。初回共存公開成功。
+次の作業：第4〜6章レビュー版CI・main統合・公開確認、第7章。
 
 2026-11-28：第1章CI 46095306289成功、PR #117統合（d14720a）。第2章初稿・演習9問・図3点・有限ブール代数とDNFの検査追加。最新CI未確認。
 
@@ -38,3 +38,5 @@
 2026-11-28：第4章・共存公開基盤CI 46105813565成功、PR #120統合（c4b43bd）。第5章初稿・図6点・演習12問を追加。最新CIと初回共存公開は未確認。
 
 2026-11-28：共存公開CI 46108611606成功、logic-c4b43bd76a44のPDF公開を確認。第5章CI 46108848169は集合差のTeX未定義命令で失敗、22f7140で修正。第6章初稿、図4点、演習12問、有限例検算追加。最新CI待ち。
+
+2026-11-28：第5〜6章初稿CI 46119431059成功。第4〜6章一次レビューを反映（演習34問・図14点の参照点検、補足と代表例の検算追加）。最新CI待ち。

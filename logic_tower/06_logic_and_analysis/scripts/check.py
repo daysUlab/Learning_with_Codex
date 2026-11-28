@@ -215,3 +215,7 @@ for C in powerset(P):
         assert any(all(x<=y for x in C) for y in P)
 assert any(x in {0} for x in [0]) and not any(x in set() for x in [0])
 print("chapter 6: finite axiom examples, choice functions and maximal elements OK")
+
+# 3章単位のレビュー検査
+import runpy
+runpy.run_path(str(root/"scripts/check_review_04_06.py"))

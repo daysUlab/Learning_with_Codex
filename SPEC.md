@@ -132,3 +132,5 @@
 - CIでHTML/PDFを生成しlogic-book成果物を保存。QFTと論理学を同じコミットからビルドし、共通workflowのassembleで統合。Pagesはmainのみ単一deployで公開し、qft-/logic-の版別PDF Releaseを作成する。既存QFTルートを維持、論理学は /logic/。初回共存公開確認待ち。
 
 - 数理論理学の第1〜3章一次レビューCI成功・main統合済み。第4章初稿CI待ち。Pages共存構成は `logic_tower/06_logic_and_analysis/PUBLICATION.md`。共通deployへの切替を実装し、初回CI・main公開の確認待ち。
+
+- 第5〜6章初稿CI成功（46119431059）。第4〜6章の一次レビュー修正を反映し、check_review_04_06.py に代表例検算を追加。最新CI・統合・公開待ち。
