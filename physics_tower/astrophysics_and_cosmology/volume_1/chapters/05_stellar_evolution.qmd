@@ -82,7 +82,7 @@
 
 核崩壊では、中心が原子核程度の密度に達して急激に硬くなり、衝撃波が生じる場合があります。しかし衝撃波は物質の分解などでエネルギーを失い、単に跳ね返るだけでは外層を吹き飛ばすのは難しいと考えられています。
 
-ニュートリノによる加熱、流体の不安定性、回転・磁場などが爆発に関与します。核崩壊型超新星のエネルギー源は主に中心部の重力収縮です。星によっては明るい超新星を起こさずブラックホールを形成する可能性もあります。爆発の成否と最終的な残骸を初期質量だけで一意に決めることはできません。
+ニュートリノによる加熱、流体の不安定性、回転・磁場などが爆発に関与します。核崩壊型超新星のエネルギー源は主に中心部の重力収縮です。星によっては明るい超新星を起こさずブラックホールを形成する可能性もあります。爆発の成否と最終的な残骸を初期質量だけで一意に決めることはできません。[7]
 
 ![カシオペヤ座Aの超新星残骸。WebbのNIRCam観測で噴出物の細かな構造や周囲のガスとの相互作用を調べられる。爆発そのものではなく、その後の残骸の画像。 Credit: NASA, ESA, CSA, STScI, D. Milisavljevic (Purdue University), T. Temim (Princeton University), I. De Looze (University of Gent). [出典](https://esawebb.org/images/weic2330a/) ／ [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。](../figures/external/cassiopeia_a.jpg){#fig-cassiopeia-a width=85%}
 
@@ -94,7 +94,7 @@
 
 第2章で距離測定に利用したIa型超新星は、核崩壊型超新星とは異なる機構で起きます。少なくとも一つの白色矮星を含む連星系が起源と考えられています。伴星から物質を受け取ったり、白色矮星同士が相互作用・合体したりする過程で、熱核反応が暴走する場合があります。[9]
 
-縮退した物質は温度が上がっても通常の気体ほど容易には膨張しないため、反応の加速を抑えにくいことが重要です。典型的なIa型超新星では白色矮星が破壊されます。必ずチャンドラセカール限界に到達してから爆発するわけではなく、複数の起源経路が研究されています。
+縮退した物質は温度が上がっても通常の気体ほど容易には膨張しないため、反応の加速を抑えにくいことが重要です。典型的なIa型超新星では白色矮星が破壊されます。必ずチャンドラセカール限界に到達してから爆発するわけではなく、複数の起源経路が研究されています。[9][10]
 
 | 比較 | 核崩壊型 | Ia型 |
 |---|---|---|
@@ -147,8 +147,9 @@
 4. [ESA/Webb Ring Nebula（2023）](https://esawebb.org/images/weic2320b/)
 5. [NASA Stars: Types](https://science.nasa.gov/universe/stars/types/)
 6. [NASA Hubble Glossary](https://science.nasa.gov/mission/hubble/multimedia/hubble-glossary/)、[NASA Webb Brown Dwarf](https://science.nasa.gov/missions/webb/nasas-webb-identifies-tiniest-free-floating-brown-dwarf/)
-7. 核崩壊の詳細・限界質量は後編で原著・専門資料を追加検証する。
+7. [Burrows & Vartanyan, Core-collapse supernova explosion theory, Nature (2021)](https://www.nature.com/articles/s41586-020-03059-w)、[Janka, Explosion Mechanisms of Core-Collapse Supernovae (2012)](https://doi.org/10.1146/annurev-nucl-102711-094901)
 8. [ESA/Webb Cas A（2023）](https://esawebb.org/images/weic2330a/)
 9. [NASA Type Ia Supernovae](https://science.nasa.gov/mission/roman-space-telescope/type-ia-supernovae/)
+10. [Type Ia supernova progenitors: a contemporary view of a long-standing puzzle (2025)](https://doi.org/10.1007/s00159-024-00158-9)
 
-公開資料確認日：2026-11-28。画像はCC BY 4.0の公式配布版。自作図は模式図であり恒星進化計算の出力ではない。詳細な核崩壊・限界質量の専門文献レビューは未完了。
+公開資料確認日：2026-11-28。画像はCC BY 4.0の公式配布版。自作図は模式図であり恒星進化計算の出力ではない。核崩壊・Ia型の専門レビューの公開概要を照合した。数値モデル・限界質量の導出と原著全文レビューは未完了。

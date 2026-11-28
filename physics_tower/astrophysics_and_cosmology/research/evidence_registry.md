@@ -57,5 +57,5 @@
 | 太陽の赤色巨星化 | B | [NASA Sun](https://science.nasa.gov/sun/facts/) | 約50億年後。地球の最終軌道は不確実 |
 | 惑星状星雲・白色矮星 | A/B | [ESA/Webb M57](https://esawebb.org/images/weic2320b/)、[NASA Stars Types](https://science.nasa.gov/universe/stars/types/) | 地球サイズ、質量は典型例 |
 | 褐色矮星 | A/B | [NASA Glossary](https://science.nasa.gov/mission/hubble/multimedia/hubble-glossary/) | 普通の水素の持続的核融合に至らない。形成過程の分類と質量境界を区別 |
-| 核崩壊型超新星と残骸 | A/B/C | [NASA Stars Types](https://science.nasa.gov/universe/stars/types/)、[ESA/Webb Cas A](https://esawebb.org/images/weic2330a/) | 爆発成否・ニュートリノ加熱・限界質量の専門資料レビューTODO |
-| Ia型超新星 | A/B/C | [NASA Type Ia](https://science.nasa.gov/mission/roman-space-telescope/type-ia-supernovae/) | 白色矮星連星起源。複数経路、限界質量未満の爆発も考慮 |
+| 核崩壊型超新星と残骸 | A/B/C | [NASA Stars Types](https://science.nasa.gov/universe/stars/types/)、[ESA/Webb Cas A](https://esawebb.org/images/weic2330a/) | [Burrows & Vartanyan 2021](https://doi.org/10.1038/s41586-020-03059-w)、[Janka 2012](https://doi.org/10.1146/annurev-nucl-102711-094901) の概要も参照。限界質量の導出はTODO |
+| Ia型超新星 | A/B/C | [NASA Type Ia](https://science.nasa.gov/mission/roman-space-telescope/type-ia-supernovae/) | [2025年の専門レビュー](https://doi.org/10.1007/s00159-024-00158-9)も参照。白色矮星連星起源。複数経路、限界質量未満の爆発も考慮 |
