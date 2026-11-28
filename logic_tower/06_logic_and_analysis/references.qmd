@@ -9,3 +9,9 @@
 - A. G. Kusraev and S. S. Kutateladze, [Invitation to Boolean valued analysis](https://www.mathnet.ru/php/archive.phtml?jrnid=vmj&option_lang=eng&paperid=655&wshow=paper), 2018：書誌・概要を確認。
 - A. G. Kusraev and S. S. Kutateladze, [The Gordon theorem: origins and meaning](https://www.mathnet.ru/php/archive.phtml?jrnid=vmj&option_lang=eng&paperid=707&wshow=paper), 2019：書誌・概要を確認。
 - Benedikt Löwe, [Forcing & the Continuum Hypothesis](https://www.math.uni-hamburg.de/home/loewe/Lent2025/)：大学講義の公開案内。強制法の後続章での参考候補。
+
+- Stanford Encyclopedia of Philosophy, [Set Theory (Spring 2023)](https://plato.stanford.edu/archives/spr2023/entries/set-theory/index.html)：順序数・超限再帰の概説（2026-11-28確認）。
+- Dumas and McCarthy, [The Least Upper Bound Property](https://math.libretexts.org/Bookshelves/Mathematical_Logic_and_Proof/Transition_to_Higher_Mathematics_%28Dumas_and_McCarthy%29/08%3A_New_Page/8.05%3A_New_Page), Mathematics LibreTexts：Dedekind切断と上限性の参考（2026-11-28確認）。
+
+- Stanford Encyclopedia of Philosophy, [Set Theory](https://plato.stanford.edu/entries/set-theory/index.html)：ZF/ZFC、CHと相対的無矛盾性（2026-11-28概説確認）。
+- Stanford Encyclopedia of Philosophy, [Gödel’s Incompleteness Theorems](https://plato.stanford.edu/entries/goedel-incompleteness/)：第一・第二不完全性定理とRosserの強化（2026-11-28概説確認）。定理の完全な証明は本章の範囲外。

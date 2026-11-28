@@ -17,6 +17,8 @@ book:
     - chapters/02_boolean_algebras.qmd
     - chapters/03_first_order.qmd
     - chapters/04_model_existence.qmd
+    - chapters/05_sets_and_ordinals.qmd
+    - chapters/06_set_theories.qmd
     - references.qmd
 format:
   html:

@@ -163,3 +163,59 @@ for bounds in [(2,10,100),(0,),(1,2,3),(10,1000,2)]:
 # 既存の名前を証人に固定する場合の反例
 assert any([False,True]) and not [False,True][0]
 print("chapter 4: finite term model and compactness examples OK (not a proof checker)")
+
+# 第5章：集合の構成例
+from itertools import combinations
+def powerset(s):
+    xs=list(s)
+    return frozenset(frozenset(c) for k in range(len(xs)+1) for c in combinations(xs,k))
+V=frozenset()
+sizes=[len(V)]
+for _ in range(5):
+    V=powerset(V)
+    sizes.append(len(V))
+assert sizes==[0,1,2,4,16,65536]
+pair=lambda a,b:frozenset((frozenset((a,)),frozenset((a,b))))
+pairs={(a,b):pair(a,b) for a,b in product(range(4),repeat=2)}
+assert len(set(pairs.values()))==16
+assert (5+7)%3==0
+idx=lambda m,n:(m+n)*(m+n+1)//2+m
+assert idx(2,3)==17
+assert sorted(idx(m,k-m) for k in range(21) for m in range(k+1))==list(range(231))
+f=[{0,2},{0},{1,2}]
+Dg={i for i in range(3) if i not in f[i]}
+assert Dg=={1} and Dg not in f
+# 有理数の平方根切断を有限標本で検算（無限集合の証明ではない）
+qs=sorted(set(Fraction(p,q) for p in range(-30,31) for q in range(1,16)))
+lower=lambda q:q<0 or q*q<2
+assert all(not lower(p) or lower(q) for p in qs for q in qs if q<p)
+for r in qs:
+    if r>=0 and r*r<2:
+        d=min(Fraction(1),(2-r*r)/(2*(2*r+1)))
+        assert d>0 and (r+d)**2<2
+    if r>0 and r*r>2:
+        d=min(r/2,(r*r-2)/(4*r))
+        assert r-d>0 and (r-d)**2>2
+print("chapter 5: pairs, diagonal enumeration, hierarchy and rational-cut examples OK")
+
+# 第6章：公理の有限例・極大元・モデルによる真偽
+A={1,2,3}
+assert len(powerset(A))==8
+assert {x for x in A if x%2==0}=={2}
+assert set.union({1,2},{2,3})==A
+assert {x*x for x in A}=={1,4,9}
+assert len(list(product(range(2),range(3),range(4))))==24
+P=[frozenset(s) for s in [{"a"},{"a","b"},{"a","c"}]]
+maximal=[x for x in P if not any(x<y for y in P)]
+greatest=[x for x in P if all(y<=x for y in P)]
+assert set(maximal)=={frozenset({"a","b"}),frozenset({"a","c"})}
+assert not greatest
+for C in powerset(P):
+    if all(x<=y or y<=x for x,y in product(C,repeat=2)):
+        assert any(all(x<=y for x in C) for y in P)
+assert any(x in {0} for x in [0]) and not any(x in set() for x in [0])
+print("chapter 6: finite axiom examples, choice functions and maximal elements OK")
+
+# 3章単位のレビュー検査
+import runpy
+runpy.run_path(str(root/"scripts/check_review_04_06.py"))
