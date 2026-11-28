@@ -6,6 +6,7 @@
 - [原稿の入口](index.qmd)
 - [第1章](chapters/01_propositional_completeness.qmd)
 - [第2章](chapters/02_boolean_algebras.qmd)
+- [第3章](chapters/03_first_order.qmd)
 - [執筆進捗](PROGRESS.md)
 - [レビュー記録](REVIEW.md)
 - [制作手順](../../TEXTBOOK_WORKFLOW.md)
@@ -19,3 +20,5 @@ quarto render
 ```
 
 GitHub Actionsは初期段階ではHTML/PDFを成果物として保存します。既存の場の量子論Pagesを上書きしないよう、共通公開サイトとサブパスの設計・統合は別工程にします。
+
+HTML・PDFの共存公開案は [PUBLICATION.md](PUBLICATION.md) を参照してください。既存QFTのURLを維持する方針です。
