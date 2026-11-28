@@ -46,3 +46,7 @@
 - Quarto, [Book Structure](https://quarto.org/docs/books/book-structure)：五部構成を標準のpart機能で登録（2026-11-28確認）。
 
 Δシステム補題と多重Cohen条件のcccの証明は本文で記述し、一般の相対的無矛盾性と構成可能宇宙の定理は引用した。
+
+## 補章1の参考資料
+
+- Naoto Shiraishi, [Frustration-freeness is decidable but unprovable](https://arxiv.org/abs/2611.07337v1), arXiv:2611.07337v1, 2026-11-05：本文の定理1、系2、定理3、定理4と補足資料を2026-11-28に[ミラーPDF](https://arxiv.cnoctave.top/pdf/2611.07337)の抽出テキストで確認。公式PDFとページ画像は取得できなかった。査読状況・引用先のタイル構成の独立検証は未確認。

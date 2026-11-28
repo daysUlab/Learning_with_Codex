@@ -19,11 +19,11 @@
 | 13 | [真理値を完全ブール代数にする](chapters/13_complete_boolean_algebras.qmd) | 一次レビューCI成功・main統合済み |
 | 14 | [集合の所属そのものをブール値にする](chapters/14_boolean_valued_universe.qmd) | 一次レビューCI成功・main統合済み |
 | 15 | [内部の実数から関数空間を取り出す](chapters/15_boolean_valued_analysis.qmd) | 一次レビューCI成功・main統合済み |
-| 16 | [有限の条件から新しい実数を作る](chapters/16_cohen_forcing.qmd) | 初稿main統合済み・一次レビューCI待ち |
-| 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | 一次レビューCI待ち |
-| 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | 一次レビューCI待ち |
+| 16 | [有限の条件から新しい実数を作る](chapters/16_cohen_forcing.qmd) | 一次レビューCI成功・main統合済み |
+| 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | 一次レビューCI成功・main統合済み |
+| 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | 一次レビューCI成功・main統合済み |
 
-次の作業：全18章CI・main統合、横断点検、索引整備、HTML/PDF表示診断・公開確認。
+次の作業：補章1 CI・main統合・公開確認、全体横断点検・索引整備・表示診断。
 
 2026-11-28：第1章CI 46095306289成功、PR #117統合（d14720a）。第2章初稿・演習9問・図3点・有限ブール代数とDNFの検査追加。最新CI未確認。
 
@@ -66,3 +66,5 @@
 2026-11-28：第1〜16章・冒頭改稿CI 46141352124成功、PR #125統合（6abd7f7）。第17章初稿・図4点・演習13問。最新CI・PDF目視・公開未確認。
 
 2026-11-28：第17章までのCI実行中に第18章初稿（図4点・演習14問）を追加。第16〜18章一次レビュー（演習39問、図11点の参照点検）。Quartoの五部構成・左目次表示検査を追加。最新CI、PDF目視、公開未確認。
+
+2026-11-28：全18章・五部構成のmain CI・deploy・release成功（defb7e2）。補章1初稿・図8点・演習15問を追加。論文v1本文・補足の抽出テキストを確認、ページ画像取得失敗、タイル構成の全詳細は引用。最新CI未確認。
