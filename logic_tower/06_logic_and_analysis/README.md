@@ -10,6 +10,7 @@
 - [第4章](chapters/04_model_existence.qmd)
 - [第5章](chapters/05_sets_and_ordinals.qmd)
 - [第6章](chapters/06_set_theories.qmd)
+- [第7章](chapters/07_ultrafilters.qmd)
 - [執筆進捗](PROGRESS.md)
 - [レビュー記録](REVIEW.md)
 - [制作手順](../../TEXTBOOK_WORKFLOW.md)

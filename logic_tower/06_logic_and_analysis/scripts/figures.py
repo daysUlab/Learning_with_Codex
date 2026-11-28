@@ -213,3 +213,35 @@ for x,y,lab in [(5,1,"{a}"),(2.5,3,"{a,b}"),(7.5,3,"{a,c}")]:
 ax.text(5,3.75,"Two maximal elements; no greatest element",ha="center",fontsize=10)
 fig.savefig(out/"maximal_elements.png",dpi=220);plt.close(fig)
 diagram([(5,4.7,"ZFC"),(2.5,2.3,"Model: CH"),(7.5,2.3,"Model: not CH"),(5,.55,"Same axioms, different truth")],[(0,1),(0,2),(1,3),(2,3)],"independence_models.png")
+
+# 第7章：フィルターと超フィルター
+fig,ax=plt.subplots(figsize=(5.4,2.6),layout="constrained")
+ax.set(xlim=(0,6),ylim=(0,4));ax.axis("off")
+for y,label,selected in [(3.1,"A",{1,2,3}),(2.1,"B",{3,4,5}),(1.1,"A and B",{3})]:
+    ax.text(.55,y,label,ha="right",va="center",fontsize=10)
+    for i in range(1,6):
+        ax.scatter(i,y,s=240,color="#2166ac" if i in selected else "#e2e8f0")
+        ax.text(i,y,str(i),ha="center",va="center",color="white" if i in selected else "#334155")
+ax.text(3,.25,"3/5 and 3/5, but intersection = 1/5",ha="center",fontsize=10)
+fig.savefig(out/"filter_majority.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.2,3.2),layout="constrained")
+ax.set(xlim=(-.5,6.5),ylim=(-.5,3.5));ax.axis("off")
+nodes={0:(3,0),1:(1,1),2:(3,1),4:(5,1),3:(1,2),5:(3,2),6:(5,2),7:(3,3)}
+for a,(x,y) in nodes.items():
+    for b,(X,Y) in nodes.items():
+        if a&b==a and (a^b).bit_count()==1:
+            ax.plot([x,X],[y,Y],color="#16857c" if a&3==3 and b&3==3 else "#cbd5e1")
+for a,(x,y) in nodes.items():
+    lab="{"+",".join(str(i+1) for i in range(3) if a&(1<<i))+"}" if a else "empty"
+    ax.text(x,y,lab,ha="center",va="center",bbox=dict(boxstyle="round,pad=.3",fc="#ccece3" if a&3==3 else "#f1f5f9",ec="#16857c" if a&3==3 else "#94a3b8"))
+fig.savefig(out/"principal_filters.png",dpi=220);plt.close(fig)
+diagram([(1.3,4.7,"F0"),(3.7,4.7,"F1"),(6.3,4.7,"F2"),(8.7,4.7,"..."),(5,1.4,"Union: upper bound")],[(0,1),(1,2),(2,3),(0,4),(1,4),(2,4),(3,4)],"filter_chain.png")
+diagram([(5,4.9,"Cofinite filter"),(2.5,3,"Add even numbers"),(7.5,3,"Add odd numbers"),(2.5,1,"Free ultrafilter U_E"),(7.5,1,"Free ultrafilter U_O")],[(0,1),(0,2),(1,3),(2,4)],"free_filter_choices.png")
+fig,ax=plt.subplots(figsize=(5.3,2.9),layout="constrained")
+ns=list(range(12))
+ax.axhline(1,color="#2166ac",alpha=.4);ax.axhline(-1,color="#d97706",alpha=.4)
+ax.scatter(ns[::2],[1]*6,color="#2166ac",label="Even indices")
+ax.scatter(ns[1::2],[-1]*6,color="#d97706",label="Odd indices")
+ax.set(xlabel="n",ylabel="a_n",xticks=ns,yticks=[-1,0,1],ylim=(-1.5,1.5))
+ax.legend(loc="center",fontsize=9,ncol=2);ax.grid(alpha=.15)
+fig.savefig(out/"filter_sequence.png",dpi=220);plt.close(fig)

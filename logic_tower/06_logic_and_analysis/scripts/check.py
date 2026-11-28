@@ -219,3 +219,53 @@ print("chapter 6: finite axiom examples, choice functions and maximal elements O
 # 3章単位のレビュー検査
 import runpy
 runpy.run_path(str(root/"scripts/check_review_04_06.py"))
+
+# 第7章：有限フィルター・超フィルターの全列挙
+from itertools import combinations
+def finite_filters(n):
+    top=(1<<n)-1
+    sets=range(top+1)
+    result=[]
+    for mask in range(1<<(top+1)):
+        F={a for a in sets if mask>>a&1}
+        if top not in F or 0 in F:
+            continue
+        if not all(a&b in F for a,b in product(F,repeat=2)):
+            continue
+        if not all(b in F for a in F for b in sets if a&b==a):
+            continue
+        result.append(F)
+    return result
+for n in range(1,5):
+    top=(1<<n)-1
+    fs=finite_filters(n)
+    assert len(fs)==top
+    for F in fs:
+        K=top
+        for a in F:
+            K&=a
+        assert K and F=={a for a in range(top+1) if a&K==K}
+    us=[F for F in fs if not any(F<G for G in fs)]
+    assert len(us)==n
+    for F in fs:
+        assert any(F<=U for U in us)
+        assert (F in us)==all((a in F)!=((top^a) in F) for a in range(top+1))
+    for U in us:
+        for a,b in product(range(top+1),repeat=2):
+            assert ((a&b) in U)==(a in U and b in U)
+            assert ((a|b) in U)==(a in U or b in U)
+        # 有限分割の有限版：各点に三つのラベルを割り当てる
+        for labels in product(range(3),repeat=n):
+            parts=[sum(1<<i for i,v in enumerate(labels) if v==j) for j in range(3)]
+            assert sum(a in U for a in parts)==1
+# 有限近似ではなく、有限領域での同値関係の計算例
+seqs=list(product(range(2),repeat=4))
+for i in range(4):
+    for a,b,c in product(seqs,repeat=3):
+        if a[i]==b[i] and b[i]==c[i]:
+            assert a[i]==c[i]
+# 多数決の反例と生成フィルターの例
+assert len({1,2,3})>5/2 and len({3,4,5})>5/2
+assert len({1,2,3}&{3,4,5})==1
+assert {a for a in range(16) if a&6==6}=={6,7,14,15}
+print("chapter 7: all filters on 1-4 points, ultrafilter laws and finite partitions OK")
