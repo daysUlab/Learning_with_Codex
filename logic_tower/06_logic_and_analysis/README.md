@@ -21,6 +21,7 @@
 - [第15章](chapters/15_boolean_valued_analysis.qmd)
 - [第16章](chapters/16_cohen_forcing.qmd)
 - [第17章](chapters/17_generic_extensions.qmd)
+- [第18章](chapters/18_independence_and_connections.qmd)
 - [執筆進捗](PROGRESS.md)
 - [レビュー記録](REVIEW.md)
 - [制作手順](../../TEXTBOOK_WORKFLOW.md)

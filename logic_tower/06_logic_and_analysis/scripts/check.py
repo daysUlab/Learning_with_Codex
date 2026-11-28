@@ -466,3 +466,23 @@ for bits in product([0,1],repeat=4):
     a_name=tuple((pcheck(k),((k,1),)) for k in range(4))
     assert eval_pname(a_name,bits)==frozenset(eval_pname(pcheck(k),bits) for k in range(4) if bits[k])
 print("chapter 17: finite name evaluation samples OK (not genericity or ZFC proof)")
+
+# 第18章：有限標本での多重条件の両立・共通根
+domains=[{0,1,2},{0,3,4},{0,5,6}]
+assert all(a&b=={0} for i,a in enumerate(domains) for b in domains[i+1:])
+for bits in product([0,1],repeat=3):
+    ps=[{k:bits[i] if k==0 else 0 for k in d} for i,d in enumerate(domains)]
+    assert any(all(a[k]==b[k] for k in a.keys()&b.keys()) for i,a in enumerate(ps) for b in ps[i+1:])
+for a,b in product(range(3),repeat=2):
+    if a!=b:
+        p={(a,0):0,(b,0):1}
+        assert p[(a,0)]!=p[(b,0)]
+print("chapter 18: finite delta-system and multiple-real condition samples OK")
+# 五部構成の章数・順番を維持
+config=(root/"_quarto.yml").read_text()
+parts=re.findall(r'^\s*- part: "([^"]+)"\s*$',config,re.M)
+assert len(parts)==5 and len(paths)==18
+for i,expected in enumerate([4,4,4,3,3]):
+    block=config.split('    - part: ')[i+1].split('    - references.qmd')[0]
+    assert len(re.findall(r'^\s*- chapters/',block,re.M))==expected
+print("logic: five parts and all 18 chapters registered")

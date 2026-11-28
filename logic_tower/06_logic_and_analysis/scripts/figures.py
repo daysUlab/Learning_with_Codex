@@ -514,3 +514,27 @@ for i,y in enumerate([4.7,3.2,1.7]):
 ax.text(6.1,5.5,"Countably many possible values",ha="center",fontsize=10)
 ax.text(5,.5,"Union over the input set",ha="center",fontsize=11)
 fig.savefig(out/"forcing_ccc_values.png",dpi=220);plt.close(fig)
+
+# 第18章：多重Cohen条件、Δシステム、独立性、三理論
+fig,ax=plt.subplots(figsize=(5.5,3),layout="constrained")
+ax.set(xlim=(-1.5,7.3),ylim=(-.4,4.8));ax.axis("off")
+specified={(0,0):1,(1,2):0,(2,4):1,(3,1):0}
+for i in range(4):
+    y=3.5-i
+    ax.text(-.6,y+.3,"real "+str(i),ha="center",fontsize=9)
+    for k in range(7):
+        v=specified.get((i,k))
+        ax.add_patch(Rectangle((k,y),.8,.6,fc="#b4ddd5" if v is not None else "#f1f5f9",ec="#64748b"))
+        ax.text(k+.4,y+.3,"?" if v is None else str(v),ha="center",va="center",fontsize=9)
+ax.text(3.3,.05,"Only finitely many specified entries",ha="center",fontsize=10)
+fig.savefig(out/"forcing_many_reals.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,3),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,5));ax.axis("off")
+for x,lab in [(2,"2, 3"),(5,"4, 5"),(8,"6, 7")]:
+    ax.plot([5,x],[2.2,3.4],color="#64748b",lw=1.4)
+    ax.text(x,3.7,lab,ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.4",fc="#e0eaf7",ec="#2166ac"))
+ax.text(5,2,"Root: 1",ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.4",fc="#e2f2ed",ec="#16857c"))
+ax.text(5,.75,"All pairwise intersections = root",ha="center",fontsize=10)
+fig.savefig(out/"forcing_delta_system.png",dpi=220);plt.close(fig)
+diagram([(5,4.7,"ZFC (if consistent)"),(2.5,2.8,"Constructible universe L"),(7.5,2.8,"Many Cohen reals"),(2.5,.8,"CH"),(7.5,.8,"not CH")],[(0,1),(0,2),(1,3),(2,4)],"forcing_ch_independence.png")
+diagram([(5,4.8,"Logic / sets / Boolean algebra"),(1.7,3,"Ultrapower"),(5,3,"Boolean-valued names"),(8.3,3,"Generic filter"),(1.7,.9,"Infinitesimals"),(5,.9,"Descent"),(8.3,.9,"Forcing extension")],[(0,1),(0,2),(0,3),(1,4),(2,5),(3,6)],"logic_three_methods.png")
