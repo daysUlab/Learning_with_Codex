@@ -291,3 +291,22 @@ for n in range(2001):
     assert (e<Fraction(1,1000))==(n>=1000)
     assert ((-1)**n)**2==1
 print("chapter 8: finite principal ultraproduct and sequence identities OK (not free ultrafilter computation)")
+
+# 第1〜6章の数列接続例と第9章：有限標本の厳密有理数計算
+for n in range(501):
+    m=n+1
+    e=Fraction(1,m)
+    e2=Fraction(1,m+1)
+    eta=Fraction(1,10**m)
+    assert not (e<Fraction(1,2)) or e<1
+    assert (e<Fraction(1,3))==(n>=3)
+    assert (e<Fraction(1,3) and n%2==0)==(n>=4 and n%2==0)
+    assert e>e2 and e*m==1
+    assert e*e*m==e and e*m*m==m
+    assert (m+2)*e==1+2*e
+    assert Fraction(n,m)==1-e
+    assert Fraction(1,2+e)-Fraction(1,2)==-e/(2*(2+e))
+    assert 0<eta<e
+    if n>=1:
+        assert 0<e**3<e**2<e<1
+print("chapter 9 and earlier sequence examples: exact rational samples OK")

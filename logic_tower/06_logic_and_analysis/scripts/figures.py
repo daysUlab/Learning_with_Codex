@@ -273,3 +273,25 @@ for j in range(5):
     ax.annotate("",xy=(3.5,.8),xytext=(x,1.5),arrowprops=dict(arrowstyle="->",color="#16857c",alpha=.65))
 ax.text(3.5,.45,"Witness class [b]",ha="center",bbox=dict(boxstyle="round",fc="#e2f2ed",ec="#16857c"))
 fig.savefig(out/"los_witnesses.png",dpi=220);plt.close(fig)
+
+# 第9章：超実数の模式図と収束速度
+fig,ax=plt.subplots(figsize=(5.5,3.1),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,4));ax.axis("off")
+ax.hlines(2.9,1,9,color="#64748b",lw=1.5)
+for x,lab in [(2,"0"),(5,"1"),(8,"2")]:
+    ax.scatter(x,2.9,color="#2166ac",s=40)
+    ax.text(x,3.2,lab,ha="center")
+ax.annotate("",xy=(2,1.3),xytext=(2,2.7),arrowprops=dict(arrowstyle="->",color="#16857c"))
+ax.hlines(1,1,9,color="#64748b",lw=1.5)
+for x,lab in [(2,"0"),(3,r"$\varepsilon^2$"),(4.6,r"$\varepsilon$"),(7,r"$\sqrt{\varepsilon}$")]:
+    ax.scatter(x,1,color="#16857c",s=55)
+    ax.text(x,.65,lab,ha="center")
+ax.text(5,1.65,"Near 0 (schematic, not to scale)",ha="center",fontsize=10)
+fig.savefig(out/"hyperreal_zoom.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,3.2),layout="constrained")
+ns=range(1,101)
+for power,color in [(0.5,"#d97706"),(1,"#2166ac"),(2,"#16857c")]:
+    ax.loglog(ns,[n**(-power) for n in ns],label=f"m^(-{power:g})",color=color)
+ax.set(xlabel="m = n + 1",ylabel="Value");ax.legend(fontsize=9);ax.grid(alpha=.2,which="both")
+fig.savefig(out/"hyperreal_rates.png",dpi=220);plt.close(fig)
+diagram([(5,4.6,"0.9, 0.99, 0.999, ..."),(2.4,2.6,"Real limit"),(7.6,2.6,"Ultrapower class"),(2.4,.8,"1"),(7.6,.8,"1 - eta, less than 1")],[(0,1),(0,2),(1,3),(2,4)],"hyperreal_decimal.png")
