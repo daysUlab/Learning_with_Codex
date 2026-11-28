@@ -1292,3 +1292,14 @@ for ax in axs[1]:
     ax.set(xticks=[0,np.pi,2*np.pi],xticklabels=["0","pi","2pi"])
 fig.savefig(out/"review_scalar_modes.png",dpi=220)
 plt.close(fig)
+
+# 第15章：Dyson展開の二重積分の領域
+fig,ax=plt.subplots(figsize=(4.6,3.7),layout="constrained")
+ax.fill_between([0,1],[0,0],[0,1],color="#2166ac",alpha=.2)
+ax.fill_between([0,1],[0,1],[1,1],color="#d97706",alpha=.2)
+ax.plot([0,1],[0,1],color="#64748b",ls="--")
+ax.text(.72,.24,"t1 > t2\nH(t1) H(t2)",ha="center",fontsize=10)
+ax.text(.26,.73,"t2 > t1\nH(t2) H(t1)",ha="center",fontsize=10)
+ax.set(xlim=(0,1),ylim=(0,1),aspect="equal",xlabel="t1",ylabel="t2",xticks=[0,1],yticks=[0,1],xticklabels=["t0","t"],yticklabels=["t0","t"])
+fig.savefig(out/"review_dyson_region.png",dpi=220)
+plt.close(fig)
