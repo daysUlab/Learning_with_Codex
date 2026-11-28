@@ -506,3 +506,19 @@ for name in re.findall(r"\]\(\.\./figures/([^)]*)\)",s):
 assert len(re.findall(r"^\d+\. ",s.split("## 演習")[1].split("## 解答")[0],re.M))==15
 assert len(re.findall(r"^\d+\. ",s.split("## 解答")[1],re.M))==15
 print("supplement 1: finite spin/grid examples and structure OK")
+
+# 全18章と補章1の節・小節直後の橋渡し（本文と章末の学習案内を含む）
+bridge_title='::: {.callout-tip title="高校数学からの橋渡し"}'
+bridge_total=0
+for path in [*paths,"supplements/01_physics_unprovability.qmd"]:
+    source=(root/path).read_text()
+    headings=list(re.finditer(r"^#{2,3} .+$",source,re.M))
+    assert headings,path
+    assert source.count(bridge_title)==len(headings),(path,len(headings))
+    for heading in headings:
+        rest=source[heading.end():].lstrip()
+        assert rest.startswith(bridge_title+"\n"),(path,heading.group())
+        body=rest.split("\n:::",1)[0].split("\n",1)[1]
+        assert len(body.strip())>=20,(path,heading.group())
+    bridge_total+=len(headings)
+print(f"logic: {bridge_total} section/subsection bridge callouts verified")

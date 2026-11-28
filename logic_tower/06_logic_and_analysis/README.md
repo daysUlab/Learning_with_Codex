@@ -27,7 +27,7 @@
 - [レビュー記録](REVIEW.md)
 - [制作手順](../../TEXTBOOK_WORKFLOW.md)
 
-完成した章だけを _quarto.yml に登録し、未執筆スケルトンを公開物に混ぜません。日本語LuaLaTeXとMathJaxを使用。Pythonで図を生成し、代表例を検査します。
+完成した章だけを _quarto.yml に登録し、未執筆スケルトンを公開物に混ぜません。日本語LuaLaTeXとMathJaxを使用。Pythonで図を生成し、代表例を検査します。全18章と補章1の各節・小節には「高校数学からの橋渡し」を配置し、原稿とHTMLで表示漏れを検査します。
 
 ```sh
 python3 -m pip install -r requirements.txt

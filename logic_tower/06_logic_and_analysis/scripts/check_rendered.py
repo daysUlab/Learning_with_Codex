@@ -30,6 +30,11 @@ for page in pages:
     sidebar_text=" ".join(unescape(re.sub(r"<[^>]+>"," ",sidebar.group(1))).split())
     for part in parts:
         assert " ".join(part.split()) in sidebar_text,(page,part)
+    if page not in (book/"index.html",book/"references.html"):
+        original=root/page.relative_to(book).with_suffix(".qmd")
+        expected=original.read_text().count('::: {.callout-tip title="高校数学からの橋渡し"}')
+        assert expected>0,original
+        assert source.count("高校数学からの橋渡し")>=expected,(page,expected)
     d=Doc()
     d.feed(source)
     for kind,url in d.urls:
