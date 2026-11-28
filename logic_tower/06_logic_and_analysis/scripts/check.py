@@ -11,6 +11,7 @@ for i,p in enumerate(paths,1):
     assert "未執筆スケルトン" not in s
     for title in ["この章で学ぶ理由","## 初読の到達目標","## 演習","## 解答"]:
         assert title in s,(p,title)
+    assert not re.search(r"^\s*\$\s*$",s,re.M),(p,"single dollar delimiter")
     assert len(re.findall(r"^\$\$\s*$",s,re.M))%2==0
     for name in re.findall(r"\]\(\.\./figures/([^)]*)\)",s):
         assert name in (root/"scripts/figures.py").read_text(),name
