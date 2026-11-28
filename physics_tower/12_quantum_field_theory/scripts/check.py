@@ -42,7 +42,8 @@ for p in [root/"index.qmd", *(root/p for p in paths)]:
         assert label not in labels, f"duplicate cross-reference label: {label} ({p})"
         labels.add(label)
     for name in re.findall(r"\]\(\.\./figures/([^)\s]+)\)", s):
-        assert f'"{name}"' in figure_source or f"'{name}'" in figure_source, f"missing figure generator: {name} ({p})"
+        if not name.startswith("external/"):
+            assert f'"{name}"' in figure_source or f"'{name}'" in figure_source, f"missing figure generator: {name} ({p})"
 # 章間参照・引用・付録リンクの存在を確認する。
 sources = [root/"index.qmd", *(root/p for p in paths), root/"glossary.qmd", root/"references.qmd"]
 bib_keys = set(re.findall(r"@\w+\{([^,]+),", (root/"references.bib").read_text()))
@@ -70,3 +71,17 @@ for path in paths[1:7]:
     bridges = re.findall(r'^#{2,3} .+\n\n::: \{\.callout-tip title="高校数学からの橋渡し"\}\n[^\n]+\n:::$', s, re.M)
     assert len(headings) == len(bridges), f"missing section bridge: {path} ({len(bridges)}/{len(headings)})"
 print("chapter 1–6 section bridges: OK")
+
+# 外部画像は個別の出典・ライセンスを持つものだけを許可する。
+import json
+assets = json.loads((root/"external_images.json").read_text())["assets"]
+assert len({a["file"] for a in assets}) == len(assets)
+assert all(a["license"] in {"CC BY 4.0", "CC BY-SA 4.0", "CC BY-SA 3.0"} for a in assets)
+for asset in assets:
+    source = (root/asset["placement"]).read_text()
+    assert source.count("figures/external/"+asset["file"]) == 1, asset
+    assert all(value in source for value in (asset["source"], asset["author"], asset["license_url"], asset["change"])), asset
+for p in sources:
+    for name in re.findall(r"figures/external/([^\s)]+)", p.read_text()):
+        assert name in {a["file"] for a in assets}, (p, name)
+print("external images: attribution, license, placement OK")
