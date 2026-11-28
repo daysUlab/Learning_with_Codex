@@ -25,6 +25,7 @@ book:
     - chapters/10_standard_part.qmd
     - chapters/11_infinitesimal_derivatives.qmd
     - chapters/12_hyperfinite_integrals.qmd
+    - chapters/13_complete_boolean_algebras.qmd
     - references.qmd
 format:
   html:

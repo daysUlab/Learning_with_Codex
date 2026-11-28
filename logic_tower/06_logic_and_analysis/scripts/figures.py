@@ -380,3 +380,34 @@ for ax,v,label in [(axs[0],1,"Rational tags: sum = 1"),(axs[1],0,"Irrational tag
     ax.axvline(1,color="#94a3b8",lw=.7)
     ax.set(xlim=(0,1),ylim=(-.15,1.15),yticks=[0,1],title=label)
 fig.savefig(out/"integral_tags.png",dpi=220);plt.close(fig)
+
+# 第13章：四元代数、上界、正則開集合、円筒
+diagram([(5,4.5,"{A, B}"),(2.5,2.6,"{A}"),(7.5,2.6,"{B}"),(5,.8,"empty")],[(3,1),(3,2),(1,0),(2,0)],"complete_boolean_four.png")
+fig,ax=plt.subplots(figsize=(5.5,2.7),layout="constrained")
+ax.set(xlim=(-.5,11.6),ylim=(-.5,3.2));ax.axis("off")
+for y,excluded,label in [(2.1,{1},"Upper bound"),(.8,{1,5},"Smaller upper bound")]:
+    for k in range(11):
+        ax.scatter(k,y,s=44,facecolor="white" if k in excluded else "#16857c" if k%2==0 else "#94a3b8",edgecolor="#64748b")
+        if y==.8:ax.text(k,y-.35,str(k),ha="center",fontsize=8)
+    ax.text(0,y+.32,label,ha="left",fontsize=10)
+    ax.text(11,y,"...",ha="center")
+fig.savefig(out/"complete_boolean_missing.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,2.9),layout="constrained")
+ax.set(xlim=(-.15,1.15),ylim=(0,3.5));ax.axis("off")
+for y,label in [(2.7,"Open set with a gap"),(1.7,"Closure"),(.7,"Interior of closure")]:
+    ax.hlines(y,0,1,color="#2166ac",lw=3)
+    ax.scatter([0,1],[y,y],s=48,facecolor="#2166ac" if y==1.7 else "white",edgecolor="#2166ac",zorder=3)
+    if y==2.7:ax.scatter(.5,y,s=52,facecolor="white",edgecolor="#2166ac",zorder=3)
+    ax.text(.5,y+.26,label,ha="center",fontsize=10)
+fig.savefig(out/"regular_open_gap.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,3.8),layout="constrained")
+ax.set(xlim=(-.4,8.4),ylim=(-.4,3.6));ax.axis("off")
+for level in range(4):
+    for i,bits in enumerate(product("01",repeat=level)):
+        x=(i+.5)*8/(2**level)
+        y=3-level
+        if level:
+            xp=(i//2+.5)*8/(2**(level-1))
+            ax.plot([xp,x],[y+1,y],color="#94a3b8",lw=1)
+        ax.text(x,y,"["+"".join(bits)+"]" if level else "X",ha="center",va="center",fontsize=9,bbox=dict(boxstyle="round,pad=.22",fc="#e0eaf7",ec="#2166ac"),zorder=3)
+fig.savefig(out/"cantor_cylinders.png",dpi=220);plt.close(fig)
