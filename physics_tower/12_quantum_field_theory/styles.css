@@ -7,3 +7,10 @@ img, svg { max-width: 100%; height: auto; }
 .qft-demo input { display: block; width: 100%; }
 @media(max-width: 600px) { body { font-size: 16px; } #quarto-document-content { padding-inline: .8rem; } }
 
+
+/* Narrow displays: allow local scrolling instead of widening the document. */
+#quarto-document-content { min-width: 0; overflow-wrap: break-word; }
+#quarto-document-content pre { overflow-x: auto; }
+#quarto-document-content .table-responsive { overflow-x: auto; }
+#quarto-document-content mjx-container[display="true"] { max-width: 100%; }
+@media (max-width: 600px) { #quarto-document-content table { font-size: .9rem; } }

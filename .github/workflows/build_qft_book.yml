@@ -26,7 +26,7 @@ jobs:
       - name: 日本語TeX環境を導入
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-science texlive-lang-english
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-science texlive-lang-english poppler-utils
           kpsewhich luatexbase.sty
           kpsewhich luatexja-fontspec.sty
           kpsewhich fontawesome5.sty
@@ -39,13 +39,28 @@ jobs:
       - name: HTMLとPDFを生成
         working-directory: physics_tower/12_quantum_field_theory
         run: |
-          quarto render
+          mkdir -p _quality
+          set -o pipefail
+          quarto render 2>&1 | tee _quality/render.log
           test -s _book/index.html
           test -s _book/qft.pdf
+          python3 scripts/check_rendered.py
+      - name: HTML画面幅別の表示診断
+        continue-on-error: true
+        working-directory: physics_tower/12_quantum_field_theory
+        run: |
+          python3 -m pip install playwright
+          python3 scripts/check_browser.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           if-no-files-found: ignore
+          name: qft-quality
+          path: physics_tower/12_quantum_field_theory/_quality
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          if-no-files-found: error
           name: qft-book
           path: physics_tower/12_quantum_field_theory/_book
       - uses: actions/upload-pages-artifact@v3
