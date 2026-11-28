@@ -150,3 +150,7 @@
 - 第4章：恒星の表面温度と色、Webbの代表色、回折像。 [NASA](https://science.nasa.gov/exoplanets/stars/)、[ESA/Webb](https://esawebb.org/about/general/image-processing/)、[Cas A](https://esawebb.org/news/weic2330/)。色は観測波長・表示法に依存。
 - 第9章：J0030+0451のホットスポット（2019年NICER、二つの独立した解析）、[NASA SVS](https://svs.gsfc.nasa.gov/13240/) の公開本文と画像を確認。白い斑点は推定温度分布の表現で直接撮像ではない。
 - 第11章：[NASA SVS 2019](https://svs.gsfc.nasa.gov/13326/) の公開本文・光路図を確認。上下の弧は同じ円盤の重力レンズ像。白色は観測・表示条件に依存、EHT画像と数値可視化を区別。
+
+## 第14章（2026-11-29確認）
+- 光速不変・時間遅れ・同時性・双子： [Einstein Online](https://www.einstein-online.info/en/relativity_space_time/)、[光時計](https://www.einstein-online.info/en/spotlight/light-clocks-time-dilation/)、[同時性](https://www.einstein-online.info/en/spotlight/Now/)、[双子](https://www.einstein-online.info/en/spotlight/Twins/)（B）。測定と受信信号、固有時と座標時を区別。表・世界線は理想化した計算。
+- GPSの特殊・一般相対論補正：[NIST](https://www.nist.gov/atomic-clocks/a-powerful-tool-for-science/putting-einstein-test)（A/B）。−7、+45、+38 μs/日の概数。距離換算は測位誤差そのものではない。
