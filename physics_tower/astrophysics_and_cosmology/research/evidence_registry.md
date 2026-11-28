@@ -69,3 +69,59 @@
 | GW170817のストロンチウム | A/B | [ESO 2019](https://www.eso.org/public/news/eso1917/) | 金の個別スペクトル線の確実な同定とは別 |
 | GRB 230307Aのテルル解釈 | C | [Levan et al. 2023/2024](https://www.nature.com/articles/s41586-023-06759-1)、[Arunachalam et al. 2026](https://academic.oup.com/mnras/article/550/2/stag1158/8735174) | テルルはスペクトルの解釈。2026年研究は塵放射を仮定した場合のコンパクト連星起源との不整合を指摘 |
 | 太陽系の形成約46億年前 | A/B | [NASA Solar System](https://science.nasa.gov/solar-system/solar-system-facts/) | 物質の起源は複数の世代 |
+
+## 第7章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 1992年パルサー惑星、1995年太陽型星の惑星、2025年9月6000個 | A | [NASA 2019](https://science.nasa.gov/universe/exoplanets/nobel-winners-changed-our-understanding-with-exoplanet-discovery/)、[30 Years](https://science.nasa.gov/exoplanets/30-years-of-exoplanets-compilation/) | 6000個は歴史的節目で最新総数ではない |
+| 原始惑星系円盤と塵の分布 | A/B | [HH 30 2025](https://esawebb.org/images/potm2501b/) | 個別惑星の確認とは区別 |
+| 観測方法 | A/B | [NASA fact sheet](https://science.nasa.gov/resource/the-search-for-other-earths-fact-sheet/) | 選択効果、視線速度の傾き依存、減光から面積比 |
+| HIP 65426 bの直接像 | A | [ESA/Webb 2022](https://esawebb.org/images/HIP-65426b/) | 公開時査読前。地表の解像像ではない |
+| 自由浮遊惑星探索 | A/B/C | [Roman microlensing](https://science.nasa.gov/mission/roman-space-telescope/microlensing/) | 質量・距離・速度の縮退、束縛状態の不確実性 |
+| 55 Cancri e、Kepler-16 b | A/B | [NASA 55 Cancri e](https://science.nasa.gov/exoplanet-catalog/55-cancri-e/)、[Kepler-16 b](https://science.nasa.gov/exoplanets/other-stars-other-worlds/kepler-16-b-almost-a-real-life-tatooine/) | スーパーアースは居住可能性を意味しない |
+
+## 第8章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 表面液体水のハビタブルゾーン | B | [Kopparapu 2013](https://doi.org/10.1088/0004-637X/765/2/131)・[訂正](https://doi.org/10.1088/0004-637X/770/1/82) | 0.99〜1.70 AUは特定のモデル値。生命の存在証拠ではない |
+| 金星・地球・火星の温度 | A/B | [NASA Solar System Temperatures](https://science.nasa.gov/resource/solar-system-temperatures/) | 代表値。場所・時刻による差 |
+| 赤色矮星と同期回転・大気 | B/C | [NASA](https://science.nasa.gov/exoplanets/habitable-zone/) | 熱輸送・大気散逸などの条件に依存 |
+| 氷衛星の地下海・エンケラドゥスのリン酸塩 | A/B | [NASA Europa](https://science.nasa.gov/jupiter/jupiter-moons/europa/europa-facts/)、[Postberg 2023](https://doi.org/10.1038/s41586-023-05987-9) | 生命検出とは別。海の存在・組成は観測と推定を区別 |
+| TRAPPIST-1 eの透過スペクトル | A/B/C | [ESA/Webb 2025](https://esawebb.org/images/trappist1e/)、[NASA](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-is-webb-revealing-about-the-trappist-1-system/) | 大気なしもありも残る。厚い水素主体大気は否定的 |
+| TRAPPIST-1 b/cの厚い大気の否定的証拠 | A/B | [Nature Astronomy 2026](https://doi.org/10.1038/s41550-026-02806-9) | e/f/gとは別の観測対象 |
+| K2-18 bのDMS/DMDS | C | [Madhusudhan 2025](https://arxiv.org/abs/2504.12267)、[Nature Astronomy 2026](https://doi.org/10.1038/s41550-025-02730-4)、[A&A 2026](https://doi.org/10.1051/0004-6361/202557718) | 代替モデル・データ処理への依存。分子同定と生命起源を分離。公開概要参照 |
+
+## 第9章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 孤立中性子星・残骸の観測 | A | [ESA/Hubble 1997](https://esahubble.org/images/opo9732a/)、[ESO 2009](https://www.eso.org/public/images/vela-snr-schmidtourcomp/) | 光点・残骸の画像は内部の解像像ではない |
+| 内部構造・状態方程式 | B/C | [2026年レビュー](https://doi.org/10.1140/epjs/s11734-026-02286-y) | 表面重力・平均密度は代表値からのニュートン近似、組成は未確定 |
+| 核パスタ | C | [Caplan et al. 2018](https://doi.org/10.1103/PhysRevLett.121.132701) | 分子動力学予測であって直接観測ではない |
+| J0437−4715 と J0740+6620 | A/B | [NICER 2024](https://doi.org/10.3847/2041-8213/ad5a6f)、[NICER/XMM 2024](https://doi.org/10.3847/1538-4357/ad5f1f) | 68%周辺信用区間。独立の質量事前分布・モデルに依存 |
+| J0952−0607の質量推定 | A/B | [Romani 2022](https://doi.org/10.3847/2041-8213/ac8007)、[2026年刊行](https://arxiv.org/abs/2512.05099) | 2.35±0.11太陽質量は統計誤差。伴星光学モデル・回転補正の不確実性。TOV限界とは区別 |
+| GW170817の潮汐変形 | A/B | [LIGO/Virgo 2018](https://doi.org/10.1103/PhysRevLett.121.161101) | 波形から状態方程式を制約 |
+| クォーク物質 | C | [Annala 2023](https://doi.org/10.1038/s41467-023-44051-y) | ベイズ推定の枠組み依存。直接同定なし、混成星とクォーク星を区別 |
+
+## 第10章（2026-11-29確認）
+
+| 主張 | 区分 | 資料 | 注意点 |
+|---|---|---|---|
+| 716 Hzパルサー | A | [Hessels 2006](https://doi.org/10.1126/science.1125125) | 半径12 kmの速度は仮定した概算 |
+| かに星雲の変化 | A/B | [ESA/Hubble 2026](https://esahubble.org/news/heic2607/) | 2024年観測、2026年公開 |
+| 重力波背景の証拠 | A/B | [NANOGrav 2023](https://arxiv.org/abs/2306.16213) | 67パルサーの相関解析。起源は確定していない |
+| Velaグリッチ | A/B/C | [2018](https://pubmed.ncbi.nlm.nih.gov/29643483/)、[2019](https://doi.org/10.1038/s41550-019-0844-6) | 超流動の解釈はモデル依存 |
+| マグネター巨大フレア | A/B | [Palmer 2005](https://doi.org/10.1038/nature03525) | 磁場はモデル推定、機構は研究中 |
+| FRBとマグネターの関連 | A/B/C | [CHIME 2020](https://doi.org/10.1038/s41586-020-2863-y)、[STARE2 2020](https://doi.org/10.1038/s41586-020-2872-x)、[GECAM 2026](https://doi.org/10.1093/mnras/stag312) | 2026年刊行論文は2022年の事象。全FRBの起源を確定しない |
+
+## 第11章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 暗黒星からシュワルツシルト解・崩壊へ | B | [APS](https://www.aps.org/apsnews/2009/11/1783-john-michell-black-holes)、[1916英訳](https://arxiv.org/abs/physics/9905030)、[1939](https://doi.org/10.1103/PhysRev.56.455) | ニュートン力学の発想と相対論の因果境界を区別 |
+| はくちょう座X-1約21太陽質量 | A/B | [Miller-Jones 2021](https://pubmed.ncbi.nlm.nih.gov/33602863/) | 距離と連星モデルに依存 |
+| S2の周期・歳差・中心質量 | A/B | [ESO 2020](https://www.eso.org/public/news/eso2006/) | 軌道の観測は地平面そのものの直接検出ではない |
+| GW150914 | A/B | [LIGO](https://ligo.org/detections/gw150914/)、[質量推定](https://ligo.org/science-summaries/o1imbh/) | 波形モデルによる質量推定 |
+| M87*・Sgr A*の影 | A/B | [EHT 2019](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole)、[EHT 2022](https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy) | 2017年の電波観測の再構成。リング、影、地平面、内部を区別 |

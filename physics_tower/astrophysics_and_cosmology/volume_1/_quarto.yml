@@ -20,6 +20,11 @@ book:
     - chapters/04_why_stars_shine.qmd
     - chapters/05_stellar_evolution.qmd
     - chapters/06_origin_of_elements.qmd
+    - chapters/07_exoplanets.qmd
+    - chapters/08_habitability.qmd
+    - chapters/09_neutron_stars.qmd
+    - chapters/10_pulsars_magnetars.qmd
+    - chapters/11_black_hole_discovery.qmd
 
 format:
   html:
