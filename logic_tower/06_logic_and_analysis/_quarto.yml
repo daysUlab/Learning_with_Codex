@@ -13,22 +13,34 @@ book:
   downloads: [pdf]
   chapters:
     - index.qmd
-    - chapters/01_propositional_completeness.qmd
-    - chapters/02_boolean_algebras.qmd
-    - chapters/03_first_order.qmd
-    - chapters/04_model_existence.qmd
-    - chapters/05_sets_and_ordinals.qmd
-    - chapters/06_set_theories.qmd
-    - chapters/07_ultrafilters.qmd
-    - chapters/08_ultraproducts.qmd
-    - chapters/09_hyperreals.qmd
-    - chapters/10_standard_part.qmd
-    - chapters/11_infinitesimal_derivatives.qmd
-    - chapters/12_hyperfinite_integrals.qmd
-    - chapters/13_complete_boolean_algebras.qmd
-    - chapters/14_boolean_valued_universe.qmd
-    - chapters/15_boolean_valued_analysis.qmd
-    - chapters/16_cohen_forcing.qmd
+    - part: "第I部　論理とモデル"
+      chapters:
+        - chapters/01_propositional_completeness.qmd
+        - chapters/02_boolean_algebras.qmd
+        - chapters/03_first_order.qmd
+        - chapters/04_model_existence.qmd
+    - part: "第II部　集合と超積"
+      chapters:
+        - chapters/05_sets_and_ordinals.qmd
+        - chapters/06_set_theories.qmd
+        - chapters/07_ultrafilters.qmd
+        - chapters/08_ultraproducts.qmd
+    - part: "第III部　超準解析：無限小と微積分"
+      chapters:
+        - chapters/09_hyperreals.qmd
+        - chapters/10_standard_part.qmd
+        - chapters/11_infinitesimal_derivatives.qmd
+        - chapters/12_hyperfinite_integrals.qmd
+    - part: "第IV部　ブール値宇宙と解析"
+      chapters:
+        - chapters/13_complete_boolean_algebras.qmd
+        - chapters/14_boolean_valued_universe.qmd
+        - chapters/15_boolean_valued_analysis.qmd
+    - part: "第V部　強制法と独立性"
+      chapters:
+        - chapters/16_cohen_forcing.qmd
+        - chapters/17_generic_extensions.qmd
+        - chapters/18_independence_and_connections.qmd
     - references.qmd
 format:
   html:

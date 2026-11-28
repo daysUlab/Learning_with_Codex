@@ -486,3 +486,55 @@ for i,(lab,word) in enumerate(rows):
         ax.text(k+.39,y+.32,v,ha="center",va="center",fontsize=10)
 ax.text(2.5,.23,"Different at a specified coordinate",ha="center",fontsize=10)
 fig.savefig(out/"forcing_new_real.png",dpi=220);plt.close(fig)
+
+# 第17章：名前の評価、拡張、ブール値と強制条件、cccの値候補
+diagram([(5,4.5,"Name: (2,p), (5,q)"),(2.5,2.7,"p in G"),(7.5,2.7,"q in G"),(2.5,.8,"{2}"),(7.5,.8,"{5}")],[(0,1),(0,2),(1,3),(2,4)],"forcing_name_evaluation.png")
+fig,ax=plt.subplots(figsize=(5.5,3.2),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,6));ax.axis("off")
+ax.add_patch(Rectangle((.7,.55),8.6,4.8,fc="#e2f2ed",ec="#16857c",lw=1.5))
+ax.add_patch(Rectangle((1.1,1.1),4.1,3.3,fc="#e0eaf7",ec="#2166ac",lw=1.5))
+ax.text(3.15,3.9,"M",ha="center",fontsize=13)
+ax.text(3.15,2.8,"Old sets",ha="center")
+ax.text(3.15,1.9,"Names",ha="center")
+ax.text(7.2,4.8,"M[G]",ha="center",fontsize=13)
+ax.text(7.2,3.5,"G",ha="center",fontsize=13)
+ax.text(7.2,2.6,"New real",ha="center")
+ax.text(7.2,1.5,"Other evaluations",ha="center")
+fig.savefig(out/"forcing_extension.png",dpi=220);plt.close(fig)
+diagram([(5,4.6,"Boolean truth value b"),(5,3.1,"Generic ultrafilter U"),(2.5,1,"b in U: true"),(7.5,1,"not b in U: false")],[(0,1),(1,2),(1,3)],"forcing_boolean_bridge.png")
+fig,ax=plt.subplots(figsize=(5.5,3.4),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,6));ax.axis("off")
+for i,y in enumerate([4.7,3.2,1.7]):
+    ax.text(1,y,"input "+str(i),ha="center",va="center",fontsize=10)
+    for j in range(4):
+        xx=4.1+j*1.15
+        ax.annotate("",xy=(xx,y),xytext=(2.2,y),arrowprops=dict(arrowstyle="->",color="#94a3b8",lw=.7))
+        ax.scatter(xx,y,s=90,color="#16857c",zorder=3)
+    ax.text(8.5,y,"...",ha="center")
+ax.text(6.1,5.5,"Countably many possible values",ha="center",fontsize=10)
+ax.text(5,.5,"Union over the input set",ha="center",fontsize=11)
+fig.savefig(out/"forcing_ccc_values.png",dpi=220);plt.close(fig)
+
+# 第18章：多重Cohen条件、Δシステム、独立性、三理論
+fig,ax=plt.subplots(figsize=(5.5,3),layout="constrained")
+ax.set(xlim=(-1.5,7.3),ylim=(-.4,4.8));ax.axis("off")
+specified={(0,0):1,(1,2):0,(2,4):1,(3,1):0}
+for i in range(4):
+    y=3.5-i
+    ax.text(-.6,y+.3,"real "+str(i),ha="center",fontsize=9)
+    for k in range(7):
+        v=specified.get((i,k))
+        ax.add_patch(Rectangle((k,y),.8,.6,fc="#b4ddd5" if v is not None else "#f1f5f9",ec="#64748b"))
+        ax.text(k+.4,y+.3,"?" if v is None else str(v),ha="center",va="center",fontsize=9)
+ax.text(3.3,.05,"Only finitely many specified entries",ha="center",fontsize=10)
+fig.savefig(out/"forcing_many_reals.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,3),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,5));ax.axis("off")
+for x,lab in [(2,"2, 3"),(5,"4, 5"),(8,"6, 7")]:
+    ax.plot([5,x],[2.2,3.4],color="#64748b",lw=1.4)
+    ax.text(x,3.7,lab,ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.4",fc="#e0eaf7",ec="#2166ac"))
+ax.text(5,2,"Root: 1",ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.4",fc="#e2f2ed",ec="#16857c"))
+ax.text(5,.75,"All pairwise intersections = root",ha="center",fontsize=10)
+fig.savefig(out/"forcing_delta_system.png",dpi=220);plt.close(fig)
+diagram([(5,4.7,"ZFC (if consistent)"),(2.5,2.8,"Constructible universe L"),(7.5,2.8,"Many Cohen reals"),(2.5,.8,"CH"),(7.5,.8,"not CH")],[(0,1),(0,2),(1,3),(2,4)],"forcing_ch_independence.png")
+diagram([(5,4.8,"Logic / sets / Boolean algebra"),(1.7,3,"Ultrapower"),(5,3,"Boolean-valued names"),(8.3,3,"Generic filter"),(1.7,.9,"Infinitesimals"),(5,.9,"Descent"),(8.3,.9,"Forcing extension")],[(0,1),(0,2),(0,3),(1,4),(2,5),(3,6)],"logic_three_methods.png")

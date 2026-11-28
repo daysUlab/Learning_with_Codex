@@ -16,14 +16,14 @@
 | 10 | [無限小と実数の接続](chapters/10_standard_part.qmd) | 一次レビューCI成功・main統合済み |
 | 11 | [無限小で微分を計算する](chapters/11_infinitesimal_derivatives.qmd) | 一次レビューCI成功・main統合済み |
 | 12 | [無限個の和で積分を計算する](chapters/12_hyperfinite_integrals.qmd) | 一次レビューCI成功・main統合済み |
-| 13 | [真理値を完全ブール代数にする](chapters/13_complete_boolean_algebras.qmd) | 初稿main統合済み・一次レビューCI待ち |
-| 14 | [集合の所属そのものをブール値にする](chapters/14_boolean_valued_universe.qmd) | PDFエラー修正・一次レビューCI待ち |
-| 15 | [内部の実数から関数空間を取り出す](chapters/15_boolean_valued_analysis.qmd) | 一次レビューCI待ち |
-| 16 | [有限の条件から新しい実数を作る](chapters/16_cohen_forcing.qmd) | 初稿・CI未確認 |
-| 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | TODO |
-| 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | TODO |
+| 13 | [真理値を完全ブール代数にする](chapters/13_complete_boolean_algebras.qmd) | 一次レビューCI成功・main統合済み |
+| 14 | [集合の所属そのものをブール値にする](chapters/14_boolean_valued_universe.qmd) | 一次レビューCI成功・main統合済み |
+| 15 | [内部の実数から関数空間を取り出す](chapters/15_boolean_valued_analysis.qmd) | 一次レビューCI成功・main統合済み |
+| 16 | [有限の条件から新しい実数を作る](chapters/16_cohen_forcing.qmd) | 初稿main統合済み・一次レビューCI待ち |
+| 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | 一次レビューCI待ち |
+| 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | 一次レビューCI待ち |
 
-次の作業：第13〜16章・冒頭改稿CI、main統合・公開確認、第17章。
+次の作業：全18章CI・main統合、横断点検、索引整備、HTML/PDF表示診断・公開確認。
 
 2026-11-28：第1章CI 46095306289成功、PR #117統合（d14720a）。第2章初稿・演習9問・図3点・有限ブール代数とDNFの検査追加。最新CI未確認。
 
@@ -62,3 +62,7 @@
 2026-11-28：第14章CI（job 140964979195）のPDFは二重角括弧未定義で失敗。標準TeX表記へ修正、第13章の欠字も数式化。第15章初稿・図3点・演習14問、第13〜15章一次レビュー反映。最新CI・目視・公開未確認。
 
 2026-11-28：第16章初稿・図3点・演習12問。冒頭に三理論の具体的な威力を物理学者・学生向けに解説（図4点）。第15章のCI実行中に追加、最新CI未確認。
+
+2026-11-28：第1〜16章・冒頭改稿CI 46141352124成功、PR #125統合（6abd7f7）。第17章初稿・図4点・演習13問。最新CI・PDF目視・公開未確認。
+
+2026-11-28：第17章までのCI実行中に第18章初稿（図4点・演習14問）を追加。第16〜18章一次レビュー（演習39問、図11点の参照点検）。Quartoの五部構成・左目次表示検査を追加。最新CI、PDF目視、公開未確認。
