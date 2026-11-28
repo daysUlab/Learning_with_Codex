@@ -1,0 +1,42 @@
+name: 数理論理学 教科書ビルド
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'logic_tower/06_logic_and_analysis/**'
+      - '.github/workflows/build_logic_book.yml'
+  pull_request:
+    paths:
+      - 'logic_tower/06_logic_and_analysis/**'
+      - '.github/workflows/build_logic_book.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: '1.7.34'
+      - name: 日本語TeX環境
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-cjk texlive-luatex texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-science texlive-lang-english
+      - name: 原稿検査とビルド
+        working-directory: logic_tower/06_logic_and_analysis
+        run: |
+          python3 -m pip install -r requirements.txt
+          python3 scripts/check.py
+          quarto render
+          test -s _book/index.html
+          test -s _book/logic.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: logic-book
+          path: logic_tower/06_logic_and_analysis/_book
+          if-no-files-found: error

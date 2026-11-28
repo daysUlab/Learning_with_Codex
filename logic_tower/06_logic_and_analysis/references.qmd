@@ -1,0 +1,11 @@
+# 参考資料 {.unnumbered}
+
+2026-11-28確認。以下は概説・公開案内の確認に用いた資料と、後続章の発展学習候補です。本文や目次の転載は行わず、各定理の証明と具体例は執筆時に改めて検証します。
+
+- Stanford Encyclopedia of Philosophy, [Propositional Logic](https://plato.stanford.edu/entries/logic-propositional/)：命題論理の構文・意味と完全性の概説。
+- Stanford Encyclopedia of Philosophy, [Classical Logic](https://plato.stanford.edu/entries/logic-classical/)：一階論理・健全性・完全性の概説。
+- H. Jerome Keisler, [Foundations of Infinitesimal Calculus](https://people.math.wisc.edu/~hkeisler/foundations.html)：超実数の基礎と微積分の発展資料。
+- H. Jerome Keisler, [Elementary Calculus: An Infinitesimal Approach](https://people.math.wisc.edu/~hkeisler/calc.html)：無限小を用いた微積分の参考候補。
+- A. G. Kusraev and S. S. Kutateladze, [Invitation to Boolean valued analysis](https://www.mathnet.ru/php/archive.phtml?jrnid=vmj&option_lang=eng&paperid=655&wshow=paper), 2018：書誌・概要を確認。
+- A. G. Kusraev and S. S. Kutateladze, [The Gordon theorem: origins and meaning](https://www.mathnet.ru/php/archive.phtml?jrnid=vmj&option_lang=eng&paperid=707&wshow=paper), 2019：書誌・概要を確認。
+- Benedikt Löwe, [Forcing & the Continuum Hypothesis](https://www.math.uni-hamburg.de/home/loewe/Lent2025/)：大学講義の公開案内。強制法の後続章での参考候補。
