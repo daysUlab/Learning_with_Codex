@@ -24,7 +24,9 @@ def valid(data, a):
     if not data.startswith(b"\x89PNG\r\n\x1a\n") or data[12:16] != b"IHDR":
         return False
     if "width" in a:
-        return struct.unpack(">II", data[16:24]) == (a["width"], a["height"])
+        width, height = struct.unpack(">II", data[16:24])
+        # 配布元の整数ピクセル丸めの差を最大1pxだけ許容する。
+        return width == a["width"] and abs(height - a["height"]) <= 1
     return True
 
 for a in json.loads((root/"external_images.json").read_text())["assets"]:

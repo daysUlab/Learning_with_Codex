@@ -85,3 +85,10 @@ for p in sources:
     for name in re.findall(r"figures/external/([^\s)]+)", p.read_text()):
         assert name in {a["file"] for a in assets}, (p, name)
 print("external images: attribution, license, placement OK")
+
+# Wikimedia の非標準サムネイル幅は2026年以降HTTP 400となり得る。
+for asset in assets:
+    if "/thumb/" in asset["url"] and "wikimedia.org/" in asset["url"]:
+        match = re.search(r"/(\d+)px-", asset["url"])
+        assert match and int(match.group(1)) in {20,40,60,120,250,330,500,960,1280,1920,3840}, asset
+        assert int(match.group(1)) == asset["width"], asset

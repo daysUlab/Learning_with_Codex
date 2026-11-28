@@ -16,15 +16,16 @@
     },
     {
       "file": "standard_model_ja.png",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Standard_Model_of_Elementary_Particles-ja.svg/1390px-Standard_Model_of_Elementary_Particles-ja.svg.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Standard_Model_of_Elementary_Particles-ja.svg/1280px-Standard_Model_of_Elementary_Particles-ja.svg.png",
       "source": "https://commons.wikimedia.org/w/index.php?title=File:Standard_Model_of_Elementary_Particles-ja.svg&oldid=796571058",
       "author": "MissMJ, Cush, Bcxfu75k",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "placement": "chapters/00_physical_discoveries.qmd",
       "change": "配布元のSVGからPNGへの変換版、表示幅のみ調整",
-      "width": 1390,
-      "height": 1330
+      "width": 1280,
+      "height": 1225,
+      "thumbnail_policy": "https://www.mediawiki.org/wiki/Common_thumbnail_sizes"
     },
     {
       "file": "cms_diphoton_2012.png",
