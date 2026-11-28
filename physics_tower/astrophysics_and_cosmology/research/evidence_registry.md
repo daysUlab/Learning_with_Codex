@@ -17,3 +17,14 @@
 | 新しいライマンα解析は標準模型とも整合 | C | [DESI 2026-07-30](https://www.desi.lbl.gov/2026/07/30/new-desi-dr2-lyman-alpha-results-shed-light-on-dark-energy/) | 時間変化は未確定、ビッグクランチを立証しない |
 | DESI全5年観測の完了 | A | [DESI 2026-04-15](https://www.desi.lbl.gov/2026/04/15/desi-reaches-mapping-milestone-surpassing-expectations/) | 全期間の最初のダークエネルギー結果は2027年予定と発表 |
 | ホーキング放射、ワームホール、真空崩壊 | D | 原著調査TODO | 天体での直接確認と混同しない |
+
+## 第2章の根拠（2026-11-28確認）
+
+| 主張 | 区分 | 資料 | 注意点 |
+|---|---|---|---|
+| 年周視差と固有運動の分離 | A/B | [ESA Gaia](https://www.esa.int/nb/articles/about-us/directorates/science/gaia/how-does-gaia-study-the-milky-way)、[Parallax](https://www.esa.int/ga/articles/about-us/directorates/science/gaia/parallax) | 半年の最大位置差は視差角の約2倍 |
+| リービットの周期・光度関係（1912年） | A/B | [NASA Dark Energy](https://science.nasa.gov/missions/roman-space-telescope/the-universe-is-expanding-faster-these-days-and-dark-energy-is-responsible-so-what-is-dark-energy/) | 古典的セファイドを対象とし、較正・補正が必要 |
+| 距離はしご | A/B | [NASA Three Steps](https://science.nasa.gov/asset/hubble/three-steps-to-the-hubble-constant-2/)、[Hubble Constant and Tension](https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-constant-and-tension/) | Ia型超新星は標準化を要し、誤差が段間で伝播 |
+| 赤方偏移と距離・時間の区別 | A/B | [NASA Cosmological Redshift](https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-cosmological-redshift/)、[Hogg 1999](https://arxiv.org/abs/astro-ph/9905116) | 距離への換算は宇宙論モデル依存 |
+| MoM-z14の赤方偏移14.44、宇宙誕生約2.8億年後 | A/B | [NASA 2026](https://science.nasa.gov/missions/webb/nasa-webb-pushes-boundaries-of-observable-universe-closer-to-big-bang/) | 赤方偏移は分光観測、宇宙年齢はモデル推定。銀河自体の年齢とは異なる |
+| 粒子地平線と事象の地平線 | B | [David Tong, Cosmology](https://www.damtp.cam.ac.uk/user/tong/cosmo/cosmohtml/S1.html) | 現在の観測可能性と将来の信号到達可能性は別 |
