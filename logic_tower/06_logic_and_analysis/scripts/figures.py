@@ -245,3 +245,31 @@ ax.scatter(ns[1::2],[-1]*6,color="#d97706",label="Odd indices")
 ax.set(xlabel="n",ylabel="a_n",xticks=ns,yticks=[-1,0,1],ylim=(-1.5,1.5))
 ax.legend(loc="center",fontsize=9,ncol=2);ax.grid(alpha=.15)
 fig.savefig(out/"filter_sequence.png",dpi=220);plt.close(fig)
+
+# 第8章：超積・超冪・証人列
+fig,ax=plt.subplots(figsize=(5.4,3),layout="constrained")
+ns=list(range(10))
+ax.plot(ns,[1/(n+1) for n in ns],"o-",color="#2166ac",label=r"$1/(n+1)$")
+ax.axhline(0,color="#d97706",ls="--",label="zero sequence")
+ax.set(xlabel="Index n",ylabel="Value",xticks=ns,ylim=(-.08,1.1))
+ax.legend(fontsize=9);ax.grid(alpha=.2)
+fig.savefig(out/"ultrapower_sequences.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,2.9),layout="constrained")
+ax.set(xlim=(-1,6),ylim=(-.4,3.5));ax.axis("off")
+for y,lab,row in [(2.7,"a = a'",[1,1,0,1,0,1]),(1.7,"b = b'",[0,1,1,1,0,1]),(.7,"Both",[0,1,0,1,0,1])]:
+    ax.text(-.15,y,lab,ha="right",va="center",fontsize=10)
+    for j,v in enumerate(row):
+        ax.scatter(j+.5,y,s=250,color="#2166ac" if v else "#e2e8f0")
+        ax.text(j+.5,y,str(v),ha="center",va="center",color="white" if v else "#334155")
+ax.text(3,-.05,"Where both agree, the sums agree",ha="center",fontsize=10)
+fig.savefig(out/"ultraproduct_representatives.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,3),layout="constrained")
+ax.set(xlim=(0,7),ylim=(0,4));ax.axis("off")
+for j in range(5):
+    x=1.1+j*1.2
+    ax.text(x,3.25,f"M{j}",ha="center",bbox=dict(boxstyle="round",fc="#e0eaf7",ec="#2166ac"))
+    ax.annotate("",xy=(x,2.1),xytext=(x,2.9),arrowprops=dict(arrowstyle="->",color="#64748b"))
+    ax.text(x,1.8,f"b{j}",ha="center",color="#16857c")
+    ax.annotate("",xy=(3.5,.8),xytext=(x,1.5),arrowprops=dict(arrowstyle="->",color="#16857c",alpha=.65))
+ax.text(3.5,.45,"Witness class [b]",ha="center",bbox=dict(boxstyle="round",fc="#e2f2ed",ec="#16857c"))
+fig.savefig(out/"los_witnesses.png",dpi=220);plt.close(fig)

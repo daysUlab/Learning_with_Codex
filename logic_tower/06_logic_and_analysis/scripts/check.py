@@ -269,3 +269,25 @@ assert len({1,2,3})>5/2 and len({3,4,5})>5/2
 assert len({1,2,3}&{3,4,5})==1
 assert {a for a in range(16) if a&6==6}=={6,7,14,15}
 print("chapter 7: all filters on 1-4 points, ultrafilter laws and finite partitions OK")
+
+# 第8章：有限主超フィルター上での演算・量化と数列の代表例
+for i in range(3):
+    seqs=list(product(range(3),repeat=3))
+    eq=lambda a,b:a[i]==b[i]
+    for a,b,c in product(seqs,repeat=3):
+        if eq(a,b):
+            assert eq(tuple(x+y for x,y in zip(a,c)),tuple(x+y for x,y in zip(b,c)))
+            assert eq(tuple(x*y for x,y in zip(a,c)),tuple(x*y for x,y in zip(b,c)))
+    for a in seqs:
+        for bits in product([False,True],repeat=9):
+            # 三要素領域における存在量化と、列の証人の存在の一致
+            left=any(bits[3*a[i]+v] for v in range(3))
+            right=any(bits[3*a[i]+b[i]] for b in seqs)
+            assert left==right
+for n in range(2001):
+    e=Fraction(1,n+1)
+    h=n+1
+    assert e*h==1 and (h+1)*e==1+e
+    assert (e<Fraction(1,1000))==(n>=1000)
+    assert ((-1)**n)**2==1
+print("chapter 8: finite principal ultraproduct and sequence identities OK (not free ultrafilter computation)")

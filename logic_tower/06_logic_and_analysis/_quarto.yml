@@ -20,6 +20,7 @@ book:
     - chapters/05_sets_and_ordinals.qmd
     - chapters/06_set_theories.qmd
     - chapters/07_ultrafilters.qmd
+    - chapters/08_ultraproducts.qmd
     - references.qmd
 format:
   html:
