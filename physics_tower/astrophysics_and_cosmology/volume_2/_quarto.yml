@@ -1,0 +1,30 @@
+project:
+  type: book
+  output-dir: _book
+
+lang: ja
+book:
+  title: "高校数学から解き明かす宇宙物理学"
+  subtitle: "宇宙のロマンを数学で再現する"
+  author: "Learning with Codex"
+  output-file: cosmic-physics
+  search: true
+  repo-url: https://github.com/daysUlab/Learning_with_Codex
+  chapters:
+    - index.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    html-math-method: mathjax
+    toc: true
+  pdf:
+    pdf-engine: lualatex
+    documentclass: scrreprt
+    papersize: a5
+    fontsize: 11pt
+    geometry: margin=17mm
+    toc: true
+    include-in-header: japanese.tex
