@@ -14,6 +14,7 @@ book:
   downloads: [pdf]
   chapters:
     - index.qmd
+    - chapters/00_physical_discoveries.qmd
     - part: "第I部　運動・状態・測定"
       chapters:
         - chapters/01_classical_mechanics.qmd
