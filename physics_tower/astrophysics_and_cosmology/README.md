@@ -9,7 +9,7 @@
 - [前編原稿](volume_1/index.qmd)
 - [後編原稿](volume_2/index.qmd)
 
-既存の[教科書制作手順](../../TEXTBOOK_WORKFLOW.md)に従う。Quartoと日本語LuaLaTeXがある環境で各巻のディレクトリから quarto render を実行する。前編の第1〜6章が初稿済み。公式観測画像の利用条件は[図版台帳](research/image_registry.md)に記載。ビルド前に Python 3 の取得スクリプトが公式画像をダウンロードするため、初回はインターネット接続が必要。第1〜5章のHTML/PDF共通ビルド成功（Actions run 46156609598）。全テーマの検証・目視レビューは未完了。
+既存の[教科書制作手順](../../TEXTBOOK_WORKFLOW.md)に従う。Quartoと日本語LuaLaTeXがある環境で各巻のディレクトリから quarto render を実行する。前編の第1〜7章が初稿済み。公式観測画像の利用条件は[図版台帳](research/image_registry.md)に記載。ビルド前に Python 3 の取得スクリプトが公式画像をダウンロードするため、初回はインターネット接続が必要。第1〜6章のHTML/PDF共通ビルド成功（Actions run 46157728164）。全テーマの検証・目視レビューは未完了。
 
 ## 随時公開
 

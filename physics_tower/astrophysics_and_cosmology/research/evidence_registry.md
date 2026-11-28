@@ -69,3 +69,14 @@
 | GW170817のストロンチウム | A/B | [ESO 2019](https://www.eso.org/public/news/eso1917/) | 金の個別スペクトル線の確実な同定とは別 |
 | GRB 230307Aのテルル解釈 | C | [Levan et al. 2023/2024](https://www.nature.com/articles/s41586-023-06759-1)、[Arunachalam et al. 2026](https://academic.oup.com/mnras/article/550/2/stag1158/8735174) | テルルはスペクトルの解釈。2026年研究は塵放射を仮定した場合のコンパクト連星起源との不整合を指摘 |
 | 太陽系の形成約46億年前 | A/B | [NASA Solar System](https://science.nasa.gov/solar-system/solar-system-facts/) | 物質の起源は複数の世代 |
+
+## 第7章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 1992年パルサー惑星、1995年太陽型星の惑星、2025年9月6000個 | A | [NASA 2019](https://science.nasa.gov/universe/exoplanets/nobel-winners-changed-our-understanding-with-exoplanet-discovery/)、[30 Years](https://science.nasa.gov/exoplanets/30-years-of-exoplanets-compilation/) | 6000個は歴史的節目で最新総数ではない |
+| 原始惑星系円盤と塵の分布 | A/B | [HH 30 2025](https://esawebb.org/images/potm2501b/) | 個別惑星の確認とは区別 |
+| 観測方法 | A/B | [NASA fact sheet](https://science.nasa.gov/resource/the-search-for-other-earths-fact-sheet/) | 選択効果、視線速度の傾き依存、減光から面積比 |
+| HIP 65426 bの直接像 | A | [ESA/Webb 2022](https://esawebb.org/images/HIP-65426b/) | 公開時査読前。地表の解像像ではない |
+| 自由浮遊惑星探索 | A/B/C | [Roman microlensing](https://science.nasa.gov/mission/roman-space-telescope/microlensing/) | 質量・距離・速度の縮退、束縛状態の不確実性 |
+| 55 Cancri e、Kepler-16 b | A/B | [NASA 55 Cancri e](https://science.nasa.gov/exoplanet-catalog/55-cancri-e/)、[Kepler-16 b](https://science.nasa.gov/exoplanets/other-stars-other-worlds/kepler-16-b-almost-a-real-life-tatooine/) | スーパーアースは居住可能性を意味しない |

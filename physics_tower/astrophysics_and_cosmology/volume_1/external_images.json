@@ -132,6 +132,26 @@
       "date": "2023-10-25",
       "type": "近赤外線観測合成画像（公式注釈付き）",
       "chapter": 6
+    },
+    {
+      "file": "hh30.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/large/potm2501b.jpg",
+      "source": "https://esawebb.org/images/potm2501b/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "ESA/Webb, NASA & CSA, ESA/Hubble, ALMA (ESO/NAOJ/NRAO)",
+      "date": "2025-02-04",
+      "type": "多波長観測画像の比較",
+      "chapter": 7
+    },
+    {
+      "file": "hip65426b.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/large/HIP-65426b.jpg",
+      "source": "https://esawebb.org/images/HIP-65426b/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA/ESA/CSA, A Carter (UCSC), the ERS 1386 team, and A. Pagan (STScI)",
+      "date": "2022-09-01",
+      "type": "赤外線直接撮像の比較",
+      "chapter": 7
     }
   ]
 }
