@@ -25,6 +25,7 @@ book:
     - chapters/09_neutron_stars.qmd
     - chapters/10_pulsars_magnetars.qmd
     - chapters/11_black_hole_discovery.qmd
+    - chapters/12_falling_into_black_holes.qmd
 
 format:
   html:

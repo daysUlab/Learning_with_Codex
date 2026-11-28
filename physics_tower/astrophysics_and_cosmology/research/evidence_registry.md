@@ -125,3 +125,13 @@
 | S2の周期・歳差・中心質量 | A/B | [ESO 2020](https://www.eso.org/public/news/eso2006/) | 軌道の観測は地平面そのものの直接検出ではない |
 | GW150914 | A/B | [LIGO](https://ligo.org/detections/gw150914/)、[質量推定](https://ligo.org/science-summaries/o1imbh/) | 波形モデルによる質量推定 |
 | M87*・Sgr A*の影 | A/B | [EHT 2019](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole)、[EHT 2022](https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy) | 2017年の電波観測の再構成。リング、影、地平面、内部を区別 |
+
+## 第12章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 静止時計の時間遅れ・落下時の信号 | B | [NASA FAQ](https://science.nasa.gov/apod/frequently-asked-questions-faqs-on-black-holes/)、[Einstein Online](https://www.einstein-online.info/en/spotlight/changing_places/) | 静止時計の比較と自由落下の固有時を区別。計算値で実測ではない |
+| 潮汐効果の質量依存性 | B | [NASA解説](https://science.nasa.gov/universe/black-holes/what-happens-when-something-gets-too-close-to-a-black-hole/)、[等価原理](https://www.einstein-online.info/en/spotlight/equivalence_principle/) | 2mの間隔に対する非回転解の局所相対加速度。安全性の評価ではない |
+| 光子球・ISCO | B | [NASA Anatomy](https://science.nasa.gov/universe/black-holes/anatomy/) | 非回転解の座標半径。影・地平面とは異なる |
+| 地平面・特異性 | B/C | [Einstein Online](https://www.einstein-online.info/en/spotlight/singularities/) | 古典理論。測地線不完全性と内部の微視的状態を区別 |
+| 回転と時空の引きずり | B | [Einstein Online](https://www.einstein-online.info/en/spotlight/Rotating-Black-Holes-Observations-and-Working-in-General-Relativity/)、[frame-dragging](https://www.einstein-online.info/en/explandict/frame-dragging/) | エルゴ領域と地平面を区別 |

@@ -32,3 +32,5 @@
 ライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
 画像ファイルは公式配布URLからビルド前にダウンロードし、ローカルにキャッシュする。Quarto HTML/PDFの両方で同一のローカルファイルを参照する。今回の実行環境では外部CDNへの接続ができないため、バイナリ取得・描画は未検証。
+
+第12章：外部図版を追加せず、8点の独自SVGを収録。NASAの計算可視化は参考リンクのみで画像の転載なし。
