@@ -14,7 +14,7 @@
 | 8 | [モデルの列から新しいモデルを作る](chapters/08_ultraproducts.qmd) | 一次レビューCI待ち |
 | 9 | [超実数を数列から構成する](chapters/09_hyperreals.qmd) | 一次レビューCI待ち |
 | 10 | [無限小と実数の接続](chapters/10_standard_part.qmd) | 初稿・CI未確認 |
-| 11 | [無限小で微分を計算する](chapters/11_infinitesimal_derivatives.qmd) | TODO |
+| 11 | [無限小で微分を計算する](chapters/11_infinitesimal_derivatives.qmd) | 初稿・CI未確認 |
 | 12 | [無限個の和で積分を計算する](chapters/12_hyperfinite_integrals.qmd) | TODO |
 | 13 | [真理値を完全ブール代数にする](chapters/13_complete_boolean_algebras.qmd) | TODO |
 | 14 | [集合の所属そのものをブール値にする](chapters/14_boolean_valued_universe.qmd) | TODO |
@@ -23,7 +23,7 @@
 | 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | TODO |
 | 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | TODO |
 
-次の作業：第1〜10章の最新CI・main統合・公開確認、第11章。
+次の作業：最新CI・main統合・公開確認、第12章、第10〜12章一次レビュー。
 
 2026-11-28：第1章CI 46095306289成功、PR #117統合（d14720a）。第2章初稿・演習9問・図3点・有限ブール代数とDNFの検査追加。最新CI未確認。
 
@@ -50,3 +50,5 @@
 2026-11-28：CI 46124099682でPython検査成功、PDFは第3章の単独ドル記号で失敗。第2・3・5章の単独ドル記号10箇所を修正し、再発防止検査を追加。最新CI待ち。
 
 2026-11-28：第7〜9章一次レビュー（演習37問・図11点の参照）、第10章初稿（図3点・演習12問）を反映。最新CI未確認。
+
+2026-11-28：第11章初稿、図3点・演習12問。第10章までのCI 46125745820実行中に執筆。最新CI未確認。

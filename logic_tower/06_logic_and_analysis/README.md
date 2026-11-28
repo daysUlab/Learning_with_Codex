@@ -14,6 +14,7 @@
 - [第8章](chapters/08_ultraproducts.qmd)
 - [第9章](chapters/09_hyperreals.qmd)
 - [第10章](chapters/10_standard_part.qmd)
+- [第11章](chapters/11_infinitesimal_derivatives.qmd)
 - [執筆進捗](PROGRESS.md)
 - [レビュー記録](REVIEW.md)
 - [制作手順](../../TEXTBOOK_WORKFLOW.md)

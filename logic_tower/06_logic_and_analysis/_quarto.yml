@@ -23,6 +23,7 @@ book:
     - chapters/08_ultraproducts.qmd
     - chapters/09_hyperreals.qmd
     - chapters/10_standard_part.qmd
+    - chapters/11_infinitesimal_derivatives.qmd
     - references.qmd
 format:
   html:

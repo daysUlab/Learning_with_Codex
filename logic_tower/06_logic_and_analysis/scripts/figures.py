@@ -323,3 +323,32 @@ axs[0].set(ylabel="Converges to 2")
 axs[1].scatter(ns,[(-1)**n for n in ns],c=["#2166ac" if n%2==0 else "#d97706" for n in ns])
 axs[1].set(xlabel="Index n",ylabel="Two choices",yticks=[-1,1],ylim=(-1.5,1.5))
 fig.savefig(out/"standard_part_limits.png",dpi=220);plt.close(fig)
+
+# 第11章：割線と接線、絶対値、単位円
+import math
+fig,ax=plt.subplots(figsize=(5.4,3.5),layout="constrained")
+xs=[2.3+i/100 for i in range(126)]
+ax.plot(xs,[x*x for x in xs],color="#2166ac",lw=2,label="f(x) = x^2")
+a=3
+for h,col in [(0.5,"#d97706"),(.15,"#16857c")]:
+    ax.plot([2.3,3.5],[a*a+(2*a+h)*(x-a) for x in [2.3,3.5]],color=col,label=f"h = {h}")
+    ax.scatter([a,a+h],[a*a,(a+h)**2],color=col)
+ax.plot([2.3,3.5],[a*a+2*a*(x-a) for x in [2.3,3.5]],"--",color="#64748b",label="Tangent")
+ax.set(xlabel="x",ylabel="f(x)",xlim=(2.3,3.55),ylim=(4,13));ax.legend(fontsize=8)
+fig.savefig(out/"derivative_secants.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,3),layout="constrained")
+ax.plot([-2,0,2],[2,0,2],color="#2166ac",lw=2)
+ax.scatter([-1,0,1],[1,0,1],color="#16857c")
+ax.text(-1,1.25,"slope = -1",ha="center");ax.text(1,1.25,"slope = 1",ha="center")
+ax.set(xlabel="x",ylabel="|x|",xlim=(-2.2,2.2),ylim=(-.1,2.3));ax.grid(alpha=.2)
+fig.savefig(out/"derivative_absolute.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5,3.7),layout="constrained")
+theta=.55
+arc=[theta*i/100 for i in range(101)]
+ax.fill([0]+[math.cos(t) for t in arc]+[0],[0]+[math.sin(t) for t in arc]+[0],color="#e0eaf7")
+ax.plot([0,1,1,0],[0,0,math.tan(theta),0],color="#d97706")
+ax.plot([0,1,math.cos(theta),0],[0,0,math.sin(theta),0],color="#16857c",lw=2)
+ax.plot([math.cos(t) for t in arc],[math.sin(t) for t in arc],color="#2166ac",lw=2)
+ax.text(.21,.065,"t",fontsize=12);ax.text(1.03,.02,"A");ax.text(.79,.54,"B");ax.text(1.03,math.tan(theta),"C");ax.text(-.06,-.05,"O")
+ax.set(xlim=(-.12,1.23),ylim=(-.12,.82),aspect="equal");ax.axis("off")
+fig.savefig(out/"derivative_trig.png",dpi=220);plt.close(fig)

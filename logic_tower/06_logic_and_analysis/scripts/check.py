@@ -320,3 +320,15 @@ for n in range(1,501):
     assert abs(2+(-1)**n*e-2)==e
     assert 0<e/(2*(2+e))<e/4
 print("chapter 10: standard-part rational examples OK")
+
+# 第11章：差商の有限標本検算
+for a in map(Fraction,range(-3,4)):
+    for n in range(1,101):
+        for sign in (-1,1):
+            h=Fraction(sign,n+1)
+            assert ((a+h)**2-a*a)/h==2*a+h
+            assert ((a+h)**3-a**3)/h==3*a*a+3*a*h+h*h
+            assert abs(h)/h==sign
+            if a and a+h:
+                assert (1/(a+h)-1/a)/h==-1/(a*(a+h))
+print("chapter 11: finite difference samples OK")
