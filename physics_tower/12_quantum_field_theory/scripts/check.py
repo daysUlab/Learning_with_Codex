@@ -57,3 +57,11 @@ import runpy
 for test_path in sorted((root/"scripts").glob("check_review_*.py")):
     runpy.run_path(str(test_path), run_name="__main__")
 
+
+# 第1〜6章：各節・小節の直後に初読者向けの橋渡しを置く。
+for path in paths[:6]:
+    s = (root/path).read_text()
+    headings = re.findall(r"^#{2,3} .+$", s, re.M)
+    bridges = re.findall(r'^#{2,3} .+\n\n::: \{\.callout-tip title="高校数学からの橋渡し"\}\n[^\n]+\n:::$', s, re.M)
+    assert len(headings) == len(bridges), f"missing section bridge: {path} ({len(bridges)}/{len(headings)})"
+print("chapter 1–6 section bridges: OK")
