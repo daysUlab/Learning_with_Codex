@@ -115,3 +115,13 @@
 | Velaグリッチ | A/B/C | [2018](https://pubmed.ncbi.nlm.nih.gov/29643483/)、[2019](https://doi.org/10.1038/s41550-019-0844-6) | 超流動の解釈はモデル依存 |
 | マグネター巨大フレア | A/B | [Palmer 2005](https://doi.org/10.1038/nature03525) | 磁場はモデル推定、機構は研究中 |
 | FRBとマグネターの関連 | A/B/C | [CHIME 2020](https://doi.org/10.1038/s41586-020-2863-y)、[STARE2 2020](https://doi.org/10.1038/s41586-020-2872-x)、[GECAM 2026](https://doi.org/10.1093/mnras/stag312) | 2026年刊行論文は2022年の事象。全FRBの起源を確定しない |
+
+## 第11章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 暗黒星からシュワルツシルト解・崩壊へ | B | [APS](https://www.aps.org/apsnews/2009/11/1783-john-michell-black-holes)、[1916英訳](https://arxiv.org/abs/physics/9905030)、[1939](https://doi.org/10.1103/PhysRev.56.455) | ニュートン力学の発想と相対論の因果境界を区別 |
+| はくちょう座X-1約21太陽質量 | A/B | [Miller-Jones 2021](https://pubmed.ncbi.nlm.nih.gov/33602863/) | 距離と連星モデルに依存 |
+| S2の周期・歳差・中心質量 | A/B | [ESO 2020](https://www.eso.org/public/news/eso2006/) | 軌道の観測は地平面そのものの直接検出ではない |
+| GW150914 | A/B | [LIGO](https://ligo.org/detections/gw150914/)、[質量推定](https://ligo.org/science-summaries/o1imbh/) | 波形モデルによる質量推定 |
+| M87*・Sgr A*の影 | A/B | [EHT 2019](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole)、[EHT 2022](https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy) | 2017年の電波観測の再構成。リング、影、地平面、内部を区別 |

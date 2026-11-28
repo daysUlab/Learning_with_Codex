@@ -24,8 +24,10 @@
 | 8 | k218b_spectrum.jpg | 2023-09-11 | 実測スペクトルと当時のモデル・想像図の合成 | [公式画像](https://esawebb.org/images/weic2321b/)、NASA, CSA, ESA, J. Olmstead (STScI), N. Madhusudhan (Cambridge University)、[利用条件](https://esawebb.org/copyright/) |
 | 9 | rxj1856_hubble.jpg | 1997-09-24 | 紫外・可視光観測合成（公式注釈付き） | [公式画像](https://esahubble.org/images/opo9732a/)、Fred Walter (State University of New York at Stony Brook) and NASA/ESA、[利用条件](https://esahubble.org/copyright/) |
 | 9 | vela_remnant.jpg | 2009-12-03 | 可視光観測画像（超新星残骸） | [公式画像](https://www.eso.org/public/images/vela-snr-schmidtourcomp/)、ESO、[利用条件](https://www.eso.org/public/copyright/) |
-
 | 10 | crab_2024_hubble.jpg | 2026-03-23 | 可視光観測画像（2024年観測） | [公式画像](https://esahubble.org/images/heic2607a/)、NASA, ESA, STScI, W. Blair (JHU). Image Processing: J. DePasquale (STScI)、[利用条件](https://esahubble.org/copyright/) |
+
+| 11 | m87_eht2019.jpg | 2019-04-10 | 電波干渉計観測からの再構成画像 | [公式画像](https://www.eso.org/public/images/eso1907a/)、EHT Collaboration、[利用条件](https://www.eso.org/public/copyright/) |
+| 11 | sgra_eht2022.jpg | 2022-05-12 | 電波干渉計観測からの平均再構成画像 | [公式画像](https://www.eso.org/public/images/eso2208-eht-mwa/)、EHT Collaboration、[利用条件](https://www.eso.org/public/copyright/) |
 
 ライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
