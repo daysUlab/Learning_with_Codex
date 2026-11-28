@@ -17,3 +17,13 @@
 - Stanford Encyclopedia of Philosophy, [Gödel’s Incompleteness Theorems](https://plato.stanford.edu/entries/goedel-incompleteness/)：第一・第二不完全性定理とRosserの強化（2026-11-28概説確認）。定理の完全な証明は本章の範囲外。
 
 - Wolfram MathWorld, [Stone Representation Theorem](https://mathworld.wolfram.com/StoneRepresentationTheorem.html)：表現定理の位相的な形を確認（2026-11-28）。本文の証明・例は独自に記述。
+
+## 第14〜15章：ブール値解析と定理の翻訳
+
+- A. G. Kusraev and S. S. Kutateladze, [The Gordon theorem: origins and meaning](https://doi.org/10.23671/VNC.2019.21.44626), 2019：Gordonの定理とKantorovichの移行の考え方（概要確認）。
+- [Geometric Characterization of Injective Banach Lattices](https://www.mdpi.com/2227-7390/9/3/250), Mathematics 9(3), 250, 2021：Gordonの定理と有界下降のStone空間上の連続関数表現を確認。
+- Masanao Ozawa, [From Boolean Valued Analysis to Quantum Set Theory: Mathematical Worldview of Gaisi Takeuti](https://www.mdpi.com/2227-7390/9/4/397), Mathematics 9(4), 397, 2021：移行による外部定理への翻訳、自己共役作用素、von Neumann代数の応用を確認。
+- [Boolean Valued Representation of Random Sets and Markov Kernels with Application to Large Deviations](https://www.mdpi.com/2227-7390/8/10/1848), Mathematics 8(10), 1848, 2020：移行・最大・混合原理と測度代数による表現の参考。
+- [Boolean valued interpretation of Banach space theory and module structures of von Neumann algebras](https://www.cambridge.org/core/journals/nagoya-mathematical-journal/article/boolean-valued-interpretation-of-banach-space-theory-and-module-structures-of-von-neumann-algebras/4D74794FF43BC416E87A5697ABDAE929)：Banach加群への移行の論文概要を確認。
+
+2026-11-28確認。第15章のモニック多項式の根の移行例は引用した表現定理と代数学の基本定理・根の評価から本書で導出した例であり、文献からの転載ではない。

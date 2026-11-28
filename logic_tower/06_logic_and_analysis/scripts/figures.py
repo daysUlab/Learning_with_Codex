@@ -432,3 +432,19 @@ for x,lab,col in [(2.5,"p: {1, 2}","#2166ac"),(7.5,"q: {2, 3}","#16857c")]:
 ax.text(5,1.8,"Mixed name u",ha="center",fontsize=12)
 ax.text(5,1,"1: p    2: 1    3: q",ha="center",fontsize=12,bbox=dict(boxstyle="round,pad=.5",fc="#e0eaf7",ec="#2166ac"))
 fig.savefig(out/"bname_mixing.png",dpi=220);plt.close(fig)
+
+# 第15章：成分別演算、有理切断、移行の流れ
+fig,ax=plt.subplots(figsize=(5.5,3.2),layout="constrained")
+for i,(lab,vals) in enumerate([("x",(2,5)),("y",(3,1)),("x+y",(5,6)),("xy",(6,5))]):
+    ax.bar(i-.18,vals[0],width=.33,color="#2166ac",label="A" if i==0 else None)
+    ax.bar(i+.18,vals[1],width=.33,color="#16857c",label="B" if i==0 else None)
+ax.set_xticks(range(4),["x","y","x+y","xy"]);ax.set_ylabel("Value");ax.legend()
+fig.savefig(out/"bva_vectors.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,3.1),layout="constrained")
+xx=[j/100 for j in range(101)]
+ax.plot(xx,xx,color="#2166ac",label="f(t) = t")
+ax.axhline(.5,color="#64748b",ls="--",label="r = 1/2")
+ax.axvspan(.5,1,color="#16857c",alpha=.2,label="Boolean value: r < f")
+ax.set(xlabel="t",ylabel="f(t)",xlim=(0,1),ylim=(0,1));ax.legend(fontsize=8)
+fig.savefig(out/"bva_cuts.png",dpi=220);plt.close(fig)
+diagram([(5,4.6,"Complex polynomial"),(5,3.3,"Root in V^B"),(2.5,1.1,"Measurable root"),(7.5,1.1,"Continuous root on K")],[(0,1),(1,2),(1,3)],"bva_transfer.png")

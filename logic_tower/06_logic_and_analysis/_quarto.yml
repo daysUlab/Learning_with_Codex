@@ -27,6 +27,7 @@ book:
     - chapters/12_hyperfinite_integrals.qmd
     - chapters/13_complete_boolean_algebras.qmd
     - chapters/14_boolean_valued_universe.qmd
+    - chapters/15_boolean_valued_analysis.qmd
     - references.qmd
 format:
   html:

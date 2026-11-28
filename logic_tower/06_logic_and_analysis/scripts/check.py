@@ -415,3 +415,18 @@ for x,y in product(names,repeat=2):
     mixed=tuple((bv_check(k),(x[k][1]&1)|(y[k][1]&2)) for k in range(3))
     assert bv_equal(mixed,x)&1 and bv_equal(mixed,y)&2
 print("chapter 14: finite B-name recursion, atomic semantics, mixing samples OK")
+
+# 第15章：成分別演算・順序と複素多項式の有限例
+x,y=(2,5),(3,1)
+assert tuple(a+b for a,b in zip(x,y))==(5,6)
+assert tuple(a*b for a,b in zip(x,y))==(6,5)
+assert tuple(max(a,b) for a,b in zip(x,y))==(3,5)
+assert sum(bit for bit,a,b in zip([1,2],x,y) if a<=b)==1
+assert sum(bit for bit,a,b in zip([1,2],x,y) if b<=a)==2
+assert tuple(a*b for a,b in zip((1,0),(0,1)))==(0,0)
+assert tuple(z*z for z in (1,1j))==(1,-1)
+for a,b in product(range(-3,4),repeat=2):
+    import cmath
+    roots=(cmath.sqrt(a),cmath.sqrt(b))
+    assert all(abs(z*z-v)<1e-12 for z,v in zip(roots,(a,b)))
+print("chapter 15: finite component operations and root samples OK")

@@ -18,6 +18,7 @@
 - [第12章](chapters/12_hyperfinite_integrals.qmd)
 - [第13章](chapters/13_complete_boolean_algebras.qmd)
 - [第14章](chapters/14_boolean_valued_universe.qmd)
+- [第15章](chapters/15_boolean_valued_analysis.qmd)
 - [執筆進捗](PROGRESS.md)
 - [レビュー記録](REVIEW.md)
 - [制作手順](../../TEXTBOOK_WORKFLOW.md)

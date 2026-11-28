@@ -76,9 +76,9 @@ $$
 名前 u,v に対して、所属の真理値を
 
 $$
-\llbracket u\in v\rrbracket=
+\mathopen{[\![} u\in v\mathclose{]\!]}=
 \bigvee_{t\in\operatorname{dom}v}
-(v(t)\wedge\llbracket u=t\rrbracket)
+(v(t)\wedge\mathopen{[\![} u=t\mathclose{]\!]})
 $$
 
 と定義します。v の各候補 t について、t の係数と u=t の真理値の両方が成立する部分を集めます。
@@ -86,18 +86,18 @@ $$
 等号のために補助記号を導入します。
 
 $$
-\llbracket u\subseteq v\rrbracket=
+\mathopen{[\![} u\subseteq v\mathclose{]\!]}=
 \bigwedge_{t\in\operatorname{dom}u}
-(u(t)\Rightarrow\llbracket t\in v\rrbracket).
+(u(t)\Rightarrow\mathopen{[\![} t\in v\mathclose{]\!]}).
 $$
 
 そして
 
 $$
 \begin{aligned}
-\llbracket u=v\rrbracket
-&=\llbracket u\subseteq v\rrbracket\\
-&\quad\wedge\llbracket v\subseteq u\rrbracket
+\mathopen{[\![} u=v\mathclose{]\!]}
+&=\mathopen{[\![} u\subseteq v\mathclose{]\!]}\\
+&\quad\wedge\mathopen{[\![} v\subseteq u\mathclose{]\!]}
 \end{aligned}
 $$
 
@@ -110,7 +110,7 @@ $$
 通常の集合 x,y について
 
 $$
-\llbracket\check x\in\check y\rrbracket=
+\mathopen{[\![}\check x\in\check y\mathclose{]\!]}=
 \begin{cases}
 1&x\in y,\\
 0&x\notin y
@@ -119,19 +119,19 @@ $$
 
 であり、等号についても x=y の場合に1、そうでなければ0です。これを二つのランクについての相互帰納法で示します。
 
-所属の式では y の各元 z に対して係数は1であり、帰納法の仮定から $\llbracket\check x=\check z\rrbracket$ は通常の等号の真理値です。その上限が1になることと x∈y は同値です。
+所属の式では y の各元 z に対して係数は1であり、帰納法の仮定から $\mathopen{[\![}\check x=\check z\mathclose{]\!]}$ は通常の等号の真理値です。その上限が1になることと x∈y は同値です。
 
 等号の式ではすべての係数が1なので、含意 $1\Rightarrow a=a$ から、x の各元が y に所属することと y の各元が x に所属することの両方を要求します。帰納法の仮定と通常の集合の外延性により、x=y の場合に限り1になります。
 
 ## 四元代数で計算する
 
-冒頭の u について $\llbracket\check 1\in u\rrbracket=p$ です。標準名の等号は、1=1 の項だけが1で、それ以外は0だからです。同様に
+冒頭の u について $\mathopen{[\![}\check 1\in u\mathclose{]\!]}=p$ です。標準名の等号は、1=1 の項だけが1で、それ以外は0だからです。同様に
 
 $$
 \begin{aligned}
-\llbracket\check 2\in u\rrbracket&=1,\\
-\llbracket\check 3\in u\rrbracket&=q,\\
-\llbracket\check 4\in u\rrbracket&=0.
+\mathopen{[\![}\check 2\in u\mathclose{]\!]}&=1,\\
+\mathopen{[\![}\check 3\in u\mathclose{]\!]}&=q,\\
+\mathopen{[\![}\check 4\in u\mathclose{]\!]}&=0.
 \end{aligned}
 $$
 
@@ -139,7 +139,7 @@ $$
 
 $$
 \begin{aligned}
-\llbracket u\subseteq v\rrbracket
+\mathopen{[\![} u\subseteq v\mathclose{]\!]}
 &=(p\Rightarrow1)\wedge(1\Rightarrow1)\\
 &\quad\wedge(q\Rightarrow0)\\
 &=\neg q=p.
@@ -149,7 +149,7 @@ $$
 逆向きは
 
 $$
-\llbracket v\subseteq u\rrbracket
+\mathopen{[\![} v\subseteq u\mathclose{]\!]}
 =(1\Rightarrow p)\wedge(1\Rightarrow1)=p.
 $$
 
@@ -170,14 +170,14 @@ $$
 
 $$
 \begin{aligned}
-\llbracket\neg\varphi\rrbracket
-&=\neg\llbracket\varphi\rrbracket,\\
-\llbracket\varphi\wedge\psi\rrbracket
-&=\llbracket\varphi\rrbracket\wedge
-\llbracket\psi\rrbracket,\\
-\llbracket\varphi\vee\psi\rrbracket
-&=\llbracket\varphi\rrbracket\vee
-\llbracket\psi\rrbracket.
+\mathopen{[\![}\neg\varphi\mathclose{]\!]}
+&=\neg\mathopen{[\![}\varphi\mathclose{]\!]},\\
+\mathopen{[\![}\varphi\wedge\psi\mathclose{]\!]}
+&=\mathopen{[\![}\varphi\mathclose{]\!]}\wedge
+\mathopen{[\![}\psi\mathclose{]\!]},\\
+\mathopen{[\![}\varphi\vee\psi\mathclose{]\!]}
+&=\mathopen{[\![}\varphi\mathclose{]\!]}\vee
+\mathopen{[\![}\psi\mathclose{]\!]}.
 \end{aligned}
 $$
 
@@ -185,10 +185,10 @@ $$
 
 $$
 \begin{aligned}
-\llbracket\exists x\,\varphi(x)\rrbracket
-&=\bigvee_{u\in V^B}\llbracket\varphi(u)\rrbracket,\\
-\llbracket\forall x\,\varphi(x)\rrbracket
-&=\bigwedge_{u\in V^B}\llbracket\varphi(u)\rrbracket.
+\mathopen{[\![}\exists x\,\varphi(x)\mathclose{]\!]}
+&=\bigvee_{u\in V^B}\mathopen{[\![}\varphi(u)\mathclose{]\!]},\\
+\mathopen{[\![}\forall x\,\varphi(x)\mathclose{]\!]}
+&=\bigwedge_{u\in V^B}\mathopen{[\![}\varphi(u)\mathclose{]\!]}.
 \end{aligned}
 $$
 
@@ -211,9 +211,9 @@ $$
 
 $$
 \begin{aligned}
-\omega\in\llbracket u\in v\rrbracket
+\omega\in\mathopen{[\![} u\in v\mathclose{]\!]}
 &\iff u_\omega\in v_\omega,\\
-\omega\in\llbracket u=v\rrbracket
+\omega\in\mathopen{[\![} u=v\mathclose{]\!]}
 &\iff u_\omega=v_\omega.
 \end{aligned}
 $$
@@ -223,7 +223,7 @@ $$
 さらに論理式についての帰納法で
 
 $$
-\omega\in\llbracket\varphi(u_1,\ldots,u_k)\rrbracket
+\omega\in\mathopen{[\![}\varphi(u_1,\ldots,u_k)\mathclose{]\!]}
 \iff V\models\varphi((u_1)_\omega,\ldots,(u_k)_\omega)
 $$
 
@@ -238,7 +238,7 @@ $$
 **混合補題。** 集合 I を添字集合とし、$(b_i)_{i\in I}$ を1の分割、$(u_i)_{i\in I}$ を名前の族とします。このとき全ての i について
 
 $$
-b_i\le\llbracket u=u_i\rrbracket
+b_i\le\mathopen{[\![} u=u_i\mathclose{]\!]}
 $$
 
 を満たす名前 u が存在します。
@@ -252,24 +252,24 @@ $$
 
 と置きます。D は集合であり、その名前のランクには上界があるため u は名前です。
 
-証明には $\llbracket t=t\rrbracket=1$ を用います。これはランク帰納法で直接示せます。各候補 s の自己等号が1なら $\llbracket s\in t\rrbracket\ge t(s)$ なので、包含の各含意は1になります。
+証明には $\mathopen{[\![} t=t\mathclose{]\!]}=1$ を用います。これはランク帰納法で直接示せます。各候補 s の自己等号が1なら $\mathopen{[\![} s\in t\mathclose{]\!]}\ge t(s)$ なので、包含の各含意は1になります。
 
 第13章の無限分配則と反鎖の性質から $b_i\wedge u(t)=b_i\wedge w_i(t)$ です。従って任意の t∈D について
 
 $$
-b_i\wedge u(t)\le\llbracket t\in u_i\rrbracket
+b_i\wedge u(t)\le\mathopen{[\![} t\in u_i\mathclose{]\!]}
 $$
 
-が成立します。t が u_i の定義域にある場合は自己等号から、ない場合は左辺が0であることから従います。含意の性質により $b_i\le\llbracket u\subseteq u_i\rrbracket$ です。
+が成立します。t が u_i の定義域にある場合は自己等号から、ない場合は左辺が0であることから従います。含意の性質により $b_i\le\mathopen{[\![} u\subseteq u_i\mathclose{]\!]}$ です。
 
 逆に t が u_i の定義域にあるなら
 
 $$
 b_i\wedge u_i(t)\le u(t)
-\le\llbracket t\in u\rrbracket.
+\le\mathopen{[\![} t\in u\mathclose{]\!]}.
 $$
 
-従って $b_i\le\llbracket u_i\subseteq u\rrbracket$ でもあり、等号についての結論を得ます。
+従って $b_i\le\mathopen{[\![} u_i\subseteq u\mathclose{]\!]}$ でもあり、等号についての結論を得ます。
 
 ![反鎖の各係数に対応する名前を一つの名前に混合する。](../figures/bname_mixing.png){#fig-bname-mixing}
 
@@ -280,31 +280,31 @@ $$
 一般の B では、次の基本法則が成立します。
 
 - 自己等号の真理値は1、等号は対称。
-- $\llbracket u=v\rrbracket\wedge\llbracket v=w\rrbracket\le\llbracket u=w\rrbracket$。
-- $\llbracket u=v\rrbracket\wedge\llbracket\varphi(u)\rrbracket\le\llbracket\varphi(v)\rrbracket$（自由変数の置換）。
+- $\mathopen{[\![} u=v\mathclose{]\!]}\wedge\mathopen{[\![} v=w\mathclose{]\!]}\le\mathopen{[\![} u=w\mathclose{]\!]}$。
+- $\mathopen{[\![} u=v\mathclose{]\!]}\wedge\mathopen{[\![}\varphi(u)\mathclose{]\!]}\le\mathopen{[\![}\varphi(v)\mathclose{]\!]}$（自由変数の置換）。
 
 自己等号は先ほど証明し、対称性は定義から従います。推移性と原子式の置換則は名前のランクについての相互帰納法で示せます。例えば所属の左側の置換では、所属の定義を上限に展開し、無限分配則と各候補との等号の推移性を使います。一般の式については構造帰納法を用います。否定では等号の対称性で逆向きの置換も成立することを使い、存在量化では無限分配則を使います。原子式の相互帰納法の全詳細はここでは省略し、以下ではこの基本法則を引用します。
 
-最大原理とは、存在量化の真理値を実現する名前が一つ取れるという定理です。$a=\llbracket\exists x\,\varphi(x)\rrbracket$ とすると、ある名前 u が存在して
+最大原理とは、存在量化の真理値を実現する名前が一つ取れるという定理です。$a=\mathopen{[\![}\exists x\,\varphi(x)\mathclose{]\!]}$ とすると、ある名前 u が存在して
 
 $$
-\llbracket\varphi(u)\rrbracket=a
+\mathopen{[\![}\varphi(u)\mathclose{]\!]}=a
 $$
 
 となります。
 
-証明のため、0でない b≤a で、ある名前 v に対して $b\le\llbracket\varphi(v)\rrbracket$ となるものを集めます。この集合は a の下で順序稠密です。任意の非零 c≤a に対し、無限分配則から
+証明のため、0でない b≤a で、ある名前 v に対して $b\le\mathopen{[\![}\varphi(v)\mathclose{]\!]}$ となるものを集めます。この集合は a の下で順序稠密です。任意の非零 c≤a に対し、無限分配則から
 
 $$
 c=c\wedge a=
-\bigvee_v(c\wedge\llbracket\varphi(v)\rrbracket)
+\bigvee_v(c\wedge\mathopen{[\![}\varphi(v)\mathclose{]\!]})
 $$
 
 となり、少なくとも一つの項が非零になるからです。
 
 Zornの補題でこの集合内の極大反鎖を選べば、その上限は a です。もし残りが非零なら稠密性により反鎖へ追加できる元が存在するからです。各反鎖要素 b_i に対する証人 v_i は集合個だけ選びます。真のクラスからの選択を避けるため、各 b_i で証人の最小ランクを取り、そのランクの名前の集合から選択公理で選びます。
 
-必要なら補元 ¬a を加え、その上の名前を空名とします。混合補題で u を作ると、等号の置換則から各 $b_i\le\llbracket\varphi(u)\rrbracket$ です。その上限 a も同じ不等式を満たし、逆向きは存在量化の定義から従います。a=0 の場合は空名でも真理値0になります。
+必要なら補元 ¬a を加え、その上の名前を空名とします。混合補題で u を作ると、等号の置換則から各 $b_i\le\mathopen{[\![}\varphi(u)\mathclose{]\!]}$ です。その上限 a も同じ不等式を満たし、逆向きは存在量化の定義から従います。a=0 の場合は空名でも真理値0になります。
 
 ## 移行定理の位置づけ
 
@@ -325,11 +325,11 @@ Zornの補題でこの集合内の極大反鎖を選べば、その上限は a �
 1. p={A}, q={B} のとき p⇒q と q⇒p を求めよ。
 2. 空名の定義域を述べよ。
 3. 標準自然数2の名前を構成せよ。
-4. 冒頭の u について $\llbracket\check 3\in u\rrbracket$ を計算せよ。
-5. $\llbracket\check 1\in u\wedge\check 3\in u\rrbracket$ を求めよ。
-6. $\llbracket u=\check{\{2,3\}}\rrbracket$ を計算せよ。
-7. $\llbracket u\subseteq\check{\{1,2,3\}}\rrbracket$ を求めよ。
-8. $\llbracket u=\check{\{2\}}\rrbracket$ を計算せよ。
+4. 冒頭の u について $\mathopen{[\![}\check 3\in u\mathclose{]\!]}$ を計算せよ。
+5. $\mathopen{[\![}\check 1\in u\wedge\check 3\in u\mathclose{]\!]}$ を求めよ。
+6. $\mathopen{[\![} u=\check{\{2,3\}}\mathclose{]\!]}$ を計算せよ。
+7. $\mathopen{[\![} u\subseteq\check{\{1,2,3\}}\mathclose{]\!]}$ を求めよ。
+8. $\mathopen{[\![} u=\check{\{2\}}\mathclose{]\!]}$ を計算せよ。
 9. 異なる関数としての名前が等号の真理値1を持つ例を挙げよ。
 10. 任意の名前 u の自己等号が1になる理由を述べよ。
 11. p 上で $\check{\{1\}}$、q 上で $\check{\{1,3\}}$ を混合した名前の係数を求めよ。
