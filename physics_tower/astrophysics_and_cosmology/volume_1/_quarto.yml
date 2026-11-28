@@ -23,6 +23,7 @@ book:
     - chapters/07_exoplanets.qmd
     - chapters/08_habitability.qmd
     - chapters/09_neutron_stars.qmd
+    - chapters/10_pulsars_magnetars.qmd
 
 format:
   html:
