@@ -352,3 +352,62 @@ ax.plot([math.cos(t) for t in arc],[math.sin(t) for t in arc],color="#2166ac",lw
 ax.text(.21,.065,"t",fontsize=12);ax.text(1.03,.02,"A");ax.text(.79,.54,"B");ax.text(1.03,math.tan(theta),"C");ax.text(-.06,-.05,"O")
 ax.set(xlim=(-.12,1.23),ylim=(-.12,.82),aspect="equal");ax.axis("off")
 fig.savefig(out/"derivative_trig.png",dpi=220);plt.close(fig)
+
+# 第12章：有限分割・超有限区間・標識点の選択
+fig,axs=plt.subplots(1,2,figsize=(5.5,2.8),layout="constrained")
+for ax,m in zip(axs,[4,16]):
+    xs=[k/m for k in range(m)]
+    ax.bar(xs,[(x+1/m)**2 for x in xs],width=1/m,align="edge",color="#b4ddd5",edgecolor="#16857c",linewidth=.6)
+    curve=[j/100 for j in range(101)]
+    ax.plot(curve,[x*x for x in curve],color="#2166ac",lw=2)
+    ax.set(xlim=(0,1.02),ylim=(0,1.05),title=f"m = {m}",xlabel="x")
+axs[0].set_ylabel("f(x)")
+fig.savefig(out/"integral_rectangles.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,2.2),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,3));ax.axis("off")
+ax.hlines(1.5,.6,9.4,color="#64748b")
+for x,lab in [(1,"1"),(2,"2"),(3,"3"),(7,"H-2"),(8,"H-1"),(9,"H")]:
+    ax.scatter(x,1.5,color="#16857c",s=45);ax.text(x,1.1,lab,ha="center")
+ax.text(5,1.5,"...",ha="center",va="center",fontsize=16)
+ax.text(2,2.05,"standard indices",ha="center");ax.text(8,2.05,"nonstandard indices",ha="center")
+fig.savefig(out/"integral_hyperfinite.png",dpi=220);plt.close(fig)
+fig,axs=plt.subplots(2,1,figsize=(5.4,3.3),layout="constrained")
+for ax,v,label in [(axs[0],1,"Rational tags: sum = 1"),(axs[1],0,"Irrational tags: sum = 0")]:
+    m=8
+    for j in range(m):
+        ax.axvline(j/m,color="#94a3b8",lw=.7)
+        ax.scatter([(j+.45)/m],[v],color="#2166ac",s=20)
+    ax.axvline(1,color="#94a3b8",lw=.7)
+    ax.set(xlim=(0,1),ylim=(-.15,1.15),yticks=[0,1],title=label)
+fig.savefig(out/"integral_tags.png",dpi=220);plt.close(fig)
+
+# 第13章：四元代数、上界、正則開集合、円筒
+diagram([(5,4.5,"{A, B}"),(2.5,2.6,"{A}"),(7.5,2.6,"{B}"),(5,.8,"empty")],[(3,1),(3,2),(1,0),(2,0)],"complete_boolean_four.png")
+fig,ax=plt.subplots(figsize=(5.5,2.7),layout="constrained")
+ax.set(xlim=(-.5,11.6),ylim=(-.5,3.2));ax.axis("off")
+for y,excluded,label in [(2.1,{1},"Upper bound"),(.8,{1,5},"Smaller upper bound")]:
+    for k in range(11):
+        ax.scatter(k,y,s=44,facecolor="white" if k in excluded else "#16857c" if k%2==0 else "#94a3b8",edgecolor="#64748b")
+        if y==.8:ax.text(k,y-.35,str(k),ha="center",fontsize=8)
+    ax.text(0,y+.32,label,ha="left",fontsize=10)
+    ax.text(11,y,"...",ha="center")
+fig.savefig(out/"complete_boolean_missing.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,2.9),layout="constrained")
+ax.set(xlim=(-.15,1.15),ylim=(0,3.5));ax.axis("off")
+for y,label in [(2.7,"Open set with a gap"),(1.7,"Closure"),(.7,"Interior of closure")]:
+    ax.hlines(y,0,1,color="#2166ac",lw=3)
+    ax.scatter([0,1],[y,y],s=48,facecolor="#2166ac" if y==1.7 else "white",edgecolor="#2166ac",zorder=3)
+    if y==2.7:ax.scatter(.5,y,s=52,facecolor="white",edgecolor="#2166ac",zorder=3)
+    ax.text(.5,y+.26,label,ha="center",fontsize=10)
+fig.savefig(out/"regular_open_gap.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.5,3.8),layout="constrained")
+ax.set(xlim=(-.4,8.4),ylim=(-.4,3.6));ax.axis("off")
+for level in range(4):
+    for i,bits in enumerate(product("01",repeat=level)):
+        x=(i+.5)*8/(2**level)
+        y=3-level
+        if level:
+            xp=(i//2+.5)*8/(2**(level-1))
+            ax.plot([xp,x],[y+1,y],color="#94a3b8",lw=1)
+        ax.text(x,y,"["+"".join(bits)+"]" if level else "X",ha="center",va="center",fontsize=9,bbox=dict(boxstyle="round,pad=.22",fc="#e0eaf7",ec="#2166ac"),zorder=3)
+fig.savefig(out/"cantor_cylinders.png",dpi=220);plt.close(fig)

@@ -332,3 +332,47 @@ for a in map(Fraction,range(-3,4)):
             if a and a+h:
                 assert (1/(a+h)-1/a)/h==-1/(a*(a+h))
 print("chapter 11: finite difference samples OK")
+
+# 第12章：有限和公式、左右の差、区間の拡大を厳密有理数で検算
+for m in range(1,151):
+    e=Fraction(1,m)
+    right=sum(Fraction(k*k,m**3) for k in range(1,m+1))
+    left=sum(Fraction(k*k,m**3) for k in range(m))
+    assert right==Fraction(1,3)+e/2+e*e/6
+    assert left==Fraction(1,3)-e/2+e*e/6
+    assert right-left==e
+    assert sum(Fraction(k,m*m) for k in range(1,m+1))==Fraction(1,2)+e/2
+    assert sum(Fraction(k**3,m**4) for k in range(1,m+1))==Fraction(1,4)+e/2+e*e/4
+    assert 8*right==Fraction(8,3)+4*e+4*e*e/3
+    assert sum(Fraction((j+1)**3-j**3,m**3) for j in range(m))==1
+print("chapter 12: exact finite Riemann sums OK")
+
+# 第13章：四元ブール代数の任意族の上限と分配、有限二進列の円筒
+for mask in range(16):
+    family=[s for s in range(4) if mask>>s&1]
+    join=0
+    meet=3
+    for s in family:
+        join|=s
+        meet&=s
+    assert all(s&join==s for s in family)
+    assert all(join&u==join for u in range(4) if all(s&u==s for s in family))
+    assert all(meet&s==meet for s in family)
+    assert all(l&meet==l for l in range(4) if all(l&s==l for s in family))
+    for a in range(4):
+        rhs=0
+        for s in family:
+            rhs|=a&s
+        assert a&join==rhs
+for depth in range(1,9):
+    words=["".join(bits) for bits in product("01",repeat=depth)]
+    cyl=lambda s:{w for w in words if w.startswith(s)}
+    for k in range(depth):
+        for bits in product("01",repeat=k):
+            s="".join(bits)
+            assert cyl(s)==cyl(s+"0")|cyl(s+"1")
+            assert not cyl(s+"0")&cyl(s+"1")
+    parts=[cyl("0"*n+"1") for n in range(depth)]
+    assert sum(map(len,parts))==2**depth-1
+    assert set().union(*parts)==set(words)-{"0"*depth}
+print("chapter 13: finite Boolean families and cylinder samples OK (not infinite completion proof)")
