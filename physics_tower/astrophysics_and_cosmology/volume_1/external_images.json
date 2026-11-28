@@ -72,6 +72,26 @@
       "date": "2025-01-29",
       "type": "観測画像（ガス放射の疑似色重ね合わせ）",
       "chapter": 3
+    },
+    {
+      "file": "protostar_l1527.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/publicationjpg/weic2219a.jpg",
+      "source": "https://esawebb.org/images/weic2219a/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA, ESA, CSA, and STScI, J. DePasquale (STScI)",
+      "date": "2022-11-16",
+      "type": "近赤外線観測画像",
+      "chapter": 4
+    },
+    {
+      "file": "pillars_creation.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/publicationjpg/weic2216e.jpg",
+      "source": "https://esawebb.org/images/weic2216e/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI).",
+      "date": "2022-10-19",
+      "type": "近赤外線観測画像",
+      "chapter": 4
     }
   ]
 }

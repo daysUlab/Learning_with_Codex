@@ -39,3 +39,12 @@
 | ラニアケア超銀河団 | A/B | [Tully et al. 2014](https://doi.org/10.1038/nature13674) | 固有速度場の再構成・定義に依存 |
 | 銀河の立体地図・ウェブ・ボイド | A/B | [DESI 2021](https://www.desi.lbl.gov/2021/07/22/the-beginnings-of-the-3-dimensional-map/)、[DESI 2026-11-15](https://www.desi.lbl.gov/2026/11/15/fifty-years-of-cosmic-cartography-in-your-hands/) | 距離モデル・選択効果 |
 | ガスフィラメント約300万光年、約150時間観測 | A/B | [ESO 2025-01-29](https://www.eso.org/public/images/potw2504a/) | ガスの放射の疑似色画像。暗黒物質の直接撮影ではない |
+
+## 第4章（2026-11-28確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 原始星・分子雲の観測 | A/B | [L1527](https://esawebb.org/images/weic2219a/)、[創造の柱](https://esawebb.org/images/weic2216e/) | 赤外線画像の表示色は可視光の色ではない |
+| 核融合・恒星進化・内部構造 | B | [NASA Stars](https://science.nasa.gov/universe/stars/)、[Sun](https://science.nasa.gov/sun/facts/) | 内部温度はモデル推定、核融合は圧力の維持に寄与 |
+| HR図の分布 | A/B | [ESA Gaia 2018](https://www.esa.int/media/gaia-s-hertzsprung-russell-diagram)、[OpenStax](https://openstax.org/books/astronomy/pages/18-4-the-h-r-diagram) | 模式図は実測点ではない |
+| 太陽ニュートリノの種類の変化 | A/B | [SNO 2002](https://pubmed.ncbi.nlm.nih.gov/12097025/)、[Nobel 2015](https://www.nobelprize.org/prizes/physics/2015/press-release/) | 電子成分と全活性成分を区別 |

@@ -10,12 +10,14 @@ book:
   author: "Learning with Codex"
   output-file: cosmic-romance
   search: true
+  downloads: [pdf]
   repo-url: https://github.com/daysUlab/Learning_with_Codex
   chapters:
     - index.qmd
     - chapters/01_cosmic_scale.qmd
     - chapters/02_looking_back.qmd
     - chapters/03_galaxies_cosmic_web.qmd
+    - chapters/04_why_stars_shine.qmd
 
 format:
   html:

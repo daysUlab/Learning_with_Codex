@@ -13,6 +13,9 @@
 | 3 | abell2744.jpg | 2014-01-07 | 観測画像（銀河団） | [公式画像](https://esahubble.org/images/heic1401a/)、NASA, ESA, and J. Lotz, M. Mountain, A. Koekemoer, and the HFF Team (STScI).、[利用条件](https://esahubble.org/copyright/) |
 | 3 | cosmic_filament.jpg | 2025-01-29 | 観測画像（ガス放射の疑似色重ね合わせ） | [公式画像](https://www.eso.org/public/images/potw2504a/)、ESO/D. Tornotti et al./Hubble: M. Revalski, P. Francis et al.、[利用条件](https://www.eso.org/public/copyright/) |
 
+| 4 | protostar_l1527.jpg | 2022-11-16 | 近赤外線観測画像 | [公式画像](https://esawebb.org/images/weic2219a/)、NASA, ESA, CSA, and STScI, J. DePasquale (STScI)、[利用条件](https://esawebb.org/copyright/) |
+| 4 | pillars_creation.jpg | 2022-10-19 | 近赤外線観測画像 | [公式画像](https://esawebb.org/images/weic2216e/)、NASA, ESA, CSA, STScI; J. DePasquale, A. Koekemoer, A. Pagan (STScI).、[利用条件](https://esawebb.org/copyright/) |
+
 ライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
 画像ファイルは公式配布URLからビルド前にダウンロードし、ローカルにキャッシュする。Quarto HTML/PDFの両方で同一のローカルファイルを参照する。今回の実行環境では外部CDNへの接続ができないため、バイナリ取得・描画は未検証。

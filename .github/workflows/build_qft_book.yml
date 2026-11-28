@@ -7,12 +7,16 @@ on:
       - 'logic_tower/06_logic_and_analysis/**'
       - '.github/workflows/build_qft_book.yml'
       - '.github/workflows/build_logic_book.yml'
+      - 'physics_tower/astrophysics_and_cosmology/**'
+      - '.github/workflows/astrophysics-book.yml'
   pull_request:
     paths:
       - 'physics_tower/12_quantum_field_theory/**'
       - 'logic_tower/06_logic_and_analysis/**'
       - '.github/workflows/build_qft_book.yml'
       - '.github/workflows/build_logic_book.yml'
+      - 'physics_tower/astrophysics_and_cosmology/**'
+      - '.github/workflows/astrophysics-book.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,6 +24,8 @@ concurrency:
   group: textbook-build-${{ github.ref }}
   cancel-in-progress: false
 jobs:
+  cosmic:
+    uses: ./.github/workflows/astrophysics-book.yml
   logic:
     uses: ./.github/workflows/build_logic_book.yml
   build:
@@ -75,7 +81,7 @@ jobs:
           name: qft-book
           path: physics_tower/12_quantum_field_theory/_book
   assemble:
-    needs: [build, logic]
+    needs: [build, logic, cosmic]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/download-artifact@v4
@@ -87,16 +93,30 @@ jobs:
           test -s site/index.html
           test -s site/qft.pdf
           test ! -e site/logic
+          test ! -e site/cosmic
+          test ! -e site/cosmic-physics
       - uses: actions/download-artifact@v4
         with:
           name: logic-book
           path: site/logic
-      - name: 二冊の生成物を確認
+      - uses: actions/download-artifact@v4
+        with:
+          name: cosmic-romance-book
+          path: site/cosmic
+      - uses: actions/download-artifact@v4
+        with:
+          name: cosmic-physics-book
+          path: site/cosmic-physics
+      - name: 四冊の生成物を確認
         run: |
           test -s site/index.html
           test -s site/qft.pdf
           test -s site/logic/index.html
           test -s site/logic/logic.pdf
+          test -s site/cosmic/index.html
+          test -s site/cosmic/cosmic-romance.pdf
+          test -s site/cosmic-physics/index.html
+          test -s site/cosmic-physics/cosmic-physics.pdf
           printf '%s\n' "$GITHUB_SHA" > site/textbook-version.txt
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
@@ -115,7 +135,7 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
-      - name: 二冊の公開と版を確認
+      - name: 四冊の公開と版を確認
         env:
           SITE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
@@ -127,7 +147,7 @@ jobs:
             sleep 10
           done
           test "$version" = "$GITHUB_SHA"
-          for path in / /qft.pdf /logic/ /logic/logic.pdf; do
+          for path in / /qft.pdf /logic/ /logic/logic.pdf /cosmic/ /cosmic/cosmic-romance.pdf /cosmic-physics/ /cosmic-physics/cosmic-physics.pdf; do
             curl -fsSL --retry 3 --max-time 60 "$base$path" -o /dev/null
           done
   release:
