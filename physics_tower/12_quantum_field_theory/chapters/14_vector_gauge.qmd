@@ -10,6 +10,10 @@
 
 自然単位系 c=ℏ=1、計量 $\eta=\operatorname{diag}(1,-1,-1,-1)$ を用います。四元ポテンシャルを $A^\mu=(A^0,\boldsymbol A)$ とします。空間ベクトルの添字は通常の三次元 Euclid 内積で扱います。
 
+## 数学の準備：ベクトル場の微分
+
+ベクトル場は各点に矢印を割り当てます。例えば $\boldsymbol A=(-y,x,0)$ では原点の周りを回る矢印になります。$\nabla\cdot\boldsymbol A=\partial_xA_x+\partial_yA_y+\partial_zA_z$ は発散、$\nabla\times\boldsymbol A=(\partial_yA_z-\partial_zA_y,\partial_zA_x-\partial_xA_z,\partial_xA_y-\partial_yA_x)$ は回転と呼びます。この例では発散0、回転 (0,0,2) です。滑らかな場では二階偏微分が交換するため勾配の回転と回転の発散は0です。
+
 ## 電磁場を四元ポテンシャルで表す
 
 電場と磁場を
@@ -26,7 +30,7 @@ $$
 F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu
 $$
 
-にまとめられます。例えば $F^{0i}=-E_i$ です。縮約を計算すると
+にまとめられます。下付き空間成分は $A_i=-\boldsymbol A_i$ なので $F_{01}=-\partial_tA_x-\partial_xA^0=E_x$、$F^{01}=-E_x$ です。$F_{12}=-\partial_xA_y+\partial_yA_x=-B_z$ で、空間添字二つを上げても同符号です。反対称性で各成分が二回現れるため $F_{\mu\nu}F^{\mu\nu}=2(\boldsymbol B^2-\boldsymbol E^2)$ です。縮約を計算すると
 
 $$
 -\frac14F_{\mu\nu}F^{\mu\nu}
@@ -52,7 +56,7 @@ $$
 +m^2 A^\nu\delta A_\nu
 $$
 
-となります。反対称性を使い、部分積分して境界項を消すと、
+となります。実際 $\delta(-F_{\mu\nu}F^{\mu\nu}/4)=-F^{\mu\nu}(\partial_\mu\delta A_\nu-\partial_\nu\delta A_\mu)/2$ です。第二項の添字を交換すると反対称性で第一項と同じになります。$-F^{\mu\nu}\partial_\mu\delta A_\nu=-\partial_\mu(F^{\mu\nu}\delta A_\nu)+(\partial_\mu F^{\mu\nu})\delta A_\nu$ と部分積分して境界項を消すと、
 
 $$
 \partial_\mu F^{\mu\nu}+m^2A^\nu=0
@@ -101,7 +105,7 @@ $$
 \end{aligned}
 $$ {#eq-proca-polarizations}
 
-です。最初の二つは横偏極、最後は縦偏極です。すべて $p\cdot\epsilon=0$、$\epsilon_\lambda\cdot\epsilon_{\lambda'}=-\delta_{\lambda\lambda'}$ を満たします。偏極の時空ノルムが負なのは計量の符号規約によるもので、粒子のHilbert空間のノルムが負という意味ではありません。
+です。最初の二つは横偏極、最後は縦偏極です。$(a,0,0,b)$ と置き $Ea-kb=0$、$a^2-b^2=-1$ を連立します。$E^2-k^2=m^2$ なので正の b を選べば b=E/m、a=k/m です。すべて $p\cdot\epsilon=0$、$\epsilon_\lambda\cdot\epsilon_{\lambda'}=-\delta_{\lambda\lambda'}$ を満たします。偏極の時空ノルムが負なのは計量の符号規約によるもので、粒子のHilbert空間のノルムが負という意味ではありません。
 
 ![運動方向に垂直な二つの偏極と、質量を持つ場に許される縦偏極。](../figures/vector_polarizations.png){#fig-vector-polarizations}
 
@@ -142,7 +146,7 @@ $$
 \frac12m^2[(A^0)^2-\boldsymbol A^2]
 $$
 
-です。$A^0$ の時間微分が含まれていません。共役運動量は
+です。$A^0$ の時間微分が含まれていません。例えば二変数の力学 $L=\dot q^2/2-c^2/2+cq$ では c の速度がないので共役運動量は0、運動方程式は $-c+q=0$ です。c は独立な振動子でなく q で決まります。場でも時間成分が拘束されます。共役運動量は
 
 $$
 \pi_0=0,\qquad
@@ -164,7 +168,7 @@ $$ {#eq-proca-secondary}
 
 となります。m>0 では $A^0=(\nabla\cdot\boldsymbol\pi)/m^2$ と決まります。
 
-Hamiltonian を求めます。空間の境界項を捨てる条件で部分積分すれば、
+Hamiltonian を求めます。$\partial_t\boldsymbol A=\boldsymbol\pi-\nabla A^0$ を $\boldsymbol\pi\cdot\partial_t\boldsymbol A-\mathcal L_P$ に代入します。$-\boldsymbol\pi\cdot\nabla A^0=-\nabla\cdot(A^0\boldsymbol\pi)+A^0\nabla\cdot\boldsymbol\pi$ なので空間の境界項を捨てる条件で部分積分すれば、
 
 $$
 H=\int d^3x\left[
@@ -174,7 +178,7 @@ H=\int d^3x\left[
 \right]
 $$
 
-です。@eq-proca-secondary を代入すると、独立な三組の正準変数で表したHamiltonianは
+です。@eq-proca-secondary から $D=\nabla\cdot\boldsymbol\pi$ と略記すれば $A^0=D/m^2$ です。$-m^2(A^0)^2/2+A^0D=D^2/(2m^2)$ となるので、独立な三組の正準変数で表したHamiltonianは
 
 $$
 H_{\mathrm{red}}=\frac12\int d^3x
@@ -240,7 +244,7 @@ F_{\mu\nu}+\partial_\mu\partial_\nu\alpha
 -\partial_\nu\partial_\mu\alpha=F_{\mu\nu}
 $$
 
-です。これは同じ電場・磁場を表すポテンシャルの記述の自由です。ゲージ変換をしても物理的な電磁場は変わりません。
+です。例えば数 x,y から観測量 x−y だけを作る模型では、両方に同じ数 c を加えても結果は変わりません。二つの数があっても物理的に区別できる組合せは一つです。Maxwell場では同様の冗長性を時空ごとの関数 α で表します。これは同じ電場・磁場を表すポテンシャルの記述の自由です。ゲージ変換をしても物理的な電磁場は変わりません。
 
 ::: {.callout-note title="数値例：純ゲージのポテンシャル"}
 局所的に α=2tx と置きます。零ポテンシャルから @eq-gauge-transformation を行えば $A^0=2x$、$\boldsymbol A=(-2t,0,0)$ です。電場のx成分は −2−(−2)=0、磁場も0になります。ポテンシャルは非零でも電磁場は零です。これは局所的な例で、無限遠の境界条件は別途指定します。
@@ -280,9 +284,9 @@ $$
 \nabla\cdot\boldsymbol A=0
 $$
 
-を選びます。自由場のGaussの法則はこの条件のもとで $\nabla^2 A^0=0$ になります。無限空間で適切な減衰条件を課し、残余ゲージを固定すれば $A^0=0$ とできます。外部電荷がある場合は一般に $A^0$ を0にはできません。
+を選びます。$\boldsymbol A\to\boldsymbol A-\nabla\alpha$ で発散は $\nabla\cdot\boldsymbol A-\nabla^2\alpha$ です。適切な境界条件のもと $\nabla^2\alpha=\nabla\cdot\boldsymbol A$ を解けばこの選択ができます。Gaussの法則は $\nabla\cdot\boldsymbol E=-\nabla^2A^0-\partial_t(\nabla\cdot\boldsymbol A)$ なので、自由場では $\nabla^2 A^0=0$ になります。無限空間で適切な減衰条件を課し、残余ゲージを固定すれば $A^0=0$ とできます。外部電荷がある場合は一般に $A^0$ を0にはできません。
 
-この自由場では $\boldsymbol A$ と $\boldsymbol\pi$ の双方が横方向に制限され、二つの独立な正準対だけが残ります。
+この自由場では $\boldsymbol A$ と $\boldsymbol\pi$ の双方が横方向に制限されます。例えば z方向の非零波数ならCoulombゲージから $ik A_z=0$、Gauss拘束から $ik\pi_z=0$ です。残るのは $(A_x,\pi_x)$ と $(A_y,\pi_y)$ の二組だけです。
 
 | 理論 | 拘束の性質 | 物理的な正準対 |
 |---|---|---:|
@@ -311,7 +315,7 @@ $$
 =\frac1{\sqrt2}(1,\pm i,0)
 $$
 
-と取れば、z軸周りの回転で位相を受ける基底になります。符号の命名は回転と波の規約に依存しますが、二つの固有ヘリシティは ±1 です。第11章の質量ゼロ粒子の分類と一致します。
+と取れば、z軸回転行列を掛けると $(1,\pm i,0)$ は $e^{\mp i\theta}$ 倍されます。例えば位相 $\varphi=kz-\omega t$ に対し $\operatorname{Re}[(1,i,0)e^{i\varphi}]=(\cos\varphi,-\sin\varphi,0)$ なので矢印の先端は円を描きます。符号の命名は回転と波の規約に依存しますが、二つの固有ヘリシティは ±1 です。第11章の質量ゼロ粒子の分類と一致します。
 
 ![二つの線形偏極と、その位相差から作る円偏極。z方向に進む波を横から模式的に表示。](../figures/vector_circular.png){#fig-vector-circular}
 
@@ -352,7 +356,7 @@ $$
 \equiv P^T_{ij}(\boldsymbol k)
 $$
 
-です。右辺は横方向への射影行列で、$P^T\boldsymbol k=0$、$(P^T)^2=P^T$ です。
+です。$\boldsymbol\epsilon_1,\boldsymbol\epsilon_2,\boldsymbol n=\boldsymbol k/|\boldsymbol k|$ は正規直交基底なので、第2章の完全性関係から $\sum_{\lambda=1,2}\epsilon_{\lambda i}\epsilon_{\lambda j}^*+n_i n_j=\delta_{ij}$ です。右辺は横方向への射影行列で、$P^T\boldsymbol k=0$、$(P^T)^2=P^T$ です。
 
 そのため独立な正準変数についての等時交換関係は、
 
@@ -368,21 +372,21 @@ $$
 
 Coulombゲージは物理的自由度が見えやすい反面、時空の共変性が式から見えにくくなります。散乱計算では共変なゲージ固定が便利です。
 
-自由なMaxwell作用の二次部分だけでは、純ゲージ方向に零固有値があるので逆演算子を定義できません。そこで計算上の規約として
+自由なMaxwell作用の二次部分だけでは、純ゲージ方向に零固有値があるので逆演算子を定義できません。第2章の例として $K=\begin{pmatrix}1&-1\\-1&1\end{pmatrix}$ は $(1,1)^{\mathsf T}$ を零に写し逆行列がありません。同様に Maxwell の二次演算子 $\eta^{\mu\nu}\Box-\partial^\mu\partial^\nu$ は $\partial_\nu\alpha$ を零に写すので、冗長性を固定する必要があります。そこで計算上の規約として
 
 $$
 \mathcal L_{\mathrm{gf}}
 =-\frac1{2\xi}(\partial_\mu A^\mu)^2
 $$
 
-を加えます。ξ=1 はFeynmanゲージと呼ばれます。このとき部分積分により二次作用は
+を加えます。ξ=1 はFeynmanゲージと呼ばれます。Maxwellの二次作用は部分積分後に $\frac12\int A_\mu(\eta^{\mu\nu}\Box-\partial^\mu\partial^\nu)A_\nu$ です。ゲージ固定項は $\frac1{2\xi}\int A_\mu\partial^\mu\partial^\nu A_\nu$ となり、ξ=1 で混合微分が相殺されます。二次作用は
 
 $$
 S^{(2)}=\frac12\int d^4x\, A_\mu
 \eta^{\mu\nu}\Box A_\nu
 $$
 
-となります。運動量空間で $\Box\to-k^2$ を用い、Feynman処方で逆演算子を取れば
+となります。運動量空間で $\Box\to-k^2$ なので二次演算子は $-k^2\eta^{\mu\nu}$ です。第12章と同じく逆演算子に i を掛けます。計量行列の逆は自身と同じなので、Feynman処方で逆演算子を取れば
 
 $$
 D_F^{\mu\nu}(k)=\frac{-i\eta^{\mu\nu}}{k^2+i0}
@@ -419,6 +423,10 @@ $$
 ![固定波数に対する縦偏極の成分の増大と、保存電流への結合を支配する残差の減少。](../figures/vector_mass_limit.png){#fig-vector-mass-limit}
 
 ただし三つの自由度を持つmassive理論を、質量パラメータを0にする操作だけで常に二自由度のMaxwell理論と同一視できるわけではありません。相互作用や追加の場も含めた極限を指定する必要があります。ここでは自由なProca場とMaxwell場の構造を比較しました。
+
+## 初読の到達目標
+
+ベクトル場の成分と物理的偏極を区別し、Proca場とMaxwell場の拘束の違い、ゲージ変換で電磁場が変わらない理由、横射影と伝播関数の逆行列としての意味を確認してください。一般の拘束系の厳密な量子化は発展内容です。
 
 ## 演習
 
