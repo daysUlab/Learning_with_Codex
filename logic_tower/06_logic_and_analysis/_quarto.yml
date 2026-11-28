@@ -42,6 +42,7 @@ book:
         - chapters/17_generic_extensions.qmd
         - chapters/18_independence_and_connections.qmd
     - supplements/01_physics_unprovability.qmd
+    - glossary.qmd
     - references.qmd
 format:
   html:
@@ -56,6 +57,6 @@ format:
     documentclass: scrreprt
     papersize: a5
     fontsize: 11pt
-    geometry: margin=17mm
+    geometry: [margin=17mm, footskip=8mm]
     toc: true
     include-in-header: japanese.tex

@@ -26,11 +26,32 @@ jobs:
         run: |
           python3 -m pip install -r requirements.txt
           python3 scripts/check.py
-          quarto render
+          mkdir -p _quality
+          set -o pipefail
+          quarto render 2>&1 | tee _quality/render.log
           test -s _book/index.html
           test -s _book/logic.pdf
           python3 scripts/check_rendered.py
+      - name: PDF全ページと代表ページ画像の診断
+        continue-on-error: true
+        working-directory: logic_tower/06_logic_and_analysis
+        run: |
+          python3 -m pip install pymupdf
+          python3 scripts/check_layout.py
+      - name: HTML画面幅別の表示診断
+        continue-on-error: true
+        working-directory: logic_tower/06_logic_and_analysis
+        run: |
+          python3 -m pip install playwright
+          python3 scripts/check_browser.py
       - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: logic-quality
+          path: logic_tower/06_logic_and_analysis/_quality
+          if-no-files-found: ignore
+      - uses: actions/upload-artifact@v4
+        if: success()
         with:
           name: logic-book
           path: logic_tower/06_logic_and_analysis/_book
