@@ -7,7 +7,7 @@ from html import unescape
 root=Path(__file__).resolve().parents[1]
 book=root/"_book"
 chapters=re.findall(r"^\s*- (chapters/\S+\.qmd)\s*$",(root/"_quarto.yml").read_text(),re.M)
-pages=[book/"index.html",*(book/Path(p).with_suffix(".html") for p in chapters),book/"supplements/01_physics_unprovability.html",book/"references.html"]
+pages=[book/"index.html",*(book/Path(p).with_suffix(".html") for p in chapters),book/"supplements/01_physics_unprovability.html",book/"glossary.html",book/"references.html"]
 class Doc(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -30,6 +30,11 @@ for page in pages:
     sidebar_text=" ".join(unescape(re.sub(r"<[^>]+>"," ",sidebar.group(1))).split())
     for part in parts:
         assert " ".join(part.split()) in sidebar_text,(page,part)
+    if page not in (book/"index.html",book/"references.html",book/"glossary.html"):
+        original=root/page.relative_to(book).with_suffix(".qmd")
+        expected=original.read_text().count('::: {.callout-tip title="高校数学からの橋渡し"}')
+        assert expected>0,original
+        assert source.count("高校数学からの橋渡し")>=expected,(page,expected)
     d=Doc()
     d.feed(source)
     for kind,url in d.urls:
