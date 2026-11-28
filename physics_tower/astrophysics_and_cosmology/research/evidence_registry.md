@@ -28,3 +28,14 @@
 | 赤方偏移と距離・時間の区別 | A/B | [NASA Cosmological Redshift](https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-cosmological-redshift/)、[Hogg 1999](https://arxiv.org/abs/astro-ph/9905116) | 距離への換算は宇宙論モデル依存 |
 | MoM-z14の赤方偏移14.44、宇宙誕生約2.8億年後 | A/B | [NASA 2026](https://science.nasa.gov/missions/webb/nasa-webb-pushes-boundaries-of-observable-universe-closer-to-big-bang/) | 赤方偏移は分光観測、宇宙年齢はモデル推定。銀河自体の年齢とは異なる |
 | 粒子地平線と事象の地平線 | B | [David Tong, Cosmology](https://www.damtp.cam.ac.uk/user/tong/cosmo/cosmohtml/S1.html) | 現在の観測可能性と将来の信号到達可能性は別 |
+
+## 第3章（2026-11-28確認）
+
+| 主張 | 区分 | 資料 | 注意点 |
+|---|---|---|---|
+| 銀河形態と観測画像 | A | [ESA/Hubble Spiral Galaxy](https://esahubble.org/wordbank/spiral-galaxy/)・図版台帳の各ページ | 見た目による分類で一意の進化系列ではない |
+| 天の川とアンドロメダの100億年以内の非合体確率が約半分 | B | [Sawala et al. 2025](https://doi.org/10.1038/s41550-025-02563-1) | 観測・質量モデルの不確実性に依存する予測 |
+| Abell 2744と重力レンズ | A/B | [ESA/Hubble 2014](https://esahubble.org/images/heic1401a/) | 背景像と質量推定を区別 |
+| ラニアケア超銀河団 | A/B | [Tully et al. 2014](https://doi.org/10.1038/nature13674) | 固有速度場の再構成・定義に依存 |
+| 銀河の立体地図・ウェブ・ボイド | A/B | [DESI 2021](https://www.desi.lbl.gov/2021/07/22/the-beginnings-of-the-3-dimensional-map/)、[DESI 2026-11-15](https://www.desi.lbl.gov/2026/11/15/fifty-years-of-cosmic-cartography-in-your-hands/) | 距離モデル・選択効果 |
+| ガスフィラメント約300万光年、約150時間観測 | A/B | [ESO 2025-01-29](https://www.eso.org/public/images/potw2504a/) | ガスの放射の疑似色画像。暗黒物質の直接撮影ではない |

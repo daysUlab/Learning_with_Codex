@@ -7,6 +7,12 @@
 | 1 | andromeda_heic2501a.jpg | 2025-01-16 | 観測モザイク | [公式画像](https://esahubble.org/images/heic2501a/)、NASA, ESA, B. Williams (University of Washington)、[利用条件](https://esahubble.org/copyright/) |
 | 2 | mom_z14_weic2603a.jpg | 2026-01-28 | 観測画像・拡大枠付き合成 | [公式画像](https://esawebb.org/images/weic2603a/)、NASA, ESA, CSA, STScI, R. Naidu (MIT), Image Processing: J. DePasquale (STScI)、[利用条件](https://esawebb.org/copyright/) |
 
+| 3 | ngc1300.jpg | 2005-01-11 | 観測画像（棒渦巻銀河） | [公式画像](https://esahubble.org/images/opo0501a/)、NASA, ESA, and The Hubble Heritage Team (STScI/AURA)、[利用条件](https://esahubble.org/copyright/) |
+| 3 | ngc1132.jpg | 2008-02-05 | 観測画像（楕円銀河） | [公式画像](https://esahubble.org/images/heic0804a/)、NASA, ESA and the Hubble Heritage (STScI/AURA)-ESA/Hubble Collaboration. Acknowledgment: M. West (ESO, Chile)、[利用条件](https://esahubble.org/copyright/) |
+| 3 | ic10.jpg | 2019-06-17 | 観測画像（不規則銀河） | [公式画像](https://esahubble.org/images/potw1924a/)、NASA, ESA and F. Bauer、[利用条件](https://esahubble.org/copyright/) |
+| 3 | abell2744.jpg | 2014-01-07 | 観測画像（銀河団） | [公式画像](https://esahubble.org/images/heic1401a/)、NASA, ESA, and J. Lotz, M. Mountain, A. Koekemoer, and the HFF Team (STScI).、[利用条件](https://esahubble.org/copyright/) |
+| 3 | cosmic_filament.jpg | 2025-01-29 | 観測画像（ガス放射の疑似色重ね合わせ） | [公式画像](https://www.eso.org/public/images/potw2504a/)、ESO/D. Tornotti et al./Hubble: M. Revalski, P. Francis et al.、[利用条件](https://www.eso.org/public/copyright/) |
+
 ライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 
 画像ファイルは公式配布URLからビルド前にダウンロードし、ローカルにキャッシュする。Quarto HTML/PDFの両方で同一のローカルファイルを参照する。今回の実行環境では外部CDNへの接続ができないため、バイナリ取得・描画は未検証。
