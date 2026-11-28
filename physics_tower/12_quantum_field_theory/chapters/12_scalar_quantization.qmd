@@ -8,7 +8,7 @@
 
 第10章で、古典的な場を Fourier モードへ分解すると独立な振動子の集まりになることを学びました。第3章では一つの調和振動子を量子化し、第5章では生成消滅演算子を使って粒子数の異なる状態を記述しました。
 
-この二つの考え方を組み合わせます。場の各モードを量子化すると、そのモードの励起数が整数になります。この励起が自由場における粒子です。場の値が整数になるという意味ではありません。
+この二つの考え方を組み合わせます。場の各モードを量子化すると、そのモードの励起数が整数になります。この励起が自由場における粒子です。場の値が整数になるという意味ではありません。一つの振動子では古典的な振幅は連続ですが、量子化後のエネルギー差は ℏω の整数倍です。自由場では各モードがこの構造を持ち、さらに励起は第11章の質量殻を満たすエネルギーと運動量を持ちます。このため粒子として数えることができます。
 
 この章では相互作用のない実スカラー場を扱います。自然単位系 c=ℏ=1、計量 (+,−,−,−)、質量 m>0 とします。
 
@@ -47,7 +47,7 @@ $$
 \qquad \boldsymbol n\in\mathbb Z^3
 $$
 
-許される波数が離散化されます。各モードの角振動数は
+一次元で $e^{ik(x+L)}=e^{ikx}$ となる条件は $e^{ikL}=1$、つまり $kL=2\pi n$ です。三方向に適用したのが上の式です。例えば L=2π なら k は整数、L=4π なら間隔は1/2です。許される波数が離散化されます。各モードの角振動数は
 
 $$
 \omega_{\boldsymbol k}=\sqrt{|\boldsymbol k|^2+m^2}
@@ -63,7 +63,16 @@ $$
 
 と書けます。実場なので $q_{-\boldsymbol k}=q_{\boldsymbol k}^*$ です。独立な複素座標を二重に数えてはいけません。
 
-非零の波数の対について、実数の cosine モードと sine モードを選べば、それぞれ一つの実調和振動子になります。零モードも一つの実振動子です。独立な実正規モードを α と書けば、
+非零の波数の対について $q_{\boldsymbol k}=(Q_c-iQ_s)/\sqrt2$、$q_{-\boldsymbol k}=(Q_c+iQ_s)/\sqrt2$ と置けば、
+
+$$
+\frac{q_{\boldsymbol k}e^{i\boldsymbol k\cdot\boldsymbol x}
++q_{-\boldsymbol k}e^{-i\boldsymbol k\cdot\boldsymbol x}}{\sqrt V}
+=\sqrt{\frac2V}(Q_c\cos(\boldsymbol k\cdot\boldsymbol x)
++Q_s\sin(\boldsymbol k\cdot\boldsymbol x))
+$$
+
+です。二つの実座標に対応します。第10章と同じく正規直交モード $f_\alpha$ では $\int d^3x\, f_\alpha f_\beta=\delta_{\alpha\beta}$、$\int d^3x\,\nabla f_\alpha\cdot\nabla f_\beta=|\boldsymbol k_\beta|^2\delta_{\alpha\beta}$ です。$\phi=\sum_\alpha Q_\alpha f_\alpha$、$\pi=\sum_\alpha P_\alpha f_\alpha$ を Hamiltonian に代入すれば交差項が消え、各実モードが独立な振動子になります。零モードも一つの実振動子です。独立な実正規モードを α と書けば、
 
 $$
 H=\sum_\alpha\frac12
@@ -82,7 +91,7 @@ n=+1 と−1 に対応する実場の Fourier 成分は複素共役ですが、�
 
 ## 正準量子化
 
-粒子力学の座標と運動量に交換関係を課したように、場と共役運動量を演算子とし、同じ時刻に
+場を量子化するとは、古典的な振動座標を第3章の量子演算子へ置き換えることです。これは量子論の入力であって古典方程式から必然的に導かれる規則ではありません。例えば一次元の格子幅 a では運動項が $\sum_j a\dot\phi_j^2/2$ なので正準運動量は $p_j=a\pi_j$ です。$[\phi_i,p_j]=i\delta_{ij}$ なら $[\phi_i,\pi_j]=i\delta_{ij}/a$ で、和 $\sum_j a$ と組み合わせればデルタ関数の役割を果たします。三次元では a³ が分母です。粒子力学の座標と運動量に交換関係を課したように、場と共役運動量を演算子とし、同じ時刻に
 
 $$
 [\hat\phi(t,\boldsymbol x),\hat\pi(t,\boldsymbol y)]
@@ -96,7 +105,7 @@ $$ {#eq-scalar-canonical}
 
 とします。有限の周期箱ならデルタ関数は周期的デルタ関数です。波数のカットオフを設けた場合は、デルタ関数もそのモード空間への射影核になります。
 
-実正規モードでは、
+モード係数 $Q_\alpha=\int d^3x\,f_\alpha\phi$、$P_\beta=\int d^3y\,f_\beta\pi$ の交換子へ場の交換関係を代入すると、デルタ関数で一つの積分が消えて $i\int d^3x\,f_\alpha f_\beta=i\delta_{\alpha\beta}$ となります。実正規モードでは、
 
 $$
 [Q_\alpha,P_\beta]=i\delta_{\alpha\beta}
@@ -104,7 +113,7 @@ $$
 
 であり、第3章と同じ調和振動子の代数です。以下、場の演算子のハットを省略します。
 
-Heisenberg 表示の運動方程式を Hamiltonian から求めれば、
+例えば $[\pi(\boldsymbol y)^2,\phi(\boldsymbol x)]=-2i\delta^{(3)}(\boldsymbol x-\boldsymbol y)\pi(\boldsymbol y)$ なので運動項から $\partial_t\phi=\pi$ です。π の時間微分では質量項が $-m^2\phi$、勾配項ではデルタ関数の微分を部分積分して $\nabla^2\phi$ になります（境界項が消える条件）。Heisenberg 表示の運動方程式を Hamiltonian から求めれば、
 
 $$
 \partial_t\phi=i[H,\phi]=\pi,\qquad
@@ -122,7 +131,16 @@ a_\alpha=\sqrt{\frac{\omega_\alpha}{2}}Q_\alpha+
 \frac{i}{\sqrt{2\omega_\alpha}}P_\alpha
 $$
 
-で定義されます。cosine と sine の振動子をユニタリに組み合わせることで、運動量が定まった進行波モードの演算子 $a_{\boldsymbol k}$ を選べます。
+で定義されます。cosine と sine の消滅演算子を $a_c,a_s$ とします。進行波の消滅演算子は
+
+$$
+a_{\boldsymbol k}=(a_c-ia_s)/\sqrt2,\qquad
+a_{-\boldsymbol k}=(a_c+ia_s)/\sqrt2
+$$
+
+です。異なる実モード同士は交換するため $[a_{\boldsymbol k},a_{-\boldsymbol k}^\dagger]=(1-1)/2=0$ です。二つの振動子を別の基底で表したのであり、一方が他方の共役ではありません。$Q_c(t)=(a_ce^{-i\omega t}+a_c^\dagger e^{i\omega t})/\sqrt{2\omega}$、sineモードも同様として実場に代入すると、次の進行波表示になります。
+
+![二つの実モードと左右の進行波の関係。](../figures/review_scalar_modes.png){#fig-review-scalar-modes}
 
 有限箱では、
 
@@ -159,7 +177,15 @@ $$
 
 ## Hamiltonian と粒子数
 
-モード展開を @eq-scalar-hamiltonian に代入すると、異なる波数の項は直交性によって消えます。各モードについて、二つの消滅演算子の積や二つの生成演算子の積は、運動項と勾配・質量項の間で相殺されます。残った項を交換関係で整理すると、
+モード展開を @eq-scalar-hamiltonian に代入すると、異なる波数の項は直交性によって消えます。まず一つの実振動子で $Q=(a+a^\dagger)/\sqrt{2\omega}$、$P=-i\sqrt{\omega/2}(a-a^\dagger)$ とすると、
+
+$$
+\frac12(P^2+\omega^2Q^2)
+=\frac\omega4[-(a-a^\dagger)^2+(a+a^\dagger)^2]
+=\frac\omega2(aa^\dagger+a^\dagger a)
+$$
+
+です。$a^2$ と $(a^\dagger)^2$ が相殺します。進行波基底へ変えても粒子数の和 $a_c^\dagger a_c+a_s^\dagger a_s=a_{\boldsymbol k}^\dagger a_{\boldsymbol k}+a_{-\boldsymbol k}^\dagger a_{-\boldsymbol k}$ は変わりません。残った項を交換関係で整理すると、
 
 $$
 H=\sum_{\boldsymbol k}\omega_{\boldsymbol k}
@@ -202,11 +228,11 @@ $$
 \boldsymbol P=\sum_{\boldsymbol k}\boldsymbol k N_{\boldsymbol k}
 $$
 
-です。一粒子状態 $a^\dagger_{\boldsymbol k}|0\rangle$ はエネルギー ω と運動量 k の固有状態です。第11章の質量殻を満たすスピン0の粒子が、場の量子化から得られました。
+です。一粒子状態 $a^\dagger_{\boldsymbol k}|0\rangle$ は真空からのエネルギー差 ω と運動量 k の固有状態です。$[H,a_{\boldsymbol k}^\dagger]=\omega_{\boldsymbol k}a_{\boldsymbol k}^\dagger$ から $Ha_{\boldsymbol k}^\dagger|0\rangle=(E_0+\omega_{\boldsymbol k})a_{\boldsymbol k}^\dagger|0\rangle$ です。真空エネルギーを0にすればエネルギー固有値は ω になります。第11章の質量殻を満たすスピン0の粒子が、場の量子化から得られました。
 
 ## 無限空間と相対論的規格化
 
-箱の体積を大きくすると波数間隔は0に近づきます。和を積分へ変える規則は
+箱の体積を大きくすると波数間隔は0に近づきます。三方向の波数間隔は Δk=2π/L なので一格子点の体積は $(\Delta k)^3=(2\pi)^3/V$ です。この体積を掛けて足すRiemann和から、和を積分へ変える規則は
 
 $$
 \frac1V\sum_{\boldsymbol k}
@@ -220,7 +246,7 @@ $$
 =(2\pi)^3\delta^{(3)}(\boldsymbol k-\boldsymbol l)
 $$
 
-すると、場は
+箱の演算子との対応は $a(\boldsymbol k)\leftrightarrow\sqrt V\,a_{\boldsymbol k}$ です。有限箱の $\delta_{\boldsymbol k\boldsymbol l}$ は $(2\pi)^3\delta^{(3)}(\boldsymbol k-\boldsymbol l)/V$ に対応するので上の交換関係を得ます。箱の $1/\sqrt V$ と演算子の $1/\sqrt V$ が合わさり $1/V$ の和になります。すると、場は
 
 $$
 \phi(x)=\int\frac{d^3k}{(2\pi)^3}
@@ -271,7 +297,13 @@ $$
 \rho_0(\Lambda)\sim\frac{\Lambda^4}{16\pi^2}
 $$
 
-です。積分を球座標に直し、高波数で ω≈k を使えばこの式を導けます。この三次元波数カットオフはローレンツ共変な規制ではなく、発散の大きさを見るための例です。
+です。第7章の立体角4πを使って球座標へ直すと、
+
+$$
+\rho_0(\Lambda)=\frac1{4\pi^2}\int_0^\Lambda k^2\sqrt{k^2+m^2}\,dk
+$$
+
+です。高波数では被積分関数が約 k³ なので主要項は $\Lambda^4/(16\pi^2)$ です。質量ゼロの模型ならこの式は厳密で、Λを10から20にすると16倍になります。この三次元波数カットオフはローレンツ共変な規制ではなく、発散の大きさを見るための例です。
 
 ![カットオフを増やしたときの真空エネルギー密度。高波数では四乗で増える。](../figures/scalar_vacuum_cutoff.png){#fig-scalar-vacuum-cutoff}
 
@@ -299,7 +331,7 @@ $$
 \langle0|Q^2|0\rangle=\frac1{2\omega}
 $$
 
-となります。これは量子力学の基底状態の分散です。
+となります。二乗を展開すると $a^2+aa^\dagger+a^\dagger a+(a^\dagger)^2$ です。真空期待値は $aa^\dagger=1+a^\dagger a$ の1だけが残ります。これは量子力学の基底状態の分散です。
 
 ::: {.callout-note title="数値例：振動数2のモード"}
 ω=2 なら真空での Q の分散は1/4、標準偏差は1/2 です。共役運動量の分散は ω/2=1 なので、標準偏差の積は1/2です。真空だからすべての場の測定値が0になるわけではありません。
@@ -327,7 +359,7 @@ $$ {#eq-scalar-wightman}
 
 ここには第11章のローレンツ不変測度が現れます。
 
-相関関数は真空状態における場の統計的な関係を記述します。二点関数をそのまま粒子がある点から別の点へ移動する確率と解釈することはできません。
+例えば一つの振動子で $Q(t)=(ae^{-i\omega t}+a^\dagger e^{i\omega t})/\sqrt{2\omega}$ なら $\langle0|Q(t)Q(0)|0\rangle=e^{-i\omega t}/(2\omega)$ です。ω=2、t=π/4なら −i/4 になります。演算子の順序を交換すると複素共役になります。相関関数は真空状態における場の統計的な関係を記述します。二点関数をそのまま粒子がある点から別の点へ移動する確率と解釈することはできません。
 
 時間順序積を
 
@@ -353,7 +385,17 @@ D_F(x-y)=
 \frac{i\,e^{-ik\cdot(x-y)}}{k^2-m^2+i0}
 $$ {#eq-scalar-feynman-propagator}
 
-となります。i0 は正の微小量 iε を加えた後に ε→0⁺ とする分布の処方です。エネルギー積分を複素平面で評価すると、時間の前後に応じて正・負周波数の項が選ばれます。この積分の極と時間順序の詳しい関係は第15章でも使います。
+となります。i0 は正の微小量 iε を加えた後に ε→0⁺ とする分布の処方です。複素積分を未習でも時間順序から分母を導けます。時間差 t、空間運動量を固定した一モードの時間順序二点関数は $e^{-i\omega|t|}/(2\omega)$ です。t の符号で場の順序が変わるので絶対値が現れます。収束因子 $e^{-\eta|t|}$（η>0）を掛けて時間 Fourier 変換を行います。
+
+$$
+\int_{-\infty}^{\infty}dt\,
+\frac{e^{ik^0t-i\omega|t|-\eta|t|}}{2\omega}
+=\frac{i}{2\omega}
+\left[\frac1{k^0-\omega+i\eta}
+-\frac1{k^0+\omega-i\eta}\right]
+$$
+
+右辺は t≥0 と t≤0 に分けて指数関数を積分した結果です。η→0⁺ の分布の極限で $i/((k^0)^2-\omega^2+i0)=i/(k^2-m^2+i0)$ となります。逆変換を複素平面で積分する方法もあり、そのときの極の位置を図示します。
 
 $$
 (\Box+m^2)D_F(x)=-i\delta^{(4)}(x)
@@ -374,17 +416,21 @@ $$ {#eq-scalar-commutator}
 
 になります。右辺は演算子ではなく数値的な分布に単位演算子を掛けたものです。
 
-時空間隔が空間的、すなわち $(x-y)^2<0$ なら、二つの点を同時刻にする慣性系が存在します。その系では等時交換関係から交換子が0になります。実スカラー場の共変性により、元の系でも0です。
+時空間隔が空間的、すなわち $(x-y)^2<0$ なら、空間軸を差ベクトルに沿わせて $\beta=\Delta t/|\Delta\boldsymbol x|$ と選べます。空間的間隔なら $|\beta|<1$ で、Lorentz変換から $\Delta t'=\gamma(\Delta t-\beta|\Delta\boldsymbol x|)=0$ です。従って二つの点を同時刻にする慣性系が存在します。その系では等時交換関係から交換子が0になります。実スカラー場の共変性により、元の系でも0です。
 
 $$
 [\phi(x),\phi(y)]=0\qquad ((x-y)^2<0)
 $$
 
-これを微視的因果律と呼びます。点の場は分布なので、厳密には空間的に離れた支持を持つ試験関数で平均した演算子について理解します。
+これを微視的因果律と呼びます。有限箱や空間波数カットオフではLorentz共変性が一般に失われるため、この厳密な局所性は共変な無限空間の場での主張です。点の場は分布なので、厳密には空間的に離れた支持を持つ試験関数で平均した演算子について理解します。
 
 ![光円錐の外では自由スカラー場の交換子が0になる。円錐内は非零になり得る領域を示す。](../figures/scalar_microcausality.png){#fig-scalar-microcausality}
 
 真空の二点関数そのものは空間的間隔でも一般に0ではありません。相関が存在することと、制御可能な信号を光速より速く送れることは異なります。局所的な観測量の交換可能性が因果律に重要です。
+
+## 初読の到達目標
+
+各モードが独立な振動子になること、量子化の規則、励起一個がエネルギーと運動量を持つ理由、真空揺らぎと粒子数の違いを説明してください。第15章の準備として一振動子の二点関数を自力で再現できることを目標にします。
 
 ## 演習
 
