@@ -13,6 +13,7 @@ book:
   chapters:
     - index.qmd
     - chapters/01_cosmic_scale.qmd
+    - chapters/02_looking_back.qmd
 
 format:
   html:
