@@ -15,3 +15,5 @@
 
 - Stanford Encyclopedia of Philosophy, [Set Theory](https://plato.stanford.edu/entries/set-theory/index.html)：ZF/ZFC、CHと相対的無矛盾性（2026-11-28概説確認）。
 - Stanford Encyclopedia of Philosophy, [Gödel’s Incompleteness Theorems](https://plato.stanford.edu/entries/goedel-incompleteness/)：第一・第二不完全性定理とRosserの強化（2026-11-28概説確認）。定理の完全な証明は本章の範囲外。
+
+- Wolfram MathWorld, [Stone Representation Theorem](https://mathworld.wolfram.com/StoneRepresentationTheorem.html)：表現定理の位相的な形を確認（2026-11-28）。本文の証明・例は独自に記述。
