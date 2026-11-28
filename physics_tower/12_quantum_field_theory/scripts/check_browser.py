@@ -38,7 +38,7 @@ try:
                     clippedMath:[...document.querySelectorAll('mjx-container[display=true]')].filter(e=>e.scrollWidth>e.clientWidth+2).length
                 })""")
                 results.append({"path":path,"width":width,"http":response.status if response else None,"metrics":metrics,"diagnostics":errors})
-                if path in ["index.html","chapters/03_quantum_mechanics.html","chapters/12_scalar_quantization.html","chapters/17_electrodynamics.html","glossary.html"]:
+                if path in ["index.html","chapters/00_physical_discoveries.html","chapters/03_quantum_mechanics.html","chapters/12_scalar_quantization.html","chapters/17_electrodynamics.html","glossary.html"]:
                     page.screenshot(path=str(out/f"html-{width}-{Path(path).stem}.png"),full_page=False)
                 page.remove_listener("pageerror",on_error)
             context.close()
