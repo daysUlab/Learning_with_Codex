@@ -20,3 +20,5 @@ quarto render
 ```
 
 GitHub Actionsは初期段階ではHTML/PDFを成果物として保存します。既存の場の量子論Pagesを上書きしないよう、共通公開サイトとサブパスの設計・統合は別工程にします。
+
+HTML・PDFの共存公開案は [PUBLICATION.md](PUBLICATION.md) を参照してください。既存QFTのURLを維持する方針です。

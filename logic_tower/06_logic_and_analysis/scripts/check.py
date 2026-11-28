@@ -71,12 +71,75 @@ for bits in product([False,True],repeat=9):
     exists_all=any(all(R(x,y) for x in D) for y in D)
     assert not exists_all or all_exists
     assert (not all_exists)==any(all(not R(x,y) for y in D) for x in D)
-    for y in D:
-        # 捕獲回避した forall z R(f(y),z) の値
-        assert all(R(f(y),z) for z in D)==all(R((y+1)%3,z) for z in D)
 # 変数条件を外した誤った推論の反例
 assert E(0) and not all(E(x) for x in D)
 assert any(E(x) for x in D) and not E(1)
 assert all(any(y!=z for z in D) for y in D)
 assert not any(y!=y for y in D)
 print("chapter 3: 512 finite relations and quantifier examples OK")
+
+# 捕獲回避代入を構文木の変換として実装し、意味論と比較する。
+def term_vars(t):
+    if isinstance(t,str):
+        return {t}
+    return set().union(*(term_vars(u) for u in t[1:]))
+def term_sub(t,x,u):
+    if isinstance(t,str):
+        return u if t==x else t
+    return (t[0],*(term_sub(v,x,u) for v in t[1:]))
+def vars_all(a):
+    op,*args=a
+    if op in ("R","eq"):
+        return term_vars(args[0])|term_vars(args[1])
+    if op in ("forall","exists"):
+        return {args[0]}|vars_all(args[1])
+    return set().union(*(vars_all(v) for v in args))
+def sub(a,x,t):
+    op,*args=a
+    if op in ("R","eq"):
+        return (op,*(term_sub(u,x,t) for u in args))
+    if op in ("forall","exists"):
+        y,B=args
+        if y==x:
+            return a
+        if y in term_vars(t):
+            used=vars_all(B)|term_vars(t)|{x,y}
+            z=next("z"+str(i) for i in range(len(used)+1) if "z"+str(i) not in used)
+            B=sub(B,y,z)
+            y=z
+        return (op,y,sub(B,x,t))
+    return (op,*(sub(v,x,t) for v in args))
+def value(t,s):
+    if isinstance(t,str):
+        return s[t]
+    assert t[0]=="f"
+    return (value(t[1],s)+1)%3
+def truth(a,s,bits):
+    op,*args=a
+    if op=="R":
+        return bits[3*value(args[0],s)+value(args[1],s)]
+    if op=="eq":
+        return value(args[0],s)==value(args[1],s)
+    if op=="not":
+        return not truth(args[0],s,bits)
+    if op=="and":
+        return all(truth(v,s,bits) for v in args)
+    y,B=args
+    assert op in ("forall","exists")
+    return (all if op=="forall" else any)(truth(B,{**s,y:d},bits) for d in D)
+formulas=[
+    ("forall","y",("R","x","y")),
+    ("exists","y",("not",("eq","x","y"))),
+    ("forall","x",("exists","y",("R","x","y"))),
+    ("exists","y",("and",("R","x","y"),("forall","z",("R","y","z")))),
+]
+cases=0
+for bits in product([False,True],repeat=9):
+    for A in formulas:
+        for t in ["y",("f","y"),("f","x"),"z"]:
+            B=sub(A,"x",t)
+            for x,y,z in product(D,repeat=3):
+                s={"x":x,"y":y,"z":z}
+                assert truth(B,s,bits)==truth(A,{**s,"x":value(t,s)},bits)
+                cases+=1
+print(f"chapter 3: substitution lemma checked in {cases} finite cases")
