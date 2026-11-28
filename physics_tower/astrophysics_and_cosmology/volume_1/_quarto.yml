@@ -21,6 +21,7 @@ book:
     - chapters/05_stellar_evolution.qmd
     - chapters/06_origin_of_elements.qmd
     - chapters/07_exoplanets.qmd
+    - chapters/08_habitability.qmd
 
 format:
   html:

@@ -18,9 +18,11 @@
 
 | 6 | crab_nebula.jpg | 2005-12-01 | 可視光観測モザイク（超新星残骸） | [公式画像](https://esahubble.org/images/heic0515a/)、NASA, ESA and Allison Loll/Jeff Hester (Arizona State University). Acknowledgement: Davide De Martin (ESA/Hubble)、[利用条件](https://esahubble.org/copyright/) |
 | 6 | grb230307a.jpg | 2023-10-25 | 近赤外線観測合成画像（公式注釈付き） | [公式画像](https://esawebb.org/images/weic2325b/)、NASA, ESA, CSA, STScI, A. Levan (IMAPP, Warw), A. Pagan (STScI)、[利用条件](https://esawebb.org/copyright/) |
-
 | 7 | hh30.jpg | 2025-02-04 | 多波長観測画像の比較 | [公式画像](https://esawebb.org/images/potm2501b/)、ESA/Webb, NASA & CSA, ESA/Hubble, ALMA (ESO/NAOJ/NRAO)、[利用条件](https://esawebb.org/copyright/) |
 | 7 | hip65426b.jpg | 2022-09-01 | 赤外線直接撮像の比較 | [公式画像](https://esawebb.org/images/HIP-65426b/)、NASA/ESA/CSA, A Carter (UCSC), the ERS 1386 team, and A. Pagan (STScI)、[利用条件](https://esawebb.org/copyright/) |
+
+| 8 | trappist1e_spectrum.jpg | 2025-09-08 | 実測スペクトルとモデル比較の解説図 | [公式画像](https://esawebb.org/images/trappist1e/)、NASA, ESA, CSA, STScI, J. Olmsted (STScI)、[利用条件](https://esawebb.org/copyright/) |
+| 8 | k218b_spectrum.jpg | 2023-09-11 | 実測スペクトルと当時のモデル・想像図の合成 | [公式画像](https://esawebb.org/images/weic2321b/)、NASA, CSA, ESA, J. Olmstead (STScI), N. Madhusudhan (Cambridge University)、[利用条件](https://esawebb.org/copyright/) |
 
 ライセンス：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。各ページの例外・第三者権利表示を個別に確認する。NASA素材一般は[NASAのメディア利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)に従う。画像検索のサムネイルは転載しない。
 

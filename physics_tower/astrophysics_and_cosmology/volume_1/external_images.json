@@ -152,6 +152,26 @@
       "date": "2022-09-01",
       "type": "赤外線直接撮像の比較",
       "chapter": 7
+    },
+    {
+      "file": "trappist1e_spectrum.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/large/trappist1e.jpg",
+      "source": "https://esawebb.org/images/trappist1e/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA, ESA, CSA, STScI, J. Olmsted (STScI)",
+      "date": "2025-09-08",
+      "type": "実測スペクトルとモデル比較の解説図",
+      "chapter": 8
+    },
+    {
+      "file": "k218b_spectrum.jpg",
+      "url": "https://cdn.esawebb.org/archives/images/large/weic2321b.jpg",
+      "source": "https://esawebb.org/images/weic2321b/",
+      "policy": "https://esawebb.org/copyright/",
+      "credit": "NASA, CSA, ESA, J. Olmstead (STScI), N. Madhusudhan (Cambridge University)",
+      "date": "2023-09-11",
+      "type": "実測スペクトルと当時のモデル・想像図の合成",
+      "chapter": 8
     }
   ]
 }

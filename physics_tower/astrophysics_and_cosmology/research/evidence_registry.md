@@ -80,3 +80,15 @@
 | HIP 65426 bの直接像 | A | [ESA/Webb 2022](https://esawebb.org/images/HIP-65426b/) | 公開時査読前。地表の解像像ではない |
 | 自由浮遊惑星探索 | A/B/C | [Roman microlensing](https://science.nasa.gov/mission/roman-space-telescope/microlensing/) | 質量・距離・速度の縮退、束縛状態の不確実性 |
 | 55 Cancri e、Kepler-16 b | A/B | [NASA 55 Cancri e](https://science.nasa.gov/exoplanet-catalog/55-cancri-e/)、[Kepler-16 b](https://science.nasa.gov/exoplanets/other-stars-other-worlds/kepler-16-b-almost-a-real-life-tatooine/) | スーパーアースは居住可能性を意味しない |
+
+## 第8章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 表面液体水のハビタブルゾーン | B | [Kopparapu 2013](https://doi.org/10.1088/0004-637X/765/2/131)・[訂正](https://doi.org/10.1088/0004-637X/770/1/82) | 0.99〜1.70 AUは特定のモデル値。生命の存在証拠ではない |
+| 金星・地球・火星の温度 | A/B | [NASA Solar System Temperatures](https://science.nasa.gov/resource/solar-system-temperatures/) | 代表値。場所・時刻による差 |
+| 赤色矮星と同期回転・大気 | B/C | [NASA](https://science.nasa.gov/exoplanets/habitable-zone/) | 熱輸送・大気散逸などの条件に依存 |
+| 氷衛星の地下海・エンケラドゥスのリン酸塩 | A/B | [NASA Europa](https://science.nasa.gov/jupiter/jupiter-moons/europa/europa-facts/)、[Postberg 2023](https://doi.org/10.1038/s41586-023-05987-9) | 生命検出とは別。海の存在・組成は観測と推定を区別 |
+| TRAPPIST-1 eの透過スペクトル | A/B/C | [ESA/Webb 2025](https://esawebb.org/images/trappist1e/)、[NASA](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-is-webb-revealing-about-the-trappist-1-system/) | 大気なしもありも残る。厚い水素主体大気は否定的 |
+| TRAPPIST-1 b/cの厚い大気の否定的証拠 | A/B | [Nature Astronomy 2026](https://doi.org/10.1038/s41550-026-02806-9) | e/f/gとは別の観測対象 |
+| K2-18 bのDMS/DMDS | C | [Madhusudhan 2025](https://arxiv.org/abs/2504.12267)、[Nature Astronomy 2026](https://doi.org/10.1038/s41550-025-02730-4)、[A&A 2026](https://doi.org/10.1051/0004-6361/202557718) | 代替モデル・データ処理への依存。分子同定と生命起源を分離。公開概要参照 |
