@@ -41,3 +41,6 @@ GitHub Actionsは両書籍のHTML/PDFを生成・検査し、共通workflowで�
 HTML・PDFの共存公開案は [PUBLICATION.md](PUBLICATION.md) を参照してください。既存QFTのURLを維持する方針です。
 
 初回公開成功（第1〜4章収録）：[HTML](https://daysulab.github.io/Learning_with_Codex/logic/)・[PDF](https://daysulab.github.io/Learning_with_Codex/logic/logic.pdf)。
+
+## 表示診断
+CIで `scripts/check_layout.py`（全PDFページの境界・欠落文字候補、代表ページ画像）と `scripts/check_browser.py`（全HTMLページを390/820/1280pxで診断）を実行する。結果はActionsの `logic-quality` artifactに保存する。診断候補は目視の代替ではなく、診断失敗は公開ビルド自体と区別する。
