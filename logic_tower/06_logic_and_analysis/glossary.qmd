@@ -1,0 +1,91 @@
+# 用語・記号索引 {.unnumbered}
+
+本文の定義に戻るための章別索引です。短い説明は復習のためのもので、厳密な定義や成立条件はリンク先を確認してください。
+
+## 論理・モデル
+
+| 用語 | 意味の手がかり | 参照 |
+|---|---|---|
+| 命題・真理値 | 命題の真偽を0と1で表す。 | [第1章](chapters/01_propositional_completeness.qmd) |
+| 構文・意味論 | 式の生成と証明規則、式の解釈を区別する。 | [第1章](chapters/01_propositional_completeness.qmd)、[第3章](chapters/03_first_order.qmd) |
+| 健全性 | 証明可能なら全てのモデルで成立する。 | [第1章](chapters/01_propositional_completeness.qmd)、[第3章](chapters/03_first_order.qmd) |
+| 完全性定理 | 全てのモデルで成立する文が証明可能である。 | [第1章](chapters/01_propositional_completeness.qmd)、[第4章](chapters/04_model_existence.qmd) |
+| コンパクト性 | 全ての有限部分が充足可能なら理論全体も充足可能。 | [第4章](chapters/04_model_existence.qmd) |
+| Henkin証人 | 存在文を満たす元のために導入する名前。 | [第4章](chapters/04_model_existence.qmd) |
+| 一階言語・量化 | 対象を変数として全称・存在を表現する。 | [第3章](chapters/03_first_order.qmd) |
+| モデル・理論 | 公理の集合と、それを満たす構造。 | [第3章](chapters/03_first_order.qmd)、[第6章](chapters/06_set_theories.qmd) |
+| 無矛盾性・不完全性 | 矛盾を証明できないことと、公理系で決められない文の存在。 | [第6章](chapters/06_set_theories.qmd)、[第18章](chapters/18_independence_and_connections.qmd) |
+
+## 集合・超積
+
+| 用語 | 意味の手がかり | 参照 |
+|---|---|---|
+| 同値関係・商集合 | 同値とみなした対象を一つの類にまとめる。 | [第5章](chapters/05_sets_and_ordinals.qmd)、[第8章](chapters/08_ultraproducts.qmd) |
+| 濃度・順序数 | 集合の大きさと整列順序の型。 | [第5章](chapters/05_sets_and_ordinals.qmd) |
+| Dedekind切断 | 有理数の下側の集合による実数の構成。 | [第5章](chapters/05_sets_and_ordinals.qmd) |
+| 選択公理・Zornの補題 | 選択関数や極大元の存在を保証する原理。 | [第6章](chapters/06_set_theories.qmd)、[第7章](chapters/07_ultrafilters.qmd) |
+| フィルター | 有限交叉と上方閉性を持つ集合族。 | [第7章](chapters/07_ultrafilters.qmd) |
+| 超フィルター | 各集合と補集合のちょうど一方を選ぶフィルター。 | [第7章](chapters/07_ultrafilters.qmd) |
+| 自由超フィルター | 自然数上で有限集合を含まない超フィルター。 | [第7章](chapters/07_ultrafilters.qmd) |
+| 超積・超冪 | 超フィルターによる直積の商。全成分が同じ構造なら超冪。 | [第8章](chapters/08_ultraproducts.qmd) |
+| Łośの定理 | 一階式の真偽を成立添字集合の所属で判定する。 | [第8章](chapters/08_ultraproducts.qmd) |
+
+## 超準解析
+
+| 用語 | 意味の手がかり | 参照 |
+|---|---|---|
+| 超実数・無限小・無限大 | 実数の超冪と標準実数に対する大小による分類。 | [第9章](chapters/09_hyperreals.qmd) |
+| Archimedes性 | 任意の正実数の自然数倍が任意の実数を越えられる性質。 | [第5章](chapters/05_sets_and_ordinals.qmd)、[第9章](chapters/09_hyperreals.qmd) |
+| 標準部 | 有限超実数に無限に近い唯一の標準実数。 | [第10章](chapters/10_standard_part.qmd) |
+| 内部集合・外部集合 | 拡張構造の内部で得られる集合とそれ以外の集合。 | [第10章](chapters/10_standard_part.qmd) |
+| 移行原理（超冪） | 指定言語の一階式を初等埋め込みで保存する。 | [第8章](chapters/08_ultraproducts.qmd)、[第10章](chapters/10_standard_part.qmd) |
+| 超自然数・超有限和 | 内部で有限の性質を持つ集合や和の拡張。 | [第12章](chapters/12_hyperfinite_integrals.qmd) |
+| 微分・積分の特徴づけ | 差商・超有限和の標準部で通常の微積分を表す。 | [第11章](chapters/11_infinitesimal_derivatives.qmd)、[第12章](chapters/12_hyperfinite_integrals.qmd) |
+
+## ブール値解析
+
+| 用語 | 意味の手がかり | 参照 |
+|---|---|---|
+| ブール代数・完全ブール代数 | 補元・有限上下限を持つ代数。完全なら任意上下限を持つ。 | [第2章](chapters/02_boolean_algebras.qmd)、[第13章](chapters/13_complete_boolean_algebras.qmd) |
+| 正則開集合 | 閉包の内部を取っても変わらない開集合。 | [第13章](chapters/13_complete_boolean_algebras.qmd) |
+| Stone空間 | 超フィルターを点とするコンパクトな空間。 | [第7章](chapters/07_ultrafilters.qmd)、[第13章](chapters/13_complete_boolean_algebras.qmd) |
+| B名・標準名 | 所属の係数を持つ集合の名前と通常の集合の埋め込み。 | [第14章](chapters/14_boolean_valued_universe.qmd) |
+| 混合補題・最大原理 | 状況ごとの名前の結合と存在量化を実現する証人。 | [第14章](chapters/14_boolean_valued_universe.qmd) |
+| 下降・上昇 | ブール値宇宙内の対象と外部の構造を対応させる操作。 | [第15章](chapters/15_boolean_valued_analysis.qmd) |
+| Gordonの定理 | 内部実数の下降と普遍完備なベクトル束との対応。 | [第15章](chapters/15_boolean_valued_analysis.qmd) |
+| 可測関数・連続関数 | 内部実数・複素数の定理を外部の関数へ翻訳する例。 | [第15章](chapters/15_boolean_valued_analysis.qmd) |
+
+## 強制法と補章
+
+| 用語 | 意味の手がかり | 参照 |
+|---|---|---|
+| 強制条件・稠密集合 | 有限情報と任意の条件から到達できる要求。 | [第16章](chapters/16_cohen_forcing.qmd) |
+| ジェネリックフィルター | 基礎モデルにある全ての稠密集合と交わるフィルター。 | [第16章](chapters/16_cohen_forcing.qmd) |
+| Cohen実数 | 有限条件の合併で得る基礎モデルにない二進数列。 | [第16章](chapters/16_cohen_forcing.qmd)、[第18章](chapters/18_independence_and_connections.qmd) |
+| 名前・ジェネリック拡大 | 条件付きの集合を評価して得られる新しいモデル。 | [第17章](chapters/17_generic_extensions.qmd) |
+| 強制関係・真理補題 | 文を保証する条件と拡張モデルでの真偽の対応。 | [第17章](chapters/17_generic_extensions.qmd) |
+| ccc・Δシステム | 反鎖の可算性と多重Cohen強制法での基数保存の道具。 | [第17章](chapters/17_generic_extensions.qmd)、[第18章](chapters/18_independence_and_connections.qmd) |
+| 連続体仮説・構成可能宇宙 | 実数の濃度に関する仮説とCHを満たす内部宇宙。 | [第18章](chapters/18_independence_and_connections.qmd) |
+| 相対的無矛盾性 | ある公理系の無矛盾性から別の公理系の無矛盾性を導くこと。 | [第18章](chapters/18_independence_and_connections.qmd) |
+| フラストレーションフリー | 各局所相互作用の最低エネルギーを同時に実現できる性質。 | [補章1](supplements/01_physics_unprovability.qmd) |
+| Hilbertの基底定理 | 有限変数多項式環のイデアルが有限生成となる定理。 | [補章1](supplements/01_physics_unprovability.qmd) |
+| 停止問題・Wangタイル | 計算機の非停止を格子の合法配置へ翻訳する道具。 | [補章1](supplements/01_physics_unprovability.qmd) |
+
+## 記号の索引
+
+| 記号 | 意味 | 参照 |
+|---|---|---|
+| $\Gamma\vdash A,\ \Gamma\models A$ | 証明可能性と意味論的帰結 | [第1章](chapters/01_propositional_completeness.qmd)、[第3章](chapters/03_first_order.qmd)、[第4章](chapters/04_model_existence.qmd) |
+| $\forall,\exists$ | 全称量化と存在量化 | [第3章](chapters/03_first_order.qmd) |
+| $\mathcal P(X)$ | X の冪集合 | [第5章](chapters/05_sets_and_ordinals.qmd) |
+| $\aleph_0,\aleph_1,\aleph_2$ | 無限基数 | [第5章](chapters/05_sets_and_ordinals.qmd)、[第18章](chapters/18_independence_and_connections.qmd) |
+| $U,\ [a]_U$ | 超フィルターと同値類 | [第7章](chapters/07_ultrafilters.qmd)、[第8章](chapters/08_ultraproducts.qmd) |
+| $\varepsilon,H$ | 無限小と無限大の超自然数の例 | [第9章](chapters/09_hyperreals.qmd)、[第12章](chapters/12_hyperfinite_integrals.qmd) |
+| $\operatorname{st}(x)$ | 標準部 | [第10章](chapters/10_standard_part.qmd)、[第11章](chapters/11_infinitesimal_derivatives.qmd)、[第12章](chapters/12_hyperfinite_integrals.qmd) |
+| $\bigvee,\bigwedge$ | 上限と下限 | [第13章](chapters/13_complete_boolean_algebras.qmd) |
+| $\mathopen{[\![}\varphi\mathclose{]\!]}$ | ブール値真理値 | [第14章](chapters/14_boolean_valued_universe.qmd) |
+| $\check x$ | 標準名 | [第14章](chapters/14_boolean_valued_universe.qmd)、[第17章](chapters/17_generic_extensions.qmd) |
+| $p\Vdash\varphi$ | 条件 p が文を強制する | [第17章](chapters/17_generic_extensions.qmd) |
+| $M[G]$ | ジェネリック拡大 | [第17章](chapters/17_generic_extensions.qmd)、[第18章](chapters/18_independence_and_connections.qmd) |
+| $\operatorname{Con}(T)$ | 理論の無矛盾性 | [第6章](chapters/06_set_theories.qmd)、[第18章](chapters/18_independence_and_connections.qmd) |
+| $H_L,\ L(d)$ | 補章の全Hamiltonianと有限検査サイズ | [補章1](supplements/01_physics_unprovability.qmd) |

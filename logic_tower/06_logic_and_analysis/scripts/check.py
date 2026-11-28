@@ -522,3 +522,13 @@ for path in [*paths,"supplements/01_physics_unprovability.qmd"]:
         assert len(body.strip())>=20,(path,heading.group())
     bridge_total+=len(headings)
 print(f"logic: {bridge_total} section/subsection bridge callouts verified")
+
+# 用語・記号索引：参照先の存在と全18章・補章の網羅を確認
+glossary=(root/"glossary.qmd").read_text()
+targets=set(re.findall(r"\]\(((?:chapters|supplements)/[^)]+\.qmd)\)",glossary))
+assert set(paths).issubset(targets),set(paths)-targets
+assert "supplements/01_physics_unprovability.qmd" in targets
+for target in targets:
+    assert (root/target).is_file(),target
+assert "glossary.qmd" in config
+print(f"logic: glossary links cover {len(targets)} chapters/supplements")
