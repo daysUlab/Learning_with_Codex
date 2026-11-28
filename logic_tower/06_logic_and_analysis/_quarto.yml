@@ -20,6 +20,10 @@ book:
     - chapters/05_sets_and_ordinals.qmd
     - chapters/06_set_theories.qmd
     - chapters/07_ultrafilters.qmd
+    - chapters/08_ultraproducts.qmd
+    - chapters/09_hyperreals.qmd
+    - chapters/10_standard_part.qmd
+    - chapters/11_infinitesimal_derivatives.qmd
     - references.qmd
 format:
   html:

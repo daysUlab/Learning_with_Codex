@@ -11,6 +11,7 @@ for i,p in enumerate(paths,1):
     assert "未執筆スケルトン" not in s
     for title in ["この章で学ぶ理由","## 初読の到達目標","## 演習","## 解答"]:
         assert title in s,(p,title)
+    assert not re.search(r"^\s*\$\s*$",s,re.M),(p,"single dollar delimiter")
     assert len(re.findall(r"^\$\$\s*$",s,re.M))%2==0
     for name in re.findall(r"\]\(\.\./figures/([^)]*)\)",s):
         assert name in (root/"scripts/figures.py").read_text(),name
@@ -269,3 +270,65 @@ assert len({1,2,3})>5/2 and len({3,4,5})>5/2
 assert len({1,2,3}&{3,4,5})==1
 assert {a for a in range(16) if a&6==6}=={6,7,14,15}
 print("chapter 7: all filters on 1-4 points, ultrafilter laws and finite partitions OK")
+
+# 第8章：有限主超フィルター上での演算・量化と数列の代表例
+for i in range(3):
+    seqs=list(product(range(3),repeat=3))
+    eq=lambda a,b:a[i]==b[i]
+    for a,b,c in product(seqs,repeat=3):
+        if eq(a,b):
+            assert eq(tuple(x+y for x,y in zip(a,c)),tuple(x+y for x,y in zip(b,c)))
+            assert eq(tuple(x*y for x,y in zip(a,c)),tuple(x*y for x,y in zip(b,c)))
+    for a in seqs:
+        for bits in product([False,True],repeat=9):
+            # 三要素領域における存在量化と、列の証人の存在の一致
+            left=any(bits[3*a[i]+v] for v in range(3))
+            right=any(bits[3*a[i]+b[i]] for b in seqs)
+            assert left==right
+for n in range(2001):
+    e=Fraction(1,n+1)
+    h=n+1
+    assert e*h==1 and (h+1)*e==1+e
+    assert (e<Fraction(1,1000))==(n>=1000)
+    assert ((-1)**n)**2==1
+print("chapter 8: finite principal ultraproduct and sequence identities OK (not free ultrafilter computation)")
+
+# 第1〜6章の数列接続例と第9章：有限標本の厳密有理数計算
+for n in range(501):
+    m=n+1
+    e=Fraction(1,m)
+    e2=Fraction(1,m+1)
+    eta=Fraction(1,10**m)
+    assert not (e<Fraction(1,2)) or e<1
+    assert (e<Fraction(1,3))==(n>=3)
+    assert (e<Fraction(1,3) and n%2==0)==(n>=4 and n%2==0)
+    assert e>e2 and e*m==1
+    assert e*e*m==e and e*m*m==m
+    assert (m+2)*e==1+2*e
+    assert Fraction(n,m)==1-e
+    assert Fraction(1,2+e)-Fraction(1,2)==-e/(2*(2+e))
+    assert 0<eta<e
+    if n>=1:
+        assert 0<e**3<e**2<e<1
+print("chapter 9 and earlier sequence examples: exact rational samples OK")
+
+# 第10章：有限標本の厳密有理数による代表例
+for n in range(1,501):
+    e=Fraction(1,n+1)
+    assert (2+e)*(3-e)==6+e-e*e
+    assert (1+e)/(2-e)-Fraction(1,2)==3*e/(2*(2-e))
+    assert abs(2+(-1)**n*e-2)==e
+    assert 0<e/(2*(2+e))<e/4
+print("chapter 10: standard-part rational examples OK")
+
+# 第11章：差商の有限標本検算
+for a in map(Fraction,range(-3,4)):
+    for n in range(1,101):
+        for sign in (-1,1):
+            h=Fraction(sign,n+1)
+            assert ((a+h)**2-a*a)/h==2*a+h
+            assert ((a+h)**3-a**3)/h==3*a*a+3*a*h+h*h
+            assert abs(h)/h==sign
+            if a and a+h:
+                assert (1/(a+h)-1/a)/h==-1/(a*(a+h))
+print("chapter 11: finite difference samples OK")

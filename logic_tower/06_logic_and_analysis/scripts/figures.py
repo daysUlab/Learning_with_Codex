@@ -245,3 +245,110 @@ ax.scatter(ns[1::2],[-1]*6,color="#d97706",label="Odd indices")
 ax.set(xlabel="n",ylabel="a_n",xticks=ns,yticks=[-1,0,1],ylim=(-1.5,1.5))
 ax.legend(loc="center",fontsize=9,ncol=2);ax.grid(alpha=.15)
 fig.savefig(out/"filter_sequence.png",dpi=220);plt.close(fig)
+
+# 第8章：超積・超冪・証人列
+fig,ax=plt.subplots(figsize=(5.4,3),layout="constrained")
+ns=list(range(10))
+ax.plot(ns,[1/(n+1) for n in ns],"o-",color="#2166ac",label=r"$1/(n+1)$")
+ax.axhline(0,color="#d97706",ls="--",label="zero sequence")
+ax.set(xlabel="Index n",ylabel="Value",xticks=ns,ylim=(-.08,1.1))
+ax.legend(fontsize=9);ax.grid(alpha=.2)
+fig.savefig(out/"ultrapower_sequences.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,2.9),layout="constrained")
+ax.set(xlim=(-1,6),ylim=(-.4,3.5));ax.axis("off")
+for y,lab,row in [(2.7,"a = a'",[1,1,0,1,0,1]),(1.7,"b = b'",[0,1,1,1,0,1]),(.7,"Both",[0,1,0,1,0,1])]:
+    ax.text(-.15,y,lab,ha="right",va="center",fontsize=10)
+    for j,v in enumerate(row):
+        ax.scatter(j+.5,y,s=250,color="#2166ac" if v else "#e2e8f0")
+        ax.text(j+.5,y,str(v),ha="center",va="center",color="white" if v else "#334155")
+ax.text(3,-.05,"Where both agree, the sums agree",ha="center",fontsize=10)
+fig.savefig(out/"ultraproduct_representatives.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,3),layout="constrained")
+ax.set(xlim=(0,7),ylim=(0,4));ax.axis("off")
+for j in range(5):
+    x=1.1+j*1.2
+    ax.text(x,3.25,f"M{j}",ha="center",bbox=dict(boxstyle="round",fc="#e0eaf7",ec="#2166ac"))
+    ax.annotate("",xy=(x,2.1),xytext=(x,2.9),arrowprops=dict(arrowstyle="->",color="#64748b"))
+    ax.text(x,1.8,f"b{j}",ha="center",color="#16857c")
+    ax.annotate("",xy=(3.5,.8),xytext=(x,1.5),arrowprops=dict(arrowstyle="->",color="#16857c",alpha=.65))
+ax.text(3.5,.45,"Witness class [b]",ha="center",bbox=dict(boxstyle="round",fc="#e2f2ed",ec="#16857c"))
+fig.savefig(out/"los_witnesses.png",dpi=220);plt.close(fig)
+
+# 第9章：超実数の模式図と収束速度
+fig,ax=plt.subplots(figsize=(5.5,3.1),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,4));ax.axis("off")
+ax.hlines(2.9,1,9,color="#64748b",lw=1.5)
+for x,lab in [(2,"0"),(5,"1"),(8,"2")]:
+    ax.scatter(x,2.9,color="#2166ac",s=40)
+    ax.text(x,3.2,lab,ha="center")
+ax.annotate("",xy=(2,1.3),xytext=(2,2.7),arrowprops=dict(arrowstyle="->",color="#16857c"))
+ax.hlines(1,1,9,color="#64748b",lw=1.5)
+for x,lab in [(2,"0"),(3,r"$\varepsilon^2$"),(4.6,r"$\varepsilon$"),(7,r"$\sqrt{\varepsilon}$")]:
+    ax.scatter(x,1,color="#16857c",s=55)
+    ax.text(x,.65,lab,ha="center")
+ax.text(5,1.65,"Near 0 (schematic, not to scale)",ha="center",fontsize=10)
+fig.savefig(out/"hyperreal_zoom.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,3.2),layout="constrained")
+ns=range(1,101)
+for power,color in [(0.5,"#d97706"),(1,"#2166ac"),(2,"#16857c")]:
+    ax.loglog(ns,[n**(-power) for n in ns],label=f"m^(-{power:g})",color=color)
+ax.set(xlabel="m = n + 1",ylabel="Value");ax.legend(fontsize=9);ax.grid(alpha=.2,which="both")
+fig.savefig(out/"hyperreal_rates.png",dpi=220);plt.close(fig)
+diagram([(5,4.6,"0.9, 0.99, 0.999, ..."),(2.4,2.6,"Real limit"),(7.6,2.6,"Ultrapower class"),(2.4,.8,"1"),(7.6,.8,"1 - eta, less than 1")],[(0,1),(0,2),(1,3),(2,4)],"hyperreal_decimal.png")
+
+# 第10章：標準部の模式図
+fig,ax=plt.subplots(figsize=(5.4,2.6),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,3.3));ax.axis("off")
+ax.hlines(2.2,1,9,color="#64748b")
+for x,lab in [(2,r"$3-\varepsilon^2$"),(5,"3"),(8,r"$3+\varepsilon$")]:
+    ax.scatter(x,2.2,color="#16857c",s=50)
+    ax.text(x,2.55,lab,ha="center",fontsize=11)
+    ax.annotate("",xy=(5,.8),xytext=(x,1.95),arrowprops=dict(arrowstyle="->",color="#2166ac"))
+ax.text(5,.48,"standard part = 3",ha="center",fontsize=11)
+fig.savefig(out/"standard_part_neighbors.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,2.8),layout="constrained")
+ax.set(xlim=(0,10),ylim=(0,4));ax.axis("off")
+for y,closed,lab in [(2.8,False,r"$x=3-\varepsilon$"),(1.3,True,r"$x=3+\varepsilon$")]:
+    ax.hlines(y,1,7,color="#2166ac",lw=3)
+    ax.scatter(7,y,s=65,facecolor="#2166ac" if closed else "white",edgecolor="#2166ac",zorder=3)
+    ax.text(7,y+.32,"3",ha="center")
+    ax.text(3,y+.35,lab,ha="center")
+    ax.text(8.2,y,"sup = 3",ha="center",fontsize=10)
+fig.savefig(out/"standard_part_cuts.png",dpi=220);plt.close(fig)
+fig,axs=plt.subplots(2,1,figsize=(5.4,4),layout="constrained")
+ns=list(range(12))
+axs[0].plot(ns,[2+(-1)**n/(n+1) for n in ns],"o-",color="#2166ac")
+axs[0].axhline(2,color="#16857c",ls="--")
+axs[0].set(ylabel="Converges to 2")
+axs[1].scatter(ns,[(-1)**n for n in ns],c=["#2166ac" if n%2==0 else "#d97706" for n in ns])
+axs[1].set(xlabel="Index n",ylabel="Two choices",yticks=[-1,1],ylim=(-1.5,1.5))
+fig.savefig(out/"standard_part_limits.png",dpi=220);plt.close(fig)
+
+# 第11章：割線と接線、絶対値、単位円
+import math
+fig,ax=plt.subplots(figsize=(5.4,3.5),layout="constrained")
+xs=[2.3+i/100 for i in range(126)]
+ax.plot(xs,[x*x for x in xs],color="#2166ac",lw=2,label="f(x) = x^2")
+a=3
+for h,col in [(0.5,"#d97706"),(.15,"#16857c")]:
+    ax.plot([2.3,3.5],[a*a+(2*a+h)*(x-a) for x in [2.3,3.5]],color=col,label=f"h = {h}")
+    ax.scatter([a,a+h],[a*a,(a+h)**2],color=col)
+ax.plot([2.3,3.5],[a*a+2*a*(x-a) for x in [2.3,3.5]],"--",color="#64748b",label="Tangent")
+ax.set(xlabel="x",ylabel="f(x)",xlim=(2.3,3.55),ylim=(4,13));ax.legend(fontsize=8)
+fig.savefig(out/"derivative_secants.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5.4,3),layout="constrained")
+ax.plot([-2,0,2],[2,0,2],color="#2166ac",lw=2)
+ax.scatter([-1,0,1],[1,0,1],color="#16857c")
+ax.text(-1,1.25,"slope = -1",ha="center");ax.text(1,1.25,"slope = 1",ha="center")
+ax.set(xlabel="x",ylabel="|x|",xlim=(-2.2,2.2),ylim=(-.1,2.3));ax.grid(alpha=.2)
+fig.savefig(out/"derivative_absolute.png",dpi=220);plt.close(fig)
+fig,ax=plt.subplots(figsize=(5,3.7),layout="constrained")
+theta=.55
+arc=[theta*i/100 for i in range(101)]
+ax.fill([0]+[math.cos(t) for t in arc]+[0],[0]+[math.sin(t) for t in arc]+[0],color="#e0eaf7")
+ax.plot([0,1,1,0],[0,0,math.tan(theta),0],color="#d97706")
+ax.plot([0,1,math.cos(theta),0],[0,0,math.sin(theta),0],color="#16857c",lw=2)
+ax.plot([math.cos(t) for t in arc],[math.sin(t) for t in arc],color="#2166ac",lw=2)
+ax.text(.21,.065,"t",fontsize=12);ax.text(1.03,.02,"A");ax.text(.79,.54,"B");ax.text(1.03,math.tan(theta),"C");ax.text(-.06,-.05,"O")
+ax.set(xlim=(-.12,1.23),ylim=(-.12,.82),aspect="equal");ax.axis("off")
+fig.savefig(out/"derivative_trig.png",dpi=220);plt.close(fig)

@@ -10,11 +10,11 @@
 | 4 | [証明からモデルを作る](chapters/04_model_existence.qmd) | 一次レビューCI成功・main統合済み |
 | 5 | [集合から数学の対象を作る](chapters/05_sets_and_ordinals.qmd) | 一次レビューCI成功・main統合済み |
 | 6 | [公理が決める数学の世界](chapters/06_set_theories.qmd) | 一次レビューCI成功・main統合済み |
-| 7 | [無限集合で多数を定義する](chapters/07_ultrafilters.qmd) | 初稿・CI待ち |
-| 8 | [モデルの列から新しいモデルを作る](chapters/08_ultraproducts.qmd) | TODO |
-| 9 | [超実数を数列から構成する](chapters/09_hyperreals.qmd) | TODO |
-| 10 | [無限小と実数の接続](chapters/10_standard_part.qmd) | TODO |
-| 11 | [無限小で微分を計算する](chapters/11_infinitesimal_derivatives.qmd) | TODO |
+| 7 | [無限集合で多数を定義する](chapters/07_ultrafilters.qmd) | 初稿main統合済み・一次レビューCI待ち |
+| 8 | [モデルの列から新しいモデルを作る](chapters/08_ultraproducts.qmd) | 一次レビューCI待ち |
+| 9 | [超実数を数列から構成する](chapters/09_hyperreals.qmd) | 一次レビューCI待ち |
+| 10 | [無限小と実数の接続](chapters/10_standard_part.qmd) | 初稿・CI未確認 |
+| 11 | [無限小で微分を計算する](chapters/11_infinitesimal_derivatives.qmd) | 初稿・CI未確認 |
 | 12 | [無限個の和で積分を計算する](chapters/12_hyperfinite_integrals.qmd) | TODO |
 | 13 | [真理値を完全ブール代数にする](chapters/13_complete_boolean_algebras.qmd) | TODO |
 | 14 | [集合の所属そのものをブール値にする](chapters/14_boolean_valued_universe.qmd) | TODO |
@@ -23,7 +23,7 @@
 | 17 | [モデルを保ったまま世界を拡張する](chapters/17_generic_extensions.qmd) | TODO |
 | 18 | [独立性と二つのモデル構成を結ぶ](chapters/18_independence_and_connections.qmd) | TODO |
 
-次の作業：第7章CI・main統合、第8章。第1〜6章のmain公開確認。
+次の作業：最新CI・main統合・公開確認、第12章、第10〜12章一次レビュー。
 
 2026-11-28：第1章CI 46095306289成功、PR #117統合（d14720a）。第2章初稿・演習9問・図3点・有限ブール代数とDNFの検査追加。最新CI未確認。
 
@@ -42,3 +42,13 @@
 2026-11-28：第5〜6章初稿CI 46119431059成功。第4〜6章一次レビューを反映（演習34問・図14点の参照点検、補足と代表例の検算追加）。最新CI待ち。
 
 2026-11-28：第4〜6章一次レビューCI 46121008492成功、PR #121統合（2a028f4）。第7章初稿・図5点・演習12問を追加。一般ブール代数のStone表現と位相的コンパクト性まで証明。有限フィルター全列挙検査を追加。最新CIとmain公開未確認。
+
+2026-11-28：第7章CI成功・PR #122統合（ab70efc）。第8章初稿、図3点、演習12問。数列から超積・超冪を構成し、無限小と無限大を先に計算してŁośの定理を証明。最新CI・公開未確認。
+
+2026-11-28：第1〜6章の原稿と演習を横断点検し、数列による接続節を各章に追加。第3章の連続性の式の表示、第6章の全単射の有限例、第8章の矛盾定数の帰納法を補足。第9章初稿・図3点・演習13問。第8章の旧CI実行中にPR #123へ追加するため最新CIで一括確認する。未レビュー・未公開。
+
+2026-11-28：CI 46124099682でPython検査成功、PDFは第3章の単独ドル記号で失敗。第2・3・5章の単独ドル記号10箇所を修正し、再発防止検査を追加。最新CI待ち。
+
+2026-11-28：第7〜9章一次レビュー（演習37問・図11点の参照）、第10章初稿（図3点・演習12問）を反映。最新CI未確認。
+
+2026-11-28：第11章初稿、図3点・演習12問。第10章までのCI 46125745820実行中に執筆。最新CI未確認。
