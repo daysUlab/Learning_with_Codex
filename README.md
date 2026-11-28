@@ -28,3 +28,5 @@
 - [高校数学から学ぶ場の量子論](physics_tower/12_quantum_field_theory/README.md)（HTML・PDF生成対応、初稿版）
 
 - [高校数学から学ぶ数理論理学と超準解析](logic_tower/06_logic_and_analysis/README.md)（全18章初稿）
+
+- [数式なしでわかる宇宙のロマン／高校数学から解き明かす宇宙物理学](physics_tower/astrophysics_and_cosmology/README.md)（二巻構成、156テーマ・全57章の設計、第1章初稿）
