@@ -1,6 +1,10 @@
 name: 数理論理学 教科書ビルド
 on:
   workflow_call:
+  pull_request:
+    paths:
+      - 'logic_tower/06_logic_and_analysis/**'
+      - '.github/workflows/build_logic_book.yml'
   workflow_dispatch:
 permissions:
   contents: read

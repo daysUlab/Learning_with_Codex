@@ -99,6 +99,41 @@ M87*はいて座A*よりはるかに大きい一方、遠方にあります。�
 
 EHTの成果はブラックホールの周辺が一般相対論の予測と整合していることを示す重要な証拠です。ただし内部の特異点を直接観測したことでも、すべての代替的なコンパクト天体の理論を一度に排除したことでもありません。
 
+## ブラックホールの白い帯と上下の光の弧は何か
+
+映画や科学的な可視化では、黒い中心を横切る白や橙色の帯と、上下に回り込む明るい弧が見えることがあります。典型的な円盤をほぼ横から見た場合、その帯は高温のガス・プラズマが作る降着円盤の直接像や重力で曲げられた像です。円盤の奥側や下面から出た光も強い重力で進路が曲がり、観測者へ届きます。そのため実際には一枚の円盤なのに、上と下に別の環があるように見えることがあります。
+
+![NASAの非回転ブラックホールと薄い降着円盤の計算可視化・光路の説明（2019年）。緑・黄は円盤上面からの光、青緑は奥側の下面から曲げられて届く光を示す注釈。右下は横から見た像、上からの像との違いを比較できる。観測写真ではない。 Credit: NASA's Goddard Space Flight Center/Jeremy Schnittman。[出典](https://svs.gsfc.nasa.gov/13326/) ／ [NASA利用規則](https://www.nasa.gov/nasa-brand-center/images-and-media/)。](../figures/external/bh_optics_nasa.svg){#fig-bh-optics-nasa width=100%}
+
+![横から見た典型的な降着円盤の外観と光の由来（独自模式図）。計算結果ではなく、帯・曲がった像・影・細い光子リングを見分けるための説明。](../figures/bh_appearance_annotated.svg){#fig-bh-appearance-annotated width=100%}
+
+| 見える部分 | 何を表すか |
+|---|---|
+| 水平の明るい帯 | 主に手前側の降着円盤の光 |
+| 上下の弧 | 重力レンズで曲げられた円盤の像。別の円盤があるわけではない |
+| 内側の細いリング | ブラックホール付近を回り込んで届く光（光子リングなど）。広い明るい帯全体とは別 |
+| 黒い中央 | 光が捕獲される効果などで暗く見える領域（影）。事象の地平面そのものではない |
+| 左右の明るさの違い | 円盤の高速運動による相対論的ドップラー効果、放射分布など |
+| 軸方向に伸びる細長い光 | ジェットがある場合、その放射。地平面内部からの噴出ではない（第13章） |
+
+白い色は高温の放射や明るさの表示を表す場合がありますが、全てのブラックホールの円盤が白いわけではありません。実際の色や明るさはガスの温度・放射機構・観測波長・視線の向き、画像処理の設定で異なります。EHTの橙色は電波強度の表示色で、肉眼で見た色ではありません。また、周囲に発光物質がない孤立ブラックホールには、明るい降着円盤が必ずあるわけではありません。背景の光が曲がることで存在を推定できる場合があります。
+
+参考：[NASA SVS 2019年の降着円盤可視化](https://svs.gsfc.nasa.gov/13326/)、[NASA Black Hole Anatomy](https://science.nasa.gov/universe/black-holes/anatomy/)、[NASA 2024年の落下可視化](https://science.nasa.gov/universe/new-nasa-black-hole-visualization-takes-viewers-beyond-the-brink/)（確認日：2026-11-29）。
+
+### 観測方向を変えると見え方はどう変わるか
+
+NASAの同じ非回転ブラックホールの可視化を、二つの異なる方向から比較します。
+
+![円盤を斜めから見た計算画像。中心の暗い影を囲む明るい円盤と細いリングが見える。 Credit: NASA’s Goddard Space Flight Center/Jeremy Schnittman。[出典](https://svs.gsfc.nasa.gov/13326/) ／ [NASA Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/)。](../figures/external/bh_sim_angle1.svg){#fig-bh-sim-angle1 width=75%}
+
+![別の方向から見た計算画像。円盤の見かけの幅や光の回り込み、左右の明るさが変わる。 Credit: NASA’s Goddard Space Flight Center/Jeremy Schnittman。[出典](https://svs.gsfc.nasa.gov/13326/) ／ [NASA Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/)。](../figures/external/bh_sim_angle2.svg){#fig-bh-sim-angle2 width=75%}
+
+左側の明るさにはこちらへ近づく高速のガスの相対論的ビーミングが関係しています。円盤を真上から見れば、この方向による明るさの差は小さくなります。どちらも画像の色・形は数値可視化の表現で、実際の可視光観測写真ではありません。
+
+※ NASA配布サーバーから画像を取得できない版では、取得不可表示が出るため、キャプションの公式出典リンクで実画像を参照してください。
+
+[NASA公式の回転する視点の動画・GIFを閲覧する](https://svs.gsfc.nasa.gov/13326/)。HTML版・PDF版では同じ静止画を掲載し、動画やGIFは公式ページへのリンクから参照します。
+
 ## 複数の証拠が一つの理解につながる
 
 | 方法 | 実際に観測するもの | 何が分かるか |

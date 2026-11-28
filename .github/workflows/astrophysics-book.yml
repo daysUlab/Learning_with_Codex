@@ -1,6 +1,10 @@
 name: 宇宙物理教科書 HTML・PDF 検証
 on:
   workflow_call:
+  pull_request:
+    paths:
+      - 'physics_tower/astrophysics_and_cosmology/**'
+      - '.github/workflows/astrophysics-book.yml'
   workflow_dispatch:
 permissions:
   contents: read

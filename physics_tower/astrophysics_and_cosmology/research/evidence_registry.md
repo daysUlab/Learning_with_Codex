@@ -125,3 +125,40 @@
 | S2の周期・歳差・中心質量 | A/B | [ESO 2020](https://www.eso.org/public/news/eso2006/) | 軌道の観測は地平面そのものの直接検出ではない |
 | GW150914 | A/B | [LIGO](https://ligo.org/detections/gw150914/)、[質量推定](https://ligo.org/science-summaries/o1imbh/) | 波形モデルによる質量推定 |
 | M87*・Sgr A*の影 | A/B | [EHT 2019](https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole)、[EHT 2022](https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy) | 2017年の電波観測の再構成。リング、影、地平面、内部を区別 |
+
+## 第12章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 静止時計の時間遅れ・落下時の信号 | B | [NASA FAQ](https://science.nasa.gov/apod/frequently-asked-questions-faqs-on-black-holes/)、[Einstein Online](https://www.einstein-online.info/en/spotlight/changing_places/) | 静止時計の比較と自由落下の固有時を区別。計算値で実測ではない |
+| 潮汐効果の質量依存性 | B | [NASA解説](https://science.nasa.gov/universe/black-holes/what-happens-when-something-gets-too-close-to-a-black-hole/)、[等価原理](https://www.einstein-online.info/en/spotlight/equivalence_principle/) | 2mの間隔に対する非回転解の局所相対加速度。安全性の評価ではない |
+| 光子球・ISCO | B | [NASA Anatomy](https://science.nasa.gov/universe/black-holes/anatomy/) | 非回転解の座標半径。影・地平面とは異なる |
+| 地平面・特異性 | B/C | [Einstein Online](https://www.einstein-online.info/en/spotlight/singularities/) | 古典理論。測地線不完全性と内部の微視的状態を区別 |
+| 回転と時空の引きずり | B | [Einstein Online](https://www.einstein-online.info/en/spotlight/Rotating-Black-Holes-Observations-and-Working-in-General-Relativity/)、[frame-dragging](https://www.einstein-online.info/en/explandict/frame-dragging/) | エルゴ領域と地平面を区別 |
+
+## 第13章（2026-11-29確認）
+
+| 主張 | 区分 | 根拠 | 注意点 |
+|---|---|---|---|
+| 降着円盤と活動銀河核 | A/B | [NASA AGN](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-are-active-galactic-nuclei/)、[Anatomy](https://science.nasa.gov/universe/black-holes/anatomy/) | 薄い円盤の5.7%は非回転解の理論値。現実の効率ではない |
+| J0529−4351の光度・質量 | A/B | [ESO 2024](https://www.eso.org/public/news/eso2402/) | 2024年の報告値、モデル依存 |
+| ジェット・ビーミング | A/B/C | [ESO Centaurus A](https://www.eso.org/public/images/eso0903a/)、[NASA AGN](https://science.nasa.gov/mission/webb/science-overview/science-explainers/what-are-active-galactic-nuclei/) | 地平面内部から出る物質ではない。発生機構は研究中 |
+| GRBの崩壊・合体起源 | A/B/C | [NASA GRB](https://science.nasa.gov/universe/gamma-ray-bursts-harvesting-knowledge-from-the-universes-most-powerful-explosions/) | 持続時間だけでは起源を特定できない |
+| 潮汐破壊現象 | A/B | [NASA TDE](https://science.nasa.gov/universe/black-holes/what-happens-when-something-gets-too-close-to-a-black-hole/)、[AT2024tvd](https://science.nasa.gov/missions/hubble/nasas-hubble-pinpoints-roaming-massive-black-hole/) | 破壊・残骸の降着と放射を区別 |
+
+## 天体の見え方の補足（2026-11-29）
+- 第4章：恒星の表面温度と色、Webbの代表色、回折像。 [NASA](https://science.nasa.gov/exoplanets/stars/)、[ESA/Webb](https://esawebb.org/about/general/image-processing/)、[Cas A](https://esawebb.org/news/weic2330/)。色は観測波長・表示法に依存。
+- 第9章：J0030+0451のホットスポット（2019年NICER、二つの独立した解析）、[NASA SVS](https://svs.gsfc.nasa.gov/13240/) の公開本文と画像を確認。白い斑点は推定温度分布の表現で直接撮像ではない。
+- 第11章：[NASA SVS 2019](https://svs.gsfc.nasa.gov/13326/) の公開本文・光路図を確認。上下の弧は同じ円盤の重力レンズ像。白色は観測・表示条件に依存、EHT画像と数値可視化を区別。
+
+## 第14章（2026-11-29確認）
+- 光速不変・時間遅れ・同時性・双子： [Einstein Online](https://www.einstein-online.info/en/relativity_space_time/)、[光時計](https://www.einstein-online.info/en/spotlight/light-clocks-time-dilation/)、[同時性](https://www.einstein-online.info/en/spotlight/Now/)、[双子](https://www.einstein-online.info/en/spotlight/Twins/)（B）。測定と受信信号、固有時と座標時を区別。表・世界線は理想化した計算。
+- GPSの特殊・一般相対論補正：[NIST](https://www.nist.gov/atomic-clocks/a-powerful-tool-for-science/putting-einstein-test)（A/B）。−7、+45、+38 μs/日の概数。距離換算は測位誤差そのものではない。
+
+## 第15章（2026-11-29確認）
+- 等価原理・光の曲がり：[Einstein Online](https://www.einstein-online.info/en/spotlight/equivalence_principle/)、[光](https://www.einstein-online.info/en/spotlight/equivalence_light/)（B）。局所と潮汐・大域的効果を区別。
+- 水星の近日点移動：[Oregon State University](https://sites.science.oregonstate.edu/coursewikis/GGR/book/content/mercury)（A/B）。42.98秒角/世紀は主要な相対論的寄与。
+- 重力赤方偏移：[NIST 2022](https://www.nist.gov/news-events/news/2022/02/jila-atomic-clocks-measure-einsteins-general-relativity-millimeter-scale)（A/B）。高さ1mの時計差は弱重力近似。
+- 1919年日食：[Royal Society](https://www.royalsociety.org/blog/2024/08/observing-relativity/)、[NASA](https://science.gsfc.nasa.gov/attic/eclipse2017.gsfc.nasa.gov/testing-general-relativity.html)（A/B）。1.75秒角は理論値で歴史的観測は誤差あり。
+- 重力レンズ：[ESA/Webb 2025](https://esawebb.org/images/potm2503a/)、[2024](https://esawebb.org/images/potm2406a/)（A/B）。光源とレンズの像・回折を区別。
+- シャピロ遅延：[Bertotti et al. 2003](https://doi.org/10.1038/nature01997)（A/B）。パラメータの差0.000021±0.000023、周波数変化から推定。局所光速の変化ではない。
